@@ -1,8 +1,8 @@
 # Jabberwocky Head Tracking Kit for iOS
 
-The Jabberwocky Head Tracking Kit (`JabberwockyHTKit`) is an open-source project, developed by Swiftable LLC, that provides a touch-free interface for existing iOS applications. Jabberwocky enables users to interact with an application by just moving their head. Head movement translates into the movement of a mouse-like cursor on the screen. By default, blinks trigger a `.touchUpInside` event simulating a tap on a screen.
+The Jabberwocky® Head Tracking Kit (`JabberwockyHTKit`) is an open-source iOS framework, developed by Swiftable LLC, that provides a touch-free interface for existing iOS applications. Jabberwocky enables users to interact with an application by just moving their head. Head movement translates into the movement of a mouse-like cursor on the screen. By default, blinks trigger a `.touchUpInside` event simulating a tap on a screen.
 
-Jabberwocky ® was originally designed as an **accessibility tool** for users with mobility impairments such as ALS or Spinal Cord Injury (SCI) so that they could effectively and efficiently interact with iOS devices. Currently, Jabberwocky requires [ARKit](https://developer.apple.com/augmented-reality/arkit/) and is only supported on devices that also support [FaceID](https://support.apple.com/en-us/HT208108). Supported devices include:
+Jabberwocky was originally designed as an **accessibility tool** for users with mobility impairments such as ALS or Spinal Cord Injury (SCI) so that they could effectively and efficiently interact with iOS devices. Currently, Jabberwocky requires [ARKit](https://developer.apple.com/augmented-reality/arkit/) and is only supported on devices that also support [FaceID](https://support.apple.com/en-us/HT208108). Supported devices include:
 * iPhone X and later models
 * iPad Pro models with the A12X Bionic chip
 
@@ -21,4 +21,4 @@ Both `JabberwockyHTKit` and `JabberwockyHTKitCore` are available in the [Jabberw
 
 
 ## Trademark
-Jabberwocky ® is a [registered trademark](http://tmsearch.uspto.gov/bin/showfield?f=doc&state=4810:1r62r7.2.1) of Swiftable LLC.
+Jabberwocky® is a [registered trademark](http://tmsearch.uspto.gov/bin/showfield?f=doc&state=4810:1r62r7.2.1) of Swiftable LLC.
