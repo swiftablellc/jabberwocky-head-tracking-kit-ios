@@ -48,7 +48,7 @@ import JabberwockyHTKitCore
             return _isHeadTrackingDisabled!
         } set {
             _isHeadTrackingDisabled = newValue
-            // Always send a notification of a potential change in the status of face tracking
+            // Always send a notification of a potential change in the status of head tracking
             // This has to be in a dispatch queue because otherwise it causes a simultaneous access exception
             DispatchQueue.main.async {
                 NotificationCenter.default.post(name: .htOnHeadTrackingStatusUpdateNotification, object: nil)

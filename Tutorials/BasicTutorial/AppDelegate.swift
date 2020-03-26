@@ -27,6 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         AVCaptureDevice.requestAccess(for: .video) { (granted) in
             if (granted) {
+                // Configure the default HTFeatures and enable Head Tracking
                 DispatchQueue.main.async {
                     HeadTracking.configure()
                     HeadTracking.shared.enable()
@@ -46,6 +47,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 }
 
 class TutorialController: UIViewController {
+    
+    private let BUTTON_IDLE_TEXT = "Blink or Tap"
+    private let BUTTON_ACTION_TEXT = "Button Tapped!"
+    
     private var button: UIButton!
     
     override func viewDidLoad() {
@@ -53,8 +58,14 @@ class TutorialController: UIViewController {
         
         view.backgroundColor = UIColor.white
         button = UIButton()
-        button.setTitle("Button", for: .normal)
-        button.titleLabel?.textColor = UIColor.purple
+        button.setTitle(BUTTON_IDLE_TEXT, for: .normal)
+        button.setTitleColor(UIColor.black, for: .normal)
+        button.layer.borderColor = UIColor.black.cgColor
+        button.layer.cornerRadius = 15
+        button.layer.borderWidth = 2.0
+        // Subclasses of UIControl are automatically configured to emit .touchUpInside
+        // events created by the JabberwockyHTKit framework.
+        // See: JabberwockyHTKit/Focusables/UIControl+Focusable.swift [htInitiateAction]
         button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
         self.view.addSubview(button)
         
@@ -66,6 +77,11 @@ class TutorialController: UIViewController {
     }
     
     @objc func buttonAction(sender: UIButton!) {
-      print("Button tapped")
+        if button.title(for: .normal) == BUTTON_IDLE_TEXT {
+            button.setTitle(BUTTON_ACTION_TEXT, for: .normal)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                self.button.setTitle(self.BUTTON_IDLE_TEXT, for: .normal)
+            }
+        }
     }
 }

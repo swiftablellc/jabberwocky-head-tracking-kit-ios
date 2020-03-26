@@ -76,10 +76,6 @@ extension UITableViewCell: HTFocusable {
         return false
     }
 
-    @objc public func htRequiresIntentionalBlinkDuration() -> Bool {
-        return true
-    }
-
     @objc public func htInitiateAction(_ screenPoint: CGPoint) {
         if let table = self.superview as? UITableView {
             let indexPath = table.indexPath(for: self)!

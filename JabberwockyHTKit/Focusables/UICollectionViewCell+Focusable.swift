@@ -75,10 +75,6 @@ extension UICollectionViewCell: HTFocusable {
     @objc public func htIgnoresScrollSpeed() -> Bool {
         return false
     }
-
-    @objc public func htRequiresIntentionalBlinkDuration() -> Bool {
-        return true
-    }
     
     @objc public func htInitiateAction(_ screenPoint: CGPoint) {
         if let collectionView = self.superview as? UICollectionView {
