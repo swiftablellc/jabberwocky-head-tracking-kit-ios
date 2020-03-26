@@ -4,3 +4,7 @@
 # Xcode - User files
 xcuserdata/
 *.xcworkspace
+
+# CocoaPods
+Podfile.lock
+Pods/
