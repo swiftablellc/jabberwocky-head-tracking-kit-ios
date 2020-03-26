@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E1E0A0F242D0513002C4BE0 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 1E1E0A0E242D0513002C4BE0 /* README.md */; };
+		1E1E0A11242D15F8002C4BE0 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 1E1E0A10242D15F8002C4BE0 /* LICENSE */; };
 		1E7C64022424090A00D97089 /* JabberwockyHTKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E7C63F42424090A00D97089 /* JabberwockyHTKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1E7C647424240A0200D97089 /* UIControl+Focusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C640C24240A0100D97089 /* UIControl+Focusable.swift */; };
 		1E7C647524240A0200D97089 /* FocusableGlassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C640D24240A0100D97089 /* FocusableGlassView.swift */; };
@@ -128,6 +130,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1E1E0A0E242D0513002C4BE0 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		1E1E0A10242D15F8002C4BE0 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		1E7C63F12424090A00D97089 /* JabberwockyHTKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JabberwockyHTKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E7C63F42424090A00D97089 /* JabberwockyHTKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JabberwockyHTKit.h; sourceTree = "<group>"; };
 		1E7C63F52424090A00D97089 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -237,6 +241,8 @@
 		1E7C63E72424090A00D97089 = {
 			isa = PBXGroup;
 			children = (
+				1E1E0A10242D15F8002C4BE0 /* LICENSE */,
+				1E1E0A0E242D0513002C4BE0 /* README.md */,
 				1E7C63F32424090A00D97089 /* JabberwockyHTKit */,
 				1E7C653E24256FD900D97089 /* Tutorials */,
 				1E7C63F22424090A00D97089 /* Products */,
@@ -634,7 +640,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E1E0A0F242D0513002C4BE0 /* README.md in Resources */,
 				1E7C648B24240A0200D97089 /* CursorAssets.xcassets in Resources */,
+				1E1E0A11242D15F8002C4BE0 /* LICENSE in Resources */,
 				1E7C648A24240A0200D97089 /* Models.scnassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
