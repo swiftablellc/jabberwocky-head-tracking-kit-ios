@@ -118,7 +118,6 @@
 /* Begin PBXFileReference section */
 		1E1E0A0E242D0513002C4BE0 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		1E1E0A10242D15F8002C4BE0 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		1E1E0A14242D379E002C4BE0 /* JabberwockyHTKitCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = JabberwockyHTKitCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E7C63F12424090A00D97089 /* JabberwockyHTKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JabberwockyHTKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E7C63F42424090A00D97089 /* JabberwockyHTKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JabberwockyHTKit.h; sourceTree = "<group>"; };
 		1E7C63F52424090A00D97089 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -201,7 +200,6 @@
 		1E7C653324255BA200D97089 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1E7C653F2425701400D97089 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = "../../../../ios/private-ios-frameworks-source/HTTutorialApp/Resources/LaunchScreen.storyboard"; sourceTree = "<group>"; };
 		1E7C65412425B2B100D97089 /* CursorRecalibrationFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CursorRecalibrationFeature.swift; sourceTree = "<group>"; };
-		1E7C6546242694F500D97089 /* JabberwockyHTKitCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = JabberwockyHTKitCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -506,8 +504,6 @@
 		1E7C64D324244F5200D97089 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1E1E0A14242D379E002C4BE0 /* JabberwockyHTKitCore.framework */,
-				1E7C6546242694F500D97089 /* JabberwockyHTKitCore.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
