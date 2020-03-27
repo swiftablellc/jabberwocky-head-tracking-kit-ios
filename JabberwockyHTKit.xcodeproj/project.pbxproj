@@ -11,7 +11,6 @@
 		1E1E0A11242D15F8002C4BE0 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 1E1E0A10242D15F8002C4BE0 /* LICENSE */; };
 		1E1E0A36242E7F53002C4BE0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C652524255BA000D97089 /* AppDelegate.swift */; };
 		1E1E0A3A242E7F53002C4BE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E7C652E24255BA200D97089 /* Assets.xcassets */; };
-		1E1E0A3B242E7F53002C4BE0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E7C653F2425701400D97089 /* LaunchScreen.storyboard */; };
 		1E1E0A45242E8035002C4BE0 /* JabberwockyHTKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E7C63F42424090A00D97089 /* JabberwockyHTKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1E1E0A47242E8035002C4BE0 /* CountdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C643924240A0200D97089 /* CountdownView.swift */; };
 		1E1E0A48242E8035002C4BE0 /* CursorToggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C643B24240A0200D97089 /* CursorToggleButton.swift */; };
@@ -91,15 +90,17 @@
 		1E1E0A94242E8035002C4BE0 /* Models.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E7C642524240A0100D97089 /* Models.scnassets */; };
 		1E1E0A9E242E8098002C4BE0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C652524255BA000D97089 /* AppDelegate.swift */; };
 		1E1E0AA2242E8098002C4BE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E7C652E24255BA200D97089 /* Assets.xcassets */; };
-		1E1E0AA3242E8098002C4BE0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E7C653F2425701400D97089 /* LaunchScreen.storyboard */; };
 		1E1E0AAB242E85D5002C4BE0 /* JabberwockyHTKitLocal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E1E0A98242E8035002C4BE0 /* JabberwockyHTKitLocal.framework */; };
 		1E1E0AAC242E85D5002C4BE0 /* JabberwockyHTKitLocal.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1E1E0A98242E8035002C4BE0 /* JabberwockyHTKitLocal.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		1E1E0AB9242E876D002C4BE0 /* JabberwockyHTKitCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E1E0AB8242E876D002C4BE0 /* JabberwockyHTKitCore.framework */; };
-		1E1E0ABA242E876D002C4BE0 /* JabberwockyHTKitCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1E1E0AB8242E876D002C4BE0 /* JabberwockyHTKitCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1E1E0ABC242E896B002C4BE0 /* JabberwockyHTKitCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E1E0AB8242E876D002C4BE0 /* JabberwockyHTKitCore.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		1E1E0ABD242E896B002C4BE0 /* JabberwockyHTKitCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1E1E0AB8242E876D002C4BE0 /* JabberwockyHTKitCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1E1E0ABE242E8DBE002C4BE0 /* JabberwockyHTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E7C63F12424090A00D97089 /* JabberwockyHTKit.framework */; };
 		1E1E0ABF242E8DBE002C4BE0 /* JabberwockyHTKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1E7C63F12424090A00D97089 /* JabberwockyHTKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1E1E0AC3242E982E002C4BE0 /* JabberwockyHTKitCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E1E0AB8242E876D002C4BE0 /* JabberwockyHTKitCore.framework */; };
+		1E1E0AC4242E982E002C4BE0 /* JabberwockyHTKitCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1E1E0AB8242E876D002C4BE0 /* JabberwockyHTKitCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1E1E0AC8242E9A2E002C4BE0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E1E0AC7242E9A2E002C4BE0 /* LaunchScreen.storyboard */; };
+		1E1E0AC9242E9A2E002C4BE0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E1E0AC7242E9A2E002C4BE0 /* LaunchScreen.storyboard */; };
+		1E1E0ACA242E9A2E002C4BE0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E1E0AC7242E9A2E002C4BE0 /* LaunchScreen.storyboard */; };
 		1E7C64022424090A00D97089 /* JabberwockyHTKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E7C63F42424090A00D97089 /* JabberwockyHTKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1E7C647424240A0200D97089 /* UIControl+Focusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C640C24240A0100D97089 /* UIControl+Focusable.swift */; };
 		1E7C647524240A0200D97089 /* FocusableGlassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C640D24240A0100D97089 /* FocusableGlassView.swift */; };
@@ -176,7 +177,6 @@
 		1E7C64E024251C1C00D97089 /* CursorBlinkClickFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C64DF24251C1C00D97089 /* CursorBlinkClickFeature.swift */; };
 		1E7C652624255BA000D97089 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C652524255BA000D97089 /* AppDelegate.swift */; };
 		1E7C652F24255BA200D97089 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E7C652E24255BA200D97089 /* Assets.xcassets */; };
-		1E7C65402425701400D97089 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E7C653F2425701400D97089 /* LaunchScreen.storyboard */; };
 		1E7C65422425B2B100D97089 /* CursorRecalibrationFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C65412425B2B100D97089 /* CursorRecalibrationFeature.swift */; };
 		25AFD9402CDDB9C02D977AB2 /* Pods_JabberwockyHTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 501F47B2164643C80B43A2D0 /* Pods_JabberwockyHTKit.framework */; };
 		4D9E44F10EB8DFA04B9477BD /* Pods_BasicTutorial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C215212007476EDFB2CBB63E /* Pods_BasicTutorial.framework */; };
@@ -213,17 +213,6 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1E1E0ABB242E876D002C4BE0 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				1E1E0ABA242E876D002C4BE0 /* JabberwockyHTKitCore.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		1E1E0AC2242E8DBE002C4BE0 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -231,6 +220,17 @@
 			dstSubfolderSpec = 10;
 			files = (
 				1E1E0ABF242E8DBE002C4BE0 /* JabberwockyHTKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E1E0AC5242E982F002C4BE0 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				1E1E0AC4242E982E002C4BE0 /* JabberwockyHTKitCore.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -245,6 +245,7 @@
 		1E1E0A98242E8035002C4BE0 /* JabberwockyHTKitLocal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JabberwockyHTKitLocal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E1E0AA9242E8098002C4BE0 /* Basic - Local.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Basic - Local.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E1E0AB8242E876D002C4BE0 /* JabberwockyHTKitCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = JabberwockyHTKitCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E1E0AC7242E9A2E002C4BE0 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1E7C63F12424090A00D97089 /* JabberwockyHTKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JabberwockyHTKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E7C63F42424090A00D97089 /* JabberwockyHTKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JabberwockyHTKit.h; sourceTree = "<group>"; };
 		1E7C63F52424090A00D97089 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -325,7 +326,6 @@
 		1E7C652524255BA000D97089 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1E7C652E24255BA200D97089 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1E7C653324255BA200D97089 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1E7C653F2425701400D97089 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = "../../../../ios/private-ios-frameworks-source/HTTutorialApp/Resources/LaunchScreen.storyboard"; sourceTree = "<group>"; };
 		1E7C65412425B2B100D97089 /* CursorRecalibrationFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CursorRecalibrationFeature.swift; sourceTree = "<group>"; };
 		469359539E6625CA0D106CB0 /* Pods-BasicTutorial-PodsOnly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasicTutorial-PodsOnly.release.xcconfig"; path = "Target Support Files/Pods-BasicTutorial-PodsOnly/Pods-BasicTutorial-PodsOnly.release.xcconfig"; sourceTree = "<group>"; };
 		4C6BD36C03E084F335039A88 /* Pods-JabberwockyHTKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JabberwockyHTKit.release.xcconfig"; path = "Target Support Files/Pods-JabberwockyHTKit/Pods-JabberwockyHTKit.release.xcconfig"; sourceTree = "<group>"; };
@@ -350,7 +350,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1E1E0AB9242E876D002C4BE0 /* JabberwockyHTKitCore.framework in Frameworks */,
+				1E1E0AC3242E982E002C4BE0 /* JabberwockyHTKitCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -681,9 +681,9 @@
 		1E7C652424255BA000D97089 /* BasicTutorial */ = {
 			isa = PBXGroup;
 			children = (
+				1E1E0AC7242E9A2E002C4BE0 /* LaunchScreen.storyboard */,
 				1E7C652524255BA000D97089 /* AppDelegate.swift */,
 				1E7C652E24255BA200D97089 /* Assets.xcassets */,
-				1E7C653F2425701400D97089 /* LaunchScreen.storyboard */,
 				1E7C653324255BA200D97089 /* Info.plist */,
 			);
 			path = BasicTutorial;
@@ -759,7 +759,7 @@
 				1E1E0A46242E8035002C4BE0 /* Sources */,
 				1E1E0A8F242E8035002C4BE0 /* Frameworks */,
 				1E1E0A90242E8035002C4BE0 /* Resources */,
-				1E1E0ABB242E876D002C4BE0 /* Embed Frameworks */,
+				1E1E0AC5242E982F002C4BE0 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -875,7 +875,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E1E0A3A242E7F53002C4BE0 /* Assets.xcassets in Resources */,
-				1E1E0A3B242E7F53002C4BE0 /* LaunchScreen.storyboard in Resources */,
+				1E1E0ACA242E9A2E002C4BE0 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -895,7 +895,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E1E0AA2242E8098002C4BE0 /* Assets.xcassets in Resources */,
-				1E1E0AA3242E8098002C4BE0 /* LaunchScreen.storyboard in Resources */,
+				1E1E0AC9242E9A2E002C4BE0 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -915,7 +915,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E7C652F24255BA200D97089 /* Assets.xcassets in Resources */,
-				1E7C65402425701400D97089 /* LaunchScreen.storyboard in Resources */,
+				1E1E0AC8242E9A2E002C4BE0 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
