@@ -9,6 +9,93 @@
 /* Begin PBXBuildFile section */
 		1E1E0A0F242D0513002C4BE0 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 1E1E0A0E242D0513002C4BE0 /* README.md */; };
 		1E1E0A11242D15F8002C4BE0 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 1E1E0A10242D15F8002C4BE0 /* LICENSE */; };
+		1E1E0A36242E7F53002C4BE0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C652524255BA000D97089 /* AppDelegate.swift */; };
+		1E1E0A38242E7F53002C4BE0 /* JabberwockyHTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E7C63F12424090A00D97089 /* JabberwockyHTKit.framework */; };
+		1E1E0A3A242E7F53002C4BE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E7C652E24255BA200D97089 /* Assets.xcassets */; };
+		1E1E0A3B242E7F53002C4BE0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E7C653F2425701400D97089 /* LaunchScreen.storyboard */; };
+		1E1E0A3D242E7F53002C4BE0 /* JabberwockyHTKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1E7C63F12424090A00D97089 /* JabberwockyHTKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1E1E0A45242E8035002C4BE0 /* JabberwockyHTKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E7C63F42424090A00D97089 /* JabberwockyHTKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1E1E0A47242E8035002C4BE0 /* CountdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C643924240A0200D97089 /* CountdownView.swift */; };
+		1E1E0A48242E8035002C4BE0 /* CursorToggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C643B24240A0200D97089 /* CursorToggleButton.swift */; };
+		1E1E0A49242E8035002C4BE0 /* Array+Chunks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C645D24240A0200D97089 /* Array+Chunks.swift */; };
+		1E1E0A4A242E8035002C4BE0 /* InMemorySettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C641C24240A0100D97089 /* InMemorySettings.swift */; };
+		1E1E0A4B242E8035002C4BE0 /* CursorGlassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C643D24240A0200D97089 /* CursorGlassView.swift */; };
+		1E1E0A4C242E8035002C4BE0 /* NSNotification+Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C645624240A0200D97089 /* NSNotification+Keyboard.swift */; };
+		1E1E0A4D242E8035002C4BE0 /* FocusableFacadeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C641024240A0100D97089 /* FocusableFacadeView.swift */; };
+		1E1E0A4E242E8035002C4BE0 /* ImmutableDefaultSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C641A24240A0100D97089 /* ImmutableDefaultSettings.swift */; };
+		1E1E0A4F242E8035002C4BE0 /* StatusBarNotificationBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C644224240A0200D97089 /* StatusBarNotificationBanner.swift */; };
+		1E1E0A50242E8035002C4BE0 /* TooltipGlassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C643E24240A0200D97089 /* TooltipGlassView.swift */; };
+		1E1E0A51242E8035002C4BE0 /* HTDwellTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C641724240A0100D97089 /* HTDwellTime.swift */; };
+		1E1E0A52242E8035002C4BE0 /* FaceMeshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C643724240A0200D97089 /* FaceMeshView.swift */; };
+		1E1E0A53242E8035002C4BE0 /* HTKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C642224240A0100D97089 /* HTKeyboard.swift */; };
+		1E1E0A54242E8035002C4BE0 /* Cursor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C646924240A0200D97089 /* Cursor.swift */; };
+		1E1E0A55242E8035002C4BE0 /* HTAnalytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C647324240A0200D97089 /* HTAnalytics.swift */; };
+		1E1E0A56242E8035002C4BE0 /* CursorBlinkClickFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C64DF24251C1C00D97089 /* CursorBlinkClickFeature.swift */; };
+		1E1E0A57242E8035002C4BE0 /* ClickAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C646B24240A0200D97089 /* ClickAnimator.swift */; };
+		1E1E0A58242E8035002C4BE0 /* StoredSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C642324240A0100D97089 /* StoredSettings.swift */; };
+		1E1E0A59242E8035002C4BE0 /* HTFocusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C640E24240A0100D97089 /* HTFocusable.swift */; };
+		1E1E0A5A242E8035002C4BE0 /* EgressWarningFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C644C24240A0200D97089 /* EgressWarningFeature.swift */; };
+		1E1E0A5B242E8035002C4BE0 /* FaceMeshFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C644924240A0200D97089 /* FaceMeshFeature.swift */; };
+		1E1E0A5C242E8035002C4BE0 /* BannerPositionFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C644024240A0200D97089 /* BannerPositionFrame.swift */; };
+		1E1E0A5D242E8035002C4BE0 /* HTDefaultAnalytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C647224240A0200D97089 /* HTDefaultAnalytics.swift */; };
+		1E1E0A5E242E8035002C4BE0 /* TransformAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C646C24240A0200D97089 /* TransformAnimator.swift */; };
+		1E1E0A5F242E8035002C4BE0 /* DeviceTypeUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C643424240A0100D97089 /* DeviceTypeUtilities.swift */; };
+		1E1E0A60242E8035002C4BE0 /* HTSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C641E24240A0100D97089 /* HTSettings.swift */; };
+		1E1E0A61242E8035002C4BE0 /* HeadTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C641B24240A0100D97089 /* HeadTracking.swift */; };
+		1E1E0A62242E8035002C4BE0 /* FocusableGlassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C640D24240A0100D97089 /* FocusableGlassView.swift */; };
+		1E1E0A63242E8035002C4BE0 /* NSNotification+Cursor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C645424240A0200D97089 /* NSNotification+Cursor.swift */; };
+		1E1E0A64242E8035002C4BE0 /* UIViewController+DefaultScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C646324240A0200D97089 /* UIViewController+DefaultScroll.swift */; };
+		1E1E0A65242E8035002C4BE0 /* HTFeatureUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C644E24240A0200D97089 /* HTFeatureUtils.swift */; };
+		1E1E0A66242E8035002C4BE0 /* CursorDrawFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C644A24240A0200D97089 /* CursorDrawFeature.swift */; };
+		1E1E0A67242E8035002C4BE0 /* WordDrawGraphics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C646E24240A0200D97089 /* WordDrawGraphics.swift */; };
+		1E1E0A68242E8035002C4BE0 /* HTAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C641324240A0100D97089 /* HTAlertController.swift */; };
+		1E1E0A69242E8035002C4BE0 /* HTCursorSensitivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C642124240A0100D97089 /* HTCursorSensitivity.swift */; };
+		1E1E0A6A242E8035002C4BE0 /* CursorScrollFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C644624240A0200D97089 /* CursorScrollFeature.swift */; };
+		1E1E0A6B242E8035002C4BE0 /* CursorMenuWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C642924240A0100D97089 /* CursorMenuWindow.swift */; };
+		1E1E0A6C242E8035002C4BE0 /* CursorMenuFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C645024240A0200D97089 /* CursorMenuFeature.swift */; };
+		1E1E0A6D242E8035002C4BE0 /* HTWindows.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C641924240A0100D97089 /* HTWindows.swift */; };
+		1E1E0A6E242E8035002C4BE0 /* BannerWarningsFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C644F24240A0200D97089 /* BannerWarningsFeature.swift */; };
+		1E1E0A6F242E8035002C4BE0 /* CursorDwellClickFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C64DD24251C0F00D97089 /* CursorDwellClickFeature.swift */; };
+		1E1E0A70242E8035002C4BE0 /* CursorClickAssistFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C644D24240A0200D97089 /* CursorClickAssistFeature.swift */; };
+		1E1E0A71242E8035002C4BE0 /* CursorEffectsWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C642A24240A0100D97089 /* CursorEffectsWindow.swift */; };
+		1E1E0A72242E8035002C4BE0 /* UIView+Subviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C646424240A0200D97089 /* UIView+Subviews.swift */; };
+		1E1E0A73242E8035002C4BE0 /* NotificationBannerQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C644424240A0200D97089 /* NotificationBannerQueue.swift */; };
+		1E1E0A74242E8035002C4BE0 /* UICollectionViewCell+Focusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C641124240A0100D97089 /* UICollectionViewCell+Focusable.swift */; };
+		1E1E0A75242E8035002C4BE0 /* HTBlinkSensitivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C641D24240A0100D97089 /* HTBlinkSensitivity.swift */; };
+		1E1E0A76242E8035002C4BE0 /* Pulsator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C647024240A0200D97089 /* Pulsator.swift */; };
+		1E1E0A77242E8035002C4BE0 /* CursorDrawWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C642B24240A0100D97089 /* CursorDrawWindow.swift */; };
+		1E1E0A78242E8035002C4BE0 /* UIView+FirstResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C645B24240A0200D97089 /* UIView+FirstResponder.swift */; };
+		1E1E0A79242E8035002C4BE0 /* CursorTooltipFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C645124240A0200D97089 /* CursorTooltipFeature.swift */; };
+		1E1E0A7A242E8035002C4BE0 /* FaceMeshWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C642C24240A0100D97089 /* FaceMeshWindow.swift */; };
+		1E1E0A7B242E8035002C4BE0 /* CursorRecalibrationFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C65412425B2B100D97089 /* CursorRecalibrationFeature.swift */; };
+		1E1E0A7C242E8035002C4BE0 /* UIScrollView+ManualScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C645A24240A0200D97089 /* UIScrollView+ManualScroll.swift */; };
+		1E1E0A7D242E8035002C4BE0 /* ImageCursor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C646824240A0200D97089 /* ImageCursor.swift */; };
+		1E1E0A7E242E8035002C4BE0 /* HTFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C644B24240A0200D97089 /* HTFeature.swift */; };
+		1E1E0A7F242E8035002C4BE0 /* HTLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C641F24240A0100D97089 /* HTLayout.swift */; };
+		1E1E0A80242E8035002C4BE0 /* BannerStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C644124240A0200D97089 /* BannerStyle.swift */; };
+		1E1E0A81242E8035002C4BE0 /* HTCursor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C642024240A0100D97089 /* HTCursor.swift */; };
+		1E1E0A82242E8035002C4BE0 /* UITableViewCell+Focusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C640F24240A0100D97089 /* UITableViewCell+Focusable.swift */; };
+		1E1E0A83242E8035002C4BE0 /* ClickAssistWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C642D24240A0100D97089 /* ClickAssistWindow.swift */; };
+		1E1E0A84242E8035002C4BE0 /* CursorIdleFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C644824240A0200D97089 /* CursorIdleFeature.swift */; };
+		1E1E0A85242E8035002C4BE0 /* UIControl+Focusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C640C24240A0100D97089 /* UIControl+Focusable.swift */; };
+		1E1E0A86242E8035002C4BE0 /* HTThemes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C641824240A0100D97089 /* HTThemes.swift */; };
+		1E1E0A87242E8035002C4BE0 /* CursorToggleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C643C24240A0200D97089 /* CursorToggleView.swift */; };
+		1E1E0A88242E8035002C4BE0 /* ChargingTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C643024240A0100D97089 /* ChargingTimer.swift */; };
+		1E1E0A89242E8035002C4BE0 /* CameraWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C642824240A0100D97089 /* CameraWindow.swift */; };
+		1E1E0A8A242E8035002C4BE0 /* UIBezierPath+LineThroughPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C646124240A0200D97089 /* UIBezierPath+LineThroughPoints.swift */; };
+		1E1E0A8B242E8035002C4BE0 /* UIWindow+TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C645E24240A0200D97089 /* UIWindow+TopViewController.swift */; };
+		1E1E0A8C242E8035002C4BE0 /* UIFont+Traits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C646524240A0200D97089 /* UIFont+Traits.swift */; };
+		1E1E0A8D242E8035002C4BE0 /* HTSounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C641624240A0100D97089 /* HTSounds.swift */; };
+		1E1E0A8E242E8035002C4BE0 /* BaseNotificationBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C644324240A0200D97089 /* BaseNotificationBanner.swift */; };
+		1E1E0A91242E8035002C4BE0 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 1E1E0A0E242D0513002C4BE0 /* README.md */; };
+		1E1E0A92242E8035002C4BE0 /* CursorAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E7C642624240A0100D97089 /* CursorAssets.xcassets */; };
+		1E1E0A93242E8035002C4BE0 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 1E1E0A10242D15F8002C4BE0 /* LICENSE */; };
+		1E1E0A94242E8035002C4BE0 /* Models.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E7C642524240A0100D97089 /* Models.scnassets */; };
+		1E1E0A9E242E8098002C4BE0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C652524255BA000D97089 /* AppDelegate.swift */; };
+		1E1E0AA0242E8098002C4BE0 /* JabberwockyHTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E7C63F12424090A00D97089 /* JabberwockyHTKit.framework */; };
+		1E1E0AA2242E8098002C4BE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E7C652E24255BA200D97089 /* Assets.xcassets */; };
+		1E1E0AA3242E8098002C4BE0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E7C653F2425701400D97089 /* LaunchScreen.storyboard */; };
+		1E1E0AA5242E8098002C4BE0 /* JabberwockyHTKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1E7C63F12424090A00D97089 /* JabberwockyHTKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1E7C64022424090A00D97089 /* JabberwockyHTKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E7C63F42424090A00D97089 /* JabberwockyHTKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1E7C647424240A0200D97089 /* UIControl+Focusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C640C24240A0100D97089 /* UIControl+Focusable.swift */; };
 		1E7C647524240A0200D97089 /* FocusableGlassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C640D24240A0100D97089 /* FocusableGlassView.swift */; };
@@ -92,6 +179,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		1E1E0A34242E7F53002C4BE0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1E7C63E82424090A00D97089 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1E7C63F02424090A00D97089;
+			remoteInfo = JabberwockyHTKit;
+		};
+		1E1E0A9C242E8098002C4BE0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1E7C63E82424090A00D97089 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1E7C63F02424090A00D97089;
+			remoteInfo = JabberwockyHTKit;
+		};
 		1E7C65392425640C00D97089 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1E7C63E82424090A00D97089 /* Project object */;
@@ -102,6 +203,28 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		1E1E0A3C242E7F53002C4BE0 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				1E1E0A3D242E7F53002C4BE0 /* JabberwockyHTKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E1E0AA4242E8098002C4BE0 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				1E1E0AA5242E8098002C4BE0 /* JabberwockyHTKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1E7C653B2425640D00D97089 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -118,6 +241,9 @@
 /* Begin PBXFileReference section */
 		1E1E0A0E242D0513002C4BE0 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		1E1E0A10242D15F8002C4BE0 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		1E1E0A41242E7F53002C4BE0 /* BasicTutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BasicTutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E1E0A98242E8035002C4BE0 /* JabberwockyHTKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JabberwockyHTKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E1E0AA9242E8098002C4BE0 /* BasicTutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BasicTutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E7C63F12424090A00D97089 /* JabberwockyHTKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JabberwockyHTKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E7C63F42424090A00D97089 /* JabberwockyHTKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JabberwockyHTKit.h; sourceTree = "<group>"; };
 		1E7C63F52424090A00D97089 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -194,7 +320,7 @@
 		1E7C647324240A0200D97089 /* HTAnalytics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTAnalytics.swift; sourceTree = "<group>"; };
 		1E7C64DD24251C0F00D97089 /* CursorDwellClickFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CursorDwellClickFeature.swift; sourceTree = "<group>"; };
 		1E7C64DF24251C1C00D97089 /* CursorBlinkClickFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CursorBlinkClickFeature.swift; sourceTree = "<group>"; };
-		1E7C652324255BA000D97089 /* Basic Tutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Basic Tutorial.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E7C652324255BA000D97089 /* BasicTutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BasicTutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E7C652524255BA000D97089 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1E7C652E24255BA200D97089 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1E7C653324255BA200D97089 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -203,6 +329,29 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		1E1E0A37242E7F53002C4BE0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E1E0A38242E7F53002C4BE0 /* JabberwockyHTKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E1E0A8F242E8035002C4BE0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E1E0A9F242E8098002C4BE0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E1E0AA0242E8098002C4BE0 /* JabberwockyHTKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1E7C63EE2424090A00D97089 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -237,7 +386,10 @@
 			isa = PBXGroup;
 			children = (
 				1E7C63F12424090A00D97089 /* JabberwockyHTKit.framework */,
-				1E7C652324255BA000D97089 /* Basic Tutorial.app */,
+				1E7C652324255BA000D97089 /* BasicTutorial.app */,
+				1E1E0A41242E7F53002C4BE0 /* BasicTutorial.app */,
+				1E1E0A98242E8035002C4BE0 /* JabberwockyHTKit.framework */,
+				1E1E0AA9242E8098002C4BE0 /* BasicTutorial.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -530,6 +682,14 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		1E1E0A44242E8035002C4BE0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E1E0A45242E8035002C4BE0 /* JabberwockyHTKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1E7C63EC2424090A00D97089 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -541,6 +701,62 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		1E1E0A32242E7F53002C4BE0 /* BasicTutorial-PodsOnly */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1E1E0A3E242E7F53002C4BE0 /* Build configuration list for PBXNativeTarget "BasicTutorial-PodsOnly" */;
+			buildPhases = (
+				1E1E0A35242E7F53002C4BE0 /* Sources */,
+				1E1E0A37242E7F53002C4BE0 /* Frameworks */,
+				1E1E0A39242E7F53002C4BE0 /* Resources */,
+				1E1E0A3C242E7F53002C4BE0 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1E1E0A33242E7F53002C4BE0 /* PBXTargetDependency */,
+			);
+			name = "BasicTutorial-PodsOnly";
+			productName = HTTutorial;
+			productReference = 1E1E0A41242E7F53002C4BE0 /* BasicTutorial.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1E1E0A43242E8035002C4BE0 /* JabberwockyHTKit-LocalDev */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1E1E0A95242E8035002C4BE0 /* Build configuration list for PBXNativeTarget "JabberwockyHTKit-LocalDev" */;
+			buildPhases = (
+				1E1E0A44242E8035002C4BE0 /* Headers */,
+				1E1E0A46242E8035002C4BE0 /* Sources */,
+				1E1E0A8F242E8035002C4BE0 /* Frameworks */,
+				1E1E0A90242E8035002C4BE0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "JabberwockyHTKit-LocalDev";
+			productName = JabberwockyHTKit;
+			productReference = 1E1E0A98242E8035002C4BE0 /* JabberwockyHTKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		1E1E0A9A242E8098002C4BE0 /* BasicTutorial-LocalDev */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1E1E0AA6242E8098002C4BE0 /* Build configuration list for PBXNativeTarget "BasicTutorial-LocalDev" */;
+			buildPhases = (
+				1E1E0A9D242E8098002C4BE0 /* Sources */,
+				1E1E0A9F242E8098002C4BE0 /* Frameworks */,
+				1E1E0AA1242E8098002C4BE0 /* Resources */,
+				1E1E0AA4242E8098002C4BE0 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1E1E0A9B242E8098002C4BE0 /* PBXTargetDependency */,
+			);
+			name = "BasicTutorial-LocalDev";
+			productName = HTTutorial;
+			productReference = 1E1E0AA9242E8098002C4BE0 /* BasicTutorial.app */;
+			productType = "com.apple.product-type.application";
+		};
 		1E7C63F02424090A00D97089 /* JabberwockyHTKit */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1E7C64052424090A00D97089 /* Build configuration list for PBXNativeTarget "JabberwockyHTKit" */;
@@ -575,7 +791,7 @@
 			);
 			name = BasicTutorial;
 			productName = HTTutorial;
-			productReference = 1E7C652324255BA000D97089 /* Basic Tutorial.app */;
+			productReference = 1E7C652324255BA000D97089 /* BasicTutorial.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -610,12 +826,44 @@
 			projectRoot = "";
 			targets = (
 				1E7C63F02424090A00D97089 /* JabberwockyHTKit */,
+				1E1E0A43242E8035002C4BE0 /* JabberwockyHTKit-LocalDev */,
 				1E7C652224255BA000D97089 /* BasicTutorial */,
+				1E1E0A9A242E8098002C4BE0 /* BasicTutorial-LocalDev */,
+				1E1E0A32242E7F53002C4BE0 /* BasicTutorial-PodsOnly */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		1E1E0A39242E7F53002C4BE0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E1E0A3A242E7F53002C4BE0 /* Assets.xcassets in Resources */,
+				1E1E0A3B242E7F53002C4BE0 /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E1E0A90242E8035002C4BE0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E1E0A91242E8035002C4BE0 /* README.md in Resources */,
+				1E1E0A92242E8035002C4BE0 /* CursorAssets.xcassets in Resources */,
+				1E1E0A93242E8035002C4BE0 /* LICENSE in Resources */,
+				1E1E0A94242E8035002C4BE0 /* Models.scnassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E1E0AA1242E8098002C4BE0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E1E0AA2242E8098002C4BE0 /* Assets.xcassets in Resources */,
+				1E1E0AA3242E8098002C4BE0 /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1E7C63EF2424090A00D97089 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -639,6 +887,101 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		1E1E0A35242E7F53002C4BE0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E1E0A36242E7F53002C4BE0 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E1E0A46242E8035002C4BE0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E1E0A47242E8035002C4BE0 /* CountdownView.swift in Sources */,
+				1E1E0A48242E8035002C4BE0 /* CursorToggleButton.swift in Sources */,
+				1E1E0A49242E8035002C4BE0 /* Array+Chunks.swift in Sources */,
+				1E1E0A4A242E8035002C4BE0 /* InMemorySettings.swift in Sources */,
+				1E1E0A4B242E8035002C4BE0 /* CursorGlassView.swift in Sources */,
+				1E1E0A4C242E8035002C4BE0 /* NSNotification+Keyboard.swift in Sources */,
+				1E1E0A4D242E8035002C4BE0 /* FocusableFacadeView.swift in Sources */,
+				1E1E0A4E242E8035002C4BE0 /* ImmutableDefaultSettings.swift in Sources */,
+				1E1E0A4F242E8035002C4BE0 /* StatusBarNotificationBanner.swift in Sources */,
+				1E1E0A50242E8035002C4BE0 /* TooltipGlassView.swift in Sources */,
+				1E1E0A51242E8035002C4BE0 /* HTDwellTime.swift in Sources */,
+				1E1E0A52242E8035002C4BE0 /* FaceMeshView.swift in Sources */,
+				1E1E0A53242E8035002C4BE0 /* HTKeyboard.swift in Sources */,
+				1E1E0A54242E8035002C4BE0 /* Cursor.swift in Sources */,
+				1E1E0A55242E8035002C4BE0 /* HTAnalytics.swift in Sources */,
+				1E1E0A56242E8035002C4BE0 /* CursorBlinkClickFeature.swift in Sources */,
+				1E1E0A57242E8035002C4BE0 /* ClickAnimator.swift in Sources */,
+				1E1E0A58242E8035002C4BE0 /* StoredSettings.swift in Sources */,
+				1E1E0A59242E8035002C4BE0 /* HTFocusable.swift in Sources */,
+				1E1E0A5A242E8035002C4BE0 /* EgressWarningFeature.swift in Sources */,
+				1E1E0A5B242E8035002C4BE0 /* FaceMeshFeature.swift in Sources */,
+				1E1E0A5C242E8035002C4BE0 /* BannerPositionFrame.swift in Sources */,
+				1E1E0A5D242E8035002C4BE0 /* HTDefaultAnalytics.swift in Sources */,
+				1E1E0A5E242E8035002C4BE0 /* TransformAnimator.swift in Sources */,
+				1E1E0A5F242E8035002C4BE0 /* DeviceTypeUtilities.swift in Sources */,
+				1E1E0A60242E8035002C4BE0 /* HTSettings.swift in Sources */,
+				1E1E0A61242E8035002C4BE0 /* HeadTracking.swift in Sources */,
+				1E1E0A62242E8035002C4BE0 /* FocusableGlassView.swift in Sources */,
+				1E1E0A63242E8035002C4BE0 /* NSNotification+Cursor.swift in Sources */,
+				1E1E0A64242E8035002C4BE0 /* UIViewController+DefaultScroll.swift in Sources */,
+				1E1E0A65242E8035002C4BE0 /* HTFeatureUtils.swift in Sources */,
+				1E1E0A66242E8035002C4BE0 /* CursorDrawFeature.swift in Sources */,
+				1E1E0A67242E8035002C4BE0 /* WordDrawGraphics.swift in Sources */,
+				1E1E0A68242E8035002C4BE0 /* HTAlertController.swift in Sources */,
+				1E1E0A69242E8035002C4BE0 /* HTCursorSensitivity.swift in Sources */,
+				1E1E0A6A242E8035002C4BE0 /* CursorScrollFeature.swift in Sources */,
+				1E1E0A6B242E8035002C4BE0 /* CursorMenuWindow.swift in Sources */,
+				1E1E0A6C242E8035002C4BE0 /* CursorMenuFeature.swift in Sources */,
+				1E1E0A6D242E8035002C4BE0 /* HTWindows.swift in Sources */,
+				1E1E0A6E242E8035002C4BE0 /* BannerWarningsFeature.swift in Sources */,
+				1E1E0A6F242E8035002C4BE0 /* CursorDwellClickFeature.swift in Sources */,
+				1E1E0A70242E8035002C4BE0 /* CursorClickAssistFeature.swift in Sources */,
+				1E1E0A71242E8035002C4BE0 /* CursorEffectsWindow.swift in Sources */,
+				1E1E0A72242E8035002C4BE0 /* UIView+Subviews.swift in Sources */,
+				1E1E0A73242E8035002C4BE0 /* NotificationBannerQueue.swift in Sources */,
+				1E1E0A74242E8035002C4BE0 /* UICollectionViewCell+Focusable.swift in Sources */,
+				1E1E0A75242E8035002C4BE0 /* HTBlinkSensitivity.swift in Sources */,
+				1E1E0A76242E8035002C4BE0 /* Pulsator.swift in Sources */,
+				1E1E0A77242E8035002C4BE0 /* CursorDrawWindow.swift in Sources */,
+				1E1E0A78242E8035002C4BE0 /* UIView+FirstResponder.swift in Sources */,
+				1E1E0A79242E8035002C4BE0 /* CursorTooltipFeature.swift in Sources */,
+				1E1E0A7A242E8035002C4BE0 /* FaceMeshWindow.swift in Sources */,
+				1E1E0A7B242E8035002C4BE0 /* CursorRecalibrationFeature.swift in Sources */,
+				1E1E0A7C242E8035002C4BE0 /* UIScrollView+ManualScroll.swift in Sources */,
+				1E1E0A7D242E8035002C4BE0 /* ImageCursor.swift in Sources */,
+				1E1E0A7E242E8035002C4BE0 /* HTFeature.swift in Sources */,
+				1E1E0A7F242E8035002C4BE0 /* HTLayout.swift in Sources */,
+				1E1E0A80242E8035002C4BE0 /* BannerStyle.swift in Sources */,
+				1E1E0A81242E8035002C4BE0 /* HTCursor.swift in Sources */,
+				1E1E0A82242E8035002C4BE0 /* UITableViewCell+Focusable.swift in Sources */,
+				1E1E0A83242E8035002C4BE0 /* ClickAssistWindow.swift in Sources */,
+				1E1E0A84242E8035002C4BE0 /* CursorIdleFeature.swift in Sources */,
+				1E1E0A85242E8035002C4BE0 /* UIControl+Focusable.swift in Sources */,
+				1E1E0A86242E8035002C4BE0 /* HTThemes.swift in Sources */,
+				1E1E0A87242E8035002C4BE0 /* CursorToggleView.swift in Sources */,
+				1E1E0A88242E8035002C4BE0 /* ChargingTimer.swift in Sources */,
+				1E1E0A89242E8035002C4BE0 /* CameraWindow.swift in Sources */,
+				1E1E0A8A242E8035002C4BE0 /* UIBezierPath+LineThroughPoints.swift in Sources */,
+				1E1E0A8B242E8035002C4BE0 /* UIWindow+TopViewController.swift in Sources */,
+				1E1E0A8C242E8035002C4BE0 /* UIFont+Traits.swift in Sources */,
+				1E1E0A8D242E8035002C4BE0 /* HTSounds.swift in Sources */,
+				1E1E0A8E242E8035002C4BE0 /* BaseNotificationBanner.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E1E0A9D242E8098002C4BE0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E1E0A9E242E8098002C4BE0 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1E7C63ED2424090A00D97089 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -729,6 +1072,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		1E1E0A33242E7F53002C4BE0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1E7C63F02424090A00D97089 /* JabberwockyHTKit */;
+			targetProxy = 1E1E0A34242E7F53002C4BE0 /* PBXContainerItemProxy */;
+		};
+		1E1E0A9B242E8098002C4BE0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1E7C63F02424090A00D97089 /* JabberwockyHTKit */;
+			targetProxy = 1E1E0A9C242E8098002C4BE0 /* PBXContainerItemProxy */;
+		};
 		1E7C653A2425640C00D97089 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 1E7C63F02424090A00D97089 /* JabberwockyHTKit */;
@@ -737,6 +1090,138 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		1E1E0A3F242E7F53002C4BE0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BDJ62329AB;
+				INFOPLIST_FILE = "$(SRCROOT)/Tutorials/BasicTutorial/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.swiftable.jabberwocky.BasicTutorial;
+				PRODUCT_NAME = BasicTutorial;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1E1E0A40242E7F53002C4BE0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BDJ62329AB;
+				INFOPLIST_FILE = "$(SRCROOT)/Tutorials/BasicTutorial/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.swiftable.jabberwocky.BasicTutorial;
+				PRODUCT_NAME = BasicTutorial;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		1E1E0A96242E8035002C4BE0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = BDJ62329AB;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/JabberwockyHTKit/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.swiftable.jabberwocky.JabberwockyHTKit;
+				PRODUCT_NAME = JabberwockyHTKit;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1E1E0A97242E8035002C4BE0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = BDJ62329AB;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/JabberwockyHTKit/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.swiftable.jabberwocky.JabberwockyHTKit;
+				PRODUCT_NAME = JabberwockyHTKit;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		1E1E0AA7242E8098002C4BE0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BDJ62329AB;
+				INFOPLIST_FILE = "$(SRCROOT)/Tutorials/BasicTutorial/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.swiftable.jabberwocky.BasicTutorial;
+				PRODUCT_NAME = BasicTutorial;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1E1E0AA8242E8098002C4BE0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BDJ62329AB;
+				INFOPLIST_FILE = "$(SRCROOT)/Tutorials/BasicTutorial/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.swiftable.jabberwocky.BasicTutorial;
+				PRODUCT_NAME = BasicTutorial;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		1E7C64032424090A00D97089 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -877,9 +1362,9 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.1.0;
+				MARKETING_VERSION = 0.3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = org.swiftable.jabberwocky.JabberwockyHTKit;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = JabberwockyHTKit;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -903,9 +1388,9 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.1.0;
+				MARKETING_VERSION = 0.3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = org.swiftable.jabberwocky.JabberwockyHTKit;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = JabberwockyHTKit;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -926,7 +1411,7 @@
 				);
 				MARKETING_VERSION = 0.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = org.swiftable.jabberwocky.BasicTutorial;
-				PRODUCT_NAME = "Basic Tutorial";
+				PRODUCT_NAME = BasicTutorial;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -946,7 +1431,7 @@
 				);
 				MARKETING_VERSION = 0.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = org.swiftable.jabberwocky.BasicTutorial;
-				PRODUCT_NAME = "Basic Tutorial";
+				PRODUCT_NAME = BasicTutorial;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -955,6 +1440,33 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1E1E0A3E242E7F53002C4BE0 /* Build configuration list for PBXNativeTarget "BasicTutorial-PodsOnly" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E1E0A3F242E7F53002C4BE0 /* Debug */,
+				1E1E0A40242E7F53002C4BE0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1E1E0A95242E8035002C4BE0 /* Build configuration list for PBXNativeTarget "JabberwockyHTKit-LocalDev" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E1E0A96242E8035002C4BE0 /* Debug */,
+				1E1E0A97242E8035002C4BE0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1E1E0AA6242E8098002C4BE0 /* Build configuration list for PBXNativeTarget "BasicTutorial-LocalDev" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E1E0AA7242E8098002C4BE0 /* Debug */,
+				1E1E0AA8242E8098002C4BE0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		1E7C63EB2424090A00D97089 /* Build configuration list for PBXProject "JabberwockyHTKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

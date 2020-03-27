@@ -11,3 +11,7 @@ end
 target 'BasicTutorial' do
   pod 'JabberwockyHTKitCore'
 end
+
+target 'BasicTutorial-PodsOnly' do
+  pod 'JabberwockyHTKit'
+end
