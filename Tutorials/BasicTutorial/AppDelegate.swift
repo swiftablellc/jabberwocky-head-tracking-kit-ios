@@ -15,7 +15,7 @@ limitations under the License.
 */
 
 import AVFoundation
-#if LOCAL_DEV
+#if JABBERWOCKY_LOCAL_DEV
   import JabberwockyHTKitLocal
 #else
   import JabberwockyHTKit

@@ -322,7 +322,7 @@
 		1E7C647324240A0200D97089 /* HTAnalytics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTAnalytics.swift; sourceTree = "<group>"; };
 		1E7C64DD24251C0F00D97089 /* CursorDwellClickFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CursorDwellClickFeature.swift; sourceTree = "<group>"; };
 		1E7C64DF24251C1C00D97089 /* CursorBlinkClickFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CursorBlinkClickFeature.swift; sourceTree = "<group>"; };
-		1E7C652324255BA000D97089 /* Basic .app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Basic .app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E7C652324255BA000D97089 /* Basic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Basic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E7C652524255BA000D97089 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1E7C652E24255BA200D97089 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1E7C653324255BA200D97089 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -400,7 +400,7 @@
 			isa = PBXGroup;
 			children = (
 				1E7C63F12424090A00D97089 /* JabberwockyHTKit.framework */,
-				1E7C652324255BA000D97089 /* Basic .app */,
+				1E7C652324255BA000D97089 /* Basic.app */,
 				1E1E0A41242E7F53002C4BE0 /* Basic - Pods.app */,
 				1E1E0A98242E8035002C4BE0 /* JabberwockyHTKitLocal.framework */,
 				1E1E0AA9242E8098002C4BE0 /* Basic - Local.app */,
@@ -826,7 +826,7 @@
 			);
 			name = BasicTutorial;
 			productName = HTTutorial;
-			productReference = 1E7C652324255BA000D97089 /* Basic .app */;
+			productReference = 1E7C652324255BA000D97089 /* Basic.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -1332,7 +1332,7 @@
 				MARKETING_VERSION = 0.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = org.swiftable.jabberwocky.BasicTutorialLocal;
 				PRODUCT_NAME = "Basic - Local";
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG LOCAL_DEV";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG JABBERWOCKY_LOCAL_DEV";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1353,7 +1353,7 @@
 				MARKETING_VERSION = 0.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = org.swiftable.jabberwocky.BasicTutorialLocal;
 				PRODUCT_NAME = "Basic - Local";
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = LOCAL_DEV;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = JABBERWOCKY_LOCAL_DEV;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1551,7 +1551,7 @@
 				);
 				MARKETING_VERSION = 0.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = org.swiftable.jabberwocky.BasicTutorial;
-				PRODUCT_NAME = "Basic ";
+				PRODUCT_NAME = Basic;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1572,7 +1572,7 @@
 				);
 				MARKETING_VERSION = 0.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = org.swiftable.jabberwocky.BasicTutorial;
-				PRODUCT_NAME = "Basic ";
+				PRODUCT_NAME = Basic;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
