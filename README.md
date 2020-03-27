@@ -21,4 +21,4 @@ Both `JabberwockyHTKit` and `JabberwockyHTKitCore` are available in the [Jabberw
 
 
 ## Trademarks
-Jabberwocky® is a [registered trademark](http://tmsearch.uspto.gov/bin/showfield?f=doc&state=4810:1r62r7.2.1) of Swiftable LLC.
+Jabberwocky® is a registered trademark of Swiftable LLC.
