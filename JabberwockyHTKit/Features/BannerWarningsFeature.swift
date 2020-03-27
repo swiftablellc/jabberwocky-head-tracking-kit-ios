@@ -55,13 +55,13 @@ import UIKit
         enabled = true
         NotificationCenter.default.addObserver(
             self, selector: #selector(self.onBannerUpdateNotification),
-            name: .onHeadTrackingWarningNotification, object: nil)
+            name: .htOnWarningNotification, object: nil)
     }
     
     @objc public func disable() {
         enabled = false
         NotificationCenter.default.removeObserver(
-            self, name: .onHeadTrackingWarningNotification, object: nil)
+            self, name: .htOnWarningNotification, object: nil)
     }
 
     // MARK: Internal
