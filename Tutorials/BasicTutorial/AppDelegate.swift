@@ -15,7 +15,11 @@ limitations under the License.
 */
 
 import AVFoundation
-import JabberwockyHTKit
+#if LOCAL_DEV
+  import JabberwockyHTKitLocal
+#else
+  import JabberwockyHTKit
+#endif
 import UIKit
 
 @UIApplicationMain

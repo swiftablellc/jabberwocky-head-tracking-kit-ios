@@ -15,6 +15,7 @@ limitations under the License.
 */
 
 import CoreGraphics
+import Foundation
 
 @objc public class HTCursor: NSObject {
     

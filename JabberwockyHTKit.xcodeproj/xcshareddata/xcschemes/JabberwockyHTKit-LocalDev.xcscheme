@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "1E1E0A43242E8035002C4BE0"
-               BuildableName = "JabberwockyHTKit-LocalDev.framework"
+               BuildableName = "JabberwockyHTKitLocal.framework"
                BlueprintName = "JabberwockyHTKit-LocalDev"
                ReferencedContainer = "container:JabberwockyHTKit.xcodeproj">
             </BuildableReference>
@@ -51,7 +51,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1E1E0A43242E8035002C4BE0"
-            BuildableName = "JabberwockyHTKit-LocalDev.framework"
+            BuildableName = "JabberwockyHTKitLocal.framework"
             BlueprintName = "JabberwockyHTKit-LocalDev"
             ReferencedContainer = "container:JabberwockyHTKit.xcodeproj">
          </BuildableReference>

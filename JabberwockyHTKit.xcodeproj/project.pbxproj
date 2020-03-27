@@ -3,17 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		1E1E0A0F242D0513002C4BE0 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 1E1E0A0E242D0513002C4BE0 /* README.md */; };
 		1E1E0A11242D15F8002C4BE0 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 1E1E0A10242D15F8002C4BE0 /* LICENSE */; };
 		1E1E0A36242E7F53002C4BE0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C652524255BA000D97089 /* AppDelegate.swift */; };
-		1E1E0A38242E7F53002C4BE0 /* JabberwockyHTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E7C63F12424090A00D97089 /* JabberwockyHTKit.framework */; };
 		1E1E0A3A242E7F53002C4BE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E7C652E24255BA200D97089 /* Assets.xcassets */; };
 		1E1E0A3B242E7F53002C4BE0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E7C653F2425701400D97089 /* LaunchScreen.storyboard */; };
-		1E1E0A3D242E7F53002C4BE0 /* JabberwockyHTKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1E7C63F12424090A00D97089 /* JabberwockyHTKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1E1E0A45242E8035002C4BE0 /* JabberwockyHTKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E7C63F42424090A00D97089 /* JabberwockyHTKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1E1E0A47242E8035002C4BE0 /* CountdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C643924240A0200D97089 /* CountdownView.swift */; };
 		1E1E0A48242E8035002C4BE0 /* CursorToggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C643B24240A0200D97089 /* CursorToggleButton.swift */; };
@@ -92,10 +90,16 @@
 		1E1E0A93242E8035002C4BE0 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 1E1E0A10242D15F8002C4BE0 /* LICENSE */; };
 		1E1E0A94242E8035002C4BE0 /* Models.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E7C642524240A0100D97089 /* Models.scnassets */; };
 		1E1E0A9E242E8098002C4BE0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C652524255BA000D97089 /* AppDelegate.swift */; };
-		1E1E0AA0242E8098002C4BE0 /* JabberwockyHTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E7C63F12424090A00D97089 /* JabberwockyHTKit.framework */; };
 		1E1E0AA2242E8098002C4BE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E7C652E24255BA200D97089 /* Assets.xcassets */; };
 		1E1E0AA3242E8098002C4BE0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E7C653F2425701400D97089 /* LaunchScreen.storyboard */; };
-		1E1E0AA5242E8098002C4BE0 /* JabberwockyHTKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1E7C63F12424090A00D97089 /* JabberwockyHTKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1E1E0AAB242E85D5002C4BE0 /* JabberwockyHTKitLocal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E1E0A98242E8035002C4BE0 /* JabberwockyHTKitLocal.framework */; };
+		1E1E0AAC242E85D5002C4BE0 /* JabberwockyHTKitLocal.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1E1E0A98242E8035002C4BE0 /* JabberwockyHTKitLocal.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1E1E0AB9242E876D002C4BE0 /* JabberwockyHTKitCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E1E0AB8242E876D002C4BE0 /* JabberwockyHTKitCore.framework */; };
+		1E1E0ABA242E876D002C4BE0 /* JabberwockyHTKitCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1E1E0AB8242E876D002C4BE0 /* JabberwockyHTKitCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1E1E0ABC242E896B002C4BE0 /* JabberwockyHTKitCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E1E0AB8242E876D002C4BE0 /* JabberwockyHTKitCore.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		1E1E0ABD242E896B002C4BE0 /* JabberwockyHTKitCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1E1E0AB8242E876D002C4BE0 /* JabberwockyHTKitCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1E1E0ABE242E8DBE002C4BE0 /* JabberwockyHTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E7C63F12424090A00D97089 /* JabberwockyHTKit.framework */; };
+		1E1E0ABF242E8DBE002C4BE0 /* JabberwockyHTKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1E7C63F12424090A00D97089 /* JabberwockyHTKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1E7C64022424090A00D97089 /* JabberwockyHTKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E7C63F42424090A00D97089 /* JabberwockyHTKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1E7C647424240A0200D97089 /* UIControl+Focusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C640C24240A0100D97089 /* UIControl+Focusable.swift */; };
 		1E7C647524240A0200D97089 /* FocusableGlassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C640D24240A0100D97089 /* FocusableGlassView.swift */; };
@@ -172,28 +176,22 @@
 		1E7C64E024251C1C00D97089 /* CursorBlinkClickFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C64DF24251C1C00D97089 /* CursorBlinkClickFeature.swift */; };
 		1E7C652624255BA000D97089 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C652524255BA000D97089 /* AppDelegate.swift */; };
 		1E7C652F24255BA200D97089 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E7C652E24255BA200D97089 /* Assets.xcassets */; };
-		1E7C65372425640C00D97089 /* JabberwockyHTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E7C63F12424090A00D97089 /* JabberwockyHTKit.framework */; };
-		1E7C65382425640C00D97089 /* JabberwockyHTKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1E7C63F12424090A00D97089 /* JabberwockyHTKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1E7C65402425701400D97089 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E7C653F2425701400D97089 /* LaunchScreen.storyboard */; };
 		1E7C65422425B2B100D97089 /* CursorRecalibrationFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C65412425B2B100D97089 /* CursorRecalibrationFeature.swift */; };
+		25AFD9402CDDB9C02D977AB2 /* Pods_JabberwockyHTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 501F47B2164643C80B43A2D0 /* Pods_JabberwockyHTKit.framework */; };
+		4D9E44F10EB8DFA04B9477BD /* Pods_BasicTutorial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C215212007476EDFB2CBB63E /* Pods_BasicTutorial.framework */; };
+		DFE49DB34BF0318B2DF43BA1 /* Pods_BasicTutorial_PodsOnly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B07850C7B23C685B285AC30 /* Pods_BasicTutorial_PodsOnly.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		1E1E0A34242E7F53002C4BE0 /* PBXContainerItemProxy */ = {
+		1E1E0AAD242E85D5002C4BE0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1E7C63E82424090A00D97089 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 1E7C63F02424090A00D97089;
-			remoteInfo = JabberwockyHTKit;
+			remoteGlobalIDString = 1E1E0A43242E8035002C4BE0;
+			remoteInfo = "JabberwockyHTKit-LocalDev";
 		};
-		1E1E0A9C242E8098002C4BE0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1E7C63E82424090A00D97089 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 1E7C63F02424090A00D97089;
-			remoteInfo = JabberwockyHTKit;
-		};
-		1E7C65392425640C00D97089 /* PBXContainerItemProxy */ = {
+		1E1E0AC0242E8DBE002C4BE0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1E7C63E82424090A00D97089 /* Project object */;
 			proxyType = 1;
@@ -203,35 +201,36 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		1E1E0A3C242E7F53002C4BE0 /* Embed Frameworks */ = {
+		1E1E0AAF242E85D5002C4BE0 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				1E1E0A3D242E7F53002C4BE0 /* JabberwockyHTKit.framework in Embed Frameworks */,
+				1E1E0ABD242E896B002C4BE0 /* JabberwockyHTKitCore.framework in Embed Frameworks */,
+				1E1E0AAC242E85D5002C4BE0 /* JabberwockyHTKitLocal.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1E1E0AA4242E8098002C4BE0 /* Embed Frameworks */ = {
+		1E1E0ABB242E876D002C4BE0 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				1E1E0AA5242E8098002C4BE0 /* JabberwockyHTKit.framework in Embed Frameworks */,
+				1E1E0ABA242E876D002C4BE0 /* JabberwockyHTKitCore.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1E7C653B2425640D00D97089 /* Embed Frameworks */ = {
+		1E1E0AC2242E8DBE002C4BE0 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				1E7C65382425640C00D97089 /* JabberwockyHTKit.framework in Embed Frameworks */,
+				1E1E0ABF242E8DBE002C4BE0 /* JabberwockyHTKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -239,11 +238,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0B07850C7B23C685B285AC30 /* Pods_BasicTutorial_PodsOnly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BasicTutorial_PodsOnly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E1E0A0E242D0513002C4BE0 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		1E1E0A10242D15F8002C4BE0 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		1E1E0A41242E7F53002C4BE0 /* BasicTutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BasicTutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		1E1E0A98242E8035002C4BE0 /* JabberwockyHTKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JabberwockyHTKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1E1E0AA9242E8098002C4BE0 /* BasicTutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BasicTutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E1E0A41242E7F53002C4BE0 /* Basic - Pods.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Basic - Pods.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E1E0A98242E8035002C4BE0 /* JabberwockyHTKitLocal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JabberwockyHTKitLocal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E1E0AA9242E8098002C4BE0 /* Basic - Local.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Basic - Local.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E1E0AB8242E876D002C4BE0 /* JabberwockyHTKitCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = JabberwockyHTKitCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E7C63F12424090A00D97089 /* JabberwockyHTKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JabberwockyHTKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E7C63F42424090A00D97089 /* JabberwockyHTKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JabberwockyHTKit.h; sourceTree = "<group>"; };
 		1E7C63F52424090A00D97089 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -320,12 +321,20 @@
 		1E7C647324240A0200D97089 /* HTAnalytics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTAnalytics.swift; sourceTree = "<group>"; };
 		1E7C64DD24251C0F00D97089 /* CursorDwellClickFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CursorDwellClickFeature.swift; sourceTree = "<group>"; };
 		1E7C64DF24251C1C00D97089 /* CursorBlinkClickFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CursorBlinkClickFeature.swift; sourceTree = "<group>"; };
-		1E7C652324255BA000D97089 /* BasicTutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BasicTutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E7C652324255BA000D97089 /* Basic .app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Basic .app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E7C652524255BA000D97089 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1E7C652E24255BA200D97089 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1E7C653324255BA200D97089 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1E7C653F2425701400D97089 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = "../../../../ios/private-ios-frameworks-source/HTTutorialApp/Resources/LaunchScreen.storyboard"; sourceTree = "<group>"; };
 		1E7C65412425B2B100D97089 /* CursorRecalibrationFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CursorRecalibrationFeature.swift; sourceTree = "<group>"; };
+		469359539E6625CA0D106CB0 /* Pods-BasicTutorial-PodsOnly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasicTutorial-PodsOnly.release.xcconfig"; path = "Target Support Files/Pods-BasicTutorial-PodsOnly/Pods-BasicTutorial-PodsOnly.release.xcconfig"; sourceTree = "<group>"; };
+		4C6BD36C03E084F335039A88 /* Pods-JabberwockyHTKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JabberwockyHTKit.release.xcconfig"; path = "Target Support Files/Pods-JabberwockyHTKit/Pods-JabberwockyHTKit.release.xcconfig"; sourceTree = "<group>"; };
+		501F47B2164643C80B43A2D0 /* Pods_JabberwockyHTKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JabberwockyHTKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		72BC8B77BF80105B32B2DFF5 /* Pods-BasicTutorial-PodsOnly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasicTutorial-PodsOnly.debug.xcconfig"; path = "Target Support Files/Pods-BasicTutorial-PodsOnly/Pods-BasicTutorial-PodsOnly.debug.xcconfig"; sourceTree = "<group>"; };
+		C1E8760EEB83FD1A2813A9F2 /* Pods-BasicTutorial.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasicTutorial.release.xcconfig"; path = "Target Support Files/Pods-BasicTutorial/Pods-BasicTutorial.release.xcconfig"; sourceTree = "<group>"; };
+		C215212007476EDFB2CBB63E /* Pods_BasicTutorial.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BasicTutorial.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBB41E7BAA291BAC94D59310 /* Pods-JabberwockyHTKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JabberwockyHTKit.debug.xcconfig"; path = "Target Support Files/Pods-JabberwockyHTKit/Pods-JabberwockyHTKit.debug.xcconfig"; sourceTree = "<group>"; };
+		F1096426A68F60239F4D270A /* Pods-BasicTutorial.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasicTutorial.debug.xcconfig"; path = "Target Support Files/Pods-BasicTutorial/Pods-BasicTutorial.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -333,7 +342,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1E1E0A38242E7F53002C4BE0 /* JabberwockyHTKit.framework in Frameworks */,
+				DFE49DB34BF0318B2DF43BA1 /* Pods_BasicTutorial_PodsOnly.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +350,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E1E0AB9242E876D002C4BE0 /* JabberwockyHTKitCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,7 +358,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1E1E0AA0242E8098002C4BE0 /* JabberwockyHTKit.framework in Frameworks */,
+				1E1E0ABC242E896B002C4BE0 /* JabberwockyHTKitCore.framework in Frameworks */,
+				1E1E0AAB242E85D5002C4BE0 /* JabberwockyHTKitLocal.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,6 +367,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25AFD9402CDDB9C02D977AB2 /* Pods_JabberwockyHTKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,7 +375,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1E7C65372425640C00D97089 /* JabberwockyHTKit.framework in Frameworks */,
+				4D9E44F10EB8DFA04B9477BD /* Pods_BasicTutorial.framework in Frameworks */,
+				1E1E0ABE242E8DBE002C4BE0 /* JabberwockyHTKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,6 +392,7 @@
 				1E7C653E24256FD900D97089 /* Tutorials */,
 				1E7C63F22424090A00D97089 /* Products */,
 				1E7C64D324244F5200D97089 /* Frameworks */,
+				ABA445A187F97E45258B9097 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -386,10 +400,10 @@
 			isa = PBXGroup;
 			children = (
 				1E7C63F12424090A00D97089 /* JabberwockyHTKit.framework */,
-				1E7C652324255BA000D97089 /* BasicTutorial.app */,
-				1E1E0A41242E7F53002C4BE0 /* BasicTutorial.app */,
-				1E1E0A98242E8035002C4BE0 /* JabberwockyHTKit.framework */,
-				1E1E0AA9242E8098002C4BE0 /* BasicTutorial.app */,
+				1E7C652324255BA000D97089 /* Basic .app */,
+				1E1E0A41242E7F53002C4BE0 /* Basic - Pods.app */,
+				1E1E0A98242E8035002C4BE0 /* JabberwockyHTKitLocal.framework */,
+				1E1E0AA9242E8098002C4BE0 /* Basic - Local.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -656,6 +670,10 @@
 		1E7C64D324244F5200D97089 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1E1E0AB8242E876D002C4BE0 /* JabberwockyHTKitCore.framework */,
+				C215212007476EDFB2CBB63E /* Pods_BasicTutorial.framework */,
+				0B07850C7B23C685B285AC30 /* Pods_BasicTutorial_PodsOnly.framework */,
+				501F47B2164643C80B43A2D0 /* Pods_JabberwockyHTKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -677,6 +695,19 @@
 				1E7C652424255BA000D97089 /* BasicTutorial */,
 			);
 			path = Tutorials;
+			sourceTree = "<group>";
+		};
+		ABA445A187F97E45258B9097 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F1096426A68F60239F4D270A /* Pods-BasicTutorial.debug.xcconfig */,
+				C1E8760EEB83FD1A2813A9F2 /* Pods-BasicTutorial.release.xcconfig */,
+				72BC8B77BF80105B32B2DFF5 /* Pods-BasicTutorial-PodsOnly.debug.xcconfig */,
+				469359539E6625CA0D106CB0 /* Pods-BasicTutorial-PodsOnly.release.xcconfig */,
+				DBB41E7BAA291BAC94D59310 /* Pods-JabberwockyHTKit.debug.xcconfig */,
+				4C6BD36C03E084F335039A88 /* Pods-JabberwockyHTKit.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -705,19 +736,19 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1E1E0A3E242E7F53002C4BE0 /* Build configuration list for PBXNativeTarget "BasicTutorial-PodsOnly" */;
 			buildPhases = (
+				92B22F8AF596DC29425E721B /* [CP] Check Pods Manifest.lock */,
 				1E1E0A35242E7F53002C4BE0 /* Sources */,
 				1E1E0A37242E7F53002C4BE0 /* Frameworks */,
 				1E1E0A39242E7F53002C4BE0 /* Resources */,
-				1E1E0A3C242E7F53002C4BE0 /* Embed Frameworks */,
+				5218F5B6B332E5E9513C4A4F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				1E1E0A33242E7F53002C4BE0 /* PBXTargetDependency */,
 			);
 			name = "BasicTutorial-PodsOnly";
 			productName = HTTutorial;
-			productReference = 1E1E0A41242E7F53002C4BE0 /* BasicTutorial.app */;
+			productReference = 1E1E0A41242E7F53002C4BE0 /* Basic - Pods.app */;
 			productType = "com.apple.product-type.application";
 		};
 		1E1E0A43242E8035002C4BE0 /* JabberwockyHTKit-LocalDev */ = {
@@ -728,6 +759,7 @@
 				1E1E0A46242E8035002C4BE0 /* Sources */,
 				1E1E0A8F242E8035002C4BE0 /* Frameworks */,
 				1E1E0A90242E8035002C4BE0 /* Resources */,
+				1E1E0ABB242E876D002C4BE0 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -735,7 +767,7 @@
 			);
 			name = "JabberwockyHTKit-LocalDev";
 			productName = JabberwockyHTKit;
-			productReference = 1E1E0A98242E8035002C4BE0 /* JabberwockyHTKit.framework */;
+			productReference = 1E1E0A98242E8035002C4BE0 /* JabberwockyHTKitLocal.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		1E1E0A9A242E8098002C4BE0 /* BasicTutorial-LocalDev */ = {
@@ -745,22 +777,23 @@
 				1E1E0A9D242E8098002C4BE0 /* Sources */,
 				1E1E0A9F242E8098002C4BE0 /* Frameworks */,
 				1E1E0AA1242E8098002C4BE0 /* Resources */,
-				1E1E0AA4242E8098002C4BE0 /* Embed Frameworks */,
+				1E1E0AAF242E85D5002C4BE0 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				1E1E0A9B242E8098002C4BE0 /* PBXTargetDependency */,
+				1E1E0AAE242E85D5002C4BE0 /* PBXTargetDependency */,
 			);
 			name = "BasicTutorial-LocalDev";
 			productName = HTTutorial;
-			productReference = 1E1E0AA9242E8098002C4BE0 /* BasicTutorial.app */;
+			productReference = 1E1E0AA9242E8098002C4BE0 /* Basic - Local.app */;
 			productType = "com.apple.product-type.application";
 		};
 		1E7C63F02424090A00D97089 /* JabberwockyHTKit */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1E7C64052424090A00D97089 /* Build configuration list for PBXNativeTarget "JabberwockyHTKit" */;
 			buildPhases = (
+				9964C09E1D39B3AAA68175DF /* [CP] Check Pods Manifest.lock */,
 				1E7C63EC2424090A00D97089 /* Headers */,
 				1E7C63ED2424090A00D97089 /* Sources */,
 				1E7C63EE2424090A00D97089 /* Frameworks */,
@@ -779,19 +812,21 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1E7C653624255BA200D97089 /* Build configuration list for PBXNativeTarget "BasicTutorial" */;
 			buildPhases = (
+				8540F80B5485C1CEE780A0FB /* [CP] Check Pods Manifest.lock */,
 				1E7C651F24255BA000D97089 /* Sources */,
 				1E7C652024255BA000D97089 /* Frameworks */,
 				1E7C652124255BA000D97089 /* Resources */,
-				1E7C653B2425640D00D97089 /* Embed Frameworks */,
+				5E5D8C1530018E53564AE481 /* [CP] Embed Pods Frameworks */,
+				1E1E0AC2242E8DBE002C4BE0 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				1E7C653A2425640C00D97089 /* PBXTargetDependency */,
+				1E1E0AC1242E8DBE002C4BE0 /* PBXTargetDependency */,
 			);
 			name = BasicTutorial;
 			productName = HTTutorial;
-			productReference = 1E7C652324255BA000D97089 /* BasicTutorial.app */;
+			productReference = 1E7C652324255BA000D97089 /* Basic .app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -885,6 +920,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5218F5B6B332E5E9513C4A4F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BasicTutorial-PodsOnly/Pods-BasicTutorial-PodsOnly-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BasicTutorial-PodsOnly/Pods-BasicTutorial-PodsOnly-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BasicTutorial-PodsOnly/Pods-BasicTutorial-PodsOnly-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5E5D8C1530018E53564AE481 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BasicTutorial/Pods-BasicTutorial-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BasicTutorial/Pods-BasicTutorial-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BasicTutorial/Pods-BasicTutorial-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8540F80B5485C1CEE780A0FB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BasicTutorial-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		92B22F8AF596DC29425E721B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BasicTutorial-PodsOnly-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9964C09E1D39B3AAA68175DF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JabberwockyHTKit-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1E1E0A35242E7F53002C4BE0 /* Sources */ = {
@@ -1072,26 +1210,22 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		1E1E0A33242E7F53002C4BE0 /* PBXTargetDependency */ = {
+		1E1E0AAE242E85D5002C4BE0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 1E7C63F02424090A00D97089 /* JabberwockyHTKit */;
-			targetProxy = 1E1E0A34242E7F53002C4BE0 /* PBXContainerItemProxy */;
+			target = 1E1E0A43242E8035002C4BE0 /* JabberwockyHTKit-LocalDev */;
+			targetProxy = 1E1E0AAD242E85D5002C4BE0 /* PBXContainerItemProxy */;
 		};
-		1E1E0A9B242E8098002C4BE0 /* PBXTargetDependency */ = {
+		1E1E0AC1242E8DBE002C4BE0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 1E7C63F02424090A00D97089 /* JabberwockyHTKit */;
-			targetProxy = 1E1E0A9C242E8098002C4BE0 /* PBXContainerItemProxy */;
-		};
-		1E7C653A2425640C00D97089 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 1E7C63F02424090A00D97089 /* JabberwockyHTKit */;
-			targetProxy = 1E7C65392425640C00D97089 /* PBXContainerItemProxy */;
+			targetProxy = 1E1E0AC0242E8DBE002C4BE0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		1E1E0A3F242E7F53002C4BE0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 72BC8B77BF80105B32B2DFF5 /* Pods-BasicTutorial-PodsOnly.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -1103,8 +1237,8 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 0.1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = org.swiftable.jabberwocky.BasicTutorial;
-				PRODUCT_NAME = BasicTutorial;
+				PRODUCT_BUNDLE_IDENTIFIER = org.swiftable.jabberwocky.BasicTutorialPods;
+				PRODUCT_NAME = "Basic - Pods";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1112,6 +1246,7 @@
 		};
 		1E1E0A40242E7F53002C4BE0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 469359539E6625CA0D106CB0 /* Pods-BasicTutorial-PodsOnly.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -1123,8 +1258,8 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 0.1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = org.swiftable.jabberwocky.BasicTutorial;
-				PRODUCT_NAME = BasicTutorial;
+				PRODUCT_BUNDLE_IDENTIFIER = org.swiftable.jabberwocky.BasicTutorialPods;
+				PRODUCT_NAME = "Basic - Pods";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1148,8 +1283,8 @@
 					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 0.1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = org.swiftable.jabberwocky.JabberwockyHTKit;
-				PRODUCT_NAME = JabberwockyHTKit;
+				PRODUCT_BUNDLE_IDENTIFIER = org.swiftable.jabberwocky.JabberwockyHTKitLocal;
+				PRODUCT_NAME = JabberwockyHTKitLocal;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1174,8 +1309,8 @@
 					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 0.1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = org.swiftable.jabberwocky.JabberwockyHTKit;
-				PRODUCT_NAME = JabberwockyHTKit;
+				PRODUCT_BUNDLE_IDENTIFIER = org.swiftable.jabberwocky.JabberwockyHTKitLocal;
+				PRODUCT_NAME = JabberwockyHTKitLocal;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1195,8 +1330,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 0.1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = org.swiftable.jabberwocky.BasicTutorial;
-				PRODUCT_NAME = BasicTutorial;
+				PRODUCT_BUNDLE_IDENTIFIER = org.swiftable.jabberwocky.BasicTutorialLocal;
+				PRODUCT_NAME = "Basic - Local";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG LOCAL_DEV";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1215,8 +1351,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 0.1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = org.swiftable.jabberwocky.BasicTutorial;
-				PRODUCT_NAME = BasicTutorial;
+				PRODUCT_BUNDLE_IDENTIFIER = org.swiftable.jabberwocky.BasicTutorialLocal;
+				PRODUCT_NAME = "Basic - Local";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = LOCAL_DEV;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1347,6 +1484,7 @@
 		};
 		1E7C64062424090A00D97089 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DBB41E7BAA291BAC94D59310 /* Pods-JabberwockyHTKit.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -1373,6 +1511,7 @@
 		};
 		1E7C64072424090A00D97089 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C6BD36C03E084F335039A88 /* Pods-JabberwockyHTKit.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -1399,6 +1538,7 @@
 		};
 		1E7C653424255BA200D97089 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F1096426A68F60239F4D270A /* Pods-BasicTutorial.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -1411,7 +1551,7 @@
 				);
 				MARKETING_VERSION = 0.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = org.swiftable.jabberwocky.BasicTutorial;
-				PRODUCT_NAME = BasicTutorial;
+				PRODUCT_NAME = "Basic ";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1419,6 +1559,7 @@
 		};
 		1E7C653524255BA200D97089 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C1E8760EEB83FD1A2813A9F2 /* Pods-BasicTutorial.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -1431,7 +1572,7 @@
 				);
 				MARKETING_VERSION = 0.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = org.swiftable.jabberwocky.BasicTutorial;
-				PRODUCT_NAME = BasicTutorial;
+				PRODUCT_NAME = "Basic ";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

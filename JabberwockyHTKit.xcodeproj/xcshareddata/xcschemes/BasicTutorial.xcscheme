@@ -29,7 +29,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1E7C652224255BA000D97089"
-            BuildableName = "BasicTutorial.app"
+            BuildableName = "Basic.app"
             BlueprintName = "BasicTutorial"
             ReferencedContainer = "container:JabberwockyHTKit.xcodeproj">
          </BuildableReference>

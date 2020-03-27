@@ -14,6 +14,8 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
+import Foundation
+
 extension NSNotification {
     // Notification cursor context object key that is included with each cursor update notification
     @objc public static let keyboardIsVisibleKey: String = "NotificationKeyboardIsVisibleKey"

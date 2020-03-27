@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "1E1E0A9A242E8098002C4BE0"
-               BuildableName = "BasicTutorial-LocalDev.app"
+               BuildableName = "Basic - Local.app"
                BlueprintName = "BasicTutorial-LocalDev"
                ReferencedContainer = "container:JabberwockyHTKit.xcodeproj">
             </BuildableReference>
@@ -45,7 +45,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1E1E0A9A242E8098002C4BE0"
-            BuildableName = "BasicTutorial-LocalDev.app"
+            BuildableName = "Basic - Local.app"
             BlueprintName = "BasicTutorial-LocalDev"
             ReferencedContainer = "container:JabberwockyHTKit.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1E1E0A9A242E8098002C4BE0"
-            BuildableName = "BasicTutorial-LocalDev.app"
+            BuildableName = "Basic - Local.app"
             BlueprintName = "BasicTutorial-LocalDev"
             ReferencedContainer = "container:JabberwockyHTKit.xcodeproj">
          </BuildableReference>

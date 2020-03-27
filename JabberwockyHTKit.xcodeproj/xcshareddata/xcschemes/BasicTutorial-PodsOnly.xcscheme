@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "1E1E0A32242E7F53002C4BE0"
-               BuildableName = "BasicTutorial-PodsOnly.app"
+               BuildableName = "Basic - Pods.app"
                BlueprintName = "BasicTutorial-PodsOnly"
                ReferencedContainer = "container:JabberwockyHTKit.xcodeproj">
             </BuildableReference>
@@ -45,7 +45,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1E1E0A32242E7F53002C4BE0"
-            BuildableName = "BasicTutorial-PodsOnly.app"
+            BuildableName = "Basic - Pods.app"
             BlueprintName = "BasicTutorial-PodsOnly"
             ReferencedContainer = "container:JabberwockyHTKit.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1E1E0A32242E7F53002C4BE0"
-            BuildableName = "BasicTutorial-PodsOnly.app"
+            BuildableName = "Basic - Pods.app"
             BlueprintName = "BasicTutorial-PodsOnly"
             ReferencedContainer = "container:JabberwockyHTKit.xcodeproj">
          </BuildableReference>
