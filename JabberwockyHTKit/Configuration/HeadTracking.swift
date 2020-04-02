@@ -27,10 +27,12 @@ import JabberwockyHTKitCore
     private static let ENABLED_SUCCESSFULLY = "Head Tracking enabled successfully."
     private static let DISABLED_IN_SETTINGS = "Head Tracking was not enabled because it was disabled " +
             "in settings and not enabled with overrideSettings = true."
-    private static let NOT_CONFIGURED_WARNING = "Head Tracking is not configured.  " +
+    private static let NOT_CONFIGURED_WARNING = "Head Tracking is not configured... " +
             "Use HeadTracking.configure() to enable this functionality."
     private static let CONFIGURE_ONCE_WARNING = "Head Tracking should only be configured once... " +
             "Attempts to configure head tracking after the first will be ignored."
+    private static let CANNOT_BE_CONFIGURED_NOT_SUPPORTED = "Head Tracking cannot be configured... " +
+            "It is not supported on this device."
     private static let CANNOT_BE_ENABLED_APP_NO_AUTHORIZATION = "Head Tracking cannot be enabled... " +
             "It is either not supported or authorized on the device."
     private static let FEATURE_CONFIGURED = "%@ configured and %@."
@@ -71,9 +73,14 @@ import JabberwockyHTKitCore
                 shared.settings = InMemorySettings()
             }
             HeadTrackingCore.configure(settings: shared.settings)
-            features.forEach { configureFeature($0) }
-            shared.configured = true
-            NSLog(CONFIGURED_SUCCESSFULLY)
+            
+            if HeadTrackingCore.shared.isSupportedByDevice {
+                features.forEach { configureFeature($0) }
+                shared.configured = true
+                NSLog(CONFIGURED_SUCCESSFULLY)
+            } else {
+                NSLog(CANNOT_BE_CONFIGURED_NOT_SUPPORTED)
+            }
         } else {
             NSLog(CONFIGURE_ONCE_WARNING)
         }
@@ -131,13 +138,14 @@ import JabberwockyHTKitCore
 
     @objc public func enable(overrideDisabledFlag: Bool = false,
                              completion: @escaping (_ success: Bool) -> () = { _ in } ) {
-        guard HeadTrackingCore.shared.isAuthorizedOnDevice else {
-            NSLog(HeadTracking.CANNOT_BE_ENABLED_APP_NO_AUTHORIZATION)
+        guard HeadTracking.shared.configured else {
+            NSLog(HeadTracking.NOT_CONFIGURED_WARNING)
+            completion(false)
             return
         }
         
-        guard HeadTracking.shared.configured else {
-            NSLog(HeadTracking.NOT_CONFIGURED_WARNING)
+        guard HeadTrackingCore.shared.isAuthorizedOnDevice else {
+            NSLog(HeadTracking.CANNOT_BE_ENABLED_APP_NO_AUTHORIZATION)
             completion(false)
             return
         }
@@ -150,6 +158,7 @@ import JabberwockyHTKitCore
             }
         } else {
             NSLog(HeadTracking.DISABLED_IN_SETTINGS)
+            completion(false)
         }
     }
 
