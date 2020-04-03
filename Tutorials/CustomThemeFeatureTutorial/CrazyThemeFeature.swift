@@ -54,7 +54,6 @@ public class CrazyThemeFeature: NSObject, HTFeature {
         ThemeColors.secondaryText = UIColor.yellow
         ThemeColors.standardBackground = UIColor.orange
 
-        /*
         CalibrationTheme.calibrationText = "Crazy Theme"
         CalibrationTheme.circleSize = {
             switch(UIDevice.current.userInterfaceIdiom) {
@@ -82,7 +81,6 @@ public class CrazyThemeFeature: NSObject, HTFeature {
                 return UIFont(name: "Papyrus", size: 40)!
             }
         }()
-        */
 
     }
 
