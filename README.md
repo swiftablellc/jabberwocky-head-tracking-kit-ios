@@ -28,7 +28,7 @@ target '$YOUR_TARGET' do
 end
 ```
 
-* Install the pods
+* Install dependencies using CocoaPods. Install [CocoaPods](https://guides.cocoapods.org/using/getting-started.html) if you haven't already:
 
 ```shell script
 pod install
@@ -110,18 +110,18 @@ import JabberwockyHTKit
 * If you run on a physical device that supports FaceID, you should get XCode output similar to below.
 
 ```shell script
-############################### Basic[19446:10081868] Requested Camera Permission
-############################### Basic[19446:10081868] Head Tracking configured successfully.
-############################### Basic[19446:10081868] Metal API Validation Enabled
-############################### Basic[19446:10081868] Head Tracking enabled successfully.
+Basic[19446:10081868] Requested Camera Permission
+Basic[19446:10081868] Head Tracking configured successfully.
+Basic[19446:10081868] Metal API Validation Enabled
+Basic[19446:10081868] Head Tracking enabled successfully.
 ```
 
 * If you run on a simulator or device that does not support FaceID, you should get XCode output similar to below. `JabberwockyHTKitCore.framework` binary comes with i386 and x86_64 module archs, so that running in a simulator should not crash.
 
 ```
-############################### Basic[2476:18033900] Requested Camera Permission
-############################### Basic[2476:18033900] Head Tracking cannot be configured. It is not supported on this device.
-############################### Basic[2476:18033900] Head Tracking is not configured. Use HeadTracking.configure() to configure.
+Basic[2476:18033900] Requested Camera Permission
+Basic[2476:18033900] Head Tracking cannot be configured. It is not supported on this device.
+Basic[2476:18033900] Head Tracking is not configured. Use HeadTracking.configure() to configure.
 ```
 
 ## Build JabberwockyHTKit from Source
