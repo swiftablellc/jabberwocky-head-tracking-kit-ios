@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E1332DB2437785400D9172B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E1332D72437785400D9172B /* LaunchScreen.storyboard */; };
+		1E1332DC2437785400D9172B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E1332D82437785400D9172B /* Assets.xcassets */; };
+		1E1332E024377A2100D9172B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E1332DF24377A2100D9172B /* main.m */; };
+		1E1332E324377AEF00D9172B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E1332E224377AEF00D9172B /* AppDelegate.m */; };
+		1E1332E424377BEE00D9172B /* AppDelegate.h in Sources */ = {isa = PBXBuildFile; fileRef = 1E1332E124377A9700D9172B /* AppDelegate.h */; };
 		1E1E0A0F242D0513002C4BE0 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 1E1E0A0E242D0513002C4BE0 /* README.md */; };
 		1E1E0A11242D15F8002C4BE0 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 1E1E0A10242D15F8002C4BE0 /* LICENSE */; };
 		1E1E0A36242E7F53002C4BE0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C652524255BA000D97089 /* AppDelegate.swift */; };
@@ -180,6 +185,7 @@
 		1E7C65422425B2B100D97089 /* CursorRecalibrationFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C65412425B2B100D97089 /* CursorRecalibrationFeature.swift */; };
 		25AFD9402CDDB9C02D977AB2 /* Pods_JabberwockyHTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 501F47B2164643C80B43A2D0 /* Pods_JabberwockyHTKit.framework */; };
 		4D9E44F10EB8DFA04B9477BD /* Pods_BasicTutorial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C215212007476EDFB2CBB63E /* Pods_BasicTutorial.framework */; };
+		6331E74C0C6A739F8F9BDA40 /* Pods_ObjcTutorial_PodsOnly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31FB4679CD65B347CAFBFAB7 /* Pods_ObjcTutorial_PodsOnly.framework */; };
 		DFE49DB34BF0318B2DF43BA1 /* Pods_BasicTutorial_PodsOnly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B07850C7B23C685B285AC30 /* Pods_BasicTutorial_PodsOnly.framework */; };
 /* End PBXBuildFile section */
 
@@ -239,6 +245,13 @@
 
 /* Begin PBXFileReference section */
 		0B07850C7B23C685B285AC30 /* Pods_BasicTutorial_PodsOnly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BasicTutorial_PodsOnly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E1332D4243777B500D9172B /* Objc - Pods.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Objc - Pods.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E1332D72437785400D9172B /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1E1332D82437785400D9172B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1E1332DA2437785400D9172B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1E1332DF24377A2100D9172B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1E1332E124377A9700D9172B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1E1332E224377AEF00D9172B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		1E1E0A0E242D0513002C4BE0 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		1E1E0A10242D15F8002C4BE0 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		1E1E0A41242E7F53002C4BE0 /* Basic - Pods.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Basic - Pods.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -327,17 +340,28 @@
 		1E7C652E24255BA200D97089 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1E7C653324255BA200D97089 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1E7C65412425B2B100D97089 /* CursorRecalibrationFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CursorRecalibrationFeature.swift; sourceTree = "<group>"; };
+		31FB4679CD65B347CAFBFAB7 /* Pods_ObjcTutorial_PodsOnly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ObjcTutorial_PodsOnly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		469359539E6625CA0D106CB0 /* Pods-BasicTutorial-PodsOnly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasicTutorial-PodsOnly.release.xcconfig"; path = "Target Support Files/Pods-BasicTutorial-PodsOnly/Pods-BasicTutorial-PodsOnly.release.xcconfig"; sourceTree = "<group>"; };
 		4C6BD36C03E084F335039A88 /* Pods-JabberwockyHTKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JabberwockyHTKit.release.xcconfig"; path = "Target Support Files/Pods-JabberwockyHTKit/Pods-JabberwockyHTKit.release.xcconfig"; sourceTree = "<group>"; };
 		501F47B2164643C80B43A2D0 /* Pods_JabberwockyHTKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JabberwockyHTKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		72BC8B77BF80105B32B2DFF5 /* Pods-BasicTutorial-PodsOnly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasicTutorial-PodsOnly.debug.xcconfig"; path = "Target Support Files/Pods-BasicTutorial-PodsOnly/Pods-BasicTutorial-PodsOnly.debug.xcconfig"; sourceTree = "<group>"; };
 		C1E8760EEB83FD1A2813A9F2 /* Pods-BasicTutorial.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasicTutorial.release.xcconfig"; path = "Target Support Files/Pods-BasicTutorial/Pods-BasicTutorial.release.xcconfig"; sourceTree = "<group>"; };
 		C215212007476EDFB2CBB63E /* Pods_BasicTutorial.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BasicTutorial.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C86A15D6F51A8BB04C9E92DD /* Pods-ObjcTutorial-PodsOnly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ObjcTutorial-PodsOnly.release.xcconfig"; path = "Target Support Files/Pods-ObjcTutorial-PodsOnly/Pods-ObjcTutorial-PodsOnly.release.xcconfig"; sourceTree = "<group>"; };
 		DBB41E7BAA291BAC94D59310 /* Pods-JabberwockyHTKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JabberwockyHTKit.debug.xcconfig"; path = "Target Support Files/Pods-JabberwockyHTKit/Pods-JabberwockyHTKit.debug.xcconfig"; sourceTree = "<group>"; };
+		E24F6194FCABE6CBBC768E4A /* Pods-ObjcTutorial-PodsOnly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ObjcTutorial-PodsOnly.debug.xcconfig"; path = "Target Support Files/Pods-ObjcTutorial-PodsOnly/Pods-ObjcTutorial-PodsOnly.debug.xcconfig"; sourceTree = "<group>"; };
 		F1096426A68F60239F4D270A /* Pods-BasicTutorial.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasicTutorial.debug.xcconfig"; path = "Target Support Files/Pods-BasicTutorial/Pods-BasicTutorial.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		1E1332CB243777B500D9172B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6331E74C0C6A739F8F9BDA40 /* Pods_ObjcTutorial_PodsOnly.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1E1E0A37242E7F53002C4BE0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -383,6 +407,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E1332C6243776DB00D9172B /* ObjcTutorial */ = {
+			isa = PBXGroup;
+			children = (
+				1E1332D82437785400D9172B /* Assets.xcassets */,
+				1E1332DA2437785400D9172B /* Info.plist */,
+				1E1332D72437785400D9172B /* LaunchScreen.storyboard */,
+				1E1332DF24377A2100D9172B /* main.m */,
+				1E1332E124377A9700D9172B /* AppDelegate.h */,
+				1E1332E224377AEF00D9172B /* AppDelegate.m */,
+			);
+			path = ObjcTutorial;
+			sourceTree = "<group>";
+		};
 		1E7C63E72424090A00D97089 = {
 			isa = PBXGroup;
 			children = (
@@ -404,6 +441,7 @@
 				1E1E0A41242E7F53002C4BE0 /* Basic - Pods.app */,
 				1E1E0A98242E8035002C4BE0 /* JabberwockyHTKitLocal.framework */,
 				1E1E0AA9242E8098002C4BE0 /* Basic - Local.app */,
+				1E1332D4243777B500D9172B /* Objc - Pods.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -674,6 +712,7 @@
 				C215212007476EDFB2CBB63E /* Pods_BasicTutorial.framework */,
 				0B07850C7B23C685B285AC30 /* Pods_BasicTutorial_PodsOnly.framework */,
 				501F47B2164643C80B43A2D0 /* Pods_JabberwockyHTKit.framework */,
+				31FB4679CD65B347CAFBFAB7 /* Pods_ObjcTutorial_PodsOnly.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -693,6 +732,7 @@
 			isa = PBXGroup;
 			children = (
 				1E7C652424255BA000D97089 /* BasicTutorial */,
+				1E1332C6243776DB00D9172B /* ObjcTutorial */,
 			);
 			path = Tutorials;
 			sourceTree = "<group>";
@@ -706,6 +746,8 @@
 				469359539E6625CA0D106CB0 /* Pods-BasicTutorial-PodsOnly.release.xcconfig */,
 				DBB41E7BAA291BAC94D59310 /* Pods-JabberwockyHTKit.debug.xcconfig */,
 				4C6BD36C03E084F335039A88 /* Pods-JabberwockyHTKit.release.xcconfig */,
+				E24F6194FCABE6CBBC768E4A /* Pods-ObjcTutorial-PodsOnly.debug.xcconfig */,
+				C86A15D6F51A8BB04C9E92DD /* Pods-ObjcTutorial-PodsOnly.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -732,6 +774,25 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		1E1332C7243777B500D9172B /* ObjcTutorial-PodsOnly */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1E1332D1243777B500D9172B /* Build configuration list for PBXNativeTarget "ObjcTutorial-PodsOnly" */;
+			buildPhases = (
+				1E1332C8243777B500D9172B /* [CP] Check Pods Manifest.lock */,
+				1E1332C9243777B500D9172B /* Sources */,
+				1E1332CB243777B500D9172B /* Frameworks */,
+				1E1332CD243777B500D9172B /* Resources */,
+				1E1332D0243777B500D9172B /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ObjcTutorial-PodsOnly";
+			productName = HTTutorial;
+			productReference = 1E1332D4243777B500D9172B /* Objc - Pods.app */;
+			productType = "com.apple.product-type.application";
+		};
 		1E1E0A32242E7F53002C4BE0 /* BasicTutorial-PodsOnly */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1E1E0A3E242E7F53002C4BE0 /* Build configuration list for PBXNativeTarget "BasicTutorial-PodsOnly" */;
@@ -836,9 +897,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1130;
-				LastUpgradeCheck = 1130;
+				LastUpgradeCheck = 1140;
 				ORGANIZATIONNAME = "Swiftable LLC";
 				TargetAttributes = {
+					1E1332C7243777B500D9172B = {
+						LastSwiftMigration = 1140;
+					};
 					1E7C63F02424090A00D97089 = {
 						CreatedOnToolsVersion = 11.3.1;
 					};
@@ -865,11 +929,21 @@
 				1E7C652224255BA000D97089 /* BasicTutorial */,
 				1E1E0A9A242E8098002C4BE0 /* BasicTutorial-LocalDev */,
 				1E1E0A32242E7F53002C4BE0 /* BasicTutorial-PodsOnly */,
+				1E1332C7243777B500D9172B /* ObjcTutorial-PodsOnly */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		1E1332CD243777B500D9172B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E1332DC2437785400D9172B /* Assets.xcassets in Resources */,
+				1E1332DB2437785400D9172B /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1E1E0A39242E7F53002C4BE0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -922,6 +996,45 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		1E1332C8243777B500D9172B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ObjcTutorial-PodsOnly-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1E1332D0243777B500D9172B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ObjcTutorial-PodsOnly/Pods-ObjcTutorial-PodsOnly-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ObjcTutorial-PodsOnly/Pods-ObjcTutorial-PodsOnly-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ObjcTutorial-PodsOnly/Pods-ObjcTutorial-PodsOnly-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		5218F5B6B332E5E9513C4A4F /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1025,6 +1138,16 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		1E1332C9243777B500D9172B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E1332E424377BEE00D9172B /* AppDelegate.h in Sources */,
+				1E1332E324377AEF00D9172B /* AppDelegate.m in Sources */,
+				1E1332E024377A2100D9172B /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1E1E0A35242E7F53002C4BE0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1223,6 +1346,53 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		1E1332D2243777B500D9172B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E24F6194FCABE6CBBC768E4A /* Pods-ObjcTutorial-PodsOnly.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BDJ62329AB;
+				INFOPLIST_FILE = "$(SRCROOT)/Tutorials/ObjcTutorial/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.swiftable.jabberwocky.ObjcTutorialPods;
+				PRODUCT_NAME = "Objc - Pods";
+				SWIFT_OBJC_BRIDGING_HEADER = "Tutorials/ObjcTutorial/ObjcTutorial-PodsOnly-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1E1332D3243777B500D9172B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C86A15D6F51A8BB04C9E92DD /* Pods-ObjcTutorial-PodsOnly.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BDJ62329AB;
+				INFOPLIST_FILE = "$(SRCROOT)/Tutorials/ObjcTutorial/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.swiftable.jabberwocky.ObjcTutorialPods;
+				PRODUCT_NAME = "Objc - Pods";
+				SWIFT_OBJC_BRIDGING_HEADER = "Tutorials/ObjcTutorial/ObjcTutorial-PodsOnly-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		1E1E0A3F242E7F53002C4BE0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 72BC8B77BF80105B32B2DFF5 /* Pods-BasicTutorial-PodsOnly.debug.xcconfig */;
@@ -1413,7 +1583,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				ONLY_ACTIVE_ARCH = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1581,6 +1751,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1E1332D1243777B500D9172B /* Build configuration list for PBXNativeTarget "ObjcTutorial-PodsOnly" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E1332D2243777B500D9172B /* Debug */,
+				1E1332D3243777B500D9172B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		1E1E0A3E242E7F53002C4BE0 /* Build configuration list for PBXNativeTarget "BasicTutorial-PodsOnly" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

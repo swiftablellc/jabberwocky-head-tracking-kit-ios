@@ -42,7 +42,7 @@ import UIKit
         return CursorBlinkClickFeature.shared!
     }
 
-    // MARK: HeadTrackingFeature protocol
+    // MARK: HTFeature protocol
     @objc public private(set) var enabled = false
 
     @objc public func enable() {

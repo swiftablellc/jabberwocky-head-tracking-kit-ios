@@ -47,7 +47,7 @@ pod install
 
 `BasicTutorial-PodsOnly` is an example application target that has one standard `UIButton` which responds to taps on the screen. When configuring head tracking within an existing application there are a few setup steps that need to be performed and then the default `HTFeature` singletons that are configured will automatically detect `UIControl`, `UICollectionViewCell`, and `UITableViewCell` elements and interact with them. Other custom `UIView` elements can be configured to work with the head tracking framework by implementing the `HTFocusable` protocol (more info below).
 
-### Step 1: Setup JabberwockyHTKit Frameworks
+### Step 1: Install JabberwockyHTKit Frameworks
 
 * Create a `Podfile` and replace `$YOUR_TARGET` with the appropriate target:
 
@@ -92,34 +92,73 @@ pod install
 
 #### Swift
 
+* See [Basic Tutorial AppDelegate](Tutorials/BasicTutorial/AppDelegate.swift) for example implementation.
+
 ```swift
-AVCaptureDevice.requestAccess(for: .video) { (granted) in
-    if (granted) {
-        // Configure the default HTFeatures and enable Head Tracking
-        DispatchQueue.main.async {
-            HeadTracking.configure()
-            HeadTracking.shared.enable()
+import AVFoundation
+import JabberwockyHTKit
+
+...
+
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        AVCaptureDevice.requestAccess(for: .video) { (granted) in
+            if (granted) {
+                // Configure the default HTFeatures and enable Head Tracking
+                DispatchQueue.main.async {
+                    HeadTracking.configure()
+                    HeadTracking.shared.enable()
+                }
+            } else {
+                NSLog("Camera Permissions Missing for Head Tracking.")
+            }
         }
-    } else {
-        NSLog("Head Tracking requires camera access.")
+        return true
     }
-}
 ```
 #### Objective C
 
+* See [Objc Tutorial AppDelegate](Tutorials/ObjcTutorial/AppDelegate.m) for example implementation.
+
 ```objc
-[AVCaptureDevice requestAccessForMediaType:AVMediaTypeVideo completionHandler:^(BOOL granted) {
-    NSLog(@"Requested Camera Permission");
-    if(granted){
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [HeadTracking configure]
-            [HeadTracking.shared enable]
-        });
-    } else {
-        NSLog(@"Camera Permissions Missing for Head Tracking");
-    }
-}];
+#import <AVFoundation/AVFoundation.h>
+#import "JabberwockyHTKit.h"
+
+...
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [AVCaptureDevice requestAccessForMediaType:AVMediaTypeVideo completionHandler:^(BOOL granted) {
+        NSLog(@"Requested Camera Permission");
+        if(granted){
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [HeadTracking configureWithEnabledFeatures:HeadTracking.DEFAULT_ENABLED_FEATURES withSettingsAppGroup:nil];
+            });
+        } else {
+            NSLog(@"Camera Permissions Missing for Head Tracking");
+        }
+    }];
+    return YES;
+}
 ```
+
+### Step 4: Run
+
+* If you run on a physical device that supports FaceID, you should get output similar to below.
+
+```shell script
+############################### Basic[19446:10081868] Requested Camera Permission
+############################### Basic[19446:10081868] Head Tracking configured successfully.
+############################### Basic[19446:10081868] Metal API Validation Enabled
+############################### Basic[19446:10081868] Head Tracking enabled successfully.
+```
+
+* If you run on a simulator or device that does not support FaceID, you should get output similar to below. `JabberwockyHTKitCore.framework` binary comes with i386 and x86_64 archs, so that running in a simulator should not crash.
+
+```
+############################### Basic[2476:18033900] Requested Camera Permission
+############################### Basic[2476:18033900] Head Tracking cannot be configured. It is not supported on this device.
+############################### Basic[2476:18033900] Head Tracking is not configured. Use HeadTracking.configure() to configure.
+```
+
 
 ## Applications
 `JabberwockyHTKit` is currently being used by the following applications in the [App Store](https://apps.apple.com/):

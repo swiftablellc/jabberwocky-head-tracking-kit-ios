@@ -27,13 +27,15 @@ import JabberwockyHTKitCore
     private static let ENABLED_SUCCESSFULLY = "Head Tracking enabled successfully."
     private static let DISABLED_IN_SETTINGS = "Head Tracking was not enabled because it was disabled " +
             "in settings and not enabled with overrideSettings = true."
-    private static let NOT_CONFIGURED_WARNING = "Head Tracking is not configured... " +
-            "Use HeadTracking.configure() to enable this functionality."
-    private static let CONFIGURE_ONCE_WARNING = "Head Tracking should only be configured once... " +
+    private static let NOT_CONFIGURED_WARNING = "Head Tracking is not configured. " +
+            "Use HeadTracking.configure() to configure."
+    private static let CONFIGURE_ONCE_WARNING = "Head Tracking should only be configured once. " +
             "Attempts to configure head tracking after the first will be ignored."
-    private static let CANNOT_BE_CONFIGURED_NOT_SUPPORTED = "Head Tracking cannot be configured... " +
+    private static let CANNOT_BE_CONFIGURED_NOT_SUPPORTED = "Head Tracking cannot be configured. " +
             "It is not supported on this device."
-    private static let CANNOT_BE_ENABLED_APP_NO_AUTHORIZATION = "Head Tracking cannot be enabled... " +
+    private static let CANNOT_BE_ENABLED_NOT_CONFIGURED = "Head Tracking cannot be enabled. " +
+            HeadTracking.NOT_CONFIGURED_WARNING
+    private static let CANNOT_BE_ENABLED_APP_NO_AUTHORIZATION = "Head Tracking cannot be enabled. " +
             "It is either not supported or authorized on the device."
     private static let FEATURE_CONFIGURED = "%@ configured and %@."
     private static let FEATURE_ALREADY_CONFIGURED = "%@ already configured. HTFeatures cannot be configured twice."

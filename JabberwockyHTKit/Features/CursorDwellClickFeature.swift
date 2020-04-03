@@ -42,7 +42,7 @@ import UIKit
         return CursorDwellClickFeature.shared!
     }
 
-    // MARK: HeadTrackingFeature protocol
+    // MARK: HTFeature protocol
     @objc public private(set) var enabled = false
 
     @objc public func enable() {

@@ -71,7 +71,7 @@ import UIKit
     private var idleChargingTimer: ChargingTimer?
     private var lastIdleTime: CFTimeInterval?
 
-    // MARK: HeadTrackingFeature protocol
+    // MARK: HTFeature protocol
     @objc public private(set) var enabled = false
 
     @objc public func enable() {
