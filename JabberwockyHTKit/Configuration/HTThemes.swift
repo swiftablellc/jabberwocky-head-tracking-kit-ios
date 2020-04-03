@@ -38,7 +38,7 @@ import UIKit
     
 }
 
-@objc class CalibrationTheme: NSObject {
+@objc public class CalibrationTheme: NSObject {
     
     public static var calibrationText = "Look Here..."
 

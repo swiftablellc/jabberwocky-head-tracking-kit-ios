@@ -14,6 +14,12 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
+#if JABBERWOCKY_LOCAL_DEV
+  import JabberwockyHTKitLocal
+#else
+  import JabberwockyHTKit
+#endif
+
 import UIKit
 
 // TODO: Move this to a Tutorial
@@ -48,6 +54,7 @@ public class CrazyThemeFeature: NSObject, HTFeature {
         ThemeColors.secondaryText = UIColor.yellow
         ThemeColors.standardBackground = UIColor.orange
 
+        /*
         CalibrationTheme.calibrationText = "Crazy Theme"
         CalibrationTheme.circleSize = {
             switch(UIDevice.current.userInterfaceIdiom) {
@@ -75,6 +82,7 @@ public class CrazyThemeFeature: NSObject, HTFeature {
                 return UIFont(name: "Papyrus", size: 40)!
             }
         }()
+        */
 
     }
 

@@ -13,7 +13,10 @@
 		1E1332E324377AEF00D9172B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E1332E224377AEF00D9172B /* AppDelegate.m */; };
 		1E1332E424377BEE00D9172B /* AppDelegate.h in Sources */ = {isa = PBXBuildFile; fileRef = 1E1332E124377A9700D9172B /* AppDelegate.h */; };
 		1E1332E624379B7B00D9172B /* CursorFocusAnimationFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1332E524379B7B00D9172B /* CursorFocusAnimationFeature.swift */; };
-		1E1332E82437B9DE00D9172B /* CrazyThemeFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1332E72437B9DE00D9172B /* CrazyThemeFeature.swift */; };
+		1E1333182437DB8B00D9172B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E1333142437DB8B00D9172B /* LaunchScreen.storyboard */; };
+		1E1333192437DB8B00D9172B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E1333152437DB8B00D9172B /* Assets.xcassets */; };
+		1E13331B2437DB8B00D9172B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1333172437DB8B00D9172B /* AppDelegate.swift */; };
+		1E13331C2437DBF200D9172B /* CrazyThemeFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1332E72437B9DE00D9172B /* CrazyThemeFeature.swift */; };
 		1E1E0A0F242D0513002C4BE0 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 1E1E0A0E242D0513002C4BE0 /* README.md */; };
 		1E1E0A11242D15F8002C4BE0 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 1E1E0A10242D15F8002C4BE0 /* LICENSE */; };
 		1E1E0A36242E7F53002C4BE0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C652524255BA000D97089 /* AppDelegate.swift */; };
@@ -185,6 +188,7 @@
 		1E7C65422425B2B100D97089 /* CursorRecalibrationFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C65412425B2B100D97089 /* CursorRecalibrationFeature.swift */; };
 		25AFD9402CDDB9C02D977AB2 /* Pods_JabberwockyHTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 501F47B2164643C80B43A2D0 /* Pods_JabberwockyHTKit.framework */; };
 		4D9E44F10EB8DFA04B9477BD /* Pods_BasicTutorial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C215212007476EDFB2CBB63E /* Pods_BasicTutorial.framework */; };
+		5A8345243E2A003E3EE758FC /* Pods_CustomThemeFeatureTutorial_PodsOnly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89F0A0BAB49CC7D71C9A3B31 /* Pods_CustomThemeFeatureTutorial_PodsOnly.framework */; };
 		6331E74C0C6A739F8F9BDA40 /* Pods_ObjcTutorial_PodsOnly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31FB4679CD65B347CAFBFAB7 /* Pods_ObjcTutorial_PodsOnly.framework */; };
 		DFE49DB34BF0318B2DF43BA1 /* Pods_BasicTutorial_PodsOnly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B07850C7B23C685B285AC30 /* Pods_BasicTutorial_PodsOnly.framework */; };
 /* End PBXBuildFile section */
@@ -255,6 +259,11 @@
 		1E1332E524379B7B00D9172B /* CursorFocusAnimationFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CursorFocusAnimationFeature.swift; sourceTree = "<group>"; };
 		1E1332E72437B9DE00D9172B /* CrazyThemeFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrazyThemeFeature.swift; sourceTree = "<group>"; };
 		1E1332EA2437D5EB00D9172B /* JabberwockyHTKit.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = JabberwockyHTKit.podspec; sourceTree = "<group>"; };
+		1E1333122437D96500D9172B /* Theme - Pods.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Theme - Pods.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E1333142437DB8B00D9172B /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1E1333152437DB8B00D9172B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1E1333162437DB8B00D9172B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1E1333172437DB8B00D9172B /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1E1E0A0E242D0513002C4BE0 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		1E1E0A10242D15F8002C4BE0 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		1E1E0A41242E7F53002C4BE0 /* Basic - Pods.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Basic - Pods.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -344,9 +353,12 @@
 		1E7C65412425B2B100D97089 /* CursorRecalibrationFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CursorRecalibrationFeature.swift; sourceTree = "<group>"; };
 		31FB4679CD65B347CAFBFAB7 /* Pods_ObjcTutorial_PodsOnly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ObjcTutorial_PodsOnly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		469359539E6625CA0D106CB0 /* Pods-BasicTutorial-PodsOnly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasicTutorial-PodsOnly.release.xcconfig"; path = "Target Support Files/Pods-BasicTutorial-PodsOnly/Pods-BasicTutorial-PodsOnly.release.xcconfig"; sourceTree = "<group>"; };
+		471FEE75B3CED1BA67828DEC /* Pods-CustomThemeFeatureTutorial-PodsOnly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomThemeFeatureTutorial-PodsOnly.release.xcconfig"; path = "Target Support Files/Pods-CustomThemeFeatureTutorial-PodsOnly/Pods-CustomThemeFeatureTutorial-PodsOnly.release.xcconfig"; sourceTree = "<group>"; };
 		4C6BD36C03E084F335039A88 /* Pods-JabberwockyHTKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JabberwockyHTKit.release.xcconfig"; path = "Target Support Files/Pods-JabberwockyHTKit/Pods-JabberwockyHTKit.release.xcconfig"; sourceTree = "<group>"; };
 		501F47B2164643C80B43A2D0 /* Pods_JabberwockyHTKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JabberwockyHTKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		72BC8B77BF80105B32B2DFF5 /* Pods-BasicTutorial-PodsOnly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasicTutorial-PodsOnly.debug.xcconfig"; path = "Target Support Files/Pods-BasicTutorial-PodsOnly/Pods-BasicTutorial-PodsOnly.debug.xcconfig"; sourceTree = "<group>"; };
+		89F0A0BAB49CC7D71C9A3B31 /* Pods_CustomThemeFeatureTutorial_PodsOnly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CustomThemeFeatureTutorial_PodsOnly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		93AEAB1E6A7BB196C32A3264 /* Pods-CustomThemeFeatureTutorial-PodsOnly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomThemeFeatureTutorial-PodsOnly.debug.xcconfig"; path = "Target Support Files/Pods-CustomThemeFeatureTutorial-PodsOnly/Pods-CustomThemeFeatureTutorial-PodsOnly.debug.xcconfig"; sourceTree = "<group>"; };
 		C1E8760EEB83FD1A2813A9F2 /* Pods-BasicTutorial.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasicTutorial.release.xcconfig"; path = "Target Support Files/Pods-BasicTutorial/Pods-BasicTutorial.release.xcconfig"; sourceTree = "<group>"; };
 		C215212007476EDFB2CBB63E /* Pods_BasicTutorial.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BasicTutorial.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C86A15D6F51A8BB04C9E92DD /* Pods-ObjcTutorial-PodsOnly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ObjcTutorial-PodsOnly.release.xcconfig"; path = "Target Support Files/Pods-ObjcTutorial-PodsOnly/Pods-ObjcTutorial-PodsOnly.release.xcconfig"; sourceTree = "<group>"; };
@@ -361,6 +373,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				6331E74C0C6A739F8F9BDA40 /* Pods_ObjcTutorial_PodsOnly.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E1333092437D96500D9172B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A8345243E2A003E3EE758FC /* Pods_CustomThemeFeatureTutorial_PodsOnly.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,6 +445,11 @@
 		1E1332E92437D42900D9172B /* CustomThemeFeatureTutorial */ = {
 			isa = PBXGroup;
 			children = (
+				1E1333172437DB8B00D9172B /* AppDelegate.swift */,
+				1E1332E72437B9DE00D9172B /* CrazyThemeFeature.swift */,
+				1E1333152437DB8B00D9172B /* Assets.xcassets */,
+				1E1333162437DB8B00D9172B /* Info.plist */,
+				1E1333142437DB8B00D9172B /* LaunchScreen.storyboard */,
 			);
 			path = CustomThemeFeatureTutorial;
 			sourceTree = "<group>";
@@ -452,6 +477,7 @@
 				1E1E0A98242E8035002C4BE0 /* JabberwockyHTKitLocal.framework */,
 				1E1E0AA9242E8098002C4BE0 /* Basic - Local.app */,
 				1E1332D4243777B500D9172B /* Objc - Pods.app */,
+				1E1333122437D96500D9172B /* Theme - Pods.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -620,7 +646,6 @@
 			isa = PBXGroup;
 			children = (
 				1E7C644F24240A0200D97089 /* BannerWarningsFeature.swift */,
-				1E1332E72437B9DE00D9172B /* CrazyThemeFeature.swift */,
 				1E7C64DF24251C1C00D97089 /* CursorBlinkClickFeature.swift */,
 				1E7C644D24240A0200D97089 /* CursorClickAssistFeature.swift */,
 				1E7C644A24240A0200D97089 /* CursorDrawFeature.swift */,
@@ -716,6 +741,7 @@
 				0B07850C7B23C685B285AC30 /* Pods_BasicTutorial_PodsOnly.framework */,
 				501F47B2164643C80B43A2D0 /* Pods_JabberwockyHTKit.framework */,
 				31FB4679CD65B347CAFBFAB7 /* Pods_ObjcTutorial_PodsOnly.framework */,
+				89F0A0BAB49CC7D71C9A3B31 /* Pods_CustomThemeFeatureTutorial_PodsOnly.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -752,6 +778,8 @@
 				4C6BD36C03E084F335039A88 /* Pods-JabberwockyHTKit.release.xcconfig */,
 				E24F6194FCABE6CBBC768E4A /* Pods-ObjcTutorial-PodsOnly.debug.xcconfig */,
 				C86A15D6F51A8BB04C9E92DD /* Pods-ObjcTutorial-PodsOnly.release.xcconfig */,
+				93AEAB1E6A7BB196C32A3264 /* Pods-CustomThemeFeatureTutorial-PodsOnly.debug.xcconfig */,
+				471FEE75B3CED1BA67828DEC /* Pods-CustomThemeFeatureTutorial-PodsOnly.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -795,6 +823,25 @@
 			name = "ObjcTutorial-PodsOnly";
 			productName = HTTutorial;
 			productReference = 1E1332D4243777B500D9172B /* Objc - Pods.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1E1333032437D96500D9172B /* CustomThemeFeatureTutorial-PodsOnly */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1E13330F2437D96500D9172B /* Build configuration list for PBXNativeTarget "CustomThemeFeatureTutorial-PodsOnly" */;
+			buildPhases = (
+				1E1333042437D96500D9172B /* [CP] Check Pods Manifest.lock */,
+				1E1333052437D96500D9172B /* Sources */,
+				1E1333092437D96500D9172B /* Frameworks */,
+				1E13330B2437D96500D9172B /* Resources */,
+				1E13330E2437D96500D9172B /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "CustomThemeFeatureTutorial-PodsOnly";
+			productName = HTTutorial;
+			productReference = 1E1333122437D96500D9172B /* Theme - Pods.app */;
 			productType = "com.apple.product-type.application";
 		};
 		1E1E0A32242E7F53002C4BE0 /* BasicTutorial-PodsOnly */ = {
@@ -900,7 +947,7 @@
 		1E7C63E82424090A00D97089 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1130;
+				LastSwiftUpdateCheck = 1140;
 				LastUpgradeCheck = 1140;
 				ORGANIZATIONNAME = "Swiftable LLC";
 				TargetAttributes = {
@@ -933,6 +980,7 @@
 				1E7C652224255BA000D97089 /* BasicTutorial */,
 				1E1E0A9A242E8098002C4BE0 /* BasicTutorial-LocalDev */,
 				1E1E0A32242E7F53002C4BE0 /* BasicTutorial-PodsOnly */,
+				1E1333032437D96500D9172B /* CustomThemeFeatureTutorial-PodsOnly */,
 				1E1332C7243777B500D9172B /* ObjcTutorial-PodsOnly */,
 			);
 		};
@@ -945,6 +993,15 @@
 			files = (
 				1E1332DC2437785400D9172B /* Assets.xcassets in Resources */,
 				1E1332DB2437785400D9172B /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E13330B2437D96500D9172B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E1333192437DB8B00D9172B /* Assets.xcassets in Resources */,
+				1E1333182437DB8B00D9172B /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1037,6 +1094,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ObjcTutorial-PodsOnly/Pods-ObjcTutorial-PodsOnly-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1E1333042437D96500D9172B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CustomThemeFeatureTutorial-PodsOnly-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1E13330E2437D96500D9172B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CustomThemeFeatureTutorial-PodsOnly/Pods-CustomThemeFeatureTutorial-PodsOnly-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CustomThemeFeatureTutorial-PodsOnly/Pods-CustomThemeFeatureTutorial-PodsOnly-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CustomThemeFeatureTutorial-PodsOnly/Pods-CustomThemeFeatureTutorial-PodsOnly-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		5218F5B6B332E5E9513C4A4F /* [CP] Embed Pods Frameworks */ = {
@@ -1152,6 +1248,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1E1333052437D96500D9172B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E13331C2437DBF200D9172B /* CrazyThemeFeature.swift in Sources */,
+				1E13331B2437DB8B00D9172B /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1E1E0A35242E7F53002C4BE0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1252,7 +1357,6 @@
 			files = (
 				1E7C649624240A0200D97089 /* CountdownView.swift in Sources */,
 				1E7C649724240A0200D97089 /* CursorToggleButton.swift in Sources */,
-				1E1332E82437B9DE00D9172B /* CrazyThemeFeature.swift in Sources */,
 				1E7C64B524240A0200D97089 /* Array+Chunks.swift in Sources */,
 				1E7C648224240A0200D97089 /* InMemorySettings.swift in Sources */,
 				1E7C649924240A0200D97089 /* CursorGlassView.swift in Sources */,
@@ -1392,6 +1496,57 @@
 				PRODUCT_BUNDLE_IDENTIFIER = org.swiftable.jabberwocky.ObjcTutorialPods;
 				PRODUCT_NAME = "Objc - Pods";
 				SWIFT_OBJC_BRIDGING_HEADER = "Tutorials/ObjcTutorial/ObjcTutorial-PodsOnly-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		1E1333102437D96500D9172B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 93AEAB1E6A7BB196C32A3264 /* Pods-CustomThemeFeatureTutorial-PodsOnly.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BDJ62329AB;
+				INFOPLIST_FILE = "$(SRCROOT)/Tutorials/CustomThemeFeatureTutorial/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.swiftable.jabberwocky.CustomThemeFeatureTutorialPods;
+				PRODUCT_NAME = "Theme - Pods";
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_PRECOMPILE_BRIDGING_HEADER = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1E1333112437D96500D9172B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 471FEE75B3CED1BA67828DEC /* Pods-CustomThemeFeatureTutorial-PodsOnly.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BDJ62329AB;
+				INFOPLIST_FILE = "$(SRCROOT)/Tutorials/CustomThemeFeatureTutorial/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.swiftable.jabberwocky.CustomThemeFeatureTutorialPods;
+				PRODUCT_NAME = "Theme - Pods";
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_PRECOMPILE_BRIDGING_HEADER = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1760,6 +1915,15 @@
 			buildConfigurations = (
 				1E1332D2243777B500D9172B /* Debug */,
 				1E1332D3243777B500D9172B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1E13330F2437D96500D9172B /* Build configuration list for PBXNativeTarget "CustomThemeFeatureTutorial-PodsOnly" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E1333102437D96500D9172B /* Debug */,
+				1E1333112437D96500D9172B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

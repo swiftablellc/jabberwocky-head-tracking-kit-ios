@@ -159,7 +159,6 @@ pod install
 * `*-PodsOnly` schemes pull all dependencies from CocoaPods and therefore are not very useful for local development of `JabberwockyHTKit`.
 * `JabberwockyHTKit` uses CocoaPods to install its one dependency `JabberwockyHTKitCore`, but the `JabberwockyHTKitCore.framework` can be found [here](https://github.com/swiftablellc/jabberwocky-head-tracking-kit-core-ios-binary/tree/master/JabberwockyHTKitCore.framework). If you don't want to use CocoaPods you checkout the repository with the framework binary and add it to the project. It might be best to create a new target similar to `JabberwockyHTKit-LocalDev` to get it to build properly.
 
-
 ## Applications
 `JabberwockyHTKit` is currently being used by the following applications in the [App Store](https://apps.apple.com/):
 * [Jabberwocky AAC](https://apps.apple.com/us/app/jabberwocky/id1438561966) - A touch-free text-to-speech app (Free).
