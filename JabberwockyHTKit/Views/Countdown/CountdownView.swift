@@ -71,14 +71,12 @@ public class CountdownView: UIView {
     public var dismissStyle: DismissStyle = .none
     public var dismissStyleAnimation: Animation = .fadeOut
 
-    public var frameSize = CGSize(
-            width: ThemeObjects.calibrationCircleSize,
-            height: ThemeObjects.calibrationCircleSize)
+    public var frameSize = CGSize(width: CalibrationTheme.circleSize, height: CalibrationTheme.circleSize)
     public var framePosition = UIApplication.shared.keyWindow!.center
 
     public var backgroundViewColor: UIColor = UIColor(white: 0, alpha: 0.5)
 
-    public var counterViewBackgroundColor: UIColor = .white
+    public var counterViewBackgroundColor: UIColor = ThemeColors.standardBackground
     public var counterViewShadowColor = UIColor.black.cgColor
     public var counterViewShadowRadius: CGFloat = 8
     public var counterViewShadowOpacity: Float = 0.5
@@ -92,12 +90,12 @@ public class CountdownView: UIView {
     public var contentOffset: CGFloat?
 
     public var counterLabelOffset: CGFloat?
-    public var counterLabelFont = ThemeFonts.huge.htBold()
-    public var counterLabelTextColor = UIColor.black
+    public var counterLabelFont = CalibrationTheme.primaryLabelFont
+    public var counterLabelTextColor = ThemeColors.primaryText
 
-    public var counterSubLabelText = "Look Here..."
-    public var counterSubLabelFont = ThemeFonts.medium
-    public var counterSubLabelTextColor = UIColor(red:0.48, green:0.48, blue:0.49, alpha:1.0)
+    public var counterSubLabelText = CalibrationTheme.calibrationText
+    public var counterSubLabelFont = CalibrationTheme.secondaryLabelFont
+    public var counterSubLabelTextColor = ThemeColors.secondaryText
 
     public var counterSubtitleLabelOffset: CGFloat?
 

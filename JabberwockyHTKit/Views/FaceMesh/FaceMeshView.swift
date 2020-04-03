@@ -29,7 +29,7 @@ import JabberwockyHTKitCore
     }
 
     public init(backgroundColor: UIColor? = nil, meshColor: UIColor? = nil) {
-        self.meshColor = meshColor == nil ? ThemeColors.darkishPurple : meshColor!
+        self.meshColor = meshColor == nil ? ThemeColors.primary : meshColor!
         
         super.init(frame: CGRect.zero)
         

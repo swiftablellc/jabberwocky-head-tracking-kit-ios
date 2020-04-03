@@ -16,7 +16,7 @@ limitations under the License.
 
 import Foundation
 
-class HTDefaultAnalytics: NSObject, HTAnalytics {
+@objc class HTDefaultAnalytics: NSObject, HTAnalytics {
 
     func sendEvent(event: HTAnalyticsEvent, additionalParameters: [String : Any]) {
         // Do nothing

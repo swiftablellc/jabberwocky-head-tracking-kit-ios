@@ -16,27 +16,33 @@ limitations under the License.
 
 import UIKit
 
-class ThemeColors {
+@objc public class ThemeColors: NSObject {
+    
+    //TODO: Expand theme reach and find appropriate names. There are lots of hardcoded pieces.
+
     //Theme colors
-    static let darkishPurple = UIColor(hue: 259.0 / 360.0, saturation: 0.86, brightness: 0.75, alpha: 1)
+    private static let darkishPurple = UIColor(hue: 259.0 / 360.0, saturation: 0.86, brightness: 0.75, alpha: 1)
     
     //Exaggerated version of theme color (for highlighting)
-    static let purePurple = UIColor(hue: 262.0 / 360.0, saturation: 1.0, brightness: 1.0, alpha: 1)
+    private static let purePurple = UIColor(hue: 262.0 / 360.0, saturation: 1.0, brightness: 1.0, alpha: 1)
     
     //Grays with tinge of primary theme (purple)
-    static let lightGray = UIColor(hue: 282.0 / 360.0, saturation: 0.03, brightness: 0.9, alpha: 1)
-    static let veryLightGray = UIColor(hue: 282.0 / 360.0, saturation: 0.02, brightness: 0.95, alpha: 1)
+    private static let lightGray = UIColor(hue: 282.0 / 360.0, saturation: 0.03, brightness: 0.9, alpha: 1)
     
-    //Generic colors that transcend theme
-    static let clear = UIColor.clear
-    static let black = UIColor.black
+    public static var cursorPulse = darkishPurple
+    public static var highlight = purePurple
+    public static var primary = darkishPurple
+    public static var primaryText = UIColor.black
+    public static var secondaryText = UIColor.gray
+    public static var standardBackground = lightGray
     
-    static let standardBackground = lightGray
-    static let primaryButton = darkishPurple
 }
 
-class ThemeObjects {
-    static let calibrationCircleSize: CGFloat = {
+@objc class CalibrationTheme: NSObject {
+    
+    public static var calibrationText = "Look Here..."
+
+    public static var circleSize: CGFloat = {
         switch(UIDevice.current.userInterfaceIdiom) {
         case .phone:
             return 160
@@ -46,20 +52,8 @@ class ThemeObjects {
             return 160
         }
     }()
-}
 
-class ThemeFonts {
-    static let gigantic: UIFont = {
-        switch(UIDevice.current.userInterfaceIdiom) {
-        case .phone:
-            return UIFont.systemFont(ofSize: 72)
-        case .pad:
-            return UIFont.systemFont(ofSize: 108)
-        default:
-            return UIFont.systemFont(ofSize: UIFont.systemFontSize * 3.6)
-        }
-    }()
-    static let huge: UIFont = {
+    public static var primaryLabelFont: UIFont = { () -> UIFont in
         switch(UIDevice.current.userInterfaceIdiom) {
         case .phone:
             return UIFont.systemFont(ofSize: 48)
@@ -68,28 +62,9 @@ class ThemeFonts {
         default:
             return UIFont.systemFont(ofSize: UIFont.systemFontSize * 2.4)
         }
-    }()
-    static let veryLarge: UIFont = {
-        switch(UIDevice.current.userInterfaceIdiom) {
-        case .phone:
-            return UIFont.systemFont(ofSize: 32)
-        case .pad:
-            return UIFont.systemFont(ofSize: 48)
-        default:
-            return UIFont.systemFont(ofSize: UIFont.systemFontSize * 1.5)
-        }
-    }()
-    static let large: UIFont = {
-        switch(UIDevice.current.userInterfaceIdiom) {
-        case .phone:
-            return UIFont.systemFont(ofSize: 24)
-        case .pad:
-            return UIFont.systemFont(ofSize: 36)
-        default:
-            return UIFont.systemFont(ofSize: UIFont.systemFontSize * 1.2)
-        }
-    }()
-    static let medium: UIFont = {
+        }().htBold()
+
+    public static var secondaryLabelFont: UIFont = {
         switch(UIDevice.current.userInterfaceIdiom) {
         case .phone:
             return UIFont.systemFont(ofSize: 20)
@@ -99,26 +74,4 @@ class ThemeFonts {
             return UIFont.systemFont(ofSize: UIFont.systemFontSize)
         }
     }()
-    static let small: UIFont = {
-        switch(UIDevice.current.userInterfaceIdiom) {
-        case .phone:
-            return UIFont.systemFont(ofSize: 16)
-        case .pad:
-            return UIFont.systemFont(ofSize: 24)
-        default:
-            return UIFont.systemFont(ofSize: UIFont.smallSystemFontSize)
-        }
-    }()
-    static let smallest: UIFont = {
-        switch(UIDevice.current.userInterfaceIdiom) {
-        case .phone:
-            return UIFont.systemFont(ofSize: 12)
-        case .pad:
-            return UIFont.systemFont(ofSize: 18)
-        default:
-            return UIFont.systemFont(ofSize: UIFont.systemFontSize * 0.6)
-        }
-    }()
-
 }
-

@@ -109,14 +109,14 @@ import UIKit.UIView
         }
         _focusAnimationState = .Started
         _blurOnComplete = false
-        
-        //TODO: Move this animation logic to a graphics animator class
+
         // Make sure the border of the real frame is clear
-        layer.borderColor = ThemeColors.clear.cgColor
-        
+        layer.borderColor = UIColor.clear.cgColor
+
+        //TODO: Move this animation logic to a graphics animator class
         let animationView = UIView()
-        animationView.backgroundColor = ThemeColors.clear
-        animationView.layer.borderColor = ThemeColors.purePurple.cgColor
+        animationView.backgroundColor = UIColor.clear
+        animationView.layer.borderColor = ThemeColors.highlight.cgColor
         animationView.layer.borderWidth = 1.0
         animationView.layer.cornerRadius = FocusableFacadeView.CORNER_RADIUS
         animationView.layer.opacity = 0.3
@@ -130,21 +130,21 @@ import UIKit.UIView
             withDuration: focusDuration, delay: 0, options: [.allowUserInteraction, .curveEaseIn],
             animations: {
                 animationView.layer.borderWidth = FocusableFacadeView.BORDER_WIDTH
-                animationView.layer.borderColor = ThemeColors.purePurple.cgColor
+                animationView.layer.borderColor = ThemeColors.highlight.cgColor
                 animationView.layer.opacity = 1.0
                 animationView.frame = self.bounds
         },
             completion: { wasCompleted in
                 if wasCompleted {
                     self._focusAnimationState = .Completed
-                    self.layer.borderColor = ThemeColors.purePurple.cgColor
+                    self.layer.borderColor = ThemeColors.highlight.cgColor
                     self.layer.borderWidth = FocusableFacadeView.BORDER_WIDTH
                     self.layer.cornerRadius = FocusableFacadeView.CORNER_RADIUS
                 }
                 else {
                     self._focusAnimationState = .None
                     //Always reset border to clear when focus animation is .None
-                    self.layer.borderColor = ThemeColors.clear.cgColor
+                    self.layer.borderColor = UIColor.clear.cgColor
                 }
                 animationView.removeFromSuperview()
         })
@@ -157,7 +157,7 @@ import UIKit.UIView
             subviews.forEach({ $0.removeFromSuperview() })
             _focusAnimationState = .None
             //Always reset border to clear when focus animation is .None
-            layer.borderColor = ThemeColors.clear.cgColor
+            layer.borderColor = UIColor.clear.cgColor
         } else {
             _blurOnComplete = true
         }
@@ -188,7 +188,7 @@ import UIKit.UIView
         if HeadTracking.shared.settings.clickGesture == .Dwell {
             _focusAnimationState = .None
             //Always reset border to clear when focus animation is .None
-            self.layer.borderColor = ThemeColors.clear.cgColor
+            self.layer.borderColor = UIColor.clear.cgColor
         }
         _clickAnimationState = .Started
         ClickAnimator.shared.execute(on: self, completion: {

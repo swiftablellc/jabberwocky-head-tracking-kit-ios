@@ -43,6 +43,17 @@ THE SOFTWARE.
 import UIKit
 
 @objc public class StatusBarNotificationBanner: BaseNotificationBanner {
+    
+    public static var statusBarFont: UIFont = { () -> UIFont in
+        switch(UIDevice.current.userInterfaceIdiom) {
+        case .phone:
+            return UIFont.systemFont(ofSize: 12)
+        case .pad:
+            return UIFont.systemFont(ofSize: 18)
+        default:
+            return UIFont.systemFont(ofSize: UIFont.systemFontSize * 0.6)
+        }
+    }().htBold()
 
     @objc public static let STATUS_BAR_DEFAULT_HEIGHT: CGFloat = 20.0
     @objc public static let STATUS_BAR_VERTICAL_SAFE_INSET: CGFloat = 5.0
@@ -52,7 +63,7 @@ import UIKit
         customBannerHeight = StatusBarNotificationBanner.STATUS_BAR_DEFAULT_HEIGHT
 
         titleLabel = UILabel()
-        titleLabel?.font = ThemeFonts.smallest.htBold()
+        titleLabel?.font = StatusBarNotificationBanner.statusBarFont
         titleLabel?.textAlignment = .center
         titleLabel?.textColor = .white
         contentView.addSubview(titleLabel!)

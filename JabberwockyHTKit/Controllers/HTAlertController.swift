@@ -71,6 +71,28 @@ enum HTAlertControllerDimension {
 @objc public class HTAlertController: UIViewController {
 
     static let CORNER_RADIUS: CGFloat = 14.0
+    
+    static let largeFont: UIFont = {
+        switch(UIDevice.current.userInterfaceIdiom) {
+        case .phone:
+            return UIFont.systemFont(ofSize: 24)
+        case .pad:
+            return UIFont.systemFont(ofSize: 36)
+        default:
+            return UIFont.systemFont(ofSize: UIFont.systemFontSize * 1.2)
+        }
+    }()
+
+    static let mediumFont: UIFont = {
+        switch(UIDevice.current.userInterfaceIdiom) {
+        case .phone:
+            return UIFont.systemFont(ofSize: 20)
+        case .pad:
+            return UIFont.systemFont(ofSize: 30)
+        default:
+            return UIFont.systemFont(ofSize: UIFont.systemFontSize)
+        }
+    }()
 
     internal var alertViewHeight: NSLayoutConstraint?
     internal var alertViewWidth: NSLayoutConstraint?
@@ -97,7 +119,7 @@ enum HTAlertControllerDimension {
         alertView.translatesAutoresizingMaskIntoConstraints = false
         alertView.backgroundColor = .white
         alertView.layer.cornerRadius = CORNER_RADIUS
-        alertView.layer.shadowColor = UIColor.black.cgColor
+        alertView.layer.shadowColor = ThemeColors.primaryText.cgColor
         alertView.layer.shadowOpacity = 0.2
         alertView.layer.shadowOffset = CGSize(width: 0, height: 0)
         alertView.layer.shadowRadius = 5
@@ -119,9 +141,9 @@ enum HTAlertControllerDimension {
         let label = UILabel()
         label.accessibilityIdentifier = "alertViewTitleLabel"
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = ThemeFonts.large.htBold()
+        label.font = HTAlertController.largeFont.htBold()
         label.textAlignment = .center
-        label.textColor = .black
+        label.textColor = ThemeColors.primaryText
         label.numberOfLines = 2
 
         return label
@@ -131,11 +153,11 @@ enum HTAlertControllerDimension {
         let textView = UITextView()
         textView.accessibilityIdentifier = "alertViewMessageTextView"
         textView.translatesAutoresizingMaskIntoConstraints = false
-        textView.font = ThemeFonts.medium
+        textView.font = HTAlertController.mediumFont
         textView.textAlignment = .center
         textView.isEditable = false
         textView.showsHorizontalScrollIndicator = false
-        textView.textColor = UIColor.black
+        textView.textColor = ThemeColors.primaryText
         textView.backgroundColor = UIColor.clear
         textView.isScrollEnabled = false
         textView.bounces = false
@@ -353,6 +375,8 @@ extension HTAlertController {
 }
 
 @objc public class HTAlertAction: UIButton {
+    
+    static let veryLightGray = UIColor(hue: 282.0 / 360.0, saturation: 0.02, brightness: 0.95, alpha: 1)
 
     @objc public enum HTAlertActionStyle: Int {
         case simple
@@ -390,13 +414,13 @@ extension HTAlertController {
         self.tintColor = fontColor
         self.setTitleColor(fontColor, for: .normal)
         
-        self.layer.borderColor = ThemeColors.veryLightGray.cgColor
+        self.layer.borderColor = HTAlertAction.veryLightGray.cgColor
         self.layer.borderWidth = 1.0
     }
 
     @objc public convenience init(title: String, style: HTAlertActionStyle = .simple, action: (() -> Void)? = nil) {
         
-        let fontColor = (style == .danger) ? UIColor.red : ThemeColors.primaryButton
+        let fontColor = (style == .danger) ? UIColor.red : ThemeColors.primaryText
         self.init(frame: .zero, fontColor: fontColor)
 
         self.style = style
@@ -404,7 +428,7 @@ extension HTAlertController {
         self.addTarget(self, action: #selector(actionTapped), for: .touchUpInside)
         self.setTitle(title, for: .normal)
         self.accessibilityIdentifier = title
-        self.titleFont = ThemeFonts.medium
+        self.titleFont = HTAlertController.mediumFont
         self.clipsToBounds = true
         self.layer.cornerRadius = HTAlertController.CORNER_RADIUS
     }

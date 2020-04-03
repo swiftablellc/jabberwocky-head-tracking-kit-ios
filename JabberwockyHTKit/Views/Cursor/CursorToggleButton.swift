@@ -17,6 +17,18 @@ limitations under the License.
 import UIKit.UIButton
 
 class CursorToggleButton: UIButton {
+    
+    private static let smallFont: UIFont = {
+        switch(UIDevice.current.userInterfaceIdiom) {
+        case .phone:
+            return UIFont.systemFont(ofSize: 16)
+        case .pad:
+            return UIFont.systemFont(ofSize: 24)
+        default:
+            return UIFont.systemFont(ofSize: UIFont.smallSystemFontSize)
+        }
+    }()
+    
     var label = UILabel()
     
     init(_ cursorToggle: CursorToggleView.CursorToggle, title: String, imageName: String) {
@@ -25,7 +37,7 @@ class CursorToggleButton: UIButton {
         setTitle(title, for: .normal)
         
         layer.cornerRadius = 14.0
-        backgroundColor = ThemeColors.primaryButton
+        backgroundColor = ThemeColors.primary
         
         self.htClickSound = .modify
         
@@ -43,13 +55,13 @@ class CursorToggleButton: UIButton {
         //Just round the two corners on the right
         layer.maskedCorners = [.layerMaxXMinYCorner, .layerMaxXMaxYCorner]
         
-        label.font = ThemeFonts.small
+        label.font = CursorToggleButton.smallFont
         label.textAlignment = .center
-        label.textColor = ThemeColors.black
+        label.textColor = ThemeColors.primaryText
         label.text = title
         label.numberOfLines = 2
         
-        label.backgroundColor = ThemeColors.standardBackground//.withAlphaComponent(0.8)
+        label.backgroundColor = ThemeColors.standardBackground
         label.layer.cornerRadius = 14.0
         label.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMaxXMaxYCorner,
                                      .layerMinXMaxYCorner, .layerMinXMinYCorner]

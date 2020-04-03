@@ -12,6 +12,8 @@
 		1E1332E024377A2100D9172B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E1332DF24377A2100D9172B /* main.m */; };
 		1E1332E324377AEF00D9172B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E1332E224377AEF00D9172B /* AppDelegate.m */; };
 		1E1332E424377BEE00D9172B /* AppDelegate.h in Sources */ = {isa = PBXBuildFile; fileRef = 1E1332E124377A9700D9172B /* AppDelegate.h */; };
+		1E1332E624379B7B00D9172B /* CursorFocusAnimationFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1332E524379B7B00D9172B /* CursorFocusAnimationFeature.swift */; };
+		1E1332E82437B9DE00D9172B /* CrazyThemeFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1332E72437B9DE00D9172B /* CrazyThemeFeature.swift */; };
 		1E1E0A0F242D0513002C4BE0 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 1E1E0A0E242D0513002C4BE0 /* README.md */; };
 		1E1E0A11242D15F8002C4BE0 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 1E1E0A10242D15F8002C4BE0 /* LICENSE */; };
 		1E1E0A36242E7F53002C4BE0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C652524255BA000D97089 /* AppDelegate.swift */; };
@@ -49,7 +51,6 @@
 		1E1E0A64242E8035002C4BE0 /* UIViewController+DefaultScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C646324240A0200D97089 /* UIViewController+DefaultScroll.swift */; };
 		1E1E0A65242E8035002C4BE0 /* HTFeatureUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C644E24240A0200D97089 /* HTFeatureUtils.swift */; };
 		1E1E0A66242E8035002C4BE0 /* CursorDrawFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C644A24240A0200D97089 /* CursorDrawFeature.swift */; };
-		1E1E0A67242E8035002C4BE0 /* WordDrawGraphics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C646E24240A0200D97089 /* WordDrawGraphics.swift */; };
 		1E1E0A68242E8035002C4BE0 /* HTAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C641324240A0100D97089 /* HTAlertController.swift */; };
 		1E1E0A69242E8035002C4BE0 /* HTCursorSensitivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C642124240A0100D97089 /* HTCursorSensitivity.swift */; };
 		1E1E0A6A242E8035002C4BE0 /* CursorScrollFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C644624240A0200D97089 /* CursorScrollFeature.swift */; };
@@ -174,7 +175,6 @@
 		1E7C64BF24240A0200D97089 /* Cursor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C646924240A0200D97089 /* Cursor.swift */; };
 		1E7C64C024240A0200D97089 /* ClickAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C646B24240A0200D97089 /* ClickAnimator.swift */; };
 		1E7C64C124240A0200D97089 /* TransformAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C646C24240A0200D97089 /* TransformAnimator.swift */; };
-		1E7C64C224240A0200D97089 /* WordDrawGraphics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C646E24240A0200D97089 /* WordDrawGraphics.swift */; };
 		1E7C64C324240A0200D97089 /* Pulsator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C647024240A0200D97089 /* Pulsator.swift */; };
 		1E7C64C424240A0200D97089 /* HTDefaultAnalytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C647224240A0200D97089 /* HTDefaultAnalytics.swift */; };
 		1E7C64C524240A0200D97089 /* HTAnalytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C647324240A0200D97089 /* HTAnalytics.swift */; };
@@ -252,6 +252,9 @@
 		1E1332DF24377A2100D9172B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1E1332E124377A9700D9172B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1E1332E224377AEF00D9172B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1E1332E524379B7B00D9172B /* CursorFocusAnimationFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CursorFocusAnimationFeature.swift; sourceTree = "<group>"; };
+		1E1332E72437B9DE00D9172B /* CrazyThemeFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrazyThemeFeature.swift; sourceTree = "<group>"; };
+		1E1332EA2437D5EB00D9172B /* JabberwockyHTKit.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = JabberwockyHTKit.podspec; sourceTree = "<group>"; };
 		1E1E0A0E242D0513002C4BE0 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		1E1E0A10242D15F8002C4BE0 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		1E1E0A41242E7F53002C4BE0 /* Basic - Pods.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Basic - Pods.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -329,7 +332,6 @@
 		1E7C646924240A0200D97089 /* Cursor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cursor.swift; sourceTree = "<group>"; };
 		1E7C646B24240A0200D97089 /* ClickAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClickAnimator.swift; sourceTree = "<group>"; };
 		1E7C646C24240A0200D97089 /* TransformAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransformAnimator.swift; sourceTree = "<group>"; };
-		1E7C646E24240A0200D97089 /* WordDrawGraphics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordDrawGraphics.swift; sourceTree = "<group>"; };
 		1E7C647024240A0200D97089 /* Pulsator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pulsator.swift; sourceTree = "<group>"; };
 		1E7C647224240A0200D97089 /* HTDefaultAnalytics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTDefaultAnalytics.swift; sourceTree = "<group>"; };
 		1E7C647324240A0200D97089 /* HTAnalytics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTAnalytics.swift; sourceTree = "<group>"; };
@@ -420,9 +422,17 @@
 			path = ObjcTutorial;
 			sourceTree = "<group>";
 		};
+		1E1332E92437D42900D9172B /* CustomThemeFeatureTutorial */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CustomThemeFeatureTutorial;
+			sourceTree = "<group>";
+		};
 		1E7C63E72424090A00D97089 = {
 			isa = PBXGroup;
 			children = (
+				1E1332EA2437D5EB00D9172B /* JabberwockyHTKit.podspec */,
 				1E1E0A10242D15F8002C4BE0 /* LICENSE */,
 				1E1E0A0E242D0513002C4BE0 /* README.md */,
 				1E7C63F32424090A00D97089 /* JabberwockyHTKit */,
@@ -610,10 +620,12 @@
 			isa = PBXGroup;
 			children = (
 				1E7C644F24240A0200D97089 /* BannerWarningsFeature.swift */,
+				1E1332E72437B9DE00D9172B /* CrazyThemeFeature.swift */,
 				1E7C64DF24251C1C00D97089 /* CursorBlinkClickFeature.swift */,
 				1E7C644D24240A0200D97089 /* CursorClickAssistFeature.swift */,
 				1E7C644A24240A0200D97089 /* CursorDrawFeature.swift */,
 				1E7C64DD24251C0F00D97089 /* CursorDwellClickFeature.swift */,
+				1E1332E524379B7B00D9172B /* CursorFocusAnimationFeature.swift */,
 				1E7C644824240A0200D97089 /* CursorIdleFeature.swift */,
 				1E7C645024240A0200D97089 /* CursorMenuFeature.swift */,
 				1E7C65412425B2B100D97089 /* CursorRecalibrationFeature.swift */,
@@ -656,7 +668,6 @@
 			children = (
 				1E7C646A24240A0200D97089 /* Animation */,
 				1E7C646724240A0200D97089 /* Cursor */,
-				1E7C646D24240A0200D97089 /* Draw */,
 				1E7C646F24240A0200D97089 /* Pulsator */,
 			);
 			path = Graphics;
@@ -678,14 +689,6 @@
 				1E7C646C24240A0200D97089 /* TransformAnimator.swift */,
 			);
 			path = Animation;
-			sourceTree = "<group>";
-		};
-		1E7C646D24240A0200D97089 /* Draw */ = {
-			isa = PBXGroup;
-			children = (
-				1E7C646E24240A0200D97089 /* WordDrawGraphics.swift */,
-			);
-			path = Draw;
 			sourceTree = "<group>";
 		};
 		1E7C646F24240A0200D97089 /* Pulsator */ = {
@@ -732,6 +735,7 @@
 			isa = PBXGroup;
 			children = (
 				1E7C652424255BA000D97089 /* BasicTutorial */,
+				1E1332E92437D42900D9172B /* CustomThemeFeatureTutorial */,
 				1E1332C6243776DB00D9172B /* ObjcTutorial */,
 			);
 			path = Tutorials;
@@ -1192,7 +1196,6 @@
 				1E1E0A64242E8035002C4BE0 /* UIViewController+DefaultScroll.swift in Sources */,
 				1E1E0A65242E8035002C4BE0 /* HTFeatureUtils.swift in Sources */,
 				1E1E0A66242E8035002C4BE0 /* CursorDrawFeature.swift in Sources */,
-				1E1E0A67242E8035002C4BE0 /* WordDrawGraphics.swift in Sources */,
 				1E1E0A68242E8035002C4BE0 /* HTAlertController.swift in Sources */,
 				1E1E0A69242E8035002C4BE0 /* HTCursorSensitivity.swift in Sources */,
 				1E1E0A6A242E8035002C4BE0 /* CursorScrollFeature.swift in Sources */,
@@ -1249,6 +1252,7 @@
 			files = (
 				1E7C649624240A0200D97089 /* CountdownView.swift in Sources */,
 				1E7C649724240A0200D97089 /* CursorToggleButton.swift in Sources */,
+				1E1332E82437B9DE00D9172B /* CrazyThemeFeature.swift in Sources */,
 				1E7C64B524240A0200D97089 /* Array+Chunks.swift in Sources */,
 				1E7C648224240A0200D97089 /* InMemorySettings.swift in Sources */,
 				1E7C649924240A0200D97089 /* CursorGlassView.swift in Sources */,
@@ -1256,6 +1260,7 @@
 				1E7C647824240A0200D97089 /* FocusableFacadeView.swift in Sources */,
 				1E7C648024240A0200D97089 /* ImmutableDefaultSettings.swift in Sources */,
 				1E7C649D24240A0200D97089 /* StatusBarNotificationBanner.swift in Sources */,
+				1E1332E624379B7B00D9172B /* CursorFocusAnimationFeature.swift in Sources */,
 				1E7C649A24240A0200D97089 /* TooltipGlassView.swift in Sources */,
 				1E7C647D24240A0200D97089 /* HTDwellTime.swift in Sources */,
 				1E7C649524240A0200D97089 /* FaceMeshView.swift in Sources */,
@@ -1279,7 +1284,6 @@
 				1E7C64BB24240A0200D97089 /* UIViewController+DefaultScroll.swift in Sources */,
 				1E7C64A824240A0200D97089 /* HTFeatureUtils.swift in Sources */,
 				1E7C64A424240A0200D97089 /* CursorDrawFeature.swift in Sources */,
-				1E7C64C224240A0200D97089 /* WordDrawGraphics.swift in Sources */,
 				1E7C647A24240A0200D97089 /* HTAlertController.swift in Sources */,
 				1E7C648724240A0200D97089 /* HTCursorSensitivity.swift in Sources */,
 				1E7C64A024240A0200D97089 /* CursorScrollFeature.swift in Sources */,
@@ -1670,7 +1674,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.3.0;
+				MARKETING_VERSION = 0.4.0;
 				PRODUCT_BUNDLE_IDENTIFIER = org.swiftable.jabberwocky.JabberwockyHTKit;
 				PRODUCT_NAME = JabberwockyHTKit;
 				SKIP_INSTALL = YES;
@@ -1697,7 +1701,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.3.0;
+				MARKETING_VERSION = 0.4.0;
 				PRODUCT_BUNDLE_IDENTIFIER = org.swiftable.jabberwocky.JabberwockyHTKit;
 				PRODUCT_NAME = JabberwockyHTKit;
 				SKIP_INSTALL = YES;

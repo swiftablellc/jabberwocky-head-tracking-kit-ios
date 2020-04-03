@@ -17,6 +17,18 @@ limitations under the License.
 import UIKit
 
 class TooltipGlassView: UIView {
+    
+    private static let smallFont: UIFont = {
+        switch(UIDevice.current.userInterfaceIdiom) {
+        case .phone:
+            return UIFont.systemFont(ofSize: 16)
+        case .pad:
+            return UIFont.systemFont(ofSize: 24)
+        default:
+            return UIFont.systemFont(ofSize: UIFont.smallSystemFontSize)
+        }
+    }()
+    
     private let PAD_TOOLTIP_WIDTH: CGFloat = 300
     private let PHONE_TOOLTIP_WIDTH: CGFloat = 240
     private let PAD_TOOLTIP_HEIGHT: CGFloat = 60
@@ -106,14 +118,12 @@ class TooltipGlassView: UIView {
     private func constructTooltipView(_ tooltip: String) -> UIView {
         let label = UILabel()
         
-        label.font = ThemeFonts.small
+        label.font = TooltipGlassView.smallFont
         label.textAlignment = .center
-        label.textColor = ThemeColors.black
+        label.textColor = ThemeColors.primaryText
         label.text = tooltip
         label.numberOfLines = 1
         label.adjustsFontSizeToFitWidth = true
-        
-        //label.backgroundColor = ThemeColors.standardBackground
         
         let view = UIView()
         view.backgroundColor = ThemeColors.standardBackground

@@ -48,7 +48,7 @@ extension UIScrollView {
         
         UIView.animate(withDuration: 0.01) {
             let indicatorsImageView = self.subviews.last as? UIImageView
-            indicatorsImageView?.backgroundColor = ThemeColors.purePurple
+            indicatorsImageView?.backgroundColor = ThemeColors.primary
             self.flashScrollIndicators()
         }
         

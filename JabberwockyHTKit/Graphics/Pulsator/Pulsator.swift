@@ -71,7 +71,7 @@ internal let kPulsatorAnimationKey = "pulsator"
         }
 
         fileprivate func setupPulse() {
-            backgroundColor = ThemeColors.darkishPurple.cgColor
+            backgroundColor = ThemeColors.cursorPulse.cgColor
             contentsScale = UIScreen.main.scale
             opacity = 0
             bounds = CGRect(origin: CGPoint.zero, size: CGSize(width: radius * 2, height: radius * 2))
