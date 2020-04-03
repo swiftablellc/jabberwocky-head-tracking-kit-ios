@@ -157,7 +157,7 @@ pod install
 
 * `*-LocalDev` schemes are for development of `JabberwockyHTKit` and `JabberwockyHTKitCore` simultaneously. This is not a common use case, so it is safe to ignore these schemes.
 * `*-PodsOnly` schemes pull all dependencies from CocoaPods and therefore are not very useful for local development of `JabberwockyHTKit`.
-* `JabberwockyHTKit` uses CocoaPods to install its one dependency `JabberwockyHTKitCore`, but the `JabberwockyHTKitCore.framework` can be found [here](https://github.com/swiftablellc/jabberwocky-head-tracking-kit-core-ios-binary/tree/master/JabberwockyHTKitCore.framework). If you don't want to use CocoaPods you can copy the checkout the repository with the framework binary and add it to the project. It might be best to create a new target similar to `JabberwockyHTKit-LocalDev` to get it to build properly.
+* `JabberwockyHTKit` uses CocoaPods to install its one dependency `JabberwockyHTKitCore`, but the `JabberwockyHTKitCore.framework` can be found [here](https://github.com/swiftablellc/jabberwocky-head-tracking-kit-core-ios-binary/tree/master/JabberwockyHTKitCore.framework). If you don't want to use CocoaPods you checkout the repository with the framework binary and add it to the project. It might be best to create a new target similar to `JabberwockyHTKit-LocalDev` to get it to build properly.
 
 
 ## Applications
