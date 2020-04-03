@@ -45,7 +45,7 @@ pod install
 
 ## Add Head Tracking to an Existing Application
 
-`BasicTutorial-PodsOnly` is an example application target that has one standard `UIButton` which responds to taps on the screen. When configuring head tracking within an existing application there are a few setup steps that need to be performed and then the default `HTFeature` singletons that are configured will automatically detect `UIControl`, `UICollectionViewCell`, and `UITableViewCell` elements and interact with them. Other custom `UIView` elements can be configured to work with the head tracking framework by implementing the `HTFocusable` protocol (more info below).
+`BasicTutorial-PodsOnly` is an example application target that has one standard `UIButton` which responds to taps on the screen. When configuring head tracking within an existing application there are a few setup steps that need to be performed. Once `JabberwockyHTKit` is configured and enabled, the default `HTFeature` singletons that are configured will automatically detect `UIControl`, `UICollectionViewCell`, and `UITableViewCell` elements and interact with them. Other custom `UIView` elements can be configured to work with the head tracking framework by implementing the `HTFocusable` protocol (more info below).
 
 ### Step 1: Install JabberwockyHTKit Frameworks
 
@@ -86,7 +86,7 @@ pod install
 </plist>
 ```
 
-### Step 3: Configure JabberwockyHTKit
+### Step 3: Configure JabberwockyHTKit in Code
 
 * Head Tracking can be configured and enabled in code any time after the application `didFinishLaunchingWithOptions`.
 
@@ -142,7 +142,7 @@ import JabberwockyHTKit
 
 ### Step 4: Run
 
-* If you run on a physical device that supports FaceID, you should get output similar to below.
+* If you run on a physical device that supports FaceID, you should get XCode output similar to below.
 
 ```shell script
 ############################### Basic[19446:10081868] Requested Camera Permission
@@ -151,7 +151,7 @@ import JabberwockyHTKit
 ############################### Basic[19446:10081868] Head Tracking enabled successfully.
 ```
 
-* If you run on a simulator or device that does not support FaceID, you should get output similar to below. `JabberwockyHTKitCore.framework` binary comes with i386 and x86_64 archs, so that running in a simulator should not crash.
+* If you run on a simulator or device that does not support FaceID, you should get XCode output similar to below. `JabberwockyHTKitCore.framework` binary comes with i386 and x86_64 module archs, so that running in a simulator should not crash.
 
 ```
 ############################### Basic[2476:18033900] Requested Camera Permission
