@@ -22,8 +22,6 @@ limitations under the License.
 
 import UIKit
 
-// TODO: Move this to a Tutorial
-
 public class CrazyThemeFeature: NSObject, HTFeature {
 
     // MARK: Singleton Initialization
