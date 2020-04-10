@@ -80,7 +80,6 @@
 		1E1E0A86242E8035002C4BE0 /* HTThemes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C641824240A0100D97089 /* HTThemes.swift */; };
 		1E1E0A88242E8035002C4BE0 /* ChargingTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C643024240A0100D97089 /* ChargingTimer.swift */; };
 		1E1E0A89242E8035002C4BE0 /* CameraWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C642824240A0100D97089 /* CameraWindow.swift */; };
-		1E1E0A8A242E8035002C4BE0 /* UIBezierPath+LineThroughPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C646124240A0200D97089 /* UIBezierPath+LineThroughPoints.swift */; };
 		1E1E0A8B242E8035002C4BE0 /* UIWindow+TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C645E24240A0200D97089 /* UIWindow+TopViewController.swift */; };
 		1E1E0A8C242E8035002C4BE0 /* UIFont+Traits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C646524240A0200D97089 /* UIFont+Traits.swift */; };
 		1E1E0A8D242E8035002C4BE0 /* HTSounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C641624240A0100D97089 /* HTSounds.swift */; };
@@ -161,7 +160,6 @@
 		1E7C64B324240A0200D97089 /* UIView+FirstResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C645B24240A0200D97089 /* UIView+FirstResponder.swift */; };
 		1E7C64B524240A0200D97089 /* Array+Chunks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C645D24240A0200D97089 /* Array+Chunks.swift */; };
 		1E7C64B624240A0200D97089 /* UIWindow+TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C645E24240A0200D97089 /* UIWindow+TopViewController.swift */; };
-		1E7C64B924240A0200D97089 /* UIBezierPath+LineThroughPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C646124240A0200D97089 /* UIBezierPath+LineThroughPoints.swift */; };
 		1E7C64BB24240A0200D97089 /* UIViewController+DefaultScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C646324240A0200D97089 /* UIViewController+DefaultScroll.swift */; };
 		1E7C64BC24240A0200D97089 /* UIView+Subviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C646424240A0200D97089 /* UIView+Subviews.swift */; };
 		1E7C64BD24240A0200D97089 /* UIFont+Traits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C646524240A0200D97089 /* UIFont+Traits.swift */; };
@@ -329,7 +327,6 @@
 		1E7C645B24240A0200D97089 /* UIView+FirstResponder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+FirstResponder.swift"; sourceTree = "<group>"; };
 		1E7C645D24240A0200D97089 /* Array+Chunks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Chunks.swift"; sourceTree = "<group>"; };
 		1E7C645E24240A0200D97089 /* UIWindow+TopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIWindow+TopViewController.swift"; sourceTree = "<group>"; };
-		1E7C646124240A0200D97089 /* UIBezierPath+LineThroughPoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBezierPath+LineThroughPoints.swift"; sourceTree = "<group>"; };
 		1E7C646324240A0200D97089 /* UIViewController+DefaultScroll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+DefaultScroll.swift"; sourceTree = "<group>"; };
 		1E7C646424240A0200D97089 /* UIView+Subviews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Subviews.swift"; sourceTree = "<group>"; };
 		1E7C646524240A0200D97089 /* UIFont+Traits.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Traits.swift"; sourceTree = "<group>"; };
@@ -643,7 +640,6 @@
 			isa = PBXGroup;
 			children = (
 				1E7C645D24240A0200D97089 /* Array+Chunks.swift */,
-				1E7C646124240A0200D97089 /* UIBezierPath+LineThroughPoints.swift */,
 				1E7C646524240A0200D97089 /* UIFont+Traits.swift */,
 				1E7C645A24240A0200D97089 /* UIScrollView+ManualScroll.swift */,
 				1E7C645B24240A0200D97089 /* UIView+FirstResponder.swift */,
@@ -1283,7 +1279,6 @@
 				1E1E0A86242E8035002C4BE0 /* HTThemes.swift in Sources */,
 				1E1E0A88242E8035002C4BE0 /* ChargingTimer.swift in Sources */,
 				1E1E0A89242E8035002C4BE0 /* CameraWindow.swift in Sources */,
-				1E1E0A8A242E8035002C4BE0 /* UIBezierPath+LineThroughPoints.swift in Sources */,
 				1E1E0A8B242E8035002C4BE0 /* UIWindow+TopViewController.swift in Sources */,
 				1E1E0A8C242E8035002C4BE0 /* UIFont+Traits.swift in Sources */,
 				1E1E0A8D242E8035002C4BE0 /* HTSounds.swift in Sources */,
@@ -1376,7 +1371,6 @@
 				1E7C649824240A0200D97089 /* CursorToggleView.swift in Sources */,
 				1E7C649224240A0200D97089 /* ChargingTimer.swift in Sources */,
 				1E7C648C24240A0200D97089 /* CameraWindow.swift in Sources */,
-				1E7C64B924240A0200D97089 /* UIBezierPath+LineThroughPoints.swift in Sources */,
 				1E7C64B624240A0200D97089 /* UIWindow+TopViewController.swift in Sources */,
 				1E7C64BD24240A0200D97089 /* UIFont+Traits.swift in Sources */,
 				1E7C647C24240A0200D97089 /* HTSounds.swift in Sources */,
