@@ -19,14 +19,14 @@ import Foundation
 extension NSNotification {
 
     @objc public static let htCursorModeKey: String = "HTNotificationCursorModeObjectKey"
-    @objc public static let htFocusedElementKey: String = "HTNotificationFocusedElementObjectKey"
+    @objc public static let htFocusContextKey: String = "HTNotificationFocusContextObjectKey"
     
     @objc public static let htOnChangeCursorModeNotificationKey = "htOnChangeCursorModeNotification"
-    @objc public static let htOnCursorFocusNotificationKey = "htOnCursorFocusNotification"
+    @objc public static let htOnCursorFocusUpdateNotificationKey = "htOnCursorFocusUpdateNotification"
     @objc public static let htOnCursorModeUpdateNotificationKey = "htOnCursorModeUpdateNotification"
     @objc public static let htOnCursorClickNotificationKey = "htOnCursorClickNotification"
     
-    @objc public static let htInitiateRecalibrationCountdownNotification = "htInitiateRecalibrationCountdownNotification"
+    @objc public static let htInitiateRecalibrationCountdownNotificationKey = "htInitiateRecalibrationCountdownNotification"
     @objc public static let htOnHeadTrackingStatusUpdateNotificationKey = "htOnHeadTrackingStatusUpdateNotification"
     
 }
@@ -34,13 +34,13 @@ extension NSNotification {
 extension NSNotification.Name {
     public static let htOnChangeCursorModeNotification =
         NSNotification.Name(NSNotification.htOnChangeCursorModeNotificationKey)
-    public static let htOnCursorFocusNotification =
-        NSNotification.Name(NSNotification.htOnCursorFocusNotificationKey)
+    public static let htOnCursorFocusUpdateNotification =
+        NSNotification.Name(NSNotification.htOnCursorFocusUpdateNotificationKey)
     public static let htOnCursorModeUpdateNotification =
         NSNotification.Name(NSNotification.htOnCursorModeUpdateNotificationKey)
     public static let htOnCursorClickNotification =
         Notification.Name(NSNotification.htOnCursorClickNotificationKey)
 
-    public static let htInitiateRecalibrationCountdownNotification = Notification.Name(NSNotification.htInitiateRecalibrationCountdownNotification)
+    public static let htInitiateRecalibrationCountdownNotification = Notification.Name(NSNotification.htInitiateRecalibrationCountdownNotificationKey)
     public static let htOnHeadTrackingStatusUpdateNotification = Notification.Name(NSNotification.htOnHeadTrackingStatusUpdateNotificationKey)
 }

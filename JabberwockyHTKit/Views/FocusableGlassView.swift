@@ -16,7 +16,7 @@ limitations under the License.
 
 import UIKit.UIView
 
-class FocusableGlassView: UIView {
+public class FocusableGlassView: HTGlassView {
     
     // TODO: This should probably be Focusable: FocusableFacadeView or some other mechanism,
     // but the Focusable protocol can't extend the Hashable protocol without causing other problems.
@@ -29,18 +29,23 @@ class FocusableGlassView: UIView {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
-        // Focusable glass views cannot be interacted with.  Always pass hit tests through...
-        return nil
+
+    @objc public func getFocusableElements() -> [HTFocusable] {
+        var focusableElements: [HTFocusable] = []
+        focusableViewMap.keys.forEach {
+            if let focusableElement = $0 as? HTFocusable {
+                focusableElements.append(focusableElement)
+            }
+        }
+        return focusableElements
     }
-    
+
     func collectFocusableViews(_ focusableViews: [UIView]) {
         // remove focusableViews that are not in the new action target set
         for focusableView in focusableViewMap.keys {
             if !focusableViews.contains(focusableView) {
                 // Don't want to remove facade views that are currently doing click animations
-                if let facadeView = focusableViewMap[focusableView], facadeView.isDisposable {
+                if let facadeView = focusableViewMap[focusableView] {
                     facadeView.removeFromSuperview()
                     focusableViewMap[focusableView] = nil
                 }
@@ -60,7 +65,7 @@ class FocusableGlassView: UIView {
             }
         }
     }
-    
+
     func getFocusedFacadeView(at point: CGPoint) -> FocusableFacadeView? {
 
         var hits = [FocusableFacadeView]()
@@ -75,7 +80,7 @@ class FocusableGlassView: UIView {
         // Filter out views that cannot be hit tested (not on top), but convert the screen point
         // from the accessible (facade) frame to one that is in the target frame (proportionate).
         hits = hits.filter { focusableFacadeView in
-            let targetScreenPoint = focusableFacadeView.screenPointInTargetFrame(from: point)
+            let targetScreenPoint = focusableFacadeView.screenPointInTargetFrame(point)
             // Hit element is expensive... 50+ hit tests is likely to cause poor performance.
             // FIXME: We might want to emit an error or log something here to check for poor performance.
             let hitView = HTFeatureUtils.getHitElement(at: targetScreenPoint, with: SynthFocusHitTestEvent())

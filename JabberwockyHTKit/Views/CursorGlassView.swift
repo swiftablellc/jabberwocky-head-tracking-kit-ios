@@ -17,7 +17,7 @@ limitations under the License.
 import JabberwockyHTKitCore
 import UIKit
 
-class CursorGlassView: UIView {
+class CursorGlassView: HTGlassView {
 
     private var cursor: Cursor
 
@@ -46,11 +46,6 @@ class CursorGlassView: UIView {
     deinit {
         NotificationCenter.default.removeObserver(
                 self, name: .htOnCursorUpdateNotification, object: nil)
-    }
-
-    override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
-        // Cursor glass views cannot be interacted with.  Always pass hit tests through...
-        return nil
     }
 
     @objc func onCursorUpdateNotification(_ notification: NSNotification) {

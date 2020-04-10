@@ -16,36 +16,30 @@ limitations under the License.
 
 import UIKit
 
-@objc public class ClickAssistWindow: UIWindow {
-    
-    var focusableGlassView: FocusableGlassView!
+@objc public class TooltipWindow: HTGlassWindow {
+    let tooltipView: TooltipGlassView = TooltipGlassView()
     
     @objc override init(frame: CGRect) {
         super.init(frame: frame)
         
-        focusableGlassView = FocusableGlassView()
-        self.addSubview(focusableGlassView!)
-        focusableGlassView.layer.zPosition = CGFloat(Float.greatestFiniteMagnitude)
-        focusableGlassView.translatesAutoresizingMaskIntoConstraints = false
-        focusableGlassView.heightAnchor.constraint(equalTo: self.heightAnchor).isActive = true
-        focusableGlassView.widthAnchor.constraint(equalTo: self.widthAnchor).isActive = true
-        focusableGlassView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
-        focusableGlassView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+        self.addSubview(tooltipView)
+        
+        tooltipView.translatesAutoresizingMaskIntoConstraints = false
+        tooltipView.heightAnchor.constraint(equalTo: self.heightAnchor).isActive = true
+        tooltipView.widthAnchor.constraint(equalTo: self.widthAnchor).isActive = true
+        tooltipView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
+        tooltipView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
     }
     
     @objc required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    @objc public override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
-        return nil
-    }
-    
     //Setting window level manually caps out at 10 million which is below system keyboard
     //But overriding the property works...
     @objc public override var windowLevel: UIWindow.Level {
         get {
-            return HTWindows.clickAssistWindowLevel
+            return HTWindows.tooltipWindowLevel
         }
         set {
             //do nothing, this is a fixed value
@@ -53,3 +47,4 @@ import UIKit
     }
     
 }
+

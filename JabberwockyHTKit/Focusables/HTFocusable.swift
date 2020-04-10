@@ -27,6 +27,10 @@ internal class BoolResultWrapper: NSObject {
 @objc public protocol HTFocusable: class {
     
     var htClickSound: HTSounds.Sound { get set }
+    /*
+     htFocusLevel must be between 0.0 and 1.0 where 1.0 indicates fully focused.
+     */
+    var htFocusLevel: Float { get set }
     var htIsFocusable: () -> Bool { get set }
     var htTooltipText: String? { get set }
     

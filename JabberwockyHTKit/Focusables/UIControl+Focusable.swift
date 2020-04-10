@@ -24,6 +24,7 @@ extension UIControl: HTFocusable {
 
     private struct Props {
         static var htClickSound: HTSounds.Sound = .click
+        static var htFocusLevel: Float = 0.0
         static var htIgnoresCursorModeAndScroll: Bool = true
         static var htIsFocusable: BoolResultWrapper = BoolResultWrapper{ return true }
         static var htIsKeyboardButton: Bool = false
@@ -40,6 +41,19 @@ extension UIControl: HTFocusable {
         }
         set {
             objc_setAssociatedObject(self, &Props.htClickSound, newValue, .OBJC_ASSOCIATION_RETAIN)
+        }
+    }
+    
+    @objc public var htFocusLevel: Float {
+        get {
+            guard let value = objc_getAssociatedObject(self, &Props.htFocusLevel) as? Float else {
+                return 0.0
+            }
+            return value
+        }
+        set {
+            let inRangeValue = max(0.0, min(1.0, newValue))
+            objc_setAssociatedObject(self, &Props.htFocusLevel, inRangeValue, .OBJC_ASSOCIATION_RETAIN)
         }
     }
 

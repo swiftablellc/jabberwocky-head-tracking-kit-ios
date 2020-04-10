@@ -14,13 +14,13 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-import Foundation
+import UIKit
 
-extension Array {
+@objc public class HTGlassView: UIView {
 
-    public func htChunks(_ chunkSize: Int) -> [[Element]] {
-        return stride(from: 0, to: self.count, by: chunkSize).map {
-            Array(self[$0..<Swift.min($0 + chunkSize, self.count)])
-        }
+    override public func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
+        // Glass views cannot be interacted with.  Always pass hit tests through...
+        return nil
     }
+
 }

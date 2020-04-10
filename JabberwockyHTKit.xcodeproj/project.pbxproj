@@ -12,7 +12,7 @@
 		1E1332E024377A2100D9172B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E1332DF24377A2100D9172B /* main.m */; };
 		1E1332E324377AEF00D9172B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E1332E224377AEF00D9172B /* AppDelegate.m */; };
 		1E1332E424377BEE00D9172B /* AppDelegate.h in Sources */ = {isa = PBXBuildFile; fileRef = 1E1332E124377A9700D9172B /* AppDelegate.h */; };
-		1E1332E624379B7B00D9172B /* CursorFocusAnimationFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1332E524379B7B00D9172B /* CursorFocusAnimationFeature.swift */; };
+		1E1332E624379B7B00D9172B /* CursorFocusAndClickAnimationFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1332E524379B7B00D9172B /* CursorFocusAndClickAnimationFeature.swift */; };
 		1E1333182437DB8B00D9172B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E1333142437DB8B00D9172B /* LaunchScreen.storyboard */; };
 		1E1333192437DB8B00D9172B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E1333152437DB8B00D9172B /* Assets.xcassets */; };
 		1E13331B2437DB8B00D9172B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1333172437DB8B00D9172B /* AppDelegate.swift */; };
@@ -22,18 +22,12 @@
 		1E1E0A36242E7F53002C4BE0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C652524255BA000D97089 /* AppDelegate.swift */; };
 		1E1E0A3A242E7F53002C4BE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E7C652E24255BA200D97089 /* Assets.xcassets */; };
 		1E1E0A45242E8035002C4BE0 /* JabberwockyHTKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E7C63F42424090A00D97089 /* JabberwockyHTKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1E1E0A47242E8035002C4BE0 /* CountdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C643924240A0200D97089 /* CountdownView.swift */; };
-		1E1E0A48242E8035002C4BE0 /* CursorToggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C643B24240A0200D97089 /* CursorToggleButton.swift */; };
 		1E1E0A49242E8035002C4BE0 /* Array+Chunks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C645D24240A0200D97089 /* Array+Chunks.swift */; };
 		1E1E0A4A242E8035002C4BE0 /* InMemorySettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C641C24240A0100D97089 /* InMemorySettings.swift */; };
-		1E1E0A4B242E8035002C4BE0 /* CursorGlassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C643D24240A0200D97089 /* CursorGlassView.swift */; };
 		1E1E0A4C242E8035002C4BE0 /* NSNotification+Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C645624240A0200D97089 /* NSNotification+Keyboard.swift */; };
-		1E1E0A4D242E8035002C4BE0 /* FocusableFacadeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C641024240A0100D97089 /* FocusableFacadeView.swift */; };
 		1E1E0A4E242E8035002C4BE0 /* ImmutableDefaultSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C641A24240A0100D97089 /* ImmutableDefaultSettings.swift */; };
 		1E1E0A4F242E8035002C4BE0 /* StatusBarNotificationBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C644224240A0200D97089 /* StatusBarNotificationBanner.swift */; };
-		1E1E0A50242E8035002C4BE0 /* TooltipGlassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C643E24240A0200D97089 /* TooltipGlassView.swift */; };
 		1E1E0A51242E8035002C4BE0 /* HTDwellTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C641724240A0100D97089 /* HTDwellTime.swift */; };
-		1E1E0A52242E8035002C4BE0 /* FaceMeshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C643724240A0200D97089 /* FaceMeshView.swift */; };
 		1E1E0A53242E8035002C4BE0 /* HTKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C642224240A0100D97089 /* HTKeyboard.swift */; };
 		1E1E0A54242E8035002C4BE0 /* Cursor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C646924240A0200D97089 /* Cursor.swift */; };
 		1E1E0A55242E8035002C4BE0 /* HTAnalytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C647324240A0200D97089 /* HTAnalytics.swift */; };
@@ -49,7 +43,6 @@
 		1E1E0A5F242E8035002C4BE0 /* DeviceTypeUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C643424240A0100D97089 /* DeviceTypeUtilities.swift */; };
 		1E1E0A60242E8035002C4BE0 /* HTSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C641E24240A0100D97089 /* HTSettings.swift */; };
 		1E1E0A61242E8035002C4BE0 /* HeadTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C641B24240A0100D97089 /* HeadTracking.swift */; };
-		1E1E0A62242E8035002C4BE0 /* FocusableGlassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C640D24240A0100D97089 /* FocusableGlassView.swift */; };
 		1E1E0A63242E8035002C4BE0 /* NSNotification+Cursor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C645424240A0200D97089 /* NSNotification+Cursor.swift */; };
 		1E1E0A64242E8035002C4BE0 /* UIViewController+DefaultScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C646324240A0200D97089 /* UIViewController+DefaultScroll.swift */; };
 		1E1E0A65242E8035002C4BE0 /* HTFeatureUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C644E24240A0200D97089 /* HTFeatureUtils.swift */; };
@@ -62,8 +55,8 @@
 		1E1E0A6D242E8035002C4BE0 /* HTWindows.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C641924240A0100D97089 /* HTWindows.swift */; };
 		1E1E0A6E242E8035002C4BE0 /* BannerWarningsFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C644F24240A0200D97089 /* BannerWarningsFeature.swift */; };
 		1E1E0A6F242E8035002C4BE0 /* CursorDwellClickFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C64DD24251C0F00D97089 /* CursorDwellClickFeature.swift */; };
-		1E1E0A70242E8035002C4BE0 /* CursorClickAssistFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C644D24240A0200D97089 /* CursorClickAssistFeature.swift */; };
-		1E1E0A71242E8035002C4BE0 /* CursorEffectsWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C642A24240A0100D97089 /* CursorEffectsWindow.swift */; };
+		1E1E0A70242E8035002C4BE0 /* CursorFocusFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C644D24240A0200D97089 /* CursorFocusFeature.swift */; };
+		1E1E0A71242E8035002C4BE0 /* TooltipWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C642A24240A0100D97089 /* TooltipWindow.swift */; };
 		1E1E0A72242E8035002C4BE0 /* UIView+Subviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C646424240A0200D97089 /* UIView+Subviews.swift */; };
 		1E1E0A73242E8035002C4BE0 /* NotificationBannerQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C644424240A0200D97089 /* NotificationBannerQueue.swift */; };
 		1E1E0A74242E8035002C4BE0 /* UICollectionViewCell+Focusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C641124240A0100D97089 /* UICollectionViewCell+Focusable.swift */; };
@@ -81,11 +74,10 @@
 		1E1E0A80242E8035002C4BE0 /* BannerStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C644124240A0200D97089 /* BannerStyle.swift */; };
 		1E1E0A81242E8035002C4BE0 /* HTCursor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C642024240A0100D97089 /* HTCursor.swift */; };
 		1E1E0A82242E8035002C4BE0 /* UITableViewCell+Focusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C640F24240A0100D97089 /* UITableViewCell+Focusable.swift */; };
-		1E1E0A83242E8035002C4BE0 /* ClickAssistWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C642D24240A0100D97089 /* ClickAssistWindow.swift */; };
+		1E1E0A83242E8035002C4BE0 /* CursorFocusWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C642D24240A0100D97089 /* CursorFocusWindow.swift */; };
 		1E1E0A84242E8035002C4BE0 /* CursorIdleFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C644824240A0200D97089 /* CursorIdleFeature.swift */; };
 		1E1E0A85242E8035002C4BE0 /* UIControl+Focusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C640C24240A0100D97089 /* UIControl+Focusable.swift */; };
 		1E1E0A86242E8035002C4BE0 /* HTThemes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C641824240A0100D97089 /* HTThemes.swift */; };
-		1E1E0A87242E8035002C4BE0 /* CursorToggleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C643C24240A0200D97089 /* CursorToggleView.swift */; };
 		1E1E0A88242E8035002C4BE0 /* ChargingTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C643024240A0100D97089 /* ChargingTimer.swift */; };
 		1E1E0A89242E8035002C4BE0 /* CameraWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C642824240A0100D97089 /* CameraWindow.swift */; };
 		1E1E0A8A242E8035002C4BE0 /* UIBezierPath+LineThroughPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C646124240A0200D97089 /* UIBezierPath+LineThroughPoints.swift */; };
@@ -96,7 +88,6 @@
 		1E1E0A91242E8035002C4BE0 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 1E1E0A0E242D0513002C4BE0 /* README.md */; };
 		1E1E0A92242E8035002C4BE0 /* CursorAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E7C642624240A0100D97089 /* CursorAssets.xcassets */; };
 		1E1E0A93242E8035002C4BE0 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 1E1E0A10242D15F8002C4BE0 /* LICENSE */; };
-		1E1E0A94242E8035002C4BE0 /* Models.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E7C642524240A0100D97089 /* Models.scnassets */; };
 		1E1E0A9E242E8098002C4BE0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C652524255BA000D97089 /* AppDelegate.swift */; };
 		1E1E0AA2242E8098002C4BE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E7C652E24255BA200D97089 /* Assets.xcassets */; };
 		1E1E0AAB242E85D5002C4BE0 /* JabberwockyHTKitLocal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E1E0A98242E8035002C4BE0 /* JabberwockyHTKitLocal.framework */; };
@@ -110,6 +101,7 @@
 		1E1E0AC8242E9A2E002C4BE0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E1E0AC7242E9A2E002C4BE0 /* LaunchScreen.storyboard */; };
 		1E1E0AC9242E9A2E002C4BE0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E1E0AC7242E9A2E002C4BE0 /* LaunchScreen.storyboard */; };
 		1E1E0ACA242E9A2E002C4BE0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E1E0AC7242E9A2E002C4BE0 /* LaunchScreen.storyboard */; };
+		1E68A4C424410AF8003DD8AE /* AtomicInteger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E68A4C324410AF8003DD8AE /* AtomicInteger.swift */; };
 		1E7C64022424090A00D97089 /* JabberwockyHTKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E7C63F42424090A00D97089 /* JabberwockyHTKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1E7C647424240A0200D97089 /* UIControl+Focusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C640C24240A0100D97089 /* UIControl+Focusable.swift */; };
 		1E7C647524240A0200D97089 /* FocusableGlassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C640D24240A0100D97089 /* FocusableGlassView.swift */; };
@@ -132,14 +124,13 @@
 		1E7C648724240A0200D97089 /* HTCursorSensitivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C642124240A0100D97089 /* HTCursorSensitivity.swift */; };
 		1E7C648824240A0200D97089 /* HTKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C642224240A0100D97089 /* HTKeyboard.swift */; };
 		1E7C648924240A0200D97089 /* StoredSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C642324240A0100D97089 /* StoredSettings.swift */; };
-		1E7C648A24240A0200D97089 /* Models.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E7C642524240A0100D97089 /* Models.scnassets */; };
 		1E7C648B24240A0200D97089 /* CursorAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E7C642624240A0100D97089 /* CursorAssets.xcassets */; };
 		1E7C648C24240A0200D97089 /* CameraWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C642824240A0100D97089 /* CameraWindow.swift */; };
 		1E7C648D24240A0200D97089 /* CursorMenuWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C642924240A0100D97089 /* CursorMenuWindow.swift */; };
-		1E7C648E24240A0200D97089 /* CursorEffectsWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C642A24240A0100D97089 /* CursorEffectsWindow.swift */; };
+		1E7C648E24240A0200D97089 /* TooltipWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C642A24240A0100D97089 /* TooltipWindow.swift */; };
 		1E7C648F24240A0200D97089 /* CursorDrawWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C642B24240A0100D97089 /* CursorDrawWindow.swift */; };
 		1E7C649024240A0200D97089 /* FaceMeshWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C642C24240A0100D97089 /* FaceMeshWindow.swift */; };
-		1E7C649124240A0200D97089 /* ClickAssistWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C642D24240A0100D97089 /* ClickAssistWindow.swift */; };
+		1E7C649124240A0200D97089 /* CursorFocusWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C642D24240A0100D97089 /* CursorFocusWindow.swift */; };
 		1E7C649224240A0200D97089 /* ChargingTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C643024240A0100D97089 /* ChargingTimer.swift */; };
 		1E7C649424240A0200D97089 /* DeviceTypeUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C643424240A0100D97089 /* DeviceTypeUtilities.swift */; };
 		1E7C649524240A0200D97089 /* FaceMeshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C643724240A0200D97089 /* FaceMeshView.swift */; };
@@ -159,7 +150,7 @@
 		1E7C64A424240A0200D97089 /* CursorDrawFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C644A24240A0200D97089 /* CursorDrawFeature.swift */; };
 		1E7C64A524240A0200D97089 /* HTFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C644B24240A0200D97089 /* HTFeature.swift */; };
 		1E7C64A624240A0200D97089 /* EgressWarningFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C644C24240A0200D97089 /* EgressWarningFeature.swift */; };
-		1E7C64A724240A0200D97089 /* CursorClickAssistFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C644D24240A0200D97089 /* CursorClickAssistFeature.swift */; };
+		1E7C64A724240A0200D97089 /* CursorFocusFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C644D24240A0200D97089 /* CursorFocusFeature.swift */; };
 		1E7C64A824240A0200D97089 /* HTFeatureUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C644E24240A0200D97089 /* HTFeatureUtils.swift */; };
 		1E7C64A924240A0200D97089 /* BannerWarningsFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C644F24240A0200D97089 /* BannerWarningsFeature.swift */; };
 		1E7C64AA24240A0200D97089 /* CursorMenuFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C645024240A0200D97089 /* CursorMenuFeature.swift */; };
@@ -186,6 +177,11 @@
 		1E7C652624255BA000D97089 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C652524255BA000D97089 /* AppDelegate.swift */; };
 		1E7C652F24255BA200D97089 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E7C652E24255BA200D97089 /* Assets.xcassets */; };
 		1E7C65422425B2B100D97089 /* CursorRecalibrationFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C65412425B2B100D97089 /* CursorRecalibrationFeature.swift */; };
+		1EF5E48F243F91F500C7E6B7 /* HTFocusContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF5E48E243F91F500C7E6B7 /* HTFocusContext.swift */; };
+		1EF5E491243FBA8A00C7E6B7 /* CursorClickSoundFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF5E490243FBA8A00C7E6B7 /* CursorClickSoundFeature.swift */; };
+		1EF5E493243FFD9E00C7E6B7 /* FocusAndClickAnimationWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF5E492243FFD9E00C7E6B7 /* FocusAndClickAnimationWindow.swift */; };
+		1EF5E495243FFDE000C7E6B7 /* HTGlassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF5E494243FFDE000C7E6B7 /* HTGlassView.swift */; };
+		1EF5E4972440047600C7E6B7 /* HTGlassWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF5E4962440047600C7E6B7 /* HTGlassWindow.swift */; };
 		25AFD9402CDDB9C02D977AB2 /* Pods_JabberwockyHTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 501F47B2164643C80B43A2D0 /* Pods_JabberwockyHTKit.framework */; };
 		4D9E44F10EB8DFA04B9477BD /* Pods_BasicTutorial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C215212007476EDFB2CBB63E /* Pods_BasicTutorial.framework */; };
 		5A8345243E2A003E3EE758FC /* Pods_CustomThemeFeatureTutorial_PodsOnly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89F0A0BAB49CC7D71C9A3B31 /* Pods_CustomThemeFeatureTutorial_PodsOnly.framework */; };
@@ -256,7 +252,7 @@
 		1E1332DF24377A2100D9172B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1E1332E124377A9700D9172B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1E1332E224377AEF00D9172B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		1E1332E524379B7B00D9172B /* CursorFocusAnimationFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CursorFocusAnimationFeature.swift; sourceTree = "<group>"; };
+		1E1332E524379B7B00D9172B /* CursorFocusAndClickAnimationFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CursorFocusAndClickAnimationFeature.swift; sourceTree = "<group>"; };
 		1E1332E72437B9DE00D9172B /* CrazyThemeFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrazyThemeFeature.swift; sourceTree = "<group>"; };
 		1E1332EA2437D5EB00D9172B /* JabberwockyHTKit.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = JabberwockyHTKit.podspec; sourceTree = "<group>"; };
 		1E1333122437D96500D9172B /* Theme - Pods.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Theme - Pods.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -271,6 +267,7 @@
 		1E1E0AA9242E8098002C4BE0 /* Basic - Local.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Basic - Local.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E1E0AB8242E876D002C4BE0 /* JabberwockyHTKitCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = JabberwockyHTKitCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E1E0AC7242E9A2E002C4BE0 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1E68A4C324410AF8003DD8AE /* AtomicInteger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtomicInteger.swift; sourceTree = "<group>"; };
 		1E7C63F12424090A00D97089 /* JabberwockyHTKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JabberwockyHTKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E7C63F42424090A00D97089 /* JabberwockyHTKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JabberwockyHTKit.h; sourceTree = "<group>"; };
 		1E7C63F52424090A00D97089 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -295,14 +292,13 @@
 		1E7C642124240A0100D97089 /* HTCursorSensitivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTCursorSensitivity.swift; sourceTree = "<group>"; };
 		1E7C642224240A0100D97089 /* HTKeyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTKeyboard.swift; sourceTree = "<group>"; };
 		1E7C642324240A0100D97089 /* StoredSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoredSettings.swift; sourceTree = "<group>"; };
-		1E7C642524240A0100D97089 /* Models.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = Models.scnassets; sourceTree = "<group>"; };
 		1E7C642624240A0100D97089 /* CursorAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = CursorAssets.xcassets; sourceTree = "<group>"; };
 		1E7C642824240A0100D97089 /* CameraWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraWindow.swift; sourceTree = "<group>"; };
 		1E7C642924240A0100D97089 /* CursorMenuWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CursorMenuWindow.swift; sourceTree = "<group>"; };
-		1E7C642A24240A0100D97089 /* CursorEffectsWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CursorEffectsWindow.swift; sourceTree = "<group>"; };
+		1E7C642A24240A0100D97089 /* TooltipWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TooltipWindow.swift; sourceTree = "<group>"; };
 		1E7C642B24240A0100D97089 /* CursorDrawWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CursorDrawWindow.swift; sourceTree = "<group>"; };
 		1E7C642C24240A0100D97089 /* FaceMeshWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceMeshWindow.swift; sourceTree = "<group>"; };
-		1E7C642D24240A0100D97089 /* ClickAssistWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClickAssistWindow.swift; sourceTree = "<group>"; };
+		1E7C642D24240A0100D97089 /* CursorFocusWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CursorFocusWindow.swift; sourceTree = "<group>"; };
 		1E7C643024240A0100D97089 /* ChargingTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChargingTimer.swift; sourceTree = "<group>"; };
 		1E7C643424240A0100D97089 /* DeviceTypeUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceTypeUtilities.swift; sourceTree = "<group>"; };
 		1E7C643724240A0200D97089 /* FaceMeshView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceMeshView.swift; sourceTree = "<group>"; };
@@ -322,7 +318,7 @@
 		1E7C644A24240A0200D97089 /* CursorDrawFeature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CursorDrawFeature.swift; sourceTree = "<group>"; };
 		1E7C644B24240A0200D97089 /* HTFeature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTFeature.swift; sourceTree = "<group>"; };
 		1E7C644C24240A0200D97089 /* EgressWarningFeature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EgressWarningFeature.swift; sourceTree = "<group>"; };
-		1E7C644D24240A0200D97089 /* CursorClickAssistFeature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CursorClickAssistFeature.swift; sourceTree = "<group>"; };
+		1E7C644D24240A0200D97089 /* CursorFocusFeature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CursorFocusFeature.swift; sourceTree = "<group>"; };
 		1E7C644E24240A0200D97089 /* HTFeatureUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTFeatureUtils.swift; sourceTree = "<group>"; };
 		1E7C644F24240A0200D97089 /* BannerWarningsFeature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerWarningsFeature.swift; sourceTree = "<group>"; };
 		1E7C645024240A0200D97089 /* CursorMenuFeature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CursorMenuFeature.swift; sourceTree = "<group>"; };
@@ -351,6 +347,11 @@
 		1E7C652E24255BA200D97089 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1E7C653324255BA200D97089 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1E7C65412425B2B100D97089 /* CursorRecalibrationFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CursorRecalibrationFeature.swift; sourceTree = "<group>"; };
+		1EF5E48E243F91F500C7E6B7 /* HTFocusContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTFocusContext.swift; sourceTree = "<group>"; };
+		1EF5E490243FBA8A00C7E6B7 /* CursorClickSoundFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CursorClickSoundFeature.swift; sourceTree = "<group>"; };
+		1EF5E492243FFD9E00C7E6B7 /* FocusAndClickAnimationWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusAndClickAnimationWindow.swift; sourceTree = "<group>"; };
+		1EF5E494243FFDE000C7E6B7 /* HTGlassView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTGlassView.swift; sourceTree = "<group>"; };
+		1EF5E4962440047600C7E6B7 /* HTGlassWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTGlassWindow.swift; sourceTree = "<group>"; };
 		31FB4679CD65B347CAFBFAB7 /* Pods_ObjcTutorial_PodsOnly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ObjcTutorial_PodsOnly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		469359539E6625CA0D106CB0 /* Pods-BasicTutorial-PodsOnly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasicTutorial-PodsOnly.release.xcconfig"; path = "Target Support Files/Pods-BasicTutorial-PodsOnly/Pods-BasicTutorial-PodsOnly.release.xcconfig"; sourceTree = "<group>"; };
 		471FEE75B3CED1BA67828DEC /* Pods-CustomThemeFeatureTutorial-PodsOnly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomThemeFeatureTutorial-PodsOnly.release.xcconfig"; path = "Target Support Files/Pods-CustomThemeFeatureTutorial-PodsOnly/Pods-CustomThemeFeatureTutorial-PodsOnly.release.xcconfig"; sourceTree = "<group>"; };
@@ -507,8 +508,6 @@
 		1E7C640B24240A0100D97089 /* Focusables */ = {
 			isa = PBXGroup;
 			children = (
-				1E7C641024240A0100D97089 /* FocusableFacadeView.swift */,
-				1E7C640D24240A0100D97089 /* FocusableGlassView.swift */,
 				1E7C640E24240A0100D97089 /* HTFocusable.swift */,
 				1E7C641124240A0100D97089 /* UICollectionViewCell+Focusable.swift */,
 				1E7C640C24240A0100D97089 /* UIControl+Focusable.swift */,
@@ -550,7 +549,6 @@
 			isa = PBXGroup;
 			children = (
 				1E7C642624240A0100D97089 /* CursorAssets.xcassets */,
-				1E7C642524240A0100D97089 /* Models.scnassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -559,11 +557,13 @@
 			isa = PBXGroup;
 			children = (
 				1E7C642824240A0100D97089 /* CameraWindow.swift */,
-				1E7C642D24240A0100D97089 /* ClickAssistWindow.swift */,
 				1E7C642B24240A0100D97089 /* CursorDrawWindow.swift */,
-				1E7C642A24240A0100D97089 /* CursorEffectsWindow.swift */,
+				1E7C642D24240A0100D97089 /* CursorFocusWindow.swift */,
 				1E7C642924240A0100D97089 /* CursorMenuWindow.swift */,
 				1E7C642C24240A0100D97089 /* FaceMeshWindow.swift */,
+				1EF5E492243FFD9E00C7E6B7 /* FocusAndClickAnimationWindow.swift */,
+				1EF5E4962440047600C7E6B7 /* HTGlassWindow.swift */,
+				1E7C642A24240A0100D97089 /* TooltipWindow.swift */,
 			);
 			path = Windows;
 			sourceTree = "<group>";
@@ -571,63 +571,27 @@
 		1E7C642E24240A0100D97089 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				1E7C643324240A0100D97089 /* Device */,
-				1E7C642F24240A0100D97089 /* Timer */,
-			);
-			path = Utilities;
-			sourceTree = "<group>";
-		};
-		1E7C642F24240A0100D97089 /* Timer */ = {
-			isa = PBXGroup;
-			children = (
+				1E68A4C324410AF8003DD8AE /* AtomicInteger.swift */,
 				1E7C643024240A0100D97089 /* ChargingTimer.swift */,
-			);
-			path = Timer;
-			sourceTree = "<group>";
-		};
-		1E7C643324240A0100D97089 /* Device */ = {
-			isa = PBXGroup;
-			children = (
 				1E7C643424240A0100D97089 /* DeviceTypeUtilities.swift */,
 			);
-			path = Device;
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		1E7C643524240A0100D97089 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				1E7C643824240A0200D97089 /* Countdown */,
-				1E7C643A24240A0200D97089 /* Cursor */,
-				1E7C643624240A0100D97089 /* FaceMesh */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		1E7C643624240A0100D97089 /* FaceMesh */ = {
-			isa = PBXGroup;
-			children = (
-				1E7C643724240A0200D97089 /* FaceMeshView.swift */,
-			);
-			path = FaceMesh;
-			sourceTree = "<group>";
-		};
-		1E7C643824240A0200D97089 /* Countdown */ = {
-			isa = PBXGroup;
-			children = (
 				1E7C643924240A0200D97089 /* CountdownView.swift */,
-			);
-			path = Countdown;
-			sourceTree = "<group>";
-		};
-		1E7C643A24240A0200D97089 /* Cursor */ = {
-			isa = PBXGroup;
-			children = (
 				1E7C643B24240A0200D97089 /* CursorToggleButton.swift */,
 				1E7C643C24240A0200D97089 /* CursorToggleView.swift */,
 				1E7C643D24240A0200D97089 /* CursorGlassView.swift */,
+				1E7C643724240A0200D97089 /* FaceMeshView.swift */,
+				1E7C641024240A0100D97089 /* FocusableFacadeView.swift */,
+				1E7C640D24240A0100D97089 /* FocusableGlassView.swift */,
+				1EF5E494243FFDE000C7E6B7 /* HTGlassView.swift */,
 				1E7C643E24240A0200D97089 /* TooltipGlassView.swift */,
 			);
-			path = Cursor;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		1E7C643F24240A0200D97089 /* Banners */ = {
@@ -647,10 +611,11 @@
 			children = (
 				1E7C644F24240A0200D97089 /* BannerWarningsFeature.swift */,
 				1E7C64DF24251C1C00D97089 /* CursorBlinkClickFeature.swift */,
-				1E7C644D24240A0200D97089 /* CursorClickAssistFeature.swift */,
+				1EF5E490243FBA8A00C7E6B7 /* CursorClickSoundFeature.swift */,
 				1E7C644A24240A0200D97089 /* CursorDrawFeature.swift */,
 				1E7C64DD24251C0F00D97089 /* CursorDwellClickFeature.swift */,
-				1E1332E524379B7B00D9172B /* CursorFocusAnimationFeature.swift */,
+				1E1332E524379B7B00D9172B /* CursorFocusAndClickAnimationFeature.swift */,
+				1E7C644D24240A0200D97089 /* CursorFocusFeature.swift */,
 				1E7C644824240A0200D97089 /* CursorIdleFeature.swift */,
 				1E7C645024240A0200D97089 /* CursorMenuFeature.swift */,
 				1E7C65412425B2B100D97089 /* CursorRecalibrationFeature.swift */,
@@ -667,6 +632,7 @@
 		1E7C645224240A0200D97089 /* Notifications */ = {
 			isa = PBXGroup;
 			children = (
+				1EF5E48E243F91F500C7E6B7 /* HTFocusContext.swift */,
 				1E7C645424240A0200D97089 /* NSNotification+Cursor.swift */,
 				1E7C645624240A0200D97089 /* NSNotification+Keyboard.swift */,
 			);
@@ -693,7 +659,6 @@
 			children = (
 				1E7C646A24240A0200D97089 /* Animation */,
 				1E7C646724240A0200D97089 /* Cursor */,
-				1E7C646F24240A0200D97089 /* Pulsator */,
 			);
 			path = Graphics;
 			sourceTree = "<group>";
@@ -701,8 +666,9 @@
 		1E7C646724240A0200D97089 /* Cursor */ = {
 			isa = PBXGroup;
 			children = (
-				1E7C646824240A0200D97089 /* ImageCursor.swift */,
 				1E7C646924240A0200D97089 /* Cursor.swift */,
+				1E7C646824240A0200D97089 /* ImageCursor.swift */,
+				1E7C647024240A0200D97089 /* Pulsator.swift */,
 			);
 			path = Cursor;
 			sourceTree = "<group>";
@@ -714,14 +680,6 @@
 				1E7C646C24240A0200D97089 /* TransformAnimator.swift */,
 			);
 			path = Animation;
-			sourceTree = "<group>";
-		};
-		1E7C646F24240A0200D97089 /* Pulsator */ = {
-			isa = PBXGroup;
-			children = (
-				1E7C647024240A0200D97089 /* Pulsator.swift */,
-			);
-			path = Pulsator;
 			sourceTree = "<group>";
 		};
 		1E7C647124240A0200D97089 /* Analytics */ = {
@@ -1021,7 +979,6 @@
 				1E1E0A91242E8035002C4BE0 /* README.md in Resources */,
 				1E1E0A92242E8035002C4BE0 /* CursorAssets.xcassets in Resources */,
 				1E1E0A93242E8035002C4BE0 /* LICENSE in Resources */,
-				1E1E0A94242E8035002C4BE0 /* Models.scnassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1041,7 +998,6 @@
 				1E1E0A0F242D0513002C4BE0 /* README.md in Resources */,
 				1E7C648B24240A0200D97089 /* CursorAssets.xcassets in Resources */,
 				1E1E0A11242D15F8002C4BE0 /* LICENSE in Resources */,
-				1E7C648A24240A0200D97089 /* Models.scnassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1269,18 +1225,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1E1E0A47242E8035002C4BE0 /* CountdownView.swift in Sources */,
-				1E1E0A48242E8035002C4BE0 /* CursorToggleButton.swift in Sources */,
 				1E1E0A49242E8035002C4BE0 /* Array+Chunks.swift in Sources */,
 				1E1E0A4A242E8035002C4BE0 /* InMemorySettings.swift in Sources */,
-				1E1E0A4B242E8035002C4BE0 /* CursorGlassView.swift in Sources */,
 				1E1E0A4C242E8035002C4BE0 /* NSNotification+Keyboard.swift in Sources */,
-				1E1E0A4D242E8035002C4BE0 /* FocusableFacadeView.swift in Sources */,
 				1E1E0A4E242E8035002C4BE0 /* ImmutableDefaultSettings.swift in Sources */,
 				1E1E0A4F242E8035002C4BE0 /* StatusBarNotificationBanner.swift in Sources */,
-				1E1E0A50242E8035002C4BE0 /* TooltipGlassView.swift in Sources */,
 				1E1E0A51242E8035002C4BE0 /* HTDwellTime.swift in Sources */,
-				1E1E0A52242E8035002C4BE0 /* FaceMeshView.swift in Sources */,
 				1E1E0A53242E8035002C4BE0 /* HTKeyboard.swift in Sources */,
 				1E1E0A54242E8035002C4BE0 /* Cursor.swift in Sources */,
 				1E1E0A55242E8035002C4BE0 /* HTAnalytics.swift in Sources */,
@@ -1296,7 +1246,6 @@
 				1E1E0A5F242E8035002C4BE0 /* DeviceTypeUtilities.swift in Sources */,
 				1E1E0A60242E8035002C4BE0 /* HTSettings.swift in Sources */,
 				1E1E0A61242E8035002C4BE0 /* HeadTracking.swift in Sources */,
-				1E1E0A62242E8035002C4BE0 /* FocusableGlassView.swift in Sources */,
 				1E1E0A63242E8035002C4BE0 /* NSNotification+Cursor.swift in Sources */,
 				1E1E0A64242E8035002C4BE0 /* UIViewController+DefaultScroll.swift in Sources */,
 				1E1E0A65242E8035002C4BE0 /* HTFeatureUtils.swift in Sources */,
@@ -1309,8 +1258,8 @@
 				1E1E0A6D242E8035002C4BE0 /* HTWindows.swift in Sources */,
 				1E1E0A6E242E8035002C4BE0 /* BannerWarningsFeature.swift in Sources */,
 				1E1E0A6F242E8035002C4BE0 /* CursorDwellClickFeature.swift in Sources */,
-				1E1E0A70242E8035002C4BE0 /* CursorClickAssistFeature.swift in Sources */,
-				1E1E0A71242E8035002C4BE0 /* CursorEffectsWindow.swift in Sources */,
+				1E1E0A70242E8035002C4BE0 /* CursorFocusFeature.swift in Sources */,
+				1E1E0A71242E8035002C4BE0 /* TooltipWindow.swift in Sources */,
 				1E1E0A72242E8035002C4BE0 /* UIView+Subviews.swift in Sources */,
 				1E1E0A73242E8035002C4BE0 /* NotificationBannerQueue.swift in Sources */,
 				1E1E0A74242E8035002C4BE0 /* UICollectionViewCell+Focusable.swift in Sources */,
@@ -1328,11 +1277,10 @@
 				1E1E0A80242E8035002C4BE0 /* BannerStyle.swift in Sources */,
 				1E1E0A81242E8035002C4BE0 /* HTCursor.swift in Sources */,
 				1E1E0A82242E8035002C4BE0 /* UITableViewCell+Focusable.swift in Sources */,
-				1E1E0A83242E8035002C4BE0 /* ClickAssistWindow.swift in Sources */,
+				1E1E0A83242E8035002C4BE0 /* CursorFocusWindow.swift in Sources */,
 				1E1E0A84242E8035002C4BE0 /* CursorIdleFeature.swift in Sources */,
 				1E1E0A85242E8035002C4BE0 /* UIControl+Focusable.swift in Sources */,
 				1E1E0A86242E8035002C4BE0 /* HTThemes.swift in Sources */,
-				1E1E0A87242E8035002C4BE0 /* CursorToggleView.swift in Sources */,
 				1E1E0A88242E8035002C4BE0 /* ChargingTimer.swift in Sources */,
 				1E1E0A89242E8035002C4BE0 /* CameraWindow.swift in Sources */,
 				1E1E0A8A242E8035002C4BE0 /* UIBezierPath+LineThroughPoints.swift in Sources */,
@@ -1364,7 +1312,7 @@
 				1E7C647824240A0200D97089 /* FocusableFacadeView.swift in Sources */,
 				1E7C648024240A0200D97089 /* ImmutableDefaultSettings.swift in Sources */,
 				1E7C649D24240A0200D97089 /* StatusBarNotificationBanner.swift in Sources */,
-				1E1332E624379B7B00D9172B /* CursorFocusAnimationFeature.swift in Sources */,
+				1E1332E624379B7B00D9172B /* CursorFocusAndClickAnimationFeature.swift in Sources */,
 				1E7C649A24240A0200D97089 /* TooltipGlassView.swift in Sources */,
 				1E7C647D24240A0200D97089 /* HTDwellTime.swift in Sources */,
 				1E7C649524240A0200D97089 /* FaceMeshView.swift in Sources */,
@@ -1374,6 +1322,7 @@
 				1E7C64E024251C1C00D97089 /* CursorBlinkClickFeature.swift in Sources */,
 				1E7C64C024240A0200D97089 /* ClickAnimator.swift in Sources */,
 				1E7C648924240A0200D97089 /* StoredSettings.swift in Sources */,
+				1EF5E495243FFDE000C7E6B7 /* HTGlassView.swift in Sources */,
 				1E7C647624240A0200D97089 /* HTFocusable.swift in Sources */,
 				1E7C64A624240A0200D97089 /* EgressWarningFeature.swift in Sources */,
 				1E7C64A324240A0200D97089 /* FaceMeshFeature.swift in Sources */,
@@ -1390,14 +1339,16 @@
 				1E7C64A424240A0200D97089 /* CursorDrawFeature.swift in Sources */,
 				1E7C647A24240A0200D97089 /* HTAlertController.swift in Sources */,
 				1E7C648724240A0200D97089 /* HTCursorSensitivity.swift in Sources */,
+				1EF5E4972440047600C7E6B7 /* HTGlassWindow.swift in Sources */,
 				1E7C64A024240A0200D97089 /* CursorScrollFeature.swift in Sources */,
 				1E7C648D24240A0200D97089 /* CursorMenuWindow.swift in Sources */,
 				1E7C64AA24240A0200D97089 /* CursorMenuFeature.swift in Sources */,
 				1E7C647F24240A0200D97089 /* HTWindows.swift in Sources */,
 				1E7C64A924240A0200D97089 /* BannerWarningsFeature.swift in Sources */,
 				1E7C64DE24251C0F00D97089 /* CursorDwellClickFeature.swift in Sources */,
-				1E7C64A724240A0200D97089 /* CursorClickAssistFeature.swift in Sources */,
-				1E7C648E24240A0200D97089 /* CursorEffectsWindow.swift in Sources */,
+				1E7C64A724240A0200D97089 /* CursorFocusFeature.swift in Sources */,
+				1EF5E493243FFD9E00C7E6B7 /* FocusAndClickAnimationWindow.swift in Sources */,
+				1E7C648E24240A0200D97089 /* TooltipWindow.swift in Sources */,
 				1E7C64BC24240A0200D97089 /* UIView+Subviews.swift in Sources */,
 				1E7C649F24240A0200D97089 /* NotificationBannerQueue.swift in Sources */,
 				1E7C647924240A0200D97089 /* UICollectionViewCell+Focusable.swift in Sources */,
@@ -1405,7 +1356,9 @@
 				1E7C64C324240A0200D97089 /* Pulsator.swift in Sources */,
 				1E7C648F24240A0200D97089 /* CursorDrawWindow.swift in Sources */,
 				1E7C64B324240A0200D97089 /* UIView+FirstResponder.swift in Sources */,
+				1EF5E48F243F91F500C7E6B7 /* HTFocusContext.swift in Sources */,
 				1E7C64AB24240A0200D97089 /* CursorTooltipFeature.swift in Sources */,
+				1E68A4C424410AF8003DD8AE /* AtomicInteger.swift in Sources */,
 				1E7C649024240A0200D97089 /* FaceMeshWindow.swift in Sources */,
 				1E7C65422425B2B100D97089 /* CursorRecalibrationFeature.swift in Sources */,
 				1E7C64B224240A0200D97089 /* UIScrollView+ManualScroll.swift in Sources */,
@@ -1413,9 +1366,10 @@
 				1E7C64A524240A0200D97089 /* HTFeature.swift in Sources */,
 				1E7C648524240A0200D97089 /* HTLayout.swift in Sources */,
 				1E7C649C24240A0200D97089 /* BannerStyle.swift in Sources */,
+				1EF5E491243FBA8A00C7E6B7 /* CursorClickSoundFeature.swift in Sources */,
 				1E7C648624240A0200D97089 /* HTCursor.swift in Sources */,
 				1E7C647724240A0200D97089 /* UITableViewCell+Focusable.swift in Sources */,
-				1E7C649124240A0200D97089 /* ClickAssistWindow.swift in Sources */,
+				1E7C649124240A0200D97089 /* CursorFocusWindow.swift in Sources */,
 				1E7C64A224240A0200D97089 /* CursorIdleFeature.swift in Sources */,
 				1E7C647424240A0200D97089 /* UIControl+Focusable.swift in Sources */,
 				1E7C647E24240A0200D97089 /* HTThemes.swift in Sources */,

@@ -44,9 +44,10 @@ import JabberwockyHTKitCore
     @objc public static let DEFAULT_ENABLED_FEATURES: [HTFeature.Type] = [
         BannerWarningsFeature.self,
         CursorBlinkClickFeature.self,
-        CursorClickAssistFeature.self,
         CursorDrawFeature.self,
         CursorDwellClickFeature.self,
+        CursorFocusAndClickAnimationFeature.self,
+        CursorFocusFeature.self,
         CursorRecalibrationFeature.self
     ]
 

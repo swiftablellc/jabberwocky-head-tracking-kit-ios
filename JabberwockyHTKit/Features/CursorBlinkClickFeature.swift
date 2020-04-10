@@ -19,14 +19,6 @@ import UIKit
 
 @objc public class CursorBlinkClickFeature: NSObject, HTFeature {
     
-    @objc public var clickAction: (CGPoint) -> Void {
-        get {
-            return _clickAction
-        } set {
-            _clickAction = newValue
-        }
-    }
-    
     // MARK: Singleton Initialization
     @objc public private(set) static var shared: CursorBlinkClickFeature?
 
@@ -50,55 +42,58 @@ import UIKit
         NotificationCenter.default.addObserver(
                 self, selector: #selector(self.onBlinkNotification(_:)),
                 name: .htOnBlinkNotification, object: nil)
+        NotificationCenter.default.addObserver(
+                self, selector: #selector(self.onFocusNotification(_:)),
+                name: .htOnCursorFocusUpdateNotification, object: nil)
     }
 
     @objc public func disable() {
         enabled = false
-        NotificationCenter.default.removeObserver(
-                self, name: .htOnCursorUpdateNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: .htOnBlinkNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: .htOnCursorFocusUpdateNotification, object: nil)
     }
 
     // MARK: Internal
-    private var _clickAction: (CGPoint) -> Void = { screenPoint in
-        guard let focusableFacade = CursorClickAssistFeature.shared?.focusedFacadeView else {
+    private var _lastFocusContext: HTFocusContext? = nil
+    private var _screenPointInElement: CGPoint? = nil
+    
+    @objc func onFocusNotification(_ notification: NSNotification) {
+        guard let focusContext = notification.userInfo?[NSNotification.htFocusContextKey]
+            as? HTFocusContext else {
+            _lastFocusContext = nil
             return
         }
-        focusableFacade.focusableDelegate.htInitiateAction(screenPoint)
+        _lastFocusContext = focusContext
     }
     
-    @objc func onBlinkNotification(_ notification: NSNotification)  {
+    @objc func onBlinkNotification(_ notification: NSNotification) {
         guard let blinkContext = notification.userInfo?[NSNotification.htBlinkContextKey]
             as? HTBlinkContext else { return }
+        
+        guard let focusContext = _lastFocusContext else { return }
         
         guard HTCursor.shared.active else { return }
         
         guard HeadTracking.shared.settings.clickGesture == .Blink else { return }
 
-        guard let focusableFacade = CursorClickAssistFeature.shared?.focusedFacadeView else { return }
-        
-        guard focusableFacade.focusableDelegate.htIgnoresCursorMode() ||
+       
+        guard focusContext.focusedElement.htIgnoresCursorMode() ||
             HTCursor.shared.actualCursorMode.isClickMode else { return }
         
-        guard focusableFacade.focusableDelegate.htIgnoresScrollSpeed() ||
+        guard focusContext.focusedElement.htIgnoresScrollSpeed() ||
             !CursorScrollFeature.isScrollingFast else { return }
         
         guard blinkContext.blinkDuration >= HTBlinkSensitivity.shared.durationSeconds else {
-            focusableFacade.focusableDelegate.htHandleTooShortClick()
+            focusContext.focusedElement.htHandleTooShortClick()
             return
         }
-        
-        let optionalScreenPoint = blinkContext.cursorContext.smoothedScreenPoint
 
-        if let screenPoint = (optionalScreenPoint.exists ? optionalScreenPoint.point: nil) {
-            focusableFacade.htAnimateClick()
-            focusableFacade.htPlayClickSound()
-            // Translate screen point touching a facade view to a screen point inside the facade's delegate.
-            clickAction(focusableFacade.htTargetScreenPoint(screenPoint))
-            DispatchQueue.main.async {
-                NotificationCenter.default.post(
-                    name: .htOnCursorClickNotification, object: nil,
-                    userInfo: [NSNotification.htFocusedElementKey: focusableFacade.focusableDelegate])
-            }
+        focusContext.focusedElement.htInitiateAction(focusContext.screenPointInElement)
+        DispatchQueue.main.async {
+            NSLog("Sending Click Notification")
+            NotificationCenter.default.post(
+                name: .htOnCursorClickNotification, object: nil,
+                userInfo: [NSNotification.htFocusContextKey: focusContext])
         }
     }
 }

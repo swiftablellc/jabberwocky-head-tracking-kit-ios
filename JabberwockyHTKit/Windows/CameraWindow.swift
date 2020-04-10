@@ -17,7 +17,7 @@ limitations under the License.
 import UIKit
 import JabberwockyHTKitCore
 
-@objc public class CameraWindow: UIWindow {
+@objc public class CameraWindow: HTGlassWindow {
 
     @objc public internal(set) var cameraViewController: HTCameraViewController? {
         get {
@@ -35,10 +35,6 @@ import JabberwockyHTKitCore
     
     @objc required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
-
-    @objc public override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
-        return nil
     }
 
     @objc public override var windowLevel: UIWindow.Level {

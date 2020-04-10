@@ -15,18 +15,20 @@ limitations under the License.
 */
 
 import UIKit
+import JabberwockyHTKitCore
 
-extension UIView {
+@objc public class HTFocusContext: NSObject {
 
-    @objc public var htFirstResponder: UIView? {
-        guard !isFirstResponder else { return self }
-        
-        for subview in subviews {
-            if let firstResponder = subview.htFirstResponder {
-                return firstResponder
-            }
-        }
-        
-        return nil
+    @objc public var cursorContext: HTCursorContext
+    @objc public var focusedElement: HTFocusable
+    @objc public var focusRect: CGRect
+    @objc public var screenPointInElement: CGPoint
+    
+    init(_ cursorContext: HTCursorContext, _ focusedElement: HTFocusable,
+         _ focusRect: CGRect, _ screenPointInElement: CGPoint) {
+        self.cursorContext = cursorContext
+        self.focusedElement = focusedElement
+        self.focusRect = focusRect
+        self.screenPointInElement = screenPointInElement
     }
 }

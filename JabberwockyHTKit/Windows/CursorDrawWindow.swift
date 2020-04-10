@@ -16,7 +16,7 @@ limitations under the License.
 
 import UIKit
 
-@objc public class CursorDrawWindow: UIWindow {
+@objc public class CursorDrawWindow: HTGlassWindow {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -35,10 +35,6 @@ import UIKit
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
-    
-    @objc public override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
-        return nil
     }
     
     //Setting window level manually caps out at 10 million which is below system keyboard

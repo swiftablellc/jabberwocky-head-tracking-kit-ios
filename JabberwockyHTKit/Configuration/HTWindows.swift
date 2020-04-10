@@ -25,15 +25,17 @@ import UIKit
     private static let WINDOW_FLOAT_INCREMENT = CGFloat(1000)
     
     private static let DEFAULT_CURSOR_DRAW_WL = UIWindow.Level(HIGHEST_WINDOW_FLOAT)
-    private static let DEFAULT_CLICK_ASSIST_WL = DEFAULT_CURSOR_DRAW_WL - WINDOW_FLOAT_INCREMENT
-    private static let DEFAULT_EFFECTS_WL = DEFAULT_CLICK_ASSIST_WL - WINDOW_FLOAT_INCREMENT
-    private static let DEFAULT_MENU_WL = DEFAULT_EFFECTS_WL - WINDOW_FLOAT_INCREMENT
+    private static let DEFAULT_FOCUS_AND_CLICK_ANIMATION_WL = DEFAULT_CURSOR_DRAW_WL - WINDOW_FLOAT_INCREMENT
+    private static let DEFAULT_CURSOR_FOCUS_WL = DEFAULT_FOCUS_AND_CLICK_ANIMATION_WL - WINDOW_FLOAT_INCREMENT
+    private static let DEFAULT_TOOLTIP_WL = DEFAULT_CURSOR_FOCUS_WL - WINDOW_FLOAT_INCREMENT
+    private static let DEFAULT_MENU_WL = DEFAULT_TOOLTIP_WL - WINDOW_FLOAT_INCREMENT
     private static let DEFAULT_FACE_MESH_WL = DEFAULT_MENU_WL - WINDOW_FLOAT_INCREMENT
     private static let DEFAULT_CAMERA_WL = UIWindow.Level(-CGFloat.greatestFiniteMagnitude)
 
     @objc public static var cursorDrawWindowLevel = DEFAULT_CURSOR_DRAW_WL
-    @objc public static var clickAssistWindowLevel = DEFAULT_CLICK_ASSIST_WL
-    @objc public static var effectsWindowLevel = DEFAULT_EFFECTS_WL
+    @objc public static var focusAndClickAnimationWindowLevel = DEFAULT_FOCUS_AND_CLICK_ANIMATION_WL
+    @objc public static var cursorFocusWindowLevel = DEFAULT_CURSOR_FOCUS_WL
+    @objc public static var tooltipWindowLevel = DEFAULT_TOOLTIP_WL
     @objc public static var menuWindowLevel = DEFAULT_MENU_WL
     @objc public static var faceMeshWindowLevel = DEFAULT_FACE_MESH_WL
     @objc public static var cameraWindowLevel = DEFAULT_CAMERA_WL
@@ -56,7 +58,7 @@ import UIKit
     }
     
     @discardableResult
-    public func enable<T>(for feature: HTFeature, of windowType : T.Type) -> T where T: UIWindow {
+    public func enable<T>(for feature: HTFeature, of windowType: T.Type) -> T where T: UIWindow {
         let featureName = String(describing: type(of: feature))
         return enable(for: featureName, of: windowType)
     }

@@ -16,46 +16,36 @@ limitations under the License.
 
 import UIKit
 
-@objc public class CursorEffectsWindow: UIWindow {
-    let tooltipView: TooltipGlassView = TooltipGlassView()
+@objc public class FocusAndClickAnimationWindow: HTGlassWindow {
+    
+    var glassView: HTGlassView!
     
     @objc override init(frame: CGRect) {
         super.init(frame: frame)
         
-        self.addSubview(tooltipView)
-        
-        tooltipView.translatesAutoresizingMaskIntoConstraints = false
-        tooltipView.heightAnchor.constraint(equalTo: self.heightAnchor).isActive = true
-        tooltipView.widthAnchor.constraint(equalTo: self.widthAnchor).isActive = true
-        tooltipView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
-        tooltipView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+        glassView = HTGlassView()
+        self.addSubview(glassView!)
+        glassView.layer.zPosition = CGFloat(Float.greatestFiniteMagnitude)
+        glassView.translatesAutoresizingMaskIntoConstraints = false
+        glassView.heightAnchor.constraint(equalTo: self.heightAnchor).isActive = true
+        glassView.widthAnchor.constraint(equalTo: self.widthAnchor).isActive = true
+        glassView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
+        glassView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
     }
     
     @objc required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    @objc public override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
-        return nil
-    }
-    
     //Setting window level manually caps out at 10 million which is below system keyboard
     //But overriding the property works...
     @objc public override var windowLevel: UIWindow.Level {
         get {
-            return HTWindows.effectsWindowLevel
+            return HTWindows.focusAndClickAnimationWindowLevel
         }
         set {
             //do nothing, this is a fixed value
         }
     }
     
-    func showTooltip(_ tooltip: String, _ view: UIView) {
-        tooltipView.showTooltip(tooltip, view)
-    }
-    
-    func hideTooltip(_ view: UIView) {
-        tooltipView.hideTooltip(view)
-    }
 }
-

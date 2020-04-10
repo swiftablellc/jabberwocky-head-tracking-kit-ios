@@ -91,8 +91,7 @@ class HTLayout {
         }
     }
     
-    static func special(_ orientationAndIdioms: [OrientationAndIdiom],
-                        _ completion: @escaping () -> Void) {
+    static func special(_ orientationAndIdioms: [OrientationAndIdiom], _ completion: @escaping () -> Void) {
         for orientationAndIdiom in orientationAndIdioms {
             if HTLayout.orientationAndIdiom == orientationAndIdiom {
                 completion()

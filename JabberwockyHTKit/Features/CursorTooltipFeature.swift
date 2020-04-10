@@ -44,26 +44,25 @@ import UIKit
     
     @objc public func enable() {
         enabled = true
-        HTWindows.shared.enable(for: self, of: CursorEffectsWindow.self)
+        HTWindows.shared.enable(for: self, of: TooltipWindow.self)
         NotificationCenter.default.addObserver(
-            self, selector: #selector(self.onCursorUpdateNotification(_:)),
-            name: .htOnCursorUpdateNotification, object: nil)
+            self, selector: #selector(self.onFocusNotification(_:)),
+            name: .htOnCursorFocusUpdateNotification, object: nil)
     }
     
     @objc public func disable() {
         enabled = false
         HTWindows.shared.disable(for: self)
-        NotificationCenter.default.removeObserver(
-            self, name: .htOnCursorUpdateNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: .htOnCursorFocusUpdateNotification, object: nil)
     }
 
     // MARK: Internal
-    private var _chargingFacadeView: FocusableFacadeView? = nil
+    private var _chargingFocusedElement: HTFocusable? = nil
     private var _tooltipChargingTimer: ChargingTimer
     
-    @objc func onCursorUpdateNotification(_ notification: NSNotification)  {
+    @objc func onFocusNotification(_ notification: NSNotification)  {
         
-        guard let tooltipWindow = HTWindows.shared.getWindow(for: self) as? CursorEffectsWindow else {
+        guard let tooltipWindow = HTWindows.shared.getWindow(for: self) as? TooltipWindow else {
             disposeOfChargingFacadeView(nil)
             return
         }
@@ -73,37 +72,33 @@ import UIKit
             return
         }
         
-        guard let cursorContext = notification.userInfo?[NSNotification.htCursorContextKey]
-            as? HTCursorContext else {
+        guard let focusContext = notification.userInfo?[NSNotification.htFocusContextKey]
+            as? HTFocusContext else {
                 disposeOfChargingFacadeView(tooltipWindow)
                 return
         }
-        if let facadeView = CursorClickAssistFeature.shared?.focusedFacadeView {
-            
-            if _tooltipChargingTimer.charge == 0 {
-                disposeOfChargingFacadeView(tooltipWindow)
-                _chargingFacadeView = facadeView
-            }
-            
-            let secondsElapsed = cursorContext.secondsSinceLastInstance
-            _tooltipChargingTimer.update(secondsElapsed, increaseCondition: {
-                return facadeView == self._chargingFacadeView
-            })
-            
-            if _tooltipChargingTimer.isFull, let tooltipText = facadeView.focusableDelegate.htTooltipText {
-                tooltipWindow.showTooltip(tooltipText, facadeView)
-            }
-        } else {
+     
+        if _tooltipChargingTimer.charge == 0 {
             disposeOfChargingFacadeView(tooltipWindow)
+            _chargingFocusedElement = focusContext.focusedElement
+        }
+        
+        let secondsElapsed = focusContext.cursorContext.secondsSinceLastInstance
+        _tooltipChargingTimer.update(secondsElapsed, increaseCondition: {
+            return focusContext.focusedElement === self._chargingFocusedElement
+        })
+        
+        if _tooltipChargingTimer.isFull, let tooltipText = focusContext.focusedElement.htTooltipText {
+            tooltipWindow.tooltipView.showTooltip(tooltipText, focusContext.focusedElement)
         }
 
     }
     
-    private func disposeOfChargingFacadeView(_ tooltipWindow: CursorEffectsWindow?) {
+    private func disposeOfChargingFacadeView(_ tooltipWindow: TooltipWindow?) {
         _tooltipChargingTimer.charge = 0
-        if let chargingView = _chargingFacadeView {
-            tooltipWindow?.hideTooltip(chargingView)
+        if let chargingFocusedElement = _chargingFocusedElement {
+            tooltipWindow?.tooltipView.hideTooltip(chargingFocusedElement)
         }
-        _chargingFacadeView = nil
+        _chargingFocusedElement = nil
     }
 }

@@ -16,7 +16,7 @@ limitations under the License.
 
 import UIKit
 
-class TooltipGlassView: UIView {
+class TooltipGlassView: HTGlassView {
     
     private static let smallFont: UIFont = {
         switch(UIDevice.current.userInterfaceIdiom) {
@@ -35,7 +35,7 @@ class TooltipGlassView: UIView {
     private let PHONE_TOOLTIP_HEIGHT: CGFloat = 50
     
     private var tooltipLabel: UIView?
-    private weak var viewWithTooltip: UIView?
+    private weak var focusableWithTooltip: HTFocusable?
     
     required init(coder decoder: NSCoder) {
         fatalError(" does not support NSCoding (Serialization)...")
@@ -53,20 +53,15 @@ class TooltipGlassView: UIView {
         NotificationCenter.default.removeObserver(self, name: .htOnCursorUpdateNotification, object: nil)
         NotificationCenter.default.removeObserver(self, name: .htOnHeadTrackingStatusUpdateNotification, object: nil)
     }
-    
-    override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
-        // View cannot be interacted with.  Always pass hit tests through...
-        return nil
-    }
-    
-    func showTooltip(_ tooltip: String, _ view: UIView) {
+
+    func showTooltip(_ tooltip: String, _ focusable: HTFocusable) {
         //One tooltip at a time
         if tooltipLabel != nil {
             tooltipLabel?.removeFromSuperview()
             tooltipLabel = nil
         }
     
-        viewWithTooltip = view
+        focusableWithTooltip = focusable
         
         let newTooltipLabel = constructTooltipView(tooltip)
         self.tooltipLabel = newTooltipLabel
@@ -76,9 +71,7 @@ class TooltipGlassView: UIView {
         let tooltipWidth: CGFloat = isPad ? PAD_TOOLTIP_WIDTH : PHONE_TOOLTIP_WIDTH
         let tooltipHeight: CGFloat = isPad ? PAD_TOOLTIP_HEIGHT: PHONE_TOOLTIP_HEIGHT
         let tooltipFrameInWindow: CGRect = {
-            guard let viewFrameInWindow = view.superview?.convert(view.frame, to: nil) else {
-                return CGRect.zero
-            }
+            let viewFrameInWindow = focusable.htFrameInScreenCoordinates()
             
             let centerX = viewFrameInWindow.midX
             let tooltipLeft = min(max(HTLayout.largePadding, centerX - tooltipWidth / 2),
@@ -96,18 +89,18 @@ class TooltipGlassView: UIView {
         newTooltipLabel.frame = tooltipFrameInGlassView
     }
     
-    func hideTooltip(_ view: UIView) {
-        if view != self.viewWithTooltip {
+    func hideTooltip(_ focusable: HTFocusable) {
+        if focusable !== self.focusableWithTooltip {
             return
         }
         
         tooltipLabel?.removeFromSuperview()
         tooltipLabel = nil
-        viewWithTooltip = nil
+        focusableWithTooltip = nil
     }
     
     @objc private func checkForOrphanedTooltip() {
-        if self.viewWithTooltip != nil {
+        if self.focusableWithTooltip !== nil {
             return
         }
         

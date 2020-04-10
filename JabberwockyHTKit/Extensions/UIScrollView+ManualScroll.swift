@@ -17,6 +17,7 @@ limitations under the License.
 import UIKit
 
 extension UIScrollView {
+
     var htCanScrollHorizontal: Bool {
         return contentSize.width > frame.width
     }

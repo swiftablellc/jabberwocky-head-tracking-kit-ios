@@ -19,14 +19,6 @@ import UIKit
 
 @objc public class CursorDwellClickFeature: NSObject, HTFeature {
     
-    @objc public var clickAction: (CGPoint) -> Void {
-        get {
-            return _clickAction
-        } set {
-            _clickAction = newValue
-        }
-    }
-    
     // MARK: Singleton Initialization
     @objc public private(set) static var shared: CursorDwellClickFeature?
 
@@ -48,27 +40,20 @@ import UIKit
     @objc public func enable() {
         enabled = true
         NotificationCenter.default.addObserver(
-                self, selector: #selector(self.onCursorUpdateNotification(_:)),
-                name: .htOnCursorUpdateNotification, object: nil)
+            self, selector: #selector(self.onFocusNotification(_:)),
+            name: .htOnCursorFocusUpdateNotification, object: nil)
     }
 
     @objc public func disable() {
         enabled = false
-        NotificationCenter.default.removeObserver(
-                self, name: .htOnCursorUpdateNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: .htOnCursorFocusUpdateNotification, object: nil)
     }
 
     // MARK: Internal
-    private var _clickAction: (CGPoint) -> Void = { screenPoint in
-        guard let focusableFacade = CursorClickAssistFeature.shared?.focusedFacadeView else {
-            return
-        }
-        focusableFacade.focusableDelegate.htInitiateAction(screenPoint)
-    }
     
-    @objc func onCursorUpdateNotification(_ notification: NSNotification)  {
-        guard let cursorContext = notification.userInfo?[NSNotification.htCursorContextKey]
-            as? HTCursorContext else {
+    @objc func onFocusNotification(_ notification: NSNotification)  {
+        guard let focusContext = notification.userInfo?[NSNotification.htFocusContextKey]
+            as? HTFocusContext else {
             return
         }
         
@@ -76,28 +61,23 @@ import UIKit
 
         guard HeadTracking.shared.settings.clickGesture == .Dwell else { return }
 
-        guard let focusableFacade = CursorClickAssistFeature.shared?.focusedFacadeView else { return }
-
-        guard focusableFacade.focusableDelegate.htIgnoresCursorMode() ||
+        guard focusContext.focusedElement.htIgnoresCursorMode() ||
            HTCursor.shared.actualCursorMode.isClickMode else { return }
 
-        guard focusableFacade.focusableDelegate.htIgnoresScrollSpeed() ||
+        guard focusContext.focusedElement.htIgnoresScrollSpeed() ||
            !CursorScrollFeature.isScrollingFast else { return }
         
-        // Fully focused facade indicates that the configured dwell time has completed
-        guard focusableFacade.isFullyFocused else { return }
+        // A fully focused element indicates that dwell click should execute.
+        guard focusContext.focusedElement.htFocusLevel >= 1.0 else { return }
 
-        let optionalScreenPoint = cursorContext.smoothedScreenPoint
-        if let screenPoint = (optionalScreenPoint.exists ? optionalScreenPoint.point: nil) {
-            focusableFacade.htAnimateClick()
-            focusableFacade.htPlayClickSound()
-            // Translate screen point touching a facade view to a screen point inside the facade's delegate.
-            clickAction(focusableFacade.htTargetScreenPoint(screenPoint))
-            DispatchQueue.main.async {
-                NotificationCenter.default.post(
-                    name: .htOnCursorClickNotification, object: nil,
-                    userInfo: [NSNotification.htFocusedElementKey: focusableFacade.focusableDelegate])
-            }
+        // We must set the focus level to 0 after a dwell click to restart the charge!
+        focusContext.focusedElement.htFocusLevel = 0.0
+        focusContext.focusedElement.htInitiateAction(focusContext.screenPointInElement)
+
+        DispatchQueue.main.async {
+            NotificationCenter.default.post(
+                name: .htOnCursorClickNotification, object: nil,
+                userInfo: [NSNotification.htFocusContextKey: focusContext])
         }
     }
 }

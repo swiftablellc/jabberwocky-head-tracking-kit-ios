@@ -16,38 +16,36 @@ limitations under the License.
 
 import UIKit
 
-@objc public class FaceMeshWindow: HTGlassWindow {
+@objc public class CursorFocusWindow: HTGlassWindow {
     
-    public var faceMeshView = FaceMeshView()
+    var focusableGlassView: FocusableGlassView!
     
     @objc override init(frame: CGRect) {
         super.init(frame: frame)
         
-        self.addSubview(faceMeshView)
-        
-        let height = HTLayout.longerDimension / 4
-        let width = height / 1.75
-        
-        faceMeshView.translatesAutoresizingMaskIntoConstraints = false
-        faceMeshView.heightAnchor.constraint(equalToConstant: height).isActive = true
-        faceMeshView.widthAnchor.constraint(equalToConstant: width).isActive = true
-        faceMeshView.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -15).isActive = true
-        faceMeshView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -15).isActive = true
+        focusableGlassView = FocusableGlassView()
+        self.addSubview(focusableGlassView!)
+        focusableGlassView.layer.zPosition = CGFloat(Float.greatestFiniteMagnitude)
+        focusableGlassView.translatesAutoresizingMaskIntoConstraints = false
+        focusableGlassView.heightAnchor.constraint(equalTo: self.heightAnchor).isActive = true
+        focusableGlassView.widthAnchor.constraint(equalTo: self.widthAnchor).isActive = true
+        focusableGlassView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
+        focusableGlassView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
     }
     
     @objc required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
     //Setting window level manually caps out at 10 million which is below system keyboard
     //But overriding the property works...
     @objc public override var windowLevel: UIWindow.Level {
         get {
-            return HTWindows.faceMeshWindowLevel
+            return HTWindows.cursorFocusWindowLevel
         }
         set {
             //do nothing, this is a fixed value
         }
     }
-
+    
 }
