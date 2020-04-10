@@ -165,7 +165,7 @@ import JabberwockyHTKitCore
         }
     }
 
-    @objc public func disable(andAlsoUpdateSettings: Bool = true) {
+    @objc public func disable(andAlsoUpdateSettings: Bool = false) {
         guard HeadTrackingCore.shared.isAuthorizedOnDevice else { return }
         HeadTracking.ifConfigured { headTracking in
             if andAlsoUpdateSettings {

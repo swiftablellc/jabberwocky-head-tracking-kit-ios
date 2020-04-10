@@ -96,6 +96,7 @@ import JabberwockyHTKit
         if(granted){
             dispatch_async(dispatch_get_main_queue(), ^{
                 [HeadTracking configureWithEnabledFeatures:HeadTracking.DEFAULT_ENABLED_FEATURES withSettingsAppGroup:nil];
+                [HeadTracking.shared enableWithOverrideDisabledFlag:false completion: ^(BOOL success) {}];
             });
         } else {
             NSLog(@"Camera Permissions Missing for Head Tracking");

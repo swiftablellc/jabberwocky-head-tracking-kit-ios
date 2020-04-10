@@ -90,7 +90,6 @@ import UIKit
 
         focusContext.focusedElement.htInitiateAction(focusContext.screenPointInElement)
         DispatchQueue.main.async {
-            NSLog("Sending Click Notification")
             NotificationCenter.default.post(
                 name: .htOnCursorClickNotification, object: nil,
                 userInfo: [NSNotification.htFocusContextKey: focusContext])
