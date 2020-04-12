@@ -101,6 +101,21 @@
 		1E1E0AC9242E9A2E002C4BE0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E1E0AC7242E9A2E002C4BE0 /* LaunchScreen.storyboard */; };
 		1E1E0ACA242E9A2E002C4BE0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E1E0AC7242E9A2E002C4BE0 /* LaunchScreen.storyboard */; };
 		1E68A4C424410AF8003DD8AE /* AtomicInteger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E68A4C324410AF8003DD8AE /* AtomicInteger.swift */; };
+		1E68A4D52442A0E5003DD8AE /* CursorClickSoundFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF5E490243FBA8A00C7E6B7 /* CursorClickSoundFeature.swift */; };
+		1E68A4D62442A0E5003DD8AE /* CursorFocusAndClickAnimationFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1332E524379B7B00D9172B /* CursorFocusAndClickAnimationFeature.swift */; };
+		1E68A4D72442A0E5003DD8AE /* HTFocusContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF5E48E243F91F500C7E6B7 /* HTFocusContext.swift */; };
+		1E68A4D82442A0E5003DD8AE /* AtomicInteger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E68A4C324410AF8003DD8AE /* AtomicInteger.swift */; };
+		1E68A4D92442A0E5003DD8AE /* CountdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C643924240A0200D97089 /* CountdownView.swift */; };
+		1E68A4DA2442A0E5003DD8AE /* CursorToggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C643B24240A0200D97089 /* CursorToggleButton.swift */; };
+		1E68A4DB2442A0E5003DD8AE /* CursorToggleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C643C24240A0200D97089 /* CursorToggleView.swift */; };
+		1E68A4DC2442A0E5003DD8AE /* CursorGlassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C643D24240A0200D97089 /* CursorGlassView.swift */; };
+		1E68A4DD2442A0E5003DD8AE /* FaceMeshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C643724240A0200D97089 /* FaceMeshView.swift */; };
+		1E68A4DE2442A0E6003DD8AE /* FocusableFacadeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C641024240A0100D97089 /* FocusableFacadeView.swift */; };
+		1E68A4DF2442A0E6003DD8AE /* FocusableGlassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C640D24240A0100D97089 /* FocusableGlassView.swift */; };
+		1E68A4E02442A0E6003DD8AE /* HTGlassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF5E494243FFDE000C7E6B7 /* HTGlassView.swift */; };
+		1E68A4E12442A0E6003DD8AE /* TooltipGlassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C643E24240A0200D97089 /* TooltipGlassView.swift */; };
+		1E68A4E22442A0E6003DD8AE /* FocusAndClickAnimationWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF5E492243FFD9E00C7E6B7 /* FocusAndClickAnimationWindow.swift */; };
+		1E68A4E32442A0E6003DD8AE /* HTGlassWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF5E4962440047600C7E6B7 /* HTGlassWindow.swift */; };
 		1E7C64022424090A00D97089 /* JabberwockyHTKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E7C63F42424090A00D97089 /* JabberwockyHTKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1E7C647424240A0200D97089 /* UIControl+Focusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C640C24240A0100D97089 /* UIControl+Focusable.swift */; };
 		1E7C647524240A0200D97089 /* FocusableGlassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C640D24240A0100D97089 /* FocusableGlassView.swift */; };
@@ -1221,6 +1236,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E68A4D52442A0E5003DD8AE /* CursorClickSoundFeature.swift in Sources */,
+				1E68A4D62442A0E5003DD8AE /* CursorFocusAndClickAnimationFeature.swift in Sources */,
+				1E68A4D72442A0E5003DD8AE /* HTFocusContext.swift in Sources */,
+				1E68A4D82442A0E5003DD8AE /* AtomicInteger.swift in Sources */,
+				1E68A4D92442A0E5003DD8AE /* CountdownView.swift in Sources */,
+				1E68A4DA2442A0E5003DD8AE /* CursorToggleButton.swift in Sources */,
+				1E68A4DB2442A0E5003DD8AE /* CursorToggleView.swift in Sources */,
+				1E68A4DC2442A0E5003DD8AE /* CursorGlassView.swift in Sources */,
+				1E68A4DD2442A0E5003DD8AE /* FaceMeshView.swift in Sources */,
+				1E68A4DE2442A0E6003DD8AE /* FocusableFacadeView.swift in Sources */,
+				1E68A4DF2442A0E6003DD8AE /* FocusableGlassView.swift in Sources */,
+				1E68A4E02442A0E6003DD8AE /* HTGlassView.swift in Sources */,
+				1E68A4E12442A0E6003DD8AE /* TooltipGlassView.swift in Sources */,
+				1E68A4E22442A0E6003DD8AE /* FocusAndClickAnimationWindow.swift in Sources */,
+				1E68A4E32442A0E6003DD8AE /* HTGlassWindow.swift in Sources */,
 				1E1E0A49242E8035002C4BE0 /* Array+Chunks.swift in Sources */,
 				1E1E0A4A242E8035002C4BE0 /* InMemorySettings.swift in Sources */,
 				1E1E0A4C242E8035002C4BE0 /* NSNotification+Keyboard.swift in Sources */,
