@@ -122,8 +122,6 @@
 		1E68A50E2442A344003DD8AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E68A50D2442A344003DD8AE /* Assets.xcassets */; };
 		1E68A5112442A344003DD8AE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E68A5102442A344003DD8AE /* Preview Assets.xcassets */; };
 		1E68A51A2442A391003DD8AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E68A5192442A391003DD8AE /* LaunchScreen.storyboard */; };
-		1E68A51B2442AA2F003DD8AE /* JabberwockyHTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E7C63F12424090A00D97089 /* JabberwockyHTKit.framework */; };
-		1E68A51C2442AA2F003DD8AE /* JabberwockyHTKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1E7C63F12424090A00D97089 /* JabberwockyHTKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1E7C64022424090A00D97089 /* JabberwockyHTKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E7C63F42424090A00D97089 /* JabberwockyHTKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1E7C647424240A0200D97089 /* UIControl+Focusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C640C24240A0100D97089 /* UIControl+Focusable.swift */; };
 		1E7C647524240A0200D97089 /* FocusableGlassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C640D24240A0100D97089 /* FocusableGlassView.swift */; };
@@ -226,13 +224,6 @@
 			remoteGlobalIDString = 1E7C63F02424090A00D97089;
 			remoteInfo = JabberwockyHTKit;
 		};
-		1E68A51D2442AA2F003DD8AE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1E7C63E82424090A00D97089 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 1E7C63F02424090A00D97089;
-			remoteInfo = JabberwockyHTKit;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -266,17 +257,6 @@
 			dstSubfolderSpec = 10;
 			files = (
 				1E1E0AC4242E982E002C4BE0 /* JabberwockyHTKitCore.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1E68A51F2442AA2F003DD8AE /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				1E68A51C2442AA2F003DD8AE /* JabberwockyHTKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -465,7 +445,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAB70B4A7C47B8CBA67665A0 /* Pods_SwiftUITutorial_PodsOnly.framework in Frameworks */,
-				1E68A51B2442AA2F003DD8AE /* JabberwockyHTKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -953,12 +932,10 @@
 				1E68A5022442A343003DD8AE /* Frameworks */,
 				1E68A5032442A343003DD8AE /* Resources */,
 				210444D15D83B7DAACC05BCF /* [CP] Embed Pods Frameworks */,
-				1E68A51F2442AA2F003DD8AE /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				1E68A51E2442AA2F003DD8AE /* PBXTargetDependency */,
 			);
 			name = "SwiftUITutorial-PodsOnly";
 			productName = SwiftUITutorial;
@@ -1586,11 +1563,6 @@
 			isa = PBXTargetDependency;
 			target = 1E7C63F02424090A00D97089 /* JabberwockyHTKit */;
 			targetProxy = 1E1E0AC0242E8DBE002C4BE0 /* PBXContainerItemProxy */;
-		};
-		1E68A51E2442AA2F003DD8AE /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 1E7C63F02424090A00D97089 /* JabberwockyHTKit */;
-			targetProxy = 1E68A51D2442AA2F003DD8AE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

@@ -21,9 +21,9 @@ struct ContentView: View {
     var body: some View {
         Button( action: {
             // FIXME: HTFocusable inspection does not work with SwiftUI Views yet.
-            NSLog("Hello World Tapped.")
+            NSLog("Physical Tap.")
         }) {
-            Text("Hello World")
+            Text("No Head Tracking Button Interaction...")
         }
     }
 }
