@@ -23,3 +23,7 @@ end
 target 'ObjcTutorial-PodsOnly' do
   pod 'JabberwockyHTKit'
 end
+
+target 'SwiftUITutorial-PodsOnly' do
+  pod 'JabberwockyHTKit'
+end

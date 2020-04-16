@@ -24,12 +24,9 @@ import UIKit
 
     override private init() { }
 
-    @objc public static func configure(withFeatureEnabled enabled: Bool = true) -> HTFeature {
+    @objc public static func configure() -> HTFeature {
         if CursorFocusAndClickAnimationFeature.shared == nil {
             CursorFocusAndClickAnimationFeature.shared = CursorFocusAndClickAnimationFeature()
-            if enabled {
-                CursorFocusAndClickAnimationFeature.shared?.enable()
-            }
         }
         return CursorFocusAndClickAnimationFeature.shared!
     }

@@ -28,14 +28,6 @@ import JabberwockyHTKitCore
             }
         }
     }
-    
-    @objc override init(frame: CGRect) {
-        super.init(frame: frame)
-    }
-    
-    @objc required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
 
     @objc public override var windowLevel: UIWindow.Level {
         get {

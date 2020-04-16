@@ -26,12 +26,9 @@ import UIKit
 
     override private init() { }
 
-    @objc public static func configure(withFeatureEnabled enabled: Bool = true) -> HTFeature {
+    @objc public static func configure() -> HTFeature {
         if CursorClickSoundFeature.shared == nil {
             CursorClickSoundFeature.shared = CursorClickSoundFeature()
-            if enabled {
-                CursorClickSoundFeature.shared?.enable()
-            }
         }
         return CursorClickSoundFeature.shared!
     }

@@ -87,12 +87,9 @@ import UIKit
     
     override private init() { }
     
-    @objc public static func configure(withFeatureEnabled enabled: Bool = true) -> HTFeature {
+    @objc public static func configure() -> HTFeature {
         if CursorScrollFeature.shared == nil {
             CursorScrollFeature.shared = CursorScrollFeature()
-            if enabled {
-                CursorScrollFeature.shared?.enable()
-            }
         }
         return CursorScrollFeature.shared!
     }

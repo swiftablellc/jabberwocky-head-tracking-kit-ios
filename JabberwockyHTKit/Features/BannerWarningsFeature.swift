@@ -38,12 +38,9 @@ import UIKit
         faceTooFarBanner.duration = CFTimeInterval.infinity
     }
     
-    @objc public static func configure(withFeatureEnabled enabled: Bool = true) -> HTFeature {
+    @objc public static func configure() -> HTFeature {
         if BannerWarningsFeature.shared == nil {
             BannerWarningsFeature.shared = BannerWarningsFeature()
-            if enabled {
-                BannerWarningsFeature.shared?.enable()
-            }
         }
         return BannerWarningsFeature.shared!
     }

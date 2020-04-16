@@ -27,12 +27,9 @@ import JabberwockyHTKitCore
         _focusableRefreshChargingTimer = ChargingTimer(for: 0.1, cycle: false, autoCharge: true)
     }
     
-    @objc public static func configure(withFeatureEnabled enabled: Bool = true) -> HTFeature {
+    @objc public static func configure() -> HTFeature {
         if CursorFocusFeature.shared == nil {
             CursorFocusFeature.shared = CursorFocusFeature()
-            if enabled {
-                CursorFocusFeature.shared?.enable()
-            }
         }
         return CursorFocusFeature.shared!
     }
@@ -82,7 +79,7 @@ import JabberwockyHTKitCore
             return
         }
 
-        guard let focusableGlassView = cursorFocusWindow.focusableGlassView else {
+        guard let focusableGlassView = cursorFocusWindow.focusableGlassView as? FocusableGlassView else {
             sendFocusUpdateEventWithNoFocus(cursorContext)
             return
         }
@@ -142,7 +139,7 @@ import JabberwockyHTKitCore
             return
         }
 
-        guard let focusableGlassView = cursorFocusWindow.focusableGlassView else {
+        guard let focusableGlassView = cursorFocusWindow.focusableGlassView as? FocusableGlassView else {
             return
         }
         

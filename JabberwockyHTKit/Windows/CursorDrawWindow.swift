@@ -18,10 +18,20 @@ import UIKit
 
 @objc public class CursorDrawWindow: HTGlassWindow {
     
+    @objc public let cursorView: HTGlassView = CursorGlassView()
+    
+    @available(iOS 13.0, *)
+    override init(windowScene: UIWindowScene) {
+        super.init(windowScene: windowScene)
+        initialize()
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
-        let cursorView = CursorGlassView()
+        initialize()
+    }
+    
+    private func initialize() {
         self.addSubview(cursorView)
         cursorView.layer.zPosition = CGFloat(Float.greatestFiniteMagnitude)
         

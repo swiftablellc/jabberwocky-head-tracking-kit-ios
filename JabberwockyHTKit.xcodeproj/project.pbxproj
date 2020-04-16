@@ -116,6 +116,14 @@
 		1E68A4E12442A0E6003DD8AE /* TooltipGlassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C643E24240A0200D97089 /* TooltipGlassView.swift */; };
 		1E68A4E22442A0E6003DD8AE /* FocusAndClickAnimationWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF5E492243FFD9E00C7E6B7 /* FocusAndClickAnimationWindow.swift */; };
 		1E68A4E32442A0E6003DD8AE /* HTGlassWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF5E4962440047600C7E6B7 /* HTGlassWindow.swift */; };
+		1E68A5082442A343003DD8AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E68A5072442A343003DD8AE /* AppDelegate.swift */; };
+		1E68A50A2442A343003DD8AE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E68A5092442A343003DD8AE /* SceneDelegate.swift */; };
+		1E68A50C2442A343003DD8AE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E68A50B2442A343003DD8AE /* ContentView.swift */; };
+		1E68A50E2442A344003DD8AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E68A50D2442A344003DD8AE /* Assets.xcassets */; };
+		1E68A5112442A344003DD8AE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E68A5102442A344003DD8AE /* Preview Assets.xcassets */; };
+		1E68A51A2442A391003DD8AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E68A5192442A391003DD8AE /* LaunchScreen.storyboard */; };
+		1E68A51B2442AA2F003DD8AE /* JabberwockyHTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E7C63F12424090A00D97089 /* JabberwockyHTKit.framework */; };
+		1E68A51C2442AA2F003DD8AE /* JabberwockyHTKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1E7C63F12424090A00D97089 /* JabberwockyHTKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1E7C64022424090A00D97089 /* JabberwockyHTKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E7C63F42424090A00D97089 /* JabberwockyHTKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1E7C647424240A0200D97089 /* UIControl+Focusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C640C24240A0100D97089 /* UIControl+Focusable.swift */; };
 		1E7C647524240A0200D97089 /* FocusableGlassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C640D24240A0100D97089 /* FocusableGlassView.swift */; };
@@ -200,6 +208,7 @@
 		5A8345243E2A003E3EE758FC /* Pods_CustomThemeFeatureTutorial_PodsOnly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89F0A0BAB49CC7D71C9A3B31 /* Pods_CustomThemeFeatureTutorial_PodsOnly.framework */; };
 		6331E74C0C6A739F8F9BDA40 /* Pods_ObjcTutorial_PodsOnly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31FB4679CD65B347CAFBFAB7 /* Pods_ObjcTutorial_PodsOnly.framework */; };
 		DFE49DB34BF0318B2DF43BA1 /* Pods_BasicTutorial_PodsOnly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B07850C7B23C685B285AC30 /* Pods_BasicTutorial_PodsOnly.framework */; };
+		FAB70B4A7C47B8CBA67665A0 /* Pods_SwiftUITutorial_PodsOnly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 315F538F33EDC8E05F00F665 /* Pods_SwiftUITutorial_PodsOnly.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -211,6 +220,13 @@
 			remoteInfo = "JabberwockyHTKit-LocalDev";
 		};
 		1E1E0AC0242E8DBE002C4BE0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1E7C63E82424090A00D97089 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1E7C63F02424090A00D97089;
+			remoteInfo = JabberwockyHTKit;
+		};
+		1E68A51D2442AA2F003DD8AE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1E7C63E82424090A00D97089 /* Project object */;
 			proxyType = 1;
@@ -254,6 +270,17 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1E68A51F2442AA2F003DD8AE /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				1E68A51C2442AA2F003DD8AE /* JabberwockyHTKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -281,6 +308,14 @@
 		1E1E0AB8242E876D002C4BE0 /* JabberwockyHTKitCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = JabberwockyHTKitCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E1E0AC7242E9A2E002C4BE0 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1E68A4C324410AF8003DD8AE /* AtomicInteger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtomicInteger.swift; sourceTree = "<group>"; };
+		1E68A5052442A343003DD8AE /* SwiftUI - Pods.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUI - Pods.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E68A5072442A343003DD8AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1E68A5092442A343003DD8AE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		1E68A50B2442A343003DD8AE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		1E68A50D2442A344003DD8AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1E68A5102442A344003DD8AE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		1E68A5152442A344003DD8AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1E68A5192442A391003DD8AE /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1E7C63F12424090A00D97089 /* JabberwockyHTKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JabberwockyHTKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E7C63F42424090A00D97089 /* JabberwockyHTKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JabberwockyHTKit.h; sourceTree = "<group>"; };
 		1E7C63F52424090A00D97089 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -364,6 +399,7 @@
 		1EF5E492243FFD9E00C7E6B7 /* FocusAndClickAnimationWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusAndClickAnimationWindow.swift; sourceTree = "<group>"; };
 		1EF5E494243FFDE000C7E6B7 /* HTGlassView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTGlassView.swift; sourceTree = "<group>"; };
 		1EF5E4962440047600C7E6B7 /* HTGlassWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTGlassWindow.swift; sourceTree = "<group>"; };
+		315F538F33EDC8E05F00F665 /* Pods_SwiftUITutorial_PodsOnly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftUITutorial_PodsOnly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		31FB4679CD65B347CAFBFAB7 /* Pods_ObjcTutorial_PodsOnly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ObjcTutorial_PodsOnly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		469359539E6625CA0D106CB0 /* Pods-BasicTutorial-PodsOnly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasicTutorial-PodsOnly.release.xcconfig"; path = "Target Support Files/Pods-BasicTutorial-PodsOnly/Pods-BasicTutorial-PodsOnly.release.xcconfig"; sourceTree = "<group>"; };
 		471FEE75B3CED1BA67828DEC /* Pods-CustomThemeFeatureTutorial-PodsOnly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomThemeFeatureTutorial-PodsOnly.release.xcconfig"; path = "Target Support Files/Pods-CustomThemeFeatureTutorial-PodsOnly/Pods-CustomThemeFeatureTutorial-PodsOnly.release.xcconfig"; sourceTree = "<group>"; };
@@ -371,6 +407,8 @@
 		501F47B2164643C80B43A2D0 /* Pods_JabberwockyHTKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JabberwockyHTKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		72BC8B77BF80105B32B2DFF5 /* Pods-BasicTutorial-PodsOnly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasicTutorial-PodsOnly.debug.xcconfig"; path = "Target Support Files/Pods-BasicTutorial-PodsOnly/Pods-BasicTutorial-PodsOnly.debug.xcconfig"; sourceTree = "<group>"; };
 		89F0A0BAB49CC7D71C9A3B31 /* Pods_CustomThemeFeatureTutorial_PodsOnly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CustomThemeFeatureTutorial_PodsOnly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D46E9A5DE88D15AD6CB0F62 /* Pods-SwiftUITutorial-PodsOnly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUITutorial-PodsOnly.release.xcconfig"; path = "Target Support Files/Pods-SwiftUITutorial-PodsOnly/Pods-SwiftUITutorial-PodsOnly.release.xcconfig"; sourceTree = "<group>"; };
+		8D62E0358FE9F65A7383C57E /* Pods-SwiftUITutorial-PodsOnly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUITutorial-PodsOnly.debug.xcconfig"; path = "Target Support Files/Pods-SwiftUITutorial-PodsOnly/Pods-SwiftUITutorial-PodsOnly.debug.xcconfig"; sourceTree = "<group>"; };
 		93AEAB1E6A7BB196C32A3264 /* Pods-CustomThemeFeatureTutorial-PodsOnly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomThemeFeatureTutorial-PodsOnly.debug.xcconfig"; path = "Target Support Files/Pods-CustomThemeFeatureTutorial-PodsOnly/Pods-CustomThemeFeatureTutorial-PodsOnly.debug.xcconfig"; sourceTree = "<group>"; };
 		C1E8760EEB83FD1A2813A9F2 /* Pods-BasicTutorial.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasicTutorial.release.xcconfig"; path = "Target Support Files/Pods-BasicTutorial/Pods-BasicTutorial.release.xcconfig"; sourceTree = "<group>"; };
 		C215212007476EDFB2CBB63E /* Pods_BasicTutorial.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BasicTutorial.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -422,6 +460,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1E68A5022442A343003DD8AE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAB70B4A7C47B8CBA67665A0 /* Pods_SwiftUITutorial_PodsOnly.framework in Frameworks */,
+				1E68A51B2442AA2F003DD8AE /* JabberwockyHTKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1E7C63EE2424090A00D97089 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -467,6 +514,28 @@
 			path = CustomThemeFeatureTutorial;
 			sourceTree = "<group>";
 		};
+		1E68A5062442A343003DD8AE /* SwiftUITutorial */ = {
+			isa = PBXGroup;
+			children = (
+				1E68A5072442A343003DD8AE /* AppDelegate.swift */,
+				1E68A5092442A343003DD8AE /* SceneDelegate.swift */,
+				1E68A50B2442A343003DD8AE /* ContentView.swift */,
+				1E68A5192442A391003DD8AE /* LaunchScreen.storyboard */,
+				1E68A50D2442A344003DD8AE /* Assets.xcassets */,
+				1E68A5152442A344003DD8AE /* Info.plist */,
+				1E68A50F2442A344003DD8AE /* Preview Content */,
+			);
+			path = SwiftUITutorial;
+			sourceTree = "<group>";
+		};
+		1E68A50F2442A344003DD8AE /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				1E68A5102442A344003DD8AE /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
 		1E7C63E72424090A00D97089 = {
 			isa = PBXGroup;
 			children = (
@@ -491,6 +560,7 @@
 				1E1E0AA9242E8098002C4BE0 /* Basic - Local.app */,
 				1E1332D4243777B500D9172B /* Objc - Pods.app */,
 				1E1333122437D96500D9172B /* Theme - Pods.app */,
+				1E68A5052442A343003DD8AE /* SwiftUI - Pods.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -711,6 +781,7 @@
 				501F47B2164643C80B43A2D0 /* Pods_JabberwockyHTKit.framework */,
 				31FB4679CD65B347CAFBFAB7 /* Pods_ObjcTutorial_PodsOnly.framework */,
 				89F0A0BAB49CC7D71C9A3B31 /* Pods_CustomThemeFeatureTutorial_PodsOnly.framework */,
+				315F538F33EDC8E05F00F665 /* Pods_SwiftUITutorial_PodsOnly.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -732,6 +803,7 @@
 				1E7C652424255BA000D97089 /* BasicTutorial */,
 				1E1332E92437D42900D9172B /* CustomThemeFeatureTutorial */,
 				1E1332C6243776DB00D9172B /* ObjcTutorial */,
+				1E68A5062442A343003DD8AE /* SwiftUITutorial */,
 			);
 			path = Tutorials;
 			sourceTree = "<group>";
@@ -749,6 +821,8 @@
 				C86A15D6F51A8BB04C9E92DD /* Pods-ObjcTutorial-PodsOnly.release.xcconfig */,
 				93AEAB1E6A7BB196C32A3264 /* Pods-CustomThemeFeatureTutorial-PodsOnly.debug.xcconfig */,
 				471FEE75B3CED1BA67828DEC /* Pods-CustomThemeFeatureTutorial-PodsOnly.release.xcconfig */,
+				8D62E0358FE9F65A7383C57E /* Pods-SwiftUITutorial-PodsOnly.debug.xcconfig */,
+				8D46E9A5DE88D15AD6CB0F62 /* Pods-SwiftUITutorial-PodsOnly.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -870,6 +944,27 @@
 			productReference = 1E1E0AA9242E8098002C4BE0 /* Basic - Local.app */;
 			productType = "com.apple.product-type.application";
 		};
+		1E68A5042442A343003DD8AE /* SwiftUITutorial-PodsOnly */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1E68A5182442A344003DD8AE /* Build configuration list for PBXNativeTarget "SwiftUITutorial-PodsOnly" */;
+			buildPhases = (
+				38178687392428367CE3BFF2 /* [CP] Check Pods Manifest.lock */,
+				1E68A5012442A343003DD8AE /* Sources */,
+				1E68A5022442A343003DD8AE /* Frameworks */,
+				1E68A5032442A343003DD8AE /* Resources */,
+				210444D15D83B7DAACC05BCF /* [CP] Embed Pods Frameworks */,
+				1E68A51F2442AA2F003DD8AE /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1E68A51E2442AA2F003DD8AE /* PBXTargetDependency */,
+			);
+			name = "SwiftUITutorial-PodsOnly";
+			productName = SwiftUITutorial;
+			productReference = 1E68A5052442A343003DD8AE /* SwiftUI - Pods.app */;
+			productType = "com.apple.product-type.application";
+		};
 		1E7C63F02424090A00D97089 /* JabberwockyHTKit */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1E7C64052424090A00D97089 /* Build configuration list for PBXNativeTarget "JabberwockyHTKit" */;
@@ -923,6 +1018,9 @@
 					1E1332C7243777B500D9172B = {
 						LastSwiftMigration = 1140;
 					};
+					1E68A5042442A343003DD8AE = {
+						CreatedOnToolsVersion = 11.4;
+					};
 					1E7C63F02424090A00D97089 = {
 						CreatedOnToolsVersion = 11.3.1;
 					};
@@ -951,6 +1049,7 @@
 				1E1E0A32242E7F53002C4BE0 /* BasicTutorial-PodsOnly */,
 				1E1333032437D96500D9172B /* CustomThemeFeatureTutorial-PodsOnly */,
 				1E1332C7243777B500D9172B /* ObjcTutorial-PodsOnly */,
+				1E68A5042442A343003DD8AE /* SwiftUITutorial-PodsOnly */,
 			);
 		};
 /* End PBXProject section */
@@ -999,6 +1098,16 @@
 			files = (
 				1E1E0AA2242E8098002C4BE0 /* Assets.xcassets in Resources */,
 				1E1E0AC9242E9A2E002C4BE0 /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E68A5032442A343003DD8AE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E68A50E2442A344003DD8AE /* Assets.xcassets in Resources */,
+				1E68A5112442A344003DD8AE /* Preview Assets.xcassets in Resources */,
+				1E68A51A2442A391003DD8AE /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1100,6 +1209,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CustomThemeFeatureTutorial-PodsOnly/Pods-CustomThemeFeatureTutorial-PodsOnly-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		210444D15D83B7DAACC05BCF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SwiftUITutorial-PodsOnly/Pods-SwiftUITutorial-PodsOnly-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SwiftUITutorial-PodsOnly/Pods-SwiftUITutorial-PodsOnly-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SwiftUITutorial-PodsOnly/Pods-SwiftUITutorial-PodsOnly-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		38178687392428367CE3BFF2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SwiftUITutorial-PodsOnly-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		5218F5B6B332E5E9513C4A4F /* [CP] Embed Pods Frameworks */ = {
@@ -1324,6 +1472,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1E68A5012442A343003DD8AE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E68A5082442A343003DD8AE /* AppDelegate.swift in Sources */,
+				1E68A50A2442A343003DD8AE /* SceneDelegate.swift in Sources */,
+				1E68A50C2442A343003DD8AE /* ContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1E7C63ED2424090A00D97089 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1428,6 +1586,11 @@
 			isa = PBXTargetDependency;
 			target = 1E7C63F02424090A00D97089 /* JabberwockyHTKit */;
 			targetProxy = 1E1E0AC0242E8DBE002C4BE0 /* PBXContainerItemProxy */;
+		};
+		1E68A51E2442AA2F003DD8AE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1E7C63F02424090A00D97089 /* JabberwockyHTKit */;
+			targetProxy = 1E68A51D2442AA2F003DD8AE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1661,6 +1824,52 @@
 				PRODUCT_BUNDLE_IDENTIFIER = org.swiftable.jabberwocky.BasicTutorialLocal;
 				PRODUCT_NAME = "Basic - Local";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = JABBERWOCKY_LOCAL_DEV;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		1E68A5162442A344003DD8AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8D62E0358FE9F65A7383C57E /* Pods-SwiftUITutorial-PodsOnly.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Tutorials/SwiftUITutorial/Preview Content\"";
+				DEVELOPMENT_TEAM = BDJ62329AB;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/Tutorials/SwiftUITutorial/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.swiftable.jabberwocky.SwiftUITutorial;
+				PRODUCT_NAME = "SwiftUI - Pods";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1E68A5172442A344003DD8AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8D46E9A5DE88D15AD6CB0F62 /* Pods-SwiftUITutorial-PodsOnly.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Tutorials/SwiftUITutorial/Preview Content\"";
+				DEVELOPMENT_TEAM = BDJ62329AB;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/Tutorials/SwiftUITutorial/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.swiftable.jabberwocky.SwiftUITutorial;
+				PRODUCT_NAME = "SwiftUI - Pods";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1929,6 +2138,15 @@
 			buildConfigurations = (
 				1E1E0AA7242E8098002C4BE0 /* Debug */,
 				1E1E0AA8242E8098002C4BE0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1E68A5182442A344003DD8AE /* Build configuration list for PBXNativeTarget "SwiftUITutorial-PodsOnly" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E68A5162442A344003DD8AE /* Debug */,
+				1E68A5172442A344003DD8AE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

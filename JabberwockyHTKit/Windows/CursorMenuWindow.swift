@@ -16,12 +16,22 @@ limitations under the License.
 
 import UIKit
 
-@objc public class CursorMenuWindow: UIWindow {
-    let toggleView: CursorToggleView = CursorToggleView()
+@objc public class CursorMenuWindow: HTGlassWindow {
+
+    @objc public let toggleView: UIView = CursorToggleView()
     
-    @objc override init(frame: CGRect) {
+    @available(iOS 13.0, *)
+    override init(windowScene: UIWindowScene) {
+        super.init(windowScene: windowScene)
+        initialize()
+    }
+    
+    override init(frame: CGRect) {
         super.init(frame: frame)
-        
+        initialize()
+    }
+    
+    private func initialize() {
         self.addSubview(toggleView)
         toggleView.layer.zPosition = CGFloat(Float.greatestFiniteMagnitude / 2)
         

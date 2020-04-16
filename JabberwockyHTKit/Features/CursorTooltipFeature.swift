@@ -29,12 +29,9 @@ import UIKit
         _tooltipChargingTimer = ChargingTimer(for: DELAY, cycle: false, decayFactor: DECAY_FACTOR)
     }
     
-    @objc public static func configure(withFeatureEnabled enabled: Bool = true) -> HTFeature {
+    @objc public static func configure() -> HTFeature {
         if CursorTooltipFeature.shared == nil {
             CursorTooltipFeature.shared = CursorTooltipFeature()
-            if enabled {
-                CursorTooltipFeature.shared?.enable()
-            }
         }
         return CursorTooltipFeature.shared!
     }
@@ -67,19 +64,24 @@ import UIKit
             return
         }
         
+        guard let tooltipView = tooltipWindow.tooltipView as? TooltipGlassView else {
+            disposeOfChargingFacadeView(nil)
+            return
+        }
+        
         guard HTCursor.shared.active else {
-            disposeOfChargingFacadeView(tooltipWindow)
+            disposeOfChargingFacadeView(tooltipView)
             return
         }
         
         guard let focusContext = notification.userInfo?[NSNotification.htFocusContextKey]
             as? HTFocusContext else {
-                disposeOfChargingFacadeView(tooltipWindow)
+                disposeOfChargingFacadeView(tooltipView)
                 return
         }
      
         if _tooltipChargingTimer.charge == 0 {
-            disposeOfChargingFacadeView(tooltipWindow)
+            disposeOfChargingFacadeView(tooltipView)
             _chargingFocusedElement = focusContext.focusedElement
         }
         
@@ -89,15 +91,15 @@ import UIKit
         })
         
         if _tooltipChargingTimer.isFull, let tooltipText = focusContext.focusedElement.htTooltipText {
-            tooltipWindow.tooltipView.showTooltip(tooltipText, focusContext.focusedElement)
+            tooltipView.showTooltip(tooltipText, focusContext.focusedElement)
         }
 
     }
     
-    private func disposeOfChargingFacadeView(_ tooltipWindow: TooltipWindow?) {
+    private func disposeOfChargingFacadeView(_ tooltipView: TooltipGlassView?) {
         _tooltipChargingTimer.charge = 0
         if let chargingFocusedElement = _chargingFocusedElement {
-            tooltipWindow?.tooltipView.hideTooltip(chargingFocusedElement)
+            tooltipView?.hideTooltip(chargingFocusedElement)
         }
         _chargingFocusedElement = nil
     }

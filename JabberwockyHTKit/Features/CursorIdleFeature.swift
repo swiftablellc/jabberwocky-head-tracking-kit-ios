@@ -29,12 +29,9 @@ import UIKit
     
     override private init() { }
 
-    @objc public static func configure(withFeatureEnabled enabled: Bool = true) -> HTFeature {
+    @objc public static func configure() -> HTFeature {
         if CursorIdleFeature.shared == nil {
             CursorIdleFeature.shared = CursorIdleFeature()
-            if enabled {
-                CursorIdleFeature.shared?.enable()
-            }
         }
         return CursorIdleFeature.shared!
     }

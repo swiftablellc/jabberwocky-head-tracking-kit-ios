@@ -17,7 +17,7 @@ limitations under the License.
 import ARKit
 import JabberwockyHTKitCore
 
-@objc public class FaceMeshView: UIView {
+class FaceMeshView: HTGlassView {
 
     private var meshColor: UIColor
     private var sceneView: ARSCNView!
@@ -28,7 +28,7 @@ import JabberwockyHTKitCore
         fatalError(" does not support NSCoding (Serialization)...")
     }
 
-    public init(backgroundColor: UIColor? = nil, meshColor: UIColor? = nil) {
+    init(backgroundColor: UIColor? = nil, meshColor: UIColor? = nil) {
         self.meshColor = meshColor == nil ? ThemeColors.primary : meshColor!
         
         super.init(frame: CGRect.zero)
@@ -62,16 +62,12 @@ import JabberwockyHTKitCore
         }
 
     }
-
-    override public func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
-        return nil
-    }
     
 }
 
 extension FaceMeshView: ARSCNViewDelegate {
 
-    @objc public func renderer(_ renderer: SCNSceneRenderer, nodeFor anchor: ARAnchor) -> SCNNode? {
+    func renderer(_ renderer: SCNSceneRenderer, nodeFor anchor: ARAnchor) -> SCNNode? {
         //Face Mesh is not supported on simulator
         #if targetEnvironment(simulator)
             return nil
@@ -85,7 +81,7 @@ extension FaceMeshView: ARSCNViewDelegate {
         #endif
     }
     
-    @objc public func renderer(_ renderer: SCNSceneRenderer, didUpdate node: SCNNode, for anchor: ARAnchor) {
+    func renderer(_ renderer: SCNSceneRenderer, didUpdate node: SCNNode, for anchor: ARAnchor) {
         guard let faceGeometry = node.geometry as? ARSCNFaceGeometry,
             let faceAnchor = anchor as? ARFaceAnchor
             else { return }

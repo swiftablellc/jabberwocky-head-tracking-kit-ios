@@ -26,12 +26,9 @@ import UIKit
     
     override private init() { }
     
-    @objc public static func configure(withFeatureEnabled enabled: Bool = true) -> HTFeature {
+    @objc public static func configure() -> HTFeature {
         if EgressWarningFeature.shared == nil {
             EgressWarningFeature.shared = EgressWarningFeature()
-            if enabled {
-                EgressWarningFeature.shared?.enable()
-            }
         }
         return EgressWarningFeature.shared!
     }

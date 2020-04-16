@@ -18,13 +18,21 @@ import UIKit
 
 @objc public class CursorFocusWindow: HTGlassWindow {
     
-    var focusableGlassView: FocusableGlassView!
+    @objc public let focusableGlassView: HTGlassView = FocusableGlassView()
     
-    @objc override init(frame: CGRect) {
+    @available(iOS 13.0, *)
+    override init(windowScene: UIWindowScene) {
+        super.init(windowScene: windowScene)
+        initialize()
+    }
+    
+    override init(frame: CGRect) {
         super.init(frame: frame)
-        
-        focusableGlassView = FocusableGlassView()
-        self.addSubview(focusableGlassView!)
+        initialize()
+    }
+    
+    private func initialize() {
+        self.addSubview(focusableGlassView)
         focusableGlassView.layer.zPosition = CGFloat(Float.greatestFiniteMagnitude)
         focusableGlassView.translatesAutoresizingMaskIntoConstraints = false
         focusableGlassView.heightAnchor.constraint(equalTo: self.heightAnchor).isActive = true

@@ -23,12 +23,9 @@ import UIKit
 
     override private init() { }
 
-    @objc public static func configure(withFeatureEnabled enabled: Bool = true) -> HTFeature {
+    @objc public static func configure() -> HTFeature {
         if CursorDrawFeature.shared == nil {
             CursorDrawFeature.shared = CursorDrawFeature()
-            if enabled {
-                CursorDrawFeature.shared?.enable()
-            }
         }
         return CursorDrawFeature.shared!
     }

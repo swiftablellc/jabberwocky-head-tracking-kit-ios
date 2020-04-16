@@ -82,7 +82,12 @@ import UIKit
         if let existingWindow = windowRegistry[featureName] as? T {
             return existingWindow
         }
-        let newWindow = T(frame: UIScreen.main.bounds)
+        let newWindow: T
+        if #available(iOS 13, *), HeadTracking.shared.windowScene != nil {
+            newWindow = T(windowScene: HeadTracking.shared.windowScene!)
+        } else {
+            newWindow = T(frame: UIScreen.main.bounds)
+        }
         windowRegistry[featureName] = newWindow
         newWindow.rootViewController = viewController
         if let keyWindow = UIApplication.shared.keyWindow {

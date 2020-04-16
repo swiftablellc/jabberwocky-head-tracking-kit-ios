@@ -37,7 +37,7 @@ import JabberwockyHTKitCore
             HeadTracking.NOT_CONFIGURED_WARNING
     private static let CANNOT_BE_ENABLED_APP_NO_AUTHORIZATION = "Head Tracking cannot be enabled. " +
             "It is either not supported or authorized on the device."
-    private static let FEATURE_CONFIGURED = "%@ configured and %@."
+    private static let FEATURE_CONFIGURED = "%@ configured."
     private static let FEATURE_ALREADY_CONFIGURED = "%@ already configured. HTFeatures cannot be configured twice."
 
     // MARK: Features enabled by default configuration
@@ -60,6 +60,8 @@ import JabberwockyHTKitCore
     // MARK: Public Fields (get/set)
     @objc public var analytics: HTAnalytics = HTDefaultAnalytics()
     @objc public var settings: HTSettings = ImmutableDefaultSettings()
+    @available(iOS 13.0, *)
+    @objc public lazy var windowScene: UIWindowScene? = nil
     
     // MARK: Internal
     private var configured = false
@@ -89,10 +91,10 @@ import JabberwockyHTKitCore
         }
     }
     
-   @objc public static func configureFeature(_ feature: HTFeature.Type, enabled: Bool = true) {
+   @objc public static func configureFeature(_ feature: HTFeature.Type) {
     if !shared.features.contains(where: { $0.isKind(of: feature) }) {
-            shared.features.append(feature.configure(withFeatureEnabled: enabled))
-            NSLog(FEATURE_CONFIGURED, String(describing: feature), enabled ? "enabled" : "disabled")
+            shared.features.append(feature.configure())
+            NSLog(FEATURE_CONFIGURED, String(describing: feature))
         } else {
             NSLog(FEATURE_ALREADY_CONFIGURED, String(describing: feature))
         }
@@ -156,6 +158,7 @@ import JabberwockyHTKitCore
         if overrideDisabledFlag || !HeadTracking.shared.settings.disabledByUser {
             HeadTracking.shared.settings.disabledByUser = false
             HeadTracking.shared.activateCameraWindow() {
+                self.features.forEach { $0.enable() }
                 NSLog(HeadTracking.ENABLED_SUCCESSFULLY)
                 completion(true)
             }
@@ -172,6 +175,7 @@ import JabberwockyHTKitCore
                 headTracking.settings.disabledByUser = true
             }
             headTracking.deactivateCameraWindow()
+            self.features.forEach { if $0.enabled { $0.disable() } }
         }
     }
 

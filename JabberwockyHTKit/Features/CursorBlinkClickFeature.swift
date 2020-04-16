@@ -24,12 +24,9 @@ import UIKit
 
     override private init() { }
 
-    @objc public static func configure(withFeatureEnabled enabled: Bool = true) -> HTFeature {
+    @objc public static func configure() -> HTFeature {
         if CursorBlinkClickFeature.shared == nil {
             CursorBlinkClickFeature.shared = CursorBlinkClickFeature()
-            if enabled {
-                CursorBlinkClickFeature.shared?.enable()
-            }
         }
         return CursorBlinkClickFeature.shared!
     }

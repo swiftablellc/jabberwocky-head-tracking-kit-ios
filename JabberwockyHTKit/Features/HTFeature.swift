@@ -18,7 +18,7 @@ import Foundation
 
 @objc public protocol HTFeature: NSObjectProtocol {
     
-    static func configure(withFeatureEnabled enabled: Bool) -> HTFeature
+    static func configure() -> HTFeature
     
     var enabled: Bool { get }
     

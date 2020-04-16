@@ -23,12 +23,9 @@ import UIKit
     
     override private init() { }
     
-    @objc public static func configure(withFeatureEnabled enabled: Bool = true) -> HTFeature {
+    @objc public static func configure() -> HTFeature {
         if FaceMeshFeature.shared == nil {
             FaceMeshFeature.shared = FaceMeshFeature()
-            if enabled {
-                FaceMeshFeature.shared?.enable()
-            }
         }
         return FaceMeshFeature.shared!
     }

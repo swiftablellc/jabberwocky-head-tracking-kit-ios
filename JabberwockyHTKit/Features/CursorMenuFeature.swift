@@ -23,12 +23,9 @@ import UIKit
     
     override private init() { }
     
-    @objc public static func configure(withFeatureEnabled enabled: Bool = true) -> HTFeature {
+    @objc public static func configure() -> HTFeature {
         if CursorMenuFeature.shared == nil {
             CursorMenuFeature.shared = CursorMenuFeature()
-            if enabled {
-                CursorMenuFeature.shared?.enable()
-            }
         }
         return CursorMenuFeature.shared!
     }

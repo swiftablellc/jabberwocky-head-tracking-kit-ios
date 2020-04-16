@@ -17,7 +17,7 @@ limitations under the License.
 import UIKit
 
 @objc public class HTGlassWindow: UIWindow {
-
+    
     override public func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
         // Glass windows cannot be interacted with.  Always pass hit tests through...
         return nil

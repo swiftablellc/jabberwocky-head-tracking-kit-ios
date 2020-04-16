@@ -18,13 +18,21 @@ import UIKit
 
 @objc public class FocusAndClickAnimationWindow: HTGlassWindow {
     
-    var glassView: HTGlassView!
+    @objc public let glassView: HTGlassView = HTGlassView()
     
-    @objc override init(frame: CGRect) {
+    @available(iOS 13.0, *)
+    override init(windowScene: UIWindowScene) {
+        super.init(windowScene: windowScene)
+        initialize()
+    }
+    
+    override init(frame: CGRect) {
         super.init(frame: frame)
-        
-        glassView = HTGlassView()
-        self.addSubview(glassView!)
+        initialize()
+    }
+    
+    private func initialize() {
+        self.addSubview(glassView)
         glassView.layer.zPosition = CGFloat(Float.greatestFiniteMagnitude)
         glassView.translatesAutoresizingMaskIntoConstraints = false
         glassView.heightAnchor.constraint(equalTo: self.heightAnchor).isActive = true

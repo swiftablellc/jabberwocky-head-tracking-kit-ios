@@ -18,11 +18,20 @@ import UIKit
 
 @objc public class FaceMeshWindow: HTGlassWindow {
     
-    public var faceMeshView = FaceMeshView()
+    @objc public let faceMeshView: HTGlassView = FaceMeshView()
     
-    @objc override init(frame: CGRect) {
+    @available(iOS 13.0, *)
+    override init(windowScene: UIWindowScene) {
+        super.init(windowScene: windowScene)
+        initialize()
+    }
+    
+    override init(frame: CGRect) {
         super.init(frame: frame)
-        
+        initialize()
+    }
+    
+    private func initialize() {
         self.addSubview(faceMeshView)
         
         let height = HTLayout.longerDimension / 4

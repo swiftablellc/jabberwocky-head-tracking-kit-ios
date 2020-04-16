@@ -17,11 +17,21 @@ limitations under the License.
 import UIKit
 
 @objc public class TooltipWindow: HTGlassWindow {
-    let tooltipView: TooltipGlassView = TooltipGlassView()
     
-    @objc override init(frame: CGRect) {
+    @objc public let tooltipView: HTGlassView = TooltipGlassView()
+    
+    @available(iOS 13.0, *)
+    override init(windowScene: UIWindowScene) {
+        super.init(windowScene: windowScene)
+        initialize()
+    }
+    
+    override init(frame: CGRect) {
         super.init(frame: frame)
-        
+        initialize()
+    }
+    
+    private func initialize() {
         self.addSubview(tooltipView)
         
         tooltipView.translatesAutoresizingMaskIntoConstraints = false
