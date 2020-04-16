@@ -160,7 +160,8 @@ pod install
 * `*-PodsOnly` schemes pull all dependencies from CocoaPods and therefore are not very useful for local development of `JabberwockyHTKit`.
 * `JabberwockyHTKit` uses CocoaPods to install its one dependency `JabberwockyHTKitCore`, but the `JabberwockyHTKitCore.framework` can be found [here](https://github.com/swiftablellc/jabberwocky-head-tracking-kit-core-ios-binary/tree/master/JabberwockyHTKitCore.framework). If you don't want to use CocoaPods you checkout the repository with the framework binary and add it to the project. It might be best to create a new target similar to `JabberwockyHTKit-LocalDev` to get it to build properly.
 
-## Release Version (Swiftable Devs Only)
+## Release (Swiftable Devs Only)
+
 1. Navigate to jabberwocky-head-tracking-kit-ios-binary directory
     * `git pull`
 2. Update the JabberwockyHTKit.podspec file.
@@ -173,14 +174,13 @@ pod install
     * `git tag -a <version> -m 'Tagging Release Version <version>'`
     * `git push origin --tags`
 5. Do a pod spec lint from the version directory
-    * `pod spec lint --verbose JabberwockyHTKit.podspec`
+    * `pod spec lint --verbose --sources="https://github.com/swiftablellc/jabberwocky-specs-repo.git" JabberwockyHTKit.podspec`
 6. Upload to the `jabberwocky-specs-repo` Pods Repo
-    * `pod repo push jabberwocky-specs-repo JabberwockyHTKitCore.podspec`
+    * `pod repo push jabberwocky-specs-repo JabberwockyHTKit.podspec`
     * If you don't have the repo installed yet: `pod repo add jabberwocky-specs-repo https://github.com/swiftablellc/jabberwocky-specs-repo.git`
 7. **IMPORTANT** - Finish pushing the commit to master.
     * `git push origin master`
     * We don't do this before before, because we can amend the commit until the podspec lint succeeds.
-
 
 ## Applications
 `JabberwockyHTKit` is currently being used by the following applications in the [App Store](https://apps.apple.com/):
