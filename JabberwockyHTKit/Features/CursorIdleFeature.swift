@@ -72,31 +72,32 @@ import UIKit
     @objc public private(set) var enabled = false
 
     @objc public func enable() {
-        enabled = true
-        idleChargingTimer = ChargingTimer(
-            for: IDLE_TIME_SECONDS, cycle: false,
-            decayFactor: ACTIVE_TO_IDLE_FACTOR)
-        idleChargingTimer?.enabled = false
-        NotificationCenter.default.addObserver(
-                self, selector: #selector(onCursorUpdateNotification(_:)),
-                name: .htOnCursorUpdateNotification, object: nil)
-        NotificationCenter.default.addObserver(
-            self, selector: #selector(onCursorClickNotification),
-            name: .htOnCursorClickNotification, object: nil)
-        NotificationCenter.default.addObserver(
-            self, selector: #selector(onRecalibrateNotification),
-            name: .htOnRecalibrateNotification, object: nil)
+        if !enabled {
+            enabled = true
+            idleChargingTimer = ChargingTimer(
+                for: IDLE_TIME_SECONDS, cycle: false,
+                decayFactor: ACTIVE_TO_IDLE_FACTOR)
+            idleChargingTimer?.enabled = false
+            NotificationCenter.default.addObserver(self, selector: #selector(onCursorUpdateNotification(_:)),
+                    name: .htOnCursorUpdateNotification, object: nil)
+            NotificationCenter.default.addObserver(self, selector: #selector(onCursorClickNotification),
+                name: .htOnCursorClickNotification, object: nil)
+            NotificationCenter.default.addObserver(self, selector: #selector(onRecalibrateNotification),
+                name: .htOnRecalibrateNotification, object: nil)
+        }
     }
 
     @objc public func disable() {
-        enabled = false
-        idleChargingTimer = nil
-        NotificationCenter.default.removeObserver(
-                self, name: .htOnCursorUpdateNotification, object: nil)
-        NotificationCenter.default.removeObserver(
-            self, name: .htOnCursorClickNotification, object: nil)
-        NotificationCenter.default.removeObserver(
-            self, name: .htOnRecalibrateNotification, object: nil)
+        if enabled {
+            enabled = false
+            idleChargingTimer = nil
+            NotificationCenter.default.removeObserver(
+                    self, name: .htOnCursorUpdateNotification, object: nil)
+            NotificationCenter.default.removeObserver(
+                self, name: .htOnCursorClickNotification, object: nil)
+            NotificationCenter.default.removeObserver(
+                self, name: .htOnRecalibrateNotification, object: nil)
+        }
     }
 
     // MARK: Internal

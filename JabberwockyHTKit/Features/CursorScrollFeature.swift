@@ -98,16 +98,19 @@ import UIKit
     @objc public private(set) var enabled = false
 
     @objc public func enable() {
-        enabled = true
-        NotificationCenter.default.addObserver(
-            self, selector: #selector(self.onCursorUpdateNotification(_:)),
-            name: .htOnCursorUpdateNotification, object: nil)
+        if !enabled {
+            enabled = true
+            NotificationCenter.default.addObserver(
+                self, selector: #selector(self.onCursorUpdateNotification(_:)),
+                name: .htOnCursorUpdateNotification, object: nil)
+        }
     }
     
     @objc public func disable() {
-        enabled = false
-        NotificationCenter.default.removeObserver(
-            self, name: .htOnCursorUpdateNotification, object: nil)
+        if enabled {
+            enabled = false
+            NotificationCenter.default.removeObserver(self, name: .htOnCursorUpdateNotification, object: nil)
+        }
     }
     
     @objc func onCursorUpdateNotification(_ notification: NSNotification)  {
@@ -125,7 +128,7 @@ import UIKit
                 return
         }
         
-        guard let screenPoint = (cursorContext.smoothedScreenPoint.exists ? cursorContext.smoothedScreenPoint.point: nil) else {
+        guard let screenPoint = cursorContext.isFaceDetected ? cursorContext.smoothedScreenPoint : nil else {
             return
         }
 
@@ -172,7 +175,7 @@ import UIKit
         on edges: Set<HTViewSide>, permitted directions: [ScrollDirection]) -> [ScrollDirection] {
         
         var availableDirections = directions
-        if let scrollTarget = HTFeatureUtils.firstViewOfType(UIScrollView.self, inHierarchyOf: element) {
+        if let scrollTarget = firstViewOfType(UIScrollView.self, inHierarchyOf: element) {
             var scrolledDirections = scroll(
                 for: scrollTarget, using: screenPoint, secondsElapsed: secondsElapsed, on: edges,
                 permitted: availableDirections)
@@ -289,6 +292,15 @@ import UIKit
         }
         
         return CGPoint(x: horizontalVelocity, y: verticalVelocity)
+    }
+    
+    private func firstViewOfType<T>(_ type: T.Type, inHierarchyOf view: UIView?) -> T? {
+        guard let view = view else { return nil }
+        if let viewOfType = view as? T {
+            return viewOfType
+        } else {
+            return firstViewOfType(type, inHierarchyOf: view.superview)
+        }
     }
     
 }

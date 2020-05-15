@@ -34,12 +34,16 @@ import UIKit
     @objc public private(set) var enabled = false
     
     @objc public func enable() {
-        enabled = true
-        HTWindows.shared.enable(for: self, of: FaceMeshWindow.self)
+        if !enabled {
+            enabled = true
+            HTWindows.shared.enable(for: self, of: FaceMeshWindow.self)
+        }
     }
     
     @objc public func disable() {
-        enabled = false
-        HTWindows.shared.disable(for: self)
+        if enabled {
+            enabled = false
+            HTWindows.shared.disable(for: self)
+        }
     }
 }

@@ -14,12 +14,15 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-#import <Foundation/Foundation.h>
+import Foundation
 
-//! Project version number for JabberwockyHTKit.
-FOUNDATION_EXPORT double JabberwockyHTKitVersionNumber;
+extension NSNotification {
+    // Generic Event Data Key
+    @objc public static let htEventContextKey: String = "HTNotificationEventContextObjectKey"
+    
+    @objc public static let htEventNotificationKey = "htEventNotificationKey"
+}
 
-//! Project version string for JabberwockyHTKit.
-FOUNDATION_EXPORT const unsigned char JabberwockyHTKitVersionString[];
-
-// In this header, you should import all the public headers of your framework using statements like #import <JabberwockyHTKit/PublicHeader.h>
+extension NSNotification.Name {
+    public static let htEventNotification = Notification.Name(NSNotification.htEventNotificationKey)
+}

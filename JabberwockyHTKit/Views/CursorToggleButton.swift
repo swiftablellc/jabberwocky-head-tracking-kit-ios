@@ -31,7 +31,7 @@ class CursorToggleButton: UIButton {
     
     var label = UILabel()
     
-    init(_ cursorToggle: CursorToggleView.CursorToggle, title: String, imageName: String) {
+    init(_ cursorToggle: CursorToggle, title: String, imageName: String) {
         super.init(frame: CGRect.zero)
         
         setTitle(title, for: .normal)

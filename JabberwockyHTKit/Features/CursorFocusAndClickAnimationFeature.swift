@@ -35,27 +35,31 @@ import UIKit
     @objc public private(set) var enabled = false
 
     @objc public func enable() {
-        enabled = true
-        HTWindows.shared.enable(for: self, of: FocusAndClickAnimationWindow.self)
-        
-        NotificationCenter.default.addObserver(
-            self, selector: #selector(self.onClickNotification(_:)),
-            name: .htOnCursorClickNotification, object: nil)
-        NotificationCenter.default.addObserver(
-            self, selector: #selector(self.onFocusNotification(_:)),
-            name: .htOnCursorFocusUpdateNotification, object: nil)
-        // Animations and focusable borders need to be cleaned up.
-        NotificationCenter.default.addObserver(self,
-            selector: #selector(self.onFocusNotification(_:)),
-            name: .htOnHeadTrackingStatusUpdateNotification, object: nil)
+        if !enabled {
+            enabled = true
+            HTWindows.shared.enable(for: self, of: FocusAndClickAnimationWindow.self)
+            
+            NotificationCenter.default.addObserver(
+                self, selector: #selector(self.onClickNotification(_:)),
+                name: .htOnCursorClickNotification, object: nil)
+            NotificationCenter.default.addObserver(
+                self, selector: #selector(self.onFocusNotification(_:)),
+                name: .htOnCursorFocusUpdateNotification, object: nil)
+            // Animations and focusable borders need to be cleaned up.
+            NotificationCenter.default.addObserver(self,
+                selector: #selector(self.onFocusNotification(_:)),
+                name: .htOnHeadTrackingStatusUpdateNotification, object: nil)
+        }
     }
 
     @objc public func disable() {
-        enabled = false
-        HTWindows.shared.disable(for: self)
-        NotificationCenter.default.removeObserver(self, name: .htOnCursorClickNotification, object: nil)
-        NotificationCenter.default.removeObserver(self, name: .htOnCursorFocusUpdateNotification, object: nil)
-        NotificationCenter.default.removeObserver(self, name: .htOnHeadTrackingStatusUpdateNotification, object: nil)
+        if enabled {
+            enabled = false
+            HTWindows.shared.disable(for: self)
+            NotificationCenter.default.removeObserver(self, name: .htOnCursorClickNotification, object: nil)
+            NotificationCenter.default.removeObserver(self, name: .htOnCursorFocusUpdateNotification, object: nil)
+            NotificationCenter.default.removeObserver(self, name: .htOnHeadTrackingStatusUpdateNotification, object: nil)
+        }
     }
 
     // MARK: Internal

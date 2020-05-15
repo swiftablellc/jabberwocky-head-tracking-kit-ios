@@ -25,11 +25,6 @@ class CursorToggleView: UIView {
     private var chargingTimer: ChargingTimer!
     private var animator: TransformAnimator!
     
-    enum CursorToggle: String {
-        case click = "Click"
-        case scroll = "Scroll"
-    }
-    
     private let CLICK_ENABLED_IMAGE = "clickCentered"
     private let CLICK_DISABLED_IMAGE = "disabledClickCentered"
     private let SCROLL_ENABLED_IMAGE = "scroll"
@@ -101,9 +96,7 @@ class CursorToggleView: UIView {
             for: TIME_TO_SHOW_TOGGLE_MENU_SECONDS,
             doWhenFull: {
                 [weak self] in
-                if !HeadTracking.shared.settings.disableCursorToggle {
-                    self?.animator.show()
-                }
+                self?.animator.show()
             },
             handleDelta: {
                 [weak self] (_, charge: Float) in
@@ -169,7 +162,7 @@ class CursorToggleView: UIView {
             let onLeftEdge = cursorContext.onEdges.contains(.left)
             
             let onView: Bool = {
-                guard let screenPoint = (cursorContext.smoothedScreenPoint.exists ? cursorContext.smoothedScreenPoint.point: nil) else {
+                guard let screenPoint = cursorContext.isFaceDetected ? cursorContext.smoothedScreenPoint : nil else {
                     return false
                 }
                 

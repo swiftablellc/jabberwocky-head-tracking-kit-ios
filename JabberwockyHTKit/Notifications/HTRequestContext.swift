@@ -14,24 +14,6 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-import UIKit
+import Foundation
 
-@objc public class HTDwellTime: NSObject {
-    //MARK: Singleton Initialization
-    @objc public private(set) static var shared: HTDwellTime = HTDwellTime()
-    
-    @objc public var durationSeconds: CFTimeInterval {
-        get {
-            return HeadTracking.shared.settings.dwellTime
-        }
-        set {
-            if durationSeconds == newValue { return }
-            HeadTracking.ifConfigured { headTracking in
-                headTracking.settings.dwellTime = newValue
-            }
-        }
-    }
-    
-    //MARK: Internal
-    override private init() { }
-}
+public typealias HTRequestContext = NSDictionary

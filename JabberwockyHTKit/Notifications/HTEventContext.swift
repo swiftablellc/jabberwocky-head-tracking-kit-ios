@@ -14,12 +14,6 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-#import <Foundation/Foundation.h>
+import Foundation
 
-//! Project version number for JabberwockyHTKit.
-FOUNDATION_EXPORT double JabberwockyHTKitVersionNumber;
-
-//! Project version string for JabberwockyHTKit.
-FOUNDATION_EXPORT const unsigned char JabberwockyHTKitVersionString[];
-
-// In this header, you should import all the public headers of your framework using statements like #import <JabberwockyHTKit/PublicHeader.h>
+public typealias HTEventContext = NSDictionary

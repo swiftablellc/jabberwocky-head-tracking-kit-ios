@@ -38,25 +38,29 @@ import JabberwockyHTKitCore
     @objc public private(set) var enabled = false
 
     @objc public func enable() {
-        enabled = true
-        HTWindows.shared.enable(for: self, of: CursorFocusWindow.self)
-        NotificationCenter.default.addObserver(
-            self, selector: #selector(self.onCursorUpdateNotification(_:)),
-            name: .htOnCursorUpdateNotification, object: nil)
-        // Focus Levels need to be cleaned up
-        NotificationCenter.default.addObserver(self,
-            selector: #selector(self.onStatusUpdateNotification(_:)),
-            name: .htOnHeadTrackingStatusUpdateNotification, object: nil)
+        if !enabled {
+            enabled = true
+            HTWindows.shared.enable(for: self, of: CursorFocusWindow.self)
+            NotificationCenter.default.addObserver(
+                self, selector: #selector(self.onCursorUpdateNotification(_:)),
+                name: .htOnCursorUpdateNotification, object: nil)
+            // Focus Levels need to be cleaned up
+            NotificationCenter.default.addObserver(self,
+                selector: #selector(self.onStatusUpdateNotification(_:)),
+                name: .htOnHeadTrackingStatusUpdateNotification, object: nil)
+        }
     }
     
     @objc public func disable() {
-        enabled = false
-        resetAllFocusLevels()
-        HTWindows.shared.disable(for: self)
-        NotificationCenter.default.removeObserver(
-            self, name: .htOnCursorUpdateNotification, object: nil)
-        NotificationCenter.default.removeObserver(
-            self, name: .htOnHeadTrackingStatusUpdateNotification, object: nil)
+        if enabled {
+            enabled = false
+            resetAllFocusLevels()
+            HTWindows.shared.disable(for: self)
+            NotificationCenter.default.removeObserver(
+                self, name: .htOnCursorUpdateNotification, object: nil)
+            NotificationCenter.default.removeObserver(
+                self, name: .htOnHeadTrackingStatusUpdateNotification, object: nil)
+        }
     }
     
     // MARK: Internal
@@ -89,7 +93,7 @@ import JabberwockyHTKitCore
             return
         }
 
-        guard let screenPoint = (cursorContext.smoothedScreenPoint.exists ? cursorContext.smoothedScreenPoint.point: nil) else {
+        guard let screenPoint = cursorContext.isFaceDetected ? cursorContext.smoothedScreenPoint : nil else {
             sendFocusUpdateEventWithNoFocus(cursorContext)
             return
         }
@@ -146,8 +150,8 @@ import JabberwockyHTKitCore
         focusableGlassView.getFocusableElements().forEach {
             if let secondsElapsed = secondsElapsed {
                 let isFocused = focusedElement === $0
-                let isDwellClick = HeadTracking.shared.settings.clickGesture == .Dwell
-                let focusDuration = isDwellClick ? HTDwellTime.shared.durationSeconds : CursorFocusFeature.DEFAULT_FOCUS_DURATION
+                let isDwellClick = HeadTracking.shared.settings.clickGesture == ClickGesture.Dwell
+                let focusDuration = isDwellClick ? HeadTracking.shared.settings.dwellTime : CursorFocusFeature.DEFAULT_FOCUS_DURATION
                 let delta = secondsElapsed / focusDuration
                 $0.htFocusLevel += Float(isFocused ? delta : -delta)
             } else {

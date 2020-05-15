@@ -26,7 +26,7 @@ import JabberwockyHTKitCore
     private static let CONFIGURED_SUCCESSFULLY = "Head Tracking configured successfully."
     private static let ENABLED_SUCCESSFULLY = "Head Tracking enabled successfully."
     private static let DISABLED_IN_SETTINGS = "Head Tracking was not enabled because it was disabled " +
-            "in settings and not enabled with overrideSettings = true."
+            "in settings and not enabled with overrideDisabledFlag = true."
     private static let NOT_CONFIGURED_WARNING = "Head Tracking is not configured. " +
             "Use HeadTracking.configure() to configure."
     private static let CONFIGURE_ONCE_WARNING = "Head Tracking should only be configured once. " +
@@ -39,9 +39,13 @@ import JabberwockyHTKitCore
             "It is either not supported or authorized on the device."
     private static let FEATURE_CONFIGURED = "%@ configured."
     private static let FEATURE_ALREADY_CONFIGURED = "%@ already configured. HTFeatures cannot be configured twice."
+    
+    @objc public static var appName: String {
+        return Bundle.main.infoDictionary!["CFBundleName"] as? String ?? ""
+    }
 
     // MARK: Features enabled by default configuration
-    @objc public static let DEFAULT_ENABLED_FEATURES: [HTFeature.Type] = [
+    @objc public static let DEFAULT_FEATURES: [HTFeature.Type] = [
         BannerWarningsFeature.self,
         CursorBlinkClickFeature.self,
         CursorDrawFeature.self,
@@ -55,21 +59,27 @@ import JabberwockyHTKitCore
     @objc public private(set) static var shared: HeadTracking = HeadTracking()
     
     // MARK: Public Fields (get only)
+    @objc public private(set) var cameraCanBeActivated = true
     @objc public private(set) var features: [HTFeature] = []
 
     // MARK: Public Fields (get/set)
     @objc public var analytics: HTAnalytics = HTDefaultAnalytics()
-    @objc public var settings: HTSettings = ImmutableDefaultSettings()
+    @objc public var settings: HTSettings = DefaultSettings.shared
     @available(iOS 13.0, *)
     @objc public lazy var windowScene: UIWindowScene? = nil
     
     // MARK: Internal
     private var configured = false
     
-    override private init() { }
+    override private init() {
+        super.init()
+        NotificationCenter.default.addObserver(self,
+            selector: #selector(self.onStatusUpdateNotification(_:)),
+            name: .htOnHeadTrackingStatusUpdateNotification, object: nil)
+    }
 
     // MARK: Head Tracking Configuration
-    @objc public static func configure(withEnabledFeatures features: [HTFeature.Type] = DEFAULT_ENABLED_FEATURES,
+    @objc public static func configure(withFeatures features: [HTFeature.Type] = DEFAULT_FEATURES,
                                        withSettingsAppGroup appGroup: String? = nil) {
         if !shared.configured {
             if let appGroup = appGroup {
@@ -130,20 +140,27 @@ import JabberwockyHTKitCore
     }
 
     // MARK: Head Tracking Status
+    
+    @objc func onStatusUpdateNotification(_ notification: NSNotification) {
+        if settings.disabledByUser && isEnabled {
+            disable()
+        }
+        
+        if !settings.disabledByUser && cameraCanBeActivated {
+            enable()
+        }
+    }
+    
     @objc public var isEnabled: Bool {
         guard HeadTrackingCore.shared.isAuthorizedOnDevice else { return false }
-        guard HeadTracking.shared.configured else { return false }
-        guard !HeadTracking.shared.settings.disabledByUser else { return false }
-        var isCameraActive = false
-        if let cameraWindow = HTWindows.shared.cameraWindow {
-            isCameraActive = cameraWindow.cameraViewController != nil
-        }
-        return isCameraActive
+        guard configured else { return false }
+        guard !settings.disabledByUser else { return false }
+        return HTWindows.shared.cameraWindow?.cameraViewController != nil
     }
 
     @objc public func enable(overrideDisabledFlag: Bool = false,
                              completion: @escaping (_ success: Bool) -> () = { _ in } ) {
-        guard HeadTracking.shared.configured else {
+        guard configured else {
             NSLog(HeadTracking.NOT_CONFIGURED_WARNING)
             completion(false)
             return
@@ -155,9 +172,9 @@ import JabberwockyHTKitCore
             return
         }
         
-        if overrideDisabledFlag || !HeadTracking.shared.settings.disabledByUser {
-            HeadTracking.shared.settings.disabledByUser = false
-            HeadTracking.shared.activateCameraWindow() {
+        if overrideDisabledFlag || !settings.disabledByUser {
+            settings.disabledByUser = false
+            activateCameraWindow() {
                 self.features.forEach { $0.enable() }
                 NSLog(HeadTracking.ENABLED_SUCCESSFULLY)
                 completion(true)
@@ -170,13 +187,13 @@ import JabberwockyHTKitCore
 
     @objc public func disable(andAlsoUpdateSettings: Bool = false) {
         guard HeadTrackingCore.shared.isAuthorizedOnDevice else { return }
-        HeadTracking.ifConfigured { headTracking in
-            if andAlsoUpdateSettings {
-                headTracking.settings.disabledByUser = true
-            }
-            headTracking.deactivateCameraWindow()
-            self.features.forEach { if $0.enabled { $0.disable() } }
+        guard configured else { return }
+        
+        if andAlsoUpdateSettings {
+            settings.disabledByUser = true
         }
+        deactivateCameraWindow()
+        features.forEach { if $0.enabled { $0.disable() } }
     }
 
     @objc public func recalibrateImmediately() {
@@ -185,8 +202,9 @@ import JabberwockyHTKitCore
         }
     }
 
-    private func activateCameraWindow(preventCalibration: Bool = false,
-                                      completion: @escaping ()->()) {
+    private func activateCameraWindow(preventCalibration: Bool = false, completion: @escaping ()->()) {
+        guard cameraCanBeActivated else { completion() ; return}
+        cameraCanBeActivated = false
         if let _ = HTWindows.shared.cameraWindow {
             let needsCalibration = !HeadTrackingCore.shared.hasCalibratedOnce && !preventCalibration
             notifyCameraWindowActivated(needsCalibration: needsCalibration)
@@ -214,6 +232,7 @@ import JabberwockyHTKitCore
     private func deactivateCameraWindow() {
         // Executes cameraViewController.viewWillDisappear and .viewDidDisappear as tear down
         HTWindows.shared.disableCameraWindow()
+        cameraCanBeActivated = true
         // Always send a notification of a potential change in the status of head tracking
         DispatchQueue.main.async {
             NotificationCenter.default.post(name: .htOnHeadTrackingStatusUpdateNotification, object: nil)

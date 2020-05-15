@@ -37,15 +37,19 @@ import UIKit
     @objc public private(set) var enabled = false
 
     @objc public func enable() {
-        enabled = true
-        NotificationCenter.default.addObserver(
-            self, selector: #selector(self.onClickNotification(_:)),
-            name: .htOnCursorClickNotification, object: nil)
+        if !enabled {
+            enabled = true
+            NotificationCenter.default.addObserver(
+                self, selector: #selector(self.onClickNotification(_:)),
+                name: .htOnCursorClickNotification, object: nil)
+        }
     }
 
     @objc public func disable() {
-        enabled = false
-        NotificationCenter.default.removeObserver(self, name: .htOnCursorClickNotification, object: nil)
+        if enabled {
+            enabled = false
+            NotificationCenter.default.removeObserver(self, name: .htOnCursorClickNotification, object: nil)
+        }
     }
 
     // MARK: Internal

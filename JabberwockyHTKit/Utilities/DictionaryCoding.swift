@@ -14,26 +14,21 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-import UIKit
+import Foundation
 
-@objc public class HTBlinkSensitivity: NSObject {
+@objc public class DictionaryCodable: NSObject {
     
-    //MARK: Singleton Initialization
-    @objc public private(set) static var shared: HTBlinkSensitivity = HTBlinkSensitivity()
-    
-    //MARK: Blink Sensitivity Options
-    @objc public var durationSeconds: CFTimeInterval {
-        get {
-            return HeadTracking.shared.settings.blinkSensitivity
-        }
-        set {
-            if durationSeconds == newValue { return }
-            HeadTracking.ifConfigured { headTracking in
-                headTracking.settings.blinkSensitivity = newValue
+    private static let encoder = JSONEncoder()
+
+    public static func encode<T: Encodable>(_ context: T) -> [String: Any]? {
+        do {
+            let json = try encoder.encode(context)
+            if let dictionary = try JSONSerialization.jsonObject(with: json, options: []) as? [String: Any] {
+                return dictionary
             }
+        } catch let error {
+            NSLog("Error encoding context: " + error.localizedDescription)
         }
+        return nil
     }
-
-    //MARK: Internal
-    override private init() { }
 }

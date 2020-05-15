@@ -85,7 +85,7 @@ public class FocusableGlassView: HTGlassView {
             // FIXME: We might want to emit an error or log something here to check for poor performance.
             let hitView = HTFeatureUtils.getHitElement(at: targetScreenPoint, with: SynthFocusHitTestEvent())
             guard let targetView = focusableFacadeView.focusableDelegate as? UIView else { return false }
-            guard HTFeatureUtils.isViewEqualOrAncestor(targetView, of: hitView) else { return false }
+            guard isViewEqualOrAncestor(targetView, of: hitView) else { return false }
             return true
         }
         
@@ -124,6 +124,15 @@ public class FocusableGlassView: HTGlassView {
             }
         }
         return closestHit
+    }
+    
+    private func isViewEqualOrAncestor(_ ancestor: UIView, of view: UIView?) -> Bool {
+        guard let view = view else { return false }
+        if view == ancestor {
+            return true
+        } else {
+            return isViewEqualOrAncestor(ancestor, of: view.superview)
+        }
     }
     
     private func getDistanceInCloseAndFarDimension(_ p1: CGPoint, _ p2: CGPoint) -> (CGFloat, CGFloat) {

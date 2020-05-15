@@ -95,7 +95,7 @@ import JabberwockyHTKit
         NSLog(@"Requested Camera Permission");
         if(granted){
             dispatch_async(dispatch_get_main_queue(), ^{
-                [HeadTracking configureWithEnabledFeatures:HeadTracking.DEFAULT_ENABLED_FEATURES withSettingsAppGroup:nil];
+                [HeadTracking configureWithFeatures:HeadTracking.DEFAULT_FEATURES withSettingsAppGroup:nil];
                 [HeadTracking.shared enableWithOverrideDisabledFlag:false completion: ^(BOOL success) {}];
             });
         } else {
@@ -112,6 +112,7 @@ import JabberwockyHTKit
 
 ```shell script
 Basic[19446:10081868] Requested Camera Permission
+...
 Basic[19446:10081868] Head Tracking configured successfully.
 Basic[19446:10081868] Metal API Validation Enabled
 Basic[19446:10081868] Head Tracking enabled successfully.

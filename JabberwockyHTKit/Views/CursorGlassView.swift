@@ -57,9 +57,8 @@ class CursorGlassView: HTGlassView {
     func drawCursor(_ cursorContext: HTCursorContext) {
         let cursorGraphic = HTCursor.shared.currentCursorGraphic
         self.alpha = HTCursor.shared.alpha
-        
-        let cursorGraphicsMode: CursorGraphicsMode = HeadTracking.shared.settings.cursorGraphicsMode
-        switch(cursorGraphicsMode) {
+            
+        switch(HeadTracking.shared.settings.cursorGraphicsMode) {
         case .Highlight:
             cursor.shadowBlack.isHidden = false
             cursor.shadowWhite.isHidden = false

@@ -14,6 +14,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
+import JabberwockyHTKitCore
 import UIKit
 
 @objc public class HTCursorSensitivity: NSObject {
@@ -88,7 +89,7 @@ import UIKit
         
         HeadTracking.ifConfigured { headTracking in
             headTracking.settings.horizontalSensitivity = newValue
-            headTracking.settings.verticalSensitivity = newValue
+            headTracking.settings.verticalSensitivity =  newValue
             //Since changing sensitivity screws with the cursor, just recalibrate
             DispatchQueue.main.async {
                 NotificationCenter.default.post(name: .htInitiateRecalibrationCountdownNotification, object: nil)

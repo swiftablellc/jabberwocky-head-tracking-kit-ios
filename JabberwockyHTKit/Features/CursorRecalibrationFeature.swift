@@ -34,17 +34,23 @@ import UIKit
     @objc public private(set) var enabled = false
     
     @objc public func enable() {
-        enabled = true
-        NotificationCenter.default.addObserver(self, selector: #selector(self.startRecalibrateCountdown),
-                                               name: .htOnHeadShakeNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(self.startRecalibrateCountdown),
-                                               name: .htInitiateRecalibrationCountdownNotification, object: nil)
+        if !enabled {
+            enabled = true
+            NotificationCenter.default.addObserver(
+                self, selector: #selector(self.startRecalibrateCountdown),
+                name: .htOnHeadShakeNotification, object: nil)
+            NotificationCenter.default.addObserver(
+                self, selector: #selector(self.startRecalibrateCountdown),
+                name: .htInitiateRecalibrationCountdownNotification, object: nil)
+        }
     }
     
     @objc public func disable() {
-        enabled = false
-        NotificationCenter.default.removeObserver(self, name: .htOnHeadShakeNotification, object: nil)
-        NotificationCenter.default.removeObserver(self, name: .htInitiateRecalibrationCountdownNotification, object: nil)
+        if enabled {
+            enabled = false
+            NotificationCenter.default.removeObserver(self, name: .htOnHeadShakeNotification, object: nil)
+            NotificationCenter.default.removeObserver(self, name: .htInitiateRecalibrationCountdownNotification, object: nil)
+        }
     }
     
     // MARK: Internal

@@ -35,19 +35,23 @@ import UIKit
     @objc public private(set) var enabled = false
 
     @objc public func enable() {
-        enabled = true
-        NotificationCenter.default.addObserver(
-                self, selector: #selector(self.onBlinkNotification(_:)),
-                name: .htOnBlinkNotification, object: nil)
-        NotificationCenter.default.addObserver(
-                self, selector: #selector(self.onFocusNotification(_:)),
-                name: .htOnCursorFocusUpdateNotification, object: nil)
+        if !enabled {
+            enabled = true
+            NotificationCenter.default.addObserver(
+                    self, selector: #selector(self.onBlinkNotification(_:)),
+                    name: .htOnBlinkNotification, object: nil)
+            NotificationCenter.default.addObserver(
+                    self, selector: #selector(self.onFocusNotification(_:)),
+                    name: .htOnCursorFocusUpdateNotification, object: nil)
+        }
     }
 
     @objc public func disable() {
-        enabled = false
-        NotificationCenter.default.removeObserver(self, name: .htOnBlinkNotification, object: nil)
-        NotificationCenter.default.removeObserver(self, name: .htOnCursorFocusUpdateNotification, object: nil)
+        if enabled {
+            enabled = false
+            NotificationCenter.default.removeObserver(self, name: .htOnBlinkNotification, object: nil)
+            NotificationCenter.default.removeObserver(self, name: .htOnCursorFocusUpdateNotification, object: nil)
+        }
     }
 
     // MARK: Internal
@@ -71,7 +75,7 @@ import UIKit
         
         guard HTCursor.shared.active else { return }
         
-        guard HeadTracking.shared.settings.clickGesture == .Blink else { return }
+        guard HeadTracking.shared.settings.clickGesture == ClickGesture.Blink else { return }
 
        
         guard focusContext.focusedElement.htIgnoresCursorMode() ||
@@ -80,7 +84,7 @@ import UIKit
         guard focusContext.focusedElement.htIgnoresScrollSpeed() ||
             !CursorScrollFeature.isScrollingFast else { return }
         
-        guard blinkContext.blinkDuration >= HTBlinkSensitivity.shared.durationSeconds else {
+        guard blinkContext.blinkDuration >= HeadTracking.shared.settings.blinkSensitivity else {
             focusContext.focusedElement.htHandleTooShortClick()
             return
         }

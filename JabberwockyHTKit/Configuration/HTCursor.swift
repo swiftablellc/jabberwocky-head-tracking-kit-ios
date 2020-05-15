@@ -17,6 +17,28 @@ limitations under the License.
 import CoreGraphics
 import Foundation
 
+@objc public enum CursorToggle: Int, RawRepresentable, Codable {
+    case click
+    case scroll
+    
+    public typealias RawValue = String
+    
+    public var rawValue: RawValue {
+        switch self {
+        case .click: return "Click"
+        case .scroll: return "Scroll"
+        }
+    }
+    
+    public init?(rawValue: RawValue) {
+        switch rawValue {
+        case "Click": self = .click
+        case "Scroll": self = .scroll
+        default: return nil
+        }
+    }
+}
+
 @objc public class HTCursor: NSObject {
     
     //MARK: Singleton Initialization

@@ -40,31 +40,31 @@ import UIKit
         return windowStack
     }
     
-    @objc public static func getFocusableViews(in windows: [UIWindow] = getHittableWindowStack()) -> [UIView] {
+    @objc public static func getFocusableViews(inWindow windows: [UIWindow] = getHittableWindowStack()) -> [UIView] {
         var focusableViews: [UIView] = []
         for window in windows {
-            for focusableView in getFocusableViews(in: window) {
+            for focusableView in getFocusableViews(inView: window) {
                 focusableViews.append(focusableView)
             }
         }
         return focusableViews
     }
 
-    public static func getFocusableViews(in view: UIView) -> [UIView] {
+    @objc public static func getFocusableViews(inView view: UIView) -> [UIView] {
         var result: [UIView] = []
         
         if let focusableView = view as? HTFocusable, focusableView.htIsFocusable() {
             result.append(view)
         }
         for subview in view.subviews {
-            result.append(contentsOf: getFocusableViews(in: subview))
+            result.append(contentsOf: getFocusableViews(inView: subview))
         }
         return result
     }
 
     @objc public static func getHitElement(at screenPoint: CGPoint,
-                                     in windows: [UIWindow] = getHittableWindowStack(),
-                                     with hitEvent: UIEvent? = nil) -> UIView? {
+                                           in windows: [UIWindow] = getHittableWindowStack(),
+                                           with hitEvent: UIEvent? = nil) -> UIView? {
         if let window = windows.first {
             // If the hitTest comes back positive we probably want to stop recursion through windows
             if let hitElement = window.hitTest(screenPoint, with: hitEvent) {
@@ -78,21 +78,4 @@ import UIKit
         return nil
     }
     
-    public static func firstViewOfType<T>(_ type: T.Type, inHierarchyOf view: UIView?) -> T? {
-        guard let view = view else { return nil }
-        if let viewOfType = view as? T {
-            return viewOfType
-        } else {
-            return firstViewOfType(type, inHierarchyOf: view.superview)
-        }
-    }
-
-    @objc public static func isViewEqualOrAncestor(_ ancestor: UIView, of view: UIView?) -> Bool {
-        guard let view = view else { return false }
-        if view == ancestor {
-            return true
-        } else {
-            return isViewEqualOrAncestor(ancestor, of: view.superview)
-        }
-    }
 }

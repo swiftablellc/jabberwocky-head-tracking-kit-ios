@@ -18,8 +18,8 @@ import UIKit
 
 @objc public class EgressWarningFeature: NSObject, HTFeature {
     
-    private static let DEFAULT_EGRESS_MESSAGE = "WARNING: This action will take you outside of " + "\(HeadTracking.shared.settings.appName). " +
-        "You will not be able to use the head cursor."
+    private static let DEFAULT_EGRESS_MESSAGE = "WARNING: This action will take you outside of " +
+        "\(HeadTracking.appName). You will not be able to use the head cursor."
 
     // MARK: Singleton Initialization
     @objc public private(set) static var shared: EgressWarningFeature?
