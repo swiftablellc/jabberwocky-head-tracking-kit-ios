@@ -29,12 +29,9 @@ public class CrazyThemeFeature: NSObject, HTFeature {
 
     override private init() { }
 
-    public static func configure(withFeatureEnabled enabled: Bool = true) -> HTFeature {
+    public static func configure() -> HTFeature {
         if CrazyThemeFeature.shared == nil {
             CrazyThemeFeature.shared = CrazyThemeFeature()
-            if enabled {
-                CrazyThemeFeature.shared?.enable()
-            }
         }
         return CrazyThemeFeature.shared!
     }
