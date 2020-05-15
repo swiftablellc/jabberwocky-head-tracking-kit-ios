@@ -2096,7 +2096,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.4.1;
+				MARKETING_VERSION = 0.5.0;
 				PRODUCT_BUNDLE_IDENTIFIER = org.swiftable.jabberwocky.JabberwockyHTKit;
 				PRODUCT_NAME = JabberwockyHTKit;
 				SKIP_INSTALL = YES;
@@ -2125,7 +2125,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.4.1;
+				MARKETING_VERSION = 0.5.0;
 				PRODUCT_BUNDLE_IDENTIFIER = org.swiftable.jabberwocky.JabberwockyHTKit;
 				PRODUCT_NAME = JabberwockyHTKit;
 				SKIP_INSTALL = YES;
