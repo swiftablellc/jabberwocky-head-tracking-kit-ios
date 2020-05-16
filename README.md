@@ -80,6 +80,41 @@ import JabberwockyHTKit
         return true
     }
 ```
+#### [SwiftUI](https://developer.apple.com/xcode/swiftui/)
+
+* SwiftUI is only partially supported (introspection and programmatic triggering of events in SwiftUI is elusive at this point). For an example implementation, which is very similar to pre-iOS 13 Swift is available at [SwiftUI Tutorial SceneDelegate](Tutorials/SwiftUITutorial/SceneDelegate.swift). The `UIWindowScene` needs to be provided to the Jabberwocky `HeadTracking` singleton for Jabberwocky to manage `UIWindow` stacks properly.
+
+```swift
+import AVFoundation
+import JabberwockyHTKit
+
+...
+
+    func sceneDidBecomeActive(_ scene: UIScene) {
+        // Called when the scene has moved from an inactive state to an active state.
+        // Use this method to restart any tasks that were paused (or not yet started) when the scene was inactive.
+        if let windowScene = scene as? UIWindowScene {
+            HeadTracking.ifConfiguredElse(configuredCompletion: { ht in
+                ht.windowScene = windowScene
+                ht.enable()
+            }) {
+                AVCaptureDevice.requestAccess(for: .video) { (granted) in
+                    if (granted) {
+                        // Configure the default HTFeatures and enable Head Tracking
+                        DispatchQueue.main.async {
+                            HeadTracking.configure()
+                            HeadTracking.shared.windowScene = windowScene
+                            HeadTracking.shared.enable()
+                        }
+                    } else {
+                        NSLog("Head Tracking requires camera access.")
+                    }
+                }
+            }
+        }
+    }
+```
+
 #### Objective C
 
 * See [Objc Tutorial AppDelegate](Tutorials/ObjcTutorial/AppDelegate.m) for example implementation.
@@ -181,7 +216,7 @@ pod install
     * If you don't have the repo installed yet: `pod repo add jabberwocky-specs-repo https://github.com/swiftablellc/jabberwocky-specs-repo.git`
 7. **IMPORTANT** - Finish pushing the commit to master.
     * `git push origin master`
-    * We don't do this before before, because we can amend the commit until the podspec lint succeeds.
+    * We don't do this before, because we can amend the commit until the podspec lint succeeds.
 
 ## Applications
 `JabberwockyHTKit` is currently being used by the following applications in the [App Store](https://apps.apple.com/):
