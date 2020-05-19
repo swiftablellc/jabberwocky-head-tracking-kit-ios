@@ -16,23 +16,14 @@ limitations under the License.
 
 import Foundation
 
- 
-public class ShareSensitivityOption: HTSettingsOptionSpecTyped {
+extension NSNotification {
+
+    @objc public static let htOnHeadTrackingSettingsUpdateNotificationKey = "htOnHeadTrackingSettingsUpdateNotification"
+    @objc public static let htOnHeadTrackingStatusUpdateNotificationKey = "htOnHeadTrackingStatusUpdateNotification"
+}
+
+extension NSNotification.Name {
+    public static let htOnHeadTrackingSettingsUpdateNotification = Notification.Name(NSNotification.htOnHeadTrackingSettingsUpdateNotificationKey)
+    public static let htOnHeadTrackingStatusUpdateNotification = Notification.Name(NSNotification.htOnHeadTrackingStatusUpdateNotificationKey)
     
-    public typealias ObjectType = Bool
-    public typealias OptionType = Bool
-    
-    private init() {}
-    public static let shared = ShareSensitivityOption()
-    
-    public var key = "shareSensitivity"
-    public var defaultObjectValueTyped = true
-    
-    public func toObjectValueTyped(optionValue: Bool) -> Bool? {
-        return optionValue
-    }
-    
-    public func toOptionValueTyped(objectValue: Bool) -> Bool? {
-        return objectValue
-    }
 }

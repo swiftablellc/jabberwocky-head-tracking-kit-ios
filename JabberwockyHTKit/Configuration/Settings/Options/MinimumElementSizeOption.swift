@@ -27,7 +27,6 @@ public class MinimumElementSizeOption: HTSettingsOptionSpecTyped {
     
     public var key = "minimumElementSize"
     public var defaultObjectValueTyped = HTLayout.defaultButtonSize
-    public var valueChangedClosure: () -> Void = { }
     
     public func toObjectValueTyped(optionValue: Double) -> CGFloat? {
         return CGFloat(optionValue)

@@ -27,7 +27,6 @@ public class HeadMovementCorrectionOption: HTSettingsOptionSpecTyped {
     
     public var key = "headMovementCorrection"
     public var defaultObjectValueTyped = HeadMovementCorrection(option: HeadMovementCorrection.Option.Low)
-    public var valueChangedClosure: () -> Void = { }
     
     public func toObjectValueTyped(optionValue: String) -> HeadMovementCorrection? {
         if let hmcOption = HeadMovementCorrection.Option.init(rawValue: optionValue) {

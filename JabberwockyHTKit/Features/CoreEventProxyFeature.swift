@@ -60,7 +60,6 @@ import JabberwockyHTKitCore
     // MARK: Internal
     
     @objc func onBlinkNotification(_ notification: NSNotification) {
-        
         guard let blinkContext = notification.userInfo?[NSNotification.htBlinkContextKey]
             as? HTBlinkContext else { return }
         let eventBody = DictionaryCodable.encode(blinkContext)

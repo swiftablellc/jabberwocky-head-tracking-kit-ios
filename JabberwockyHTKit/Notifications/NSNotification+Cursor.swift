@@ -27,7 +27,6 @@ extension NSNotification {
     @objc public static let htOnCursorClickNotificationKey = "htOnCursorClickNotification"
     
     @objc public static let htInitiateRecalibrationCountdownNotificationKey = "htInitiateRecalibrationCountdownNotification"
-    @objc public static let htOnHeadTrackingStatusUpdateNotificationKey = "htOnHeadTrackingStatusUpdateNotification"
     
 }
 
@@ -42,5 +41,4 @@ extension NSNotification.Name {
         Notification.Name(NSNotification.htOnCursorClickNotificationKey)
 
     public static let htInitiateRecalibrationCountdownNotification = Notification.Name(NSNotification.htInitiateRecalibrationCountdownNotificationKey)
-    public static let htOnHeadTrackingStatusUpdateNotification = Notification.Name(NSNotification.htOnHeadTrackingStatusUpdateNotificationKey)
 }

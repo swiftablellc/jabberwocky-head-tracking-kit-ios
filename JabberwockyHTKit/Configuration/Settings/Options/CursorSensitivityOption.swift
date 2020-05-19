@@ -46,7 +46,6 @@ public class CursorSensitivityOption: HTSettingsOptionSpecTyped {
         return  "cursorSensitivity"
     }
     public var defaultObjectValueTyped = Transform.Medium.rawValue
-    public var valueChangedClosure: () -> Void = { }
     
     public func toObjectValueTyped(optionValue: String) -> Float? {
         return Transform.fromLabel(optionValue)?.rawValue

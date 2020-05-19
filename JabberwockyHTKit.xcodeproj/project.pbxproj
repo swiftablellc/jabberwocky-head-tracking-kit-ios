@@ -131,6 +131,8 @@
 		1E3DD1E1246C8BCD00969739 /* DefaultSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3DD1DF246C8BCD00969739 /* DefaultSettings.swift */; };
 		1E3DD1E3246D9EF800969739 /* HeadMovementCorrectionOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3DD1E2246D9EF800969739 /* HeadMovementCorrectionOption.swift */; };
 		1E3DD1E4246D9EF800969739 /* HeadMovementCorrectionOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3DD1E2246D9EF800969739 /* HeadMovementCorrectionOption.swift */; };
+		1E3DD20924746B7C00969739 /* NSNotification+Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3DD20824746B7C00969739 /* NSNotification+Status.swift */; };
+		1E3DD20A24746B7C00969739 /* NSNotification+Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3DD20824746B7C00969739 /* NSNotification+Status.swift */; };
 		1E68A4C424410AF8003DD8AE /* AtomicInteger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E68A4C324410AF8003DD8AE /* AtomicInteger.swift */; };
 		1E68A4D52442A0E5003DD8AE /* CursorClickSoundFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF5E490243FBA8A00C7E6B7 /* CursorClickSoundFeature.swift */; };
 		1E68A4D62442A0E5003DD8AE /* CursorFocusAndClickAnimationFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1332E524379B7B00D9172B /* CursorFocusAndClickAnimationFeature.swift */; };
@@ -332,6 +334,7 @@
 		1E3DD1DC246C7CCD00969739 /* MinimumElementSizeOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinimumElementSizeOption.swift; sourceTree = "<group>"; };
 		1E3DD1DF246C8BCD00969739 /* DefaultSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultSettings.swift; sourceTree = "<group>"; };
 		1E3DD1E2246D9EF800969739 /* HeadMovementCorrectionOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadMovementCorrectionOption.swift; sourceTree = "<group>"; };
+		1E3DD20824746B7C00969739 /* NSNotification+Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSNotification+Status.swift"; sourceTree = "<group>"; };
 		1E68A4C324410AF8003DD8AE /* AtomicInteger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtomicInteger.swift; sourceTree = "<group>"; };
 		1E68A5052442A343003DD8AE /* SwiftUI - Pods.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUI - Pods.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E68A5072442A343003DD8AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -768,6 +771,7 @@
 				1E3DD1A52449002F00969739 /* NSNotification+Event.swift */,
 				1E7C645624240A0200D97089 /* NSNotification+Keyboard.swift */,
 				1E3DD1AE24493A5F00969739 /* NSNotification+Remote.swift */,
+				1E3DD20824746B7C00969739 /* NSNotification+Status.swift */,
 			);
 			path = Notifications;
 			sourceTree = "<group>";
@@ -1470,6 +1474,7 @@
 				1E1E0A5A242E8035002C4BE0 /* EgressWarningFeature.swift in Sources */,
 				1E1E0A5B242E8035002C4BE0 /* FaceMeshFeature.swift in Sources */,
 				1E1E0A5C242E8035002C4BE0 /* BannerPositionFrame.swift in Sources */,
+				1E3DD20A24746B7C00969739 /* NSNotification+Status.swift in Sources */,
 				1E3DD1AD2449395800969739 /* RemoteSettingsFeature.swift in Sources */,
 				1E1E0A5D242E8035002C4BE0 /* HTDefaultAnalytics.swift in Sources */,
 				1E1E0A5E242E8035002C4BE0 /* TransformAnimator.swift in Sources */,
@@ -1586,6 +1591,7 @@
 				1E7C648124240A0200D97089 /* HeadTracking.swift in Sources */,
 				1E7C647524240A0200D97089 /* FocusableGlassView.swift in Sources */,
 				1E7C64AD24240A0200D97089 /* NSNotification+Cursor.swift in Sources */,
+				1E3DD20924746B7C00969739 /* NSNotification+Status.swift in Sources */,
 				1E3DD1AC2449395800969739 /* RemoteSettingsFeature.swift in Sources */,
 				1E7C64BB24240A0200D97089 /* UIViewController+DefaultScroll.swift in Sources */,
 				1E7C64A824240A0200D97089 /* HTFeatureUtils.swift in Sources */,

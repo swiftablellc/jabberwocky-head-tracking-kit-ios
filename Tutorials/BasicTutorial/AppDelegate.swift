@@ -33,6 +33,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             if (granted) {
                 // Configure the default HTFeatures and enable Head Tracking
                 DispatchQueue.main.async {
+                    //let bundleId = Bundle.main.bundleIdentifier ?? ""
+                    //HeadTracking.configure(withSettingsAppGroup: "group." + bundleId)
                     HeadTracking.configure()
                     HeadTracking.shared.enable()
                 }

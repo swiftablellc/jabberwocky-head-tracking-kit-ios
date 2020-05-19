@@ -27,13 +27,6 @@ public class DisabledByUserOption: HTSettingsOptionSpecTyped {
     
     public var key = "disabledByUser"
     public var defaultObjectValueTyped = false
-    public var valueChangedClosure: () -> Void = {
-        // Always send a notification of a potential change in the status of head tracking
-        // Always use the main dispatch queue for these notifications!
-        DispatchQueue.main.async {
-            NotificationCenter.default.post(name: .htOnHeadTrackingStatusUpdateNotification, object: nil)
-        }
-    }
     
     public func toObjectValueTyped(optionValue: Bool) -> Bool? {
         return optionValue

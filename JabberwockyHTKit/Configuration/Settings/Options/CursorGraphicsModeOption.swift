@@ -27,7 +27,6 @@ public class CursorGraphicsModeOption: HTSettingsOptionSpecTyped {
     
     public var key = "cursorGraphicsMode"
     public var defaultObjectValueTyped = CursorGraphicsMode.Highlight
-    public var valueChangedClosure: () -> Void = { }
     
     public func toObjectValueTyped(optionValue: String) -> CursorGraphicsMode? {
         return CursorGraphicsMode(rawValue: optionValue)

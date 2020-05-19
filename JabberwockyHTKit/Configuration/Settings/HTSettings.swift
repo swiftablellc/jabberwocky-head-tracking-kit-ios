@@ -55,7 +55,6 @@ public extension HTSettings {
 public protocol HTSettingsOptionSpec {
     var key: String {get}
     var defaultObjectValue: Any {get}
-    var valueChangedClosure: () -> Void {get}
     
     func toObjectValue(optionValue: Any) -> Any?
     func toOptionValue(objectValue: Any) -> Any?

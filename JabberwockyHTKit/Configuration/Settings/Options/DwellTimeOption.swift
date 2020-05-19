@@ -27,7 +27,6 @@ public class DwellTimeOption: HTSettingsOptionSpecTyped {
     
     public var key = "dwellTime"
     public var defaultObjectValueTyped = Transform.Medium.rawValue
-    public var valueChangedClosure: () -> Void = { }
     
     public func toObjectValueTyped(optionValue: String) -> CFTimeInterval? {
         return Transform.fromLabel(optionValue)?.rawValue

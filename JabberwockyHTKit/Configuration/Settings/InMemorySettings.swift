@@ -60,7 +60,9 @@ import JabberwockyHTKitCore
     internal func updateInMemory(key: String, objectValue: Any, optionValue: Any, optionSpec: HTSettingsOptionSpec) {
         objectStore[key] = objectValue
         optionStore[key] = optionValue
-        optionSpec.valueChangedClosure()
+        DispatchQueue.main.async {
+            NotificationCenter.default.post(name: .htOnHeadTrackingSettingsUpdateNotification, object: nil)
+        }
     }
     
 }

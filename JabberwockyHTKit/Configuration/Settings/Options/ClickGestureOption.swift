@@ -27,7 +27,6 @@ public class ClickGestureOption: HTSettingsOptionSpecTyped {
     
     public var key = "clickGesture"
     public var defaultObjectValueTyped = ClickGesture.Blink
-    public var valueChangedClosure: () -> Void = { }
     
     public func toObjectValueTyped(optionValue: String) -> ClickGesture? {
         return ClickGesture(rawValue: optionValue)

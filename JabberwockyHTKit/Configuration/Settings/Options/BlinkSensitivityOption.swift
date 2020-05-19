@@ -27,8 +27,6 @@ public class BlinkSensitivityOption: HTSettingsOptionSpecTyped {
     
     public var key = "blinkSensitivity"
     public var defaultObjectValueTyped = Transform.Highest.rawValue
-
-    public var valueChangedClosure: () -> Void = { }
     
     public func toObjectValueTyped(optionValue: String) -> CFTimeInterval? {
         return Transform.fromLabel(optionValue)?.rawValue
