@@ -133,6 +133,8 @@
 		1E3DD1E4246D9EF800969739 /* HeadMovementCorrectionOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3DD1E2246D9EF800969739 /* HeadMovementCorrectionOption.swift */; };
 		1E3DD20924746B7C00969739 /* NSNotification+Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3DD20824746B7C00969739 /* NSNotification+Status.swift */; };
 		1E3DD20A24746B7C00969739 /* NSNotification+Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3DD20824746B7C00969739 /* NSNotification+Status.swift */; };
+		1E3DD21F2475A80100969739 /* HTSettingsUpdateContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3DD21E2475A80100969739 /* HTSettingsUpdateContext.swift */; };
+		1E3DD2202475A80100969739 /* HTSettingsUpdateContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3DD21E2475A80100969739 /* HTSettingsUpdateContext.swift */; };
 		1E68A4C424410AF8003DD8AE /* AtomicInteger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E68A4C324410AF8003DD8AE /* AtomicInteger.swift */; };
 		1E68A4D52442A0E5003DD8AE /* CursorClickSoundFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF5E490243FBA8A00C7E6B7 /* CursorClickSoundFeature.swift */; };
 		1E68A4D62442A0E5003DD8AE /* CursorFocusAndClickAnimationFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1332E524379B7B00D9172B /* CursorFocusAndClickAnimationFeature.swift */; };
@@ -335,6 +337,7 @@
 		1E3DD1DF246C8BCD00969739 /* DefaultSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultSettings.swift; sourceTree = "<group>"; };
 		1E3DD1E2246D9EF800969739 /* HeadMovementCorrectionOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadMovementCorrectionOption.swift; sourceTree = "<group>"; };
 		1E3DD20824746B7C00969739 /* NSNotification+Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSNotification+Status.swift"; sourceTree = "<group>"; };
+		1E3DD21E2475A80100969739 /* HTSettingsUpdateContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTSettingsUpdateContext.swift; sourceTree = "<group>"; };
 		1E68A4C324410AF8003DD8AE /* AtomicInteger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtomicInteger.swift; sourceTree = "<group>"; };
 		1E68A5052442A343003DD8AE /* SwiftUI - Pods.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUI - Pods.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E68A5072442A343003DD8AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -767,6 +770,7 @@
 				1E3DD1A82449055100969739 /* HTEventContext.swift */,
 				1EF5E48E243F91F500C7E6B7 /* HTFocusContext.swift */,
 				1E3DD1B124493E0700969739 /* HTRequestContext.swift */,
+				1E3DD21E2475A80100969739 /* HTSettingsUpdateContext.swift */,
 				1E7C645424240A0200D97089 /* NSNotification+Cursor.swift */,
 				1E3DD1A52449002F00969739 /* NSNotification+Event.swift */,
 				1E7C645624240A0200D97089 /* NSNotification+Keyboard.swift */,
@@ -1531,6 +1535,7 @@
 				1E1E0A89242E8035002C4BE0 /* CameraWindow.swift in Sources */,
 				1E1E0A8B242E8035002C4BE0 /* UIWindow+TopViewController.swift in Sources */,
 				1E1E0A8C242E8035002C4BE0 /* UIFont+Traits.swift in Sources */,
+				1E3DD2202475A80100969739 /* HTSettingsUpdateContext.swift in Sources */,
 				1E1E0A8D242E8035002C4BE0 /* HTSounds.swift in Sources */,
 				1E1E0A8E242E8035002C4BE0 /* BaseNotificationBanner.swift in Sources */,
 			);
@@ -1648,6 +1653,7 @@
 				1E7C648C24240A0200D97089 /* CameraWindow.swift in Sources */,
 				1E7C64B624240A0200D97089 /* UIWindow+TopViewController.swift in Sources */,
 				1E7C64BD24240A0200D97089 /* UIFont+Traits.swift in Sources */,
+				1E3DD21F2475A80100969739 /* HTSettingsUpdateContext.swift in Sources */,
 				1E7C647C24240A0200D97089 /* HTSounds.swift in Sources */,
 				1E7C649E24240A0200D97089 /* BaseNotificationBanner.swift in Sources */,
 			);
@@ -2102,7 +2108,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.7.0;
+				MARKETING_VERSION = 0.7.1;
 				PRODUCT_BUNDLE_IDENTIFIER = org.swiftable.jabberwocky.JabberwockyHTKit;
 				PRODUCT_NAME = JabberwockyHTKit;
 				SKIP_INSTALL = YES;
@@ -2131,7 +2137,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.7.0;
+				MARKETING_VERSION = 0.7.1;
 				PRODUCT_BUNDLE_IDENTIFIER = org.swiftable.jabberwocky.JabberwockyHTKit;
 				PRODUCT_NAME = JabberwockyHTKit;
 				SKIP_INSTALL = YES;
