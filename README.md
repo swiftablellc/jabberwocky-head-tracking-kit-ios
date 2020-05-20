@@ -1,6 +1,8 @@
 # Jabberwocky Head Tracking Kit for iOS
 ![GitHub tag (latest SemVer)](https://img.shields.io/github/v/tag/swiftablellc/jabberwocky-head-tracking-kit-ios?label=release&sort=semver) ![Platform](https://img.shields.io/badge/platform-iOS-lightgrey) ![GitHub](https://img.shields.io/github/license/swiftablellc/jabberwocky-head-tracking-kit-ios) 
 
+> Head Tracking Cursor for any iOS app!
+
 ![htkit-demo](https://user-images.githubusercontent.com/6625903/82473198-d5ba2080-9a8e-11ea-9c2a-379558bf8b65.gif)
 
 ## About
