@@ -61,7 +61,9 @@ import JabberwockyHTKitCore
         objectStore[key] = objectValue
         optionStore[key] = optionValue
         DispatchQueue.main.async {
-            NotificationCenter.default.post(name: .htOnHeadTrackingSettingsUpdateNotification, object: nil)
+            let settingsUpdateContext = HTSettingsUpdateContext(key, objectValue, optionValue)
+            NotificationCenter.default.post(name: .htOnHeadTrackingSettingsUpdateNotification, object: nil,
+                                            userInfo: [NSNotification.htSettingsUpdateKey: settingsUpdateContext])
         }
     }
     

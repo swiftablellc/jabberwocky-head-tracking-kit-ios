@@ -25,6 +25,7 @@ import JabberwockyHTKitCore
     // MARK: INFO and WARNINGs
     private static let CONFIGURED_SUCCESSFULLY = "Head Tracking configured successfully."
     private static let ENABLED_SUCCESSFULLY = "Head Tracking enabled successfully."
+    private static let DISABLED = "Head Tracking disabled."
     private static let DISABLED_IN_SETTINGS = "Head Tracking was not enabled because it was disabled " +
             "in settings. It must be enabled through 'HeadTracking.shared.settings.disabledByUser = false'."
     private static let NOT_CONFIGURED_WARNING = "Head Tracking is not configured. " +
@@ -37,6 +38,10 @@ import JabberwockyHTKitCore
             HeadTracking.NOT_CONFIGURED_WARNING
     private static let CANNOT_BE_ENABLED_APP_NO_AUTHORIZATION = "Head Tracking cannot be enabled. " +
             "It is either not supported or authorized on the device."
+    private static let FAILED_TO_ENABLE_CAMERA = "Head Tracking failed to enable. " +
+            "Camera session could not be started."
+    private static let FAILED_TO_ENABLE_COMPETING_PROCESS = "Head Tracking failed to enable. " +
+            "Head Tracking is in the process of being enabled in a separate thread."
     private static let FEATURE_CONFIGURED = "%@ configured."
     private static let FEATURE_ALREADY_CONFIGURED = "%@ already configured. HTFeatures cannot be configured twice."
     
@@ -59,7 +64,7 @@ import JabberwockyHTKitCore
     @objc public private(set) static var shared: HeadTracking = HeadTracking()
     
     // MARK: Public Fields (get only)
-    @objc public private(set) var cameraCanBeActivated = true
+    @objc public private(set) var currentlyActivatingCamera = false
     @objc public private(set) var features: [HTFeature] = []
 
     // MARK: Public Fields (get/set)
@@ -141,11 +146,18 @@ import JabberwockyHTKitCore
 
     // MARK: Head Tracking Status
     @objc func onSettingsUpdateNotification(_ notification: NSNotification) {
-        if settings.disabledByUser && cameraActivated {
+        guard let settingsUpdateContext = notification.userInfo?[NSNotification.htSettingsUpdateKey]
+            as? HTSettingsUpdateContext else { return }
+        
+        guard settingsUpdateContext.key == DisabledByUserOption.shared.key else { return }
+        
+        guard let disabledByUser = settingsUpdateContext.objectValue as? Bool else { return }
+        
+        if disabledByUser && cameraActivated {
             disable()
         }
         
-        if !settings.disabledByUser && cameraCanBeActivated {
+        if !disabledByUser && !currentlyActivatingCamera {
             enable()
         }
     }
@@ -175,10 +187,15 @@ import JabberwockyHTKitCore
         }
         
         if !settings.disabledByUser {
-            activateCameraWindow() {
-                self.features.forEach { if !$0.enabled { $0.enable() } }
-                NSLog(HeadTracking.ENABLED_SUCCESSFULLY)
-                completion(true)
+            activateCameraWindow() { active in
+                if active {
+                    self.features.forEach { if !$0.enabled { $0.enable() } }
+                    NSLog(HeadTracking.ENABLED_SUCCESSFULLY)
+                    completion(true)
+                } else {
+                    NSLog(HeadTracking.FAILED_TO_ENABLE_CAMERA)
+                    completion(false)
+                }
             }
         } else {
             NSLog(HeadTracking.DISABLED_IN_SETTINGS)
@@ -191,6 +208,7 @@ import JabberwockyHTKitCore
         guard HeadTrackingCore.shared.isAuthorizedOnDevice else { return }
         deactivateCameraWindow()
         features.forEach { if $0.enabled { $0.disable() } }
+        NSLog(HeadTracking.DISABLED)
     }
 
     @objc public func recalibrateImmediately() {
@@ -199,24 +217,25 @@ import JabberwockyHTKitCore
         }
     }
 
-    private func activateCameraWindow(preventCalibration: Bool = false, completion: @escaping ()->()) {
-        guard cameraCanBeActivated else { completion() ; return}
-        cameraCanBeActivated = false
-        if let _ = HTWindows.shared.cameraWindow {
-            let needsCalibration = !HeadTrackingCore.shared.hasCalibratedOnce && !preventCalibration
-            notifyCameraWindowActivated(needsCalibration: needsCalibration)
-            completion()
-        } else {
-            HTCameraViewController.initialize { cameraViewController in
-                HTWindows.shared.enableCameraWindow(cameraViewController)
-                let needsCalibration = !preventCalibration
-                self.notifyCameraWindowActivated(needsCalibration: needsCalibration)
-                completion()
-            }
+    private func activateCameraWindow(preventCalibration: Bool = false, completion: @escaping (Bool) -> ()) {
+        guard !currentlyActivatingCamera else {
+            NSLog(HeadTracking.FAILED_TO_ENABLE_COMPETING_PROCESS)
+            completion(false)
+            return
         }
+        currentlyActivatingCamera = true
+        
+        HTCameraViewController.initialize(completion: { cameraViewController in
+            HTWindows.shared.enableCameraWindow(cameraViewController)
+        }, activatedClosure: { active in
+            let needsCalibration = !preventCalibration
+            self.notifyCameraWindowActivated(needsCalibration: needsCalibration)
+            completion(active)
+        })
     }
 
     private func notifyCameraWindowActivated(needsCalibration: Bool) {
+        self.currentlyActivatingCamera = false
         // Always send a notification of a potential change in the status of head tracking
         DispatchQueue.main.async {
             NotificationCenter.default.post(name: .htOnHeadTrackingStatusUpdateNotification, object: nil)
@@ -229,7 +248,6 @@ import JabberwockyHTKitCore
     private func deactivateCameraWindow() {
         // Executes cameraViewController.viewWillDisappear and .viewDidDisappear as tear down
         HTWindows.shared.disableCameraWindow()
-        cameraCanBeActivated = true
         // Always send a notification of a potential change in the status of head tracking
         DispatchQueue.main.async {
             NotificationCenter.default.post(name: .htOnHeadTrackingStatusUpdateNotification, object: nil)

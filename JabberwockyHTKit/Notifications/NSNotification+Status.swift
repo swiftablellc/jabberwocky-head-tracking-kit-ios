@@ -17,6 +17,8 @@ limitations under the License.
 import Foundation
 
 extension NSNotification {
+    
+    @objc public static let htSettingsUpdateKey: String = "HTNotificationSettingsUpdateObjectKey"
 
     @objc public static let htOnHeadTrackingSettingsUpdateNotificationKey = "htOnHeadTrackingSettingsUpdateNotification"
     @objc public static let htOnHeadTrackingStatusUpdateNotificationKey = "htOnHeadTrackingStatusUpdateNotification"
