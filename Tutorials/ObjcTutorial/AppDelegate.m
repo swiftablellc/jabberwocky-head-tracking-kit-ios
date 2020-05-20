@@ -30,7 +30,7 @@ limitations under the License.
         if(granted){
             dispatch_async(dispatch_get_main_queue(), ^{
                 [HeadTracking configureWithFeatures:HeadTracking.DEFAULT_FEATURES withSettingsAppGroup:nil];
-                [HeadTracking.shared enableWithOverrideDisabledFlag:false completion: ^(BOOL success) {}];
+                [HeadTracking.shared enableWithCompletion: ^(BOOL success) {}];
             });
         } else {
             NSLog(@"Camera Permissions Missing for Head Tracking");
