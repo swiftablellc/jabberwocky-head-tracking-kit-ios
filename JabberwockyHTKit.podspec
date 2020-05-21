@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "JabberwockyHTKit"
-  spec.version      = "0.7.2"
+  spec.version      = "0.7.3"
   spec.summary      = "Jabberwocky Head Tracking Kit for iOS"
 
   spec.description  = <<-DESC
@@ -32,7 +32,7 @@ limitations under the License.
 
   spec.source_files  = "JabberwockyHTKit/**/*.{swift}"
   spec.resources = "JabberwockyHTKit/**/*.{xcassets,scnassets}"
-  spec.dependency "JabberwockyHTKitCore", "> 0.4"
+  spec.dependency "JabberwockyHTKitCore", ">= 0.4"
 
   spec.ios.deployment_target = "12.0"
   spec.swift_version = "5.2"
