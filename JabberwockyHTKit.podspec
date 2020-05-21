@@ -1,13 +1,13 @@
 Pod::Spec.new do |spec|
   spec.name         = "JabberwockyHTKit"
-  spec.version      = "0.7.1"
+  spec.version      = "0.7.2"
   spec.summary      = "Jabberwocky Head Tracking Kit for iOS"
 
   spec.description  = <<-DESC
 The Jabberwocky® Head Tracking Kit (JabberwockyHTKit) is an open-source iOS framework, developed by Swiftable LLC, that provides a touch-free interface for existing iOS applications. Jabberwocky enables users to interact with an application by just moving their head. Head movement translates into the movement of a mouse-like cursor on the screen. By default, blinks trigger a .touchUpInside event simulating a tap on any UIControl subclass (in fact any subclass of UIView can be extended to respond to a facial gesture trigger).
                    DESC
 
-  spec.homepage     = "https://github.com/swiftablellc/jabberwocky-head-tracking-kit-ios"
+  spec.homepage     = "https://www.jabberwockyapp.com"
   spec.license      = {
     :type => "Copyright",
     :text => <<-LICENSE
@@ -27,12 +27,12 @@ limitations under the License.
       LICENSE
   }
 
-  spec.authors      = { "jon hoag" => "jon@swiftable.org", "aaron chavez" => "aaron@swiftable.org" }
+  spec.authors      = { "Jonathan Hoag" => "jon@swiftable.org", "Aaron Chavez" => "aaron@swiftable.org" }
   spec.source       = { :git => "https://github.com/swiftablellc/jabberwocky-head-tracking-kit-ios.git", :tag => "#{spec.version}" }
 
   spec.source_files  = "JabberwockyHTKit/**/*.{swift}"
   spec.resources = "JabberwockyHTKit/**/*.{xcassets,scnassets}"
-  spec.dependency "JabberwockyHTKitCore"
+  spec.dependency "JabberwockyHTKitCore", "> 0.4"
 
   spec.ios.deployment_target = "12.0"
   spec.swift_version = "5.2"
