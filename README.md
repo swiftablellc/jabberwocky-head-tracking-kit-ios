@@ -220,7 +220,11 @@ pod install
 6. Upload to the `jabberwocky-specs-repo` Pods Repo
     * `pod repo push jabberwocky-specs-repo JabberwockyHTKit.podspec`
     * If you don't have the repo installed yet: `pod repo add jabberwocky-specs-repo https://github.com/swiftablellc/jabberwocky-specs-repo.git`
-7. **IMPORTANT** - Finish pushing the commit to master.
+7. Pod spec lint for CocoaPods
+    * `pod lib lint`
+8. Upload to CocoaPods
+    * `pod trunk push JabberwockyHTKit.podspec`
+9. **IMPORTANT** - Finish pushing the commit to master.
     * `git push origin master`
     * We don't do this before, because we can amend the commit until the podspec lint succeeds.
 
