@@ -5,18 +5,22 @@
 
 ![htkit-demo](https://user-images.githubusercontent.com/6625903/82473198-d5ba2080-9a8e-11ea-9c2a-379558bf8b65.gif)
 
-## About
-The Jabberwocky® Head Tracking Kit (`JabberwockyHTKit`) is an open-source iOS framework, developed by [Swiftable LLC](https://www.jabberwockyapp.com), that provides a touch-free interface for existing iOS applications. Jabberwocky enables users to interact with an application by just moving their head. Head movement translates into the movement of a mouse-like cursor on the screen. By default, blinks trigger a `.touchUpInside` event simulating a tap on any `UIControl` subclass (in fact any subclass of `UIView` can be extended to respond to a facial gesture trigger).
+## Features
 
-Jabberwocky was originally designed as an **accessibility tool** for users with mobility impairments such as ALS or Spinal Cord Injury (SCI) to enable effective and efficient interaction with iOS devices. Currently, Jabberwocky requires [ARKit](https://developer.apple.com/augmented-reality/arkit/) and is only supported on devices that also support [FaceID](https://support.apple.com/en-us/HT208108). Supported devices include:
-* iPhone X and later models
-* iPad Pro models with the A12X Bionic chip
-
-As of iOS 13, Head Tracking Accessibility was added to [iOS Switch Control](https://support.apple.com/en-us/HT201370#usesc) for the same device models supported by Jabberwocky. It is important to note that iOS Head Tracking can be configured to operate in a similar capacity to Jabberwocky Head Tracking, but is provided at the OS level. While iOS Head Tracking Accessibility works across the entire device, its tight coupling with Switch Control, complicated setup, and limited feature set make it unsuitable for many users. Jabberwocky supports in-app customization of Head Tracking and provides custom event hooks.
+* Head Tracking Cursor
+* Blink or Dwell Click
+* Easy to use Settings
+* < 10 Line Configuration for Existing Apps
+* Interaction with existing UI elements: 
+  * `UIControl`
+  * `UICollectionViewCell`
+  * `UITableViewCell`
+  * Extensible for subclasses of `UIView`
+* Plugin Framework (HTFeature)
 
 ## Add Head Tracking to an Existing Application
 
-`BasicTutorial-PodsOnly` is an example application target that has one standard `UIButton` which responds to taps on the screen. When configuring head tracking within an existing application there are a few setup steps that need to be performed. Once `JabberwockyHTKit` is configured and enabled, the default `HTFeature` singletons that are configured will automatically detect `UIControl`, `UICollectionViewCell`, and `UITableViewCell` elements and interact with them. Other custom `UIView` elements can be configured to work with the head tracking framework by implementing the `HTFocusable` protocol (more info below).
+`BasicTutorial-PodsOnly` is an example application target that has one standard `UIButton` which responds to taps on the screen. When configuring head tracking within an existing application there are a few setup steps that need to be performed. Once `JabberwockyHTKit` is configured and enabled, the default `HTFeature` singletons that are configured will automatically detect `UIControl`, `UICollectionViewCell`, and `UITableViewCell` elements and interact with them. Other custom `UIView` elements can be configured to work with the head tracking framework by implementing the `HTFocusable` protocol.
 
 ### Step 1: Install JabberwockyHTKit Frameworks
 
@@ -202,31 +206,18 @@ pod install
 * `*-PodsOnly` schemes pull all dependencies from CocoaPods and therefore are not very useful for local development of `JabberwockyHTKit`.
 * `JabberwockyHTKit` uses CocoaPods to install its one dependency `JabberwockyHTKitCore`, but the `JabberwockyHTKitCore.framework` can be found [here](https://github.com/swiftablellc/jabberwocky-head-tracking-kit-core-ios-binary/tree/master/JabberwockyHTKitCore.framework). If you don't want to use CocoaPods you checkout the repository with the framework binary and add it to the project. It might be best to create a new target similar to `JabberwockyHTKit-LocalDev` to get it to build properly.
 
-## Release (Swiftable Devs Only)
+## Release Instructions (Swiftable Developers)
 
-1. Navigate to jabberwocky-head-tracking-kit-ios-binary directory
-    * `git pull`
-2. Update the JabberwockyHTKit.podspec file.
-    * Modify the version number in spec.version.
-    * Modify the swift_version if needed in spec.swift_version.
-3. Prepare Release Commit
-    * `git add *` 
-    * `git commit -m 'Preparing <version> for release.'`
-4. Tag version
-    * `git tag -a <version> -m 'Tagging Release Version <version>'`
-    * `git push origin --tags`
-5. Do a pod spec lint from the version directory
-    * `pod spec lint --verbose --sources="https://github.com/swiftablellc/jabberwocky-specs-repo.git" JabberwockyHTKit.podspec`
-6. Upload to the `jabberwocky-specs-repo` Pods Repo
-    * `pod repo push jabberwocky-specs-repo JabberwockyHTKit.podspec`
-    * If you don't have the repo installed yet: `pod repo add jabberwocky-specs-repo https://github.com/swiftablellc/jabberwocky-specs-repo.git`
-7. Pod spec lint for CocoaPods
-    * `pod lib lint`
-8. Upload to CocoaPods
-    * `pod trunk push JabberwockyHTKit.podspec`
-9. **IMPORTANT** - Finish pushing the commit to master.
-    * `git push origin master`
-    * We don't do this before, because we can amend the commit until the podspec lint succeeds.
+* [Release Instructions](RELEASE.md) for JabberwockyHTKit
+
+## About
+The Jabberwocky® Head Tracking Kit (`JabberwockyHTKit`) is an open-source iOS framework, developed by [Swiftable LLC](https://www.jabberwockyapp.com), that provides a touch-free interface for existing iOS applications. Jabberwocky enables users to interact with an application by just moving their head. Head movement translates into the movement of a mouse-like cursor on the screen. By default, blinks trigger a `.touchUpInside` event simulating a tap on any `UIControl` subclass (in fact any subclass of `UIView` can be extended to respond to a facial gesture trigger).
+
+Jabberwocky was originally designed as an **accessibility tool** for users with mobility impairments such as ALS or Spinal Cord Injury (SCI) to enable effective and efficient interaction with iOS devices. Currently, Jabberwocky requires [ARKit](https://developer.apple.com/augmented-reality/arkit/) and is only supported on devices that also support [FaceID](https://support.apple.com/en-us/HT208108). Supported devices include:
+* iPhone X and later models
+* iPad Pro models with the A12X Bionic chip
+
+As of iOS 13, Head Tracking Accessibility was added to [iOS Switch Control](https://support.apple.com/en-us/HT201370#usesc) for the same device models supported by Jabberwocky. It is important to note that iOS Head Tracking can be configured to operate in a similar capacity to Jabberwocky Head Tracking, but is provided at the OS level. While iOS Head Tracking Accessibility works across the entire device, its tight coupling with Switch Control, complicated setup, and limited feature set make it unsuitable for many users. Jabberwocky supports in-app customization of Head Tracking and provides custom event hooks.
 
 ## Applications
 `JabberwockyHTKit` is currently being used by the following applications in the [App Store](https://apps.apple.com/):
