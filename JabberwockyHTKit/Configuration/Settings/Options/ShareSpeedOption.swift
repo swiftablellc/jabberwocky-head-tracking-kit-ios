@@ -17,15 +17,15 @@ limitations under the License.
 import Foundation
 
  
-public class ShareSensitivityOption: HTSettingsOptionSpecTyped {
+public class ShareSpeedOption: HTSettingsOptionSpecTyped {
     
     public typealias ObjectType = Bool
     public typealias OptionType = Bool
     
     private init() {}
-    public static let shared = ShareSensitivityOption()
+    public static let shared = ShareSpeedOption()
     
-    public var key = "shareSensitivity"
+    public var key = "shareSpeed"
     public var defaultObjectValueTyped = true
     
     public func toObjectValueTyped(optionValue: Bool) -> Bool? {

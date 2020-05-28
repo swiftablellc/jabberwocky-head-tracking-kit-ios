@@ -17,33 +17,33 @@ limitations under the License.
 import Foundation
 
 
-public class HorizontalSensitivityOption: CursorSensitivityOption {
+public class HorizontalSpeedOption: CursorSpeedOption {
     
     private override init() {}
-    public static let shared = HorizontalSensitivityOption()
+    public static let shared = HorizontalSpeedOption()
     
     public override var key: String {
-        return "horizontalSensitivity"
+        return "horizontalSpeed"
     }
 }
 
-public class VerticalSensitivityOption: CursorSensitivityOption {
+public class VerticalSpeedOption: CursorSpeedOption {
     
     private override init() {}
-    public static let shared = VerticalSensitivityOption()
+    public static let shared = VerticalSpeedOption()
     
     public override var key: String {
-        return "verticalSensitivity"
+        return "verticalSpeed"
     }
 }
 
-public class CursorSensitivityOption: HTSettingsOptionSpecTyped {
-    
+public class CursorSpeedOption: HTSettingsOptionSpecTyped {
+
     public typealias ObjectType = Float
     public typealias OptionType = String
     
     public var key: String {
-        return  "cursorSensitivity"
+        return  "cursorSpeed"
     }
     public var defaultObjectValueTyped = Transform.Medium.rawValue
     

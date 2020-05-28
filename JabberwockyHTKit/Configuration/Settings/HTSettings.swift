@@ -26,7 +26,7 @@ import JabberwockyHTKitCore
     var disabledByUser: Bool {get set}
     var dwellTime: CFTimeInterval {get set}
     var minimumElementSize: CGFloat {get set}
-    var shareSensitivity: Bool {get set}
+    var shareSpeed: Bool {get set}
 
     // MARK: Generic Getters/Setters
     func getDefaultObject(_ key: String) -> Any?

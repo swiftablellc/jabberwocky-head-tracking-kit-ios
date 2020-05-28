@@ -18,24 +18,24 @@ import Foundation
 import JabberwockyHTKitCore
 
  
-public class HeadMovementCorrectionOption: HTSettingsOptionSpecTyped {
-    public typealias ObjectType = HeadMovementCorrection
+public class CursorStickinessOption: HTSettingsOptionSpecTyped {
+    public typealias ObjectType = CursorStickiness
     public typealias OptionType = String
     
     private init() {}
-    public static let shared = HeadMovementCorrectionOption()
+    public static let shared = CursorStickinessOption()
     
-    public var key = "headMovementCorrection"
-    public var defaultObjectValueTyped = HeadMovementCorrection(option: HeadMovementCorrection.Option.Low)
+    public var key = "cursorStickiness"
+    public var defaultObjectValueTyped = CursorStickiness(option: CursorStickiness.Option.Low)
     
-    public func toObjectValueTyped(optionValue: String) -> HeadMovementCorrection? {
-        if let hmcOption = HeadMovementCorrection.Option.init(rawValue: optionValue) {
-            return HeadMovementCorrection(option: hmcOption)
+    public func toObjectValueTyped(optionValue: String) -> CursorStickiness? {
+        if let hmcOption = CursorStickiness.Option.init(rawValue: optionValue) {
+            return CursorStickiness(option: hmcOption)
         }
         return nil
     }
     
-    public func toOptionValueTyped(objectValue: HeadMovementCorrection) -> String? {
+    public func toOptionValueTyped(objectValue: CursorStickiness) -> String? {
         return objectValue.option.rawValue
     }
 

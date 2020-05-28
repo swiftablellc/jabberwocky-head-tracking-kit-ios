@@ -32,29 +32,29 @@ import JabberwockyHTKitCore
         BlinkSensitivityOption.shared.key: BlinkSensitivityOption.shared,
         ClickGestureOption.shared.key: ClickGestureOption.shared,
         CursorGraphicsModeOption.shared.key: CursorGraphicsModeOption.shared,
+        CursorStickinessOption.shared.key: CursorStickinessOption.shared,
         DisabledByUserOption.shared.key: DisabledByUserOption.shared,
         DwellTimeOption.shared.key: DwellTimeOption.shared,
-        HeadMovementCorrectionOption.shared.key: HeadMovementCorrectionOption.shared,
-        HorizontalSensitivityOption.shared.key: HorizontalSensitivityOption.shared,
+        HorizontalSpeedOption.shared.key: HorizontalSpeedOption.shared,
         MinimumElementSizeOption.shared.key: MinimumElementSizeOption.shared,
-        ShareSensitivityOption.shared.key: ShareSensitivityOption.shared,
-        VerticalSensitivityOption.shared.key: VerticalSensitivityOption.shared
+        ShareSpeedOption.shared.key: ShareSpeedOption.shared,
+        VerticalSpeedOption.shared.key: VerticalSpeedOption.shared
     ]
     
     // MARK: Required Methods by HTKitCore
-    public var headMovementCorrection: HeadMovementCorrection {
-        get { getTypedObject(HeadMovementCorrectionOption.shared) }
-        set { setObject(HeadMovementCorrectionOption.shared.key, newValue) }
+    public var cursorStickiness: CursorStickiness {
+        get { getTypedObject(CursorStickinessOption.shared) }
+        set { setObject(CursorStickinessOption.shared.key, newValue) }
     }
     
-    public var horizontalSensitivity: Float {
-        get { getTypedObject(HorizontalSensitivityOption.shared) }
-        set { setObject(HorizontalSensitivityOption.shared.key, newValue) }
+    public var horizontalSpeed: Float {
+        get { getTypedObject(HorizontalSpeedOption.shared) }
+        set { setObject(HorizontalSpeedOption.shared.key, newValue) }
     }
     
-    public var verticalSensitivity: Float {
-        get { getTypedObject(VerticalSensitivityOption.shared) }
-        set { setObject(VerticalSensitivityOption.shared.key, newValue) }
+    public var verticalSpeed: Float {
+        get { getTypedObject(VerticalSpeedOption.shared) }
+        set { setObject(VerticalSpeedOption.shared.key, newValue) }
     }
     
     // MARK: Convenience Method Implementations
@@ -88,9 +88,9 @@ import JabberwockyHTKitCore
         set { setObject(MinimumElementSizeOption.shared.key, newValue) }
     }
 
-    public var shareSensitivity: Bool {
-        get { getTypedObject(ShareSensitivityOption.shared) }
-        set { setObject(ShareSensitivityOption.shared.key, newValue) }
+    public var shareSpeed: Bool {
+        get { getTypedObject(ShareSpeedOption.shared) }
+        set { setObject(ShareSpeedOption.shared.key, newValue) }
     }
     
     // MARK: Generic Getters/Setters

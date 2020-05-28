@@ -46,7 +46,6 @@
 		1E1E0A65242E8035002C4BE0 /* HTFeatureUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C644E24240A0200D97089 /* HTFeatureUtils.swift */; };
 		1E1E0A66242E8035002C4BE0 /* CursorDrawFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C644A24240A0200D97089 /* CursorDrawFeature.swift */; };
 		1E1E0A68242E8035002C4BE0 /* HTAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C641324240A0100D97089 /* HTAlertController.swift */; };
-		1E1E0A69242E8035002C4BE0 /* HTCursorSensitivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C642124240A0100D97089 /* HTCursorSensitivity.swift */; };
 		1E1E0A6A242E8035002C4BE0 /* CursorScrollFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C644624240A0200D97089 /* CursorScrollFeature.swift */; };
 		1E1E0A6B242E8035002C4BE0 /* CursorMenuWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C642924240A0100D97089 /* CursorMenuWindow.swift */; };
 		1E1E0A6C242E8035002C4BE0 /* CursorMenuFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C645024240A0200D97089 /* CursorMenuFeature.swift */; };
@@ -113,8 +112,8 @@
 		1E3DD1B92449FF2D00969739 /* DictionaryCoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3DD1B72449FF2D00969739 /* DictionaryCoding.swift */; };
 		1E3DD1C8246C530200969739 /* BlinkSensitivityOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3DD1C7246C530200969739 /* BlinkSensitivityOption.swift */; };
 		1E3DD1C9246C530200969739 /* BlinkSensitivityOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3DD1C7246C530200969739 /* BlinkSensitivityOption.swift */; };
-		1E3DD1CB246C6E2C00969739 /* CursorSensitivityOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3DD1CA246C6E2C00969739 /* CursorSensitivityOption.swift */; };
-		1E3DD1CC246C6E2C00969739 /* CursorSensitivityOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3DD1CA246C6E2C00969739 /* CursorSensitivityOption.swift */; };
+		1E3DD1CB246C6E2C00969739 /* CursorSpeedOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3DD1CA246C6E2C00969739 /* CursorSpeedOption.swift */; };
+		1E3DD1CC246C6E2C00969739 /* CursorSpeedOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3DD1CA246C6E2C00969739 /* CursorSpeedOption.swift */; };
 		1E3DD1CE246C73E900969739 /* DwellTimeOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3DD1CD246C73E900969739 /* DwellTimeOption.swift */; };
 		1E3DD1CF246C73E900969739 /* DwellTimeOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3DD1CD246C73E900969739 /* DwellTimeOption.swift */; };
 		1E3DD1D1246C74E700969739 /* ClickGestureOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3DD1D0246C74E700969739 /* ClickGestureOption.swift */; };
@@ -123,14 +122,14 @@
 		1E3DD1D5246C772100969739 /* CursorGraphicsModeOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3DD1D3246C772100969739 /* CursorGraphicsModeOption.swift */; };
 		1E3DD1D7246C7ABA00969739 /* DisabledByUserOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3DD1D6246C7ABA00969739 /* DisabledByUserOption.swift */; };
 		1E3DD1D8246C7ABA00969739 /* DisabledByUserOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3DD1D6246C7ABA00969739 /* DisabledByUserOption.swift */; };
-		1E3DD1DA246C7B1F00969739 /* ShareSensitivityOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3DD1D9246C7B1F00969739 /* ShareSensitivityOption.swift */; };
-		1E3DD1DB246C7B1F00969739 /* ShareSensitivityOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3DD1D9246C7B1F00969739 /* ShareSensitivityOption.swift */; };
+		1E3DD1DA246C7B1F00969739 /* ShareSpeedOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3DD1D9246C7B1F00969739 /* ShareSpeedOption.swift */; };
+		1E3DD1DB246C7B1F00969739 /* ShareSpeedOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3DD1D9246C7B1F00969739 /* ShareSpeedOption.swift */; };
 		1E3DD1DD246C7CCD00969739 /* MinimumElementSizeOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3DD1DC246C7CCD00969739 /* MinimumElementSizeOption.swift */; };
 		1E3DD1DE246C7CCD00969739 /* MinimumElementSizeOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3DD1DC246C7CCD00969739 /* MinimumElementSizeOption.swift */; };
 		1E3DD1E0246C8BCD00969739 /* DefaultSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3DD1DF246C8BCD00969739 /* DefaultSettings.swift */; };
 		1E3DD1E1246C8BCD00969739 /* DefaultSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3DD1DF246C8BCD00969739 /* DefaultSettings.swift */; };
-		1E3DD1E3246D9EF800969739 /* HeadMovementCorrectionOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3DD1E2246D9EF800969739 /* HeadMovementCorrectionOption.swift */; };
-		1E3DD1E4246D9EF800969739 /* HeadMovementCorrectionOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3DD1E2246D9EF800969739 /* HeadMovementCorrectionOption.swift */; };
+		1E3DD1E3246D9EF800969739 /* CursorStickinessOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3DD1E2246D9EF800969739 /* CursorStickinessOption.swift */; };
+		1E3DD1E4246D9EF800969739 /* CursorStickinessOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3DD1E2246D9EF800969739 /* CursorStickinessOption.swift */; };
 		1E3DD20924746B7C00969739 /* NSNotification+Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3DD20824746B7C00969739 /* NSNotification+Status.swift */; };
 		1E3DD20A24746B7C00969739 /* NSNotification+Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3DD20824746B7C00969739 /* NSNotification+Status.swift */; };
 		1E3DD21F2475A80100969739 /* HTSettingsUpdateContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3DD21E2475A80100969739 /* HTSettingsUpdateContext.swift */; };
@@ -173,7 +172,6 @@
 		1E7C648424240A0200D97089 /* HTSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C641E24240A0100D97089 /* HTSettings.swift */; };
 		1E7C648524240A0200D97089 /* HTLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C641F24240A0100D97089 /* HTLayout.swift */; };
 		1E7C648624240A0200D97089 /* HTCursor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C642024240A0100D97089 /* HTCursor.swift */; };
-		1E7C648724240A0200D97089 /* HTCursorSensitivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C642124240A0100D97089 /* HTCursorSensitivity.swift */; };
 		1E7C648824240A0200D97089 /* HTKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C642224240A0100D97089 /* HTKeyboard.swift */; };
 		1E7C648924240A0200D97089 /* StoredSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C642324240A0100D97089 /* StoredSettings.swift */; };
 		1E7C648B24240A0200D97089 /* CursorAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E7C642624240A0100D97089 /* CursorAssets.xcassets */; };
@@ -327,15 +325,15 @@
 		1E3DD1B124493E0700969739 /* HTRequestContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTRequestContext.swift; sourceTree = "<group>"; };
 		1E3DD1B72449FF2D00969739 /* DictionaryCoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryCoding.swift; sourceTree = "<group>"; };
 		1E3DD1C7246C530200969739 /* BlinkSensitivityOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlinkSensitivityOption.swift; sourceTree = "<group>"; };
-		1E3DD1CA246C6E2C00969739 /* CursorSensitivityOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CursorSensitivityOption.swift; sourceTree = "<group>"; };
+		1E3DD1CA246C6E2C00969739 /* CursorSpeedOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CursorSpeedOption.swift; sourceTree = "<group>"; };
 		1E3DD1CD246C73E900969739 /* DwellTimeOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DwellTimeOption.swift; sourceTree = "<group>"; };
 		1E3DD1D0246C74E700969739 /* ClickGestureOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClickGestureOption.swift; sourceTree = "<group>"; };
 		1E3DD1D3246C772100969739 /* CursorGraphicsModeOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CursorGraphicsModeOption.swift; sourceTree = "<group>"; };
 		1E3DD1D6246C7ABA00969739 /* DisabledByUserOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisabledByUserOption.swift; sourceTree = "<group>"; };
-		1E3DD1D9246C7B1F00969739 /* ShareSensitivityOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSensitivityOption.swift; sourceTree = "<group>"; };
+		1E3DD1D9246C7B1F00969739 /* ShareSpeedOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSpeedOption.swift; sourceTree = "<group>"; };
 		1E3DD1DC246C7CCD00969739 /* MinimumElementSizeOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinimumElementSizeOption.swift; sourceTree = "<group>"; };
 		1E3DD1DF246C8BCD00969739 /* DefaultSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultSettings.swift; sourceTree = "<group>"; };
-		1E3DD1E2246D9EF800969739 /* HeadMovementCorrectionOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadMovementCorrectionOption.swift; sourceTree = "<group>"; };
+		1E3DD1E2246D9EF800969739 /* CursorStickinessOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CursorStickinessOption.swift; sourceTree = "<group>"; };
 		1E3DD20824746B7C00969739 /* NSNotification+Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSNotification+Status.swift"; sourceTree = "<group>"; };
 		1E3DD21E2475A80100969739 /* HTSettingsUpdateContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTSettingsUpdateContext.swift; sourceTree = "<group>"; };
 		1E68A4C324410AF8003DD8AE /* AtomicInteger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtomicInteger.swift; sourceTree = "<group>"; };
@@ -365,7 +363,6 @@
 		1E7C641E24240A0100D97089 /* HTSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTSettings.swift; sourceTree = "<group>"; };
 		1E7C641F24240A0100D97089 /* HTLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTLayout.swift; sourceTree = "<group>"; };
 		1E7C642024240A0100D97089 /* HTCursor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTCursor.swift; sourceTree = "<group>"; };
-		1E7C642124240A0100D97089 /* HTCursorSensitivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTCursorSensitivity.swift; sourceTree = "<group>"; };
 		1E7C642224240A0100D97089 /* HTKeyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTKeyboard.swift; sourceTree = "<group>"; };
 		1E7C642324240A0100D97089 /* StoredSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoredSettings.swift; sourceTree = "<group>"; };
 		1E7C642624240A0100D97089 /* CursorAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = CursorAssets.xcassets; sourceTree = "<group>"; };
@@ -559,12 +556,12 @@
 				1E3DD1C7246C530200969739 /* BlinkSensitivityOption.swift */,
 				1E3DD1D0246C74E700969739 /* ClickGestureOption.swift */,
 				1E3DD1D3246C772100969739 /* CursorGraphicsModeOption.swift */,
-				1E3DD1CA246C6E2C00969739 /* CursorSensitivityOption.swift */,
+				1E3DD1CA246C6E2C00969739 /* CursorSpeedOption.swift */,
+				1E3DD1E2246D9EF800969739 /* CursorStickinessOption.swift */,
 				1E3DD1D6246C7ABA00969739 /* DisabledByUserOption.swift */,
 				1E3DD1CD246C73E900969739 /* DwellTimeOption.swift */,
-				1E3DD1E2246D9EF800969739 /* HeadMovementCorrectionOption.swift */,
 				1E3DD1DC246C7CCD00969739 /* MinimumElementSizeOption.swift */,
-				1E3DD1D9246C7B1F00969739 /* ShareSensitivityOption.swift */,
+				1E3DD1D9246C7B1F00969739 /* ShareSpeedOption.swift */,
 			);
 			path = Options;
 			sourceTree = "<group>";
@@ -667,7 +664,6 @@
 				1E3DD1C5246B004A00969739 /* Settings */,
 				1E7C641B24240A0100D97089 /* HeadTracking.swift */,
 				1E7C642024240A0100D97089 /* HTCursor.swift */,
-				1E7C642124240A0100D97089 /* HTCursorSensitivity.swift */,
 				1E7C642224240A0100D97089 /* HTKeyboard.swift */,
 				1E7C641F24240A0100D97089 /* HTLayout.swift */,
 				1E7C641624240A0100D97089 /* HTSounds.swift */,
@@ -1494,7 +1490,6 @@
 				1E3DD1C9246C530200969739 /* BlinkSensitivityOption.swift in Sources */,
 				1E1E0A66242E8035002C4BE0 /* CursorDrawFeature.swift in Sources */,
 				1E1E0A68242E8035002C4BE0 /* HTAlertController.swift in Sources */,
-				1E1E0A69242E8035002C4BE0 /* HTCursorSensitivity.swift in Sources */,
 				1E3DD1B92449FF2D00969739 /* DictionaryCoding.swift in Sources */,
 				1E1E0A6A242E8035002C4BE0 /* CursorScrollFeature.swift in Sources */,
 				1E1E0A6B242E8035002C4BE0 /* CursorMenuWindow.swift in Sources */,
@@ -1515,12 +1510,12 @@
 				1E1E0A7B242E8035002C4BE0 /* CursorRecalibrationFeature.swift in Sources */,
 				1E1E0A7C242E8035002C4BE0 /* UIScrollView+ManualScroll.swift in Sources */,
 				1E1E0A7D242E8035002C4BE0 /* ImageCursor.swift in Sources */,
-				1E3DD1CC246C6E2C00969739 /* CursorSensitivityOption.swift in Sources */,
+				1E3DD1CC246C6E2C00969739 /* CursorSpeedOption.swift in Sources */,
 				1E3DD1B324493E0700969739 /* HTRequestContext.swift in Sources */,
 				1E1E0A7E242E8035002C4BE0 /* HTFeature.swift in Sources */,
 				1E1E0A7F242E8035002C4BE0 /* HTLayout.swift in Sources */,
 				1E3DD1AA2449055100969739 /* HTEventContext.swift in Sources */,
-				1E3DD1DB246C7B1F00969739 /* ShareSensitivityOption.swift in Sources */,
+				1E3DD1DB246C7B1F00969739 /* ShareSpeedOption.swift in Sources */,
 				1E1E0A80242E8035002C4BE0 /* BannerStyle.swift in Sources */,
 				1E1E0A81242E8035002C4BE0 /* HTCursor.swift in Sources */,
 				1E1E0A82242E8035002C4BE0 /* UITableViewCell+Focusable.swift in Sources */,
@@ -1528,7 +1523,7 @@
 				1E1E0A84242E8035002C4BE0 /* CursorIdleFeature.swift in Sources */,
 				1E3DD1D5246C772100969739 /* CursorGraphicsModeOption.swift in Sources */,
 				1E1E0A85242E8035002C4BE0 /* UIControl+Focusable.swift in Sources */,
-				1E3DD1E4246D9EF800969739 /* HeadMovementCorrectionOption.swift in Sources */,
+				1E3DD1E4246D9EF800969739 /* CursorStickinessOption.swift in Sources */,
 				1E3DD1D2246C74E700969739 /* ClickGestureOption.swift in Sources */,
 				1E1E0A86242E8035002C4BE0 /* HTThemes.swift in Sources */,
 				1E1E0A88242E8035002C4BE0 /* ChargingTimer.swift in Sources */,
@@ -1602,7 +1597,6 @@
 				1E7C64A824240A0200D97089 /* HTFeatureUtils.swift in Sources */,
 				1E7C64A424240A0200D97089 /* CursorDrawFeature.swift in Sources */,
 				1E7C647A24240A0200D97089 /* HTAlertController.swift in Sources */,
-				1E7C648724240A0200D97089 /* HTCursorSensitivity.swift in Sources */,
 				1E3DD1E0246C8BCD00969739 /* DefaultSettings.swift in Sources */,
 				1E3DD1AF24493A5F00969739 /* NSNotification+Remote.swift in Sources */,
 				1EF5E4972440047600C7E6B7 /* HTGlassWindow.swift in Sources */,
@@ -1633,12 +1627,12 @@
 				1E7C64BE24240A0200D97089 /* ImageCursor.swift in Sources */,
 				1E7C64A524240A0200D97089 /* HTFeature.swift in Sources */,
 				1E7C648524240A0200D97089 /* HTLayout.swift in Sources */,
-				1E3DD1CB246C6E2C00969739 /* CursorSensitivityOption.swift in Sources */,
+				1E3DD1CB246C6E2C00969739 /* CursorSpeedOption.swift in Sources */,
 				1E3DD1B224493E0700969739 /* HTRequestContext.swift in Sources */,
 				1E7C649C24240A0200D97089 /* BannerStyle.swift in Sources */,
 				1EF5E491243FBA8A00C7E6B7 /* CursorClickSoundFeature.swift in Sources */,
 				1E3DD1A92449055100969739 /* HTEventContext.swift in Sources */,
-				1E3DD1DA246C7B1F00969739 /* ShareSensitivityOption.swift in Sources */,
+				1E3DD1DA246C7B1F00969739 /* ShareSpeedOption.swift in Sources */,
 				1E7C648624240A0200D97089 /* HTCursor.swift in Sources */,
 				1E7C647724240A0200D97089 /* UITableViewCell+Focusable.swift in Sources */,
 				1E7C649124240A0200D97089 /* CursorFocusWindow.swift in Sources */,
@@ -1646,7 +1640,7 @@
 				1E7C647424240A0200D97089 /* UIControl+Focusable.swift in Sources */,
 				1E3DD1D4246C772100969739 /* CursorGraphicsModeOption.swift in Sources */,
 				1E7C647E24240A0200D97089 /* HTThemes.swift in Sources */,
-				1E3DD1E3246D9EF800969739 /* HeadMovementCorrectionOption.swift in Sources */,
+				1E3DD1E3246D9EF800969739 /* CursorStickinessOption.swift in Sources */,
 				1E3DD1D1246C74E700969739 /* ClickGestureOption.swift in Sources */,
 				1E7C649824240A0200D97089 /* CursorToggleView.swift in Sources */,
 				1E7C649224240A0200D97089 /* ChargingTimer.swift in Sources */,
