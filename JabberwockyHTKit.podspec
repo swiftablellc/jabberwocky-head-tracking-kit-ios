@@ -30,9 +30,16 @@ limitations under the License.
   spec.authors      = { "Jonathan Hoag" => "jon@swiftable.org", "Aaron Chavez" => "aaron@swiftable.org" }
   spec.source       = { :git => "https://github.com/swiftablellc/jabberwocky-head-tracking-kit-ios.git", :tag => "#{spec.version}" }
 
-  spec.source_files  = "JabberwockyHTKit*/**/*.{swift}"
-  spec.resources = "JabberwockyHTKit*/**/*.{xcassets,scnassets}"
-  spec.vendored_frameworks = "JabberwockyARKitEngine.xcframework"
+  spec.subspec 'Engine' do |engine|
+    engine.source_files  = "JabberwockyHTKitEngine/**/*.{swift}"
+  end
+
+  spec.subspec 'Kit' do |kit|
+    kit.dependency 'JabberwockyHTKit/Engine'
+    kit.source_files  = "JabberwockyHTKit/**/*.{swift}"
+    kit.resources = "JabberwockyHTKit/**/*.{xcassets,scnassets}"
+    kit.vendored_frameworks = "JabberwockyARKitEngine.xcframework"
+  end
 
   spec.ios.deployment_target = "9.0"
   spec.swift_version = "5.2"
