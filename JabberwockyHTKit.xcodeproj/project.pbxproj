@@ -28,7 +28,6 @@
 		1E1E0AC8242E9A2E002C4BE0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E1E0AC7242E9A2E002C4BE0 /* LaunchScreen.storyboard */; };
 		1E1E0AC9242E9A2E002C4BE0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E1E0AC7242E9A2E002C4BE0 /* LaunchScreen.storyboard */; };
 		1E1E0ACA242E9A2E002C4BE0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E1E0AC7242E9A2E002C4BE0 /* LaunchScreen.storyboard */; };
-		1E29470824A63ABD0029AB0E /* JabberwockyHTKitEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E29470624A63ABC0029AB0E /* JabberwockyHTKitEngine.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1E3DD1A32448D56000969739 /* CoreEventProxyFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3DD1A22448D56000969739 /* CoreEventProxyFeature.swift */; };
 		1E3DD1A62449002F00969739 /* NSNotification+Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3DD1A52449002F00969739 /* NSNotification+Event.swift */; };
 		1E3DD1A92449055100969739 /* HTEventContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3DD1A82449055100969739 /* HTEventContext.swift */; };
@@ -49,14 +48,17 @@
 		1E3DD20924746B7C00969739 /* NSNotification+Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3DD20824746B7C00969739 /* NSNotification+Status.swift */; };
 		1E3DD21F2475A80100969739 /* HTSettingsUpdateContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3DD21E2475A80100969739 /* HTSettingsUpdateContext.swift */; };
 		1E40591E2538AFBD00A70885 /* JabberwockyARKitEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EF86C8E24A6D8DC007ECB09 /* JabberwockyARKitEngine.framework */; };
-		1E4059332538E73900A70885 /* JabberwockyHTKitEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E86A5AC24A5470000E75D5A /* JabberwockyHTKitEngine.framework */; };
-		1E4059342538E73900A70885 /* JabberwockyHTKitEngine.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1E86A5AC24A5470000E75D5A /* JabberwockyHTKitEngine.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1E4059622538E9D800A70885 /* JabberwockyARKitEngine.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E4059612538E9D800A70885 /* JabberwockyARKitEngine.xcframework */; };
 		1E4059632538E9D800A70885 /* JabberwockyARKitEngine.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1E4059612538E9D800A70885 /* JabberwockyARKitEngine.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		1E4059782538EA7300A70885 /* JabberwockyARKitEngine.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E4059612538E9D800A70885 /* JabberwockyARKitEngine.xcframework */; };
-		1E4059792538EA7300A70885 /* JabberwockyARKitEngine.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1E4059612538E9D800A70885 /* JabberwockyARKitEngine.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		1E4059802538EADE00A70885 /* JabberwockyHTKitEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E86A5AC24A5470000E75D5A /* JabberwockyHTKitEngine.framework */; };
-		1E4059812538EADE00A70885 /* JabberwockyHTKitEngine.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1E86A5AC24A5470000E75D5A /* JabberwockyHTKitEngine.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1E4059FF2539E8E700A70885 /* HTEngineSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1CE41A24A5426200001570 /* HTEngineSettings.swift */; };
+		1E405A002539E8E700A70885 /* HTScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1CE41B24A5426200001570 /* HTScreen.swift */; };
+		1E405A012539E8E700A70885 /* HTEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1CE42224A5426200001570 /* HTEngine.swift */; };
+		1E405A022539E8E700A70885 /* HTActivationContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1CE42524A5426200001570 /* HTActivationContext.swift */; };
+		1E405A032539E8E700A70885 /* HTBlinkContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1CE42724A5426200001570 /* HTBlinkContext.swift */; };
+		1E405A042539E8E700A70885 /* HTCursorContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1CE42824A5426200001570 /* HTCursorContext.swift */; };
+		1E405A052539E8E700A70885 /* HTWarningContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1CE42924A5426200001570 /* HTWarningContext.swift */; };
+		1E405A062539E8E700A70885 /* NSNotification+HeadTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1CE42424A5426200001570 /* NSNotification+HeadTracking.swift */; };
+		1E405A072539E8E700A70885 /* NSNotification+Warning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1CE42624A5426200001570 /* NSNotification+Warning.swift */; };
 		1E68A4C424410AF8003DD8AE /* AtomicInteger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E68A4C324410AF8003DD8AE /* AtomicInteger.swift */; };
 		1E68A5082442A343003DD8AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E68A5072442A343003DD8AE /* AppDelegate.swift */; };
 		1E68A50A2442A343003DD8AE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E68A5092442A343003DD8AE /* SceneDelegate.swift */; };
@@ -130,15 +132,6 @@
 		1E7C652624255BA000D97089 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C652524255BA000D97089 /* AppDelegate.swift */; };
 		1E7C652F24255BA200D97089 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E7C652E24255BA200D97089 /* Assets.xcassets */; };
 		1E7C65422425B2B100D97089 /* CursorRecalibrationFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C65412425B2B100D97089 /* CursorRecalibrationFeature.swift */; };
-		1E86A5B424A547E000E75D5A /* HTEngineSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1CE41A24A5426200001570 /* HTEngineSettings.swift */; };
-		1E86A5B524A547E000E75D5A /* HTScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1CE41B24A5426200001570 /* HTScreen.swift */; };
-		1E86A5B624A547E000E75D5A /* HTEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1CE42224A5426200001570 /* HTEngine.swift */; };
-		1E86A5B724A547E000E75D5A /* HTActivationContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1CE42524A5426200001570 /* HTActivationContext.swift */; };
-		1E86A5B824A547E000E75D5A /* HTBlinkContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1CE42724A5426200001570 /* HTBlinkContext.swift */; };
-		1E86A5B924A547E000E75D5A /* HTCursorContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1CE42824A5426200001570 /* HTCursorContext.swift */; };
-		1E86A5BA24A547E000E75D5A /* HTWarningContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1CE42924A5426200001570 /* HTWarningContext.swift */; };
-		1E86A5BB24A547E000E75D5A /* NSNotification+HeadTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1CE42424A5426200001570 /* NSNotification+HeadTracking.swift */; };
-		1E86A5BC24A547E000E75D5A /* NSNotification+Warning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1CE42624A5426200001570 /* NSNotification+Warning.swift */; };
 		1EB6A34D24C9CFA900E4D854 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 1EB6A34C24C9CFA900E4D854 /* Podfile */; };
 		1EF5E48F243F91F500C7E6B7 /* HTFocusContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF5E48E243F91F500C7E6B7 /* HTFocusContext.swift */; };
 		1EF5E491243FBA8A00C7E6B7 /* CursorClickSoundFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF5E490243FBA8A00C7E6B7 /* CursorClickSoundFeature.swift */; };
@@ -150,8 +143,6 @@
 		1EF86C8124A6D0FF007ECB09 /* FaceMeshWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF86C8024A6D0FF007ECB09 /* FaceMeshWindow.swift */; };
 		1EF86C8624A6D80A007ECB09 /* JabberwockyHTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E7C63F12424090A00D97089 /* JabberwockyHTKit.framework */; };
 		1EF86C8724A6D80A007ECB09 /* JabberwockyHTKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1E7C63F12424090A00D97089 /* JabberwockyHTKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		1EF86C8A24A6D80A007ECB09 /* JabberwockyHTKitEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E86A5AC24A5470000E75D5A /* JabberwockyHTKitEngine.framework */; };
-		1EF86C8B24A6D80A007ECB09 /* JabberwockyHTKitEngine.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1E86A5AC24A5470000E75D5A /* JabberwockyHTKitEngine.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1EF86C9024A6D8DC007ECB09 /* JabberwockyARKitEngine.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1EF86C8E24A6D8DC007ECB09 /* JabberwockyARKitEngine.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5A8345243E2A003E3EE758FC /* Pods_CustomThemeFeatureTutorial_PodsOnly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89F0A0BAB49CC7D71C9A3B31 /* Pods_CustomThemeFeatureTutorial_PodsOnly.framework */; };
 		6331E74C0C6A739F8F9BDA40 /* Pods_ObjcTutorial_PodsOnly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31FB4679CD65B347CAFBFAB7 /* Pods_ObjcTutorial_PodsOnly.framework */; };
@@ -167,33 +158,12 @@
 			remoteGlobalIDString = 1E7C63F02424090A00D97089;
 			remoteInfo = JabberwockyHTKit;
 		};
-		1E4059352538E73900A70885 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1E7C63E82424090A00D97089 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 1E86A5AB24A5470000E75D5A;
-			remoteInfo = JabberwockyHTKitEngine;
-		};
-		1EF86C7024A6CEFF007ECB09 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1E7C63E82424090A00D97089 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 1E86A5AB24A5470000E75D5A;
-			remoteInfo = JabberwockyHTKitEngine;
-		};
 		1EF86C8824A6D80A007ECB09 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1E7C63E82424090A00D97089 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 1E7C63F02424090A00D97089;
 			remoteInfo = JabberwockyHTKit;
-		};
-		1EF86C8C24A6D80A007ECB09 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1E7C63E82424090A00D97089 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 1E86A5AB24A5470000E75D5A;
-			remoteInfo = JabberwockyHTKitEngine;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -204,21 +174,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				1E4059342538E73900A70885 /* JabberwockyHTKitEngine.framework in Embed Frameworks */,
 				1E4059632538E9D800A70885 /* JabberwockyARKitEngine.xcframework in Embed Frameworks */,
 				1E1E0ABF242E8DBE002C4BE0 /* JabberwockyHTKit.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1E40597A2538EA7300A70885 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				1E4059812538EADE00A70885 /* JabberwockyHTKitEngine.framework in Embed Frameworks */,
-				1E4059792538EA7300A70885 /* JabberwockyARKitEngine.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -231,7 +188,6 @@
 			files = (
 				1EF86C9024A6D8DC007ECB09 /* JabberwockyARKitEngine.framework in Embed Frameworks */,
 				1EF86C8724A6D80A007ECB09 /* JabberwockyHTKit.framework in Embed Frameworks */,
-				1EF86C8B24A6D80A007ECB09 /* JabberwockyHTKitEngine.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -269,8 +225,6 @@
 		1E1E0A41242E7F53002C4BE0 /* Basic - Pods.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Basic - Pods.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E1E0AA9242E8098002C4BE0 /* Basic - Local.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Basic - Local.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E1E0AC7242E9A2E002C4BE0 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		1E29470624A63ABC0029AB0E /* JabberwockyHTKitEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JabberwockyHTKitEngine.h; sourceTree = "<group>"; };
-		1E29470724A63ABC0029AB0E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1E3DD1A22448D56000969739 /* CoreEventProxyFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreEventProxyFeature.swift; sourceTree = "<group>"; };
 		1E3DD1A52449002F00969739 /* NSNotification+Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSNotification+Event.swift"; sourceTree = "<group>"; };
 		1E3DD1A82449055100969739 /* HTEventContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTEventContext.swift; sourceTree = "<group>"; };
@@ -370,7 +324,6 @@
 		1E7C652E24255BA200D97089 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1E7C653324255BA200D97089 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1E7C65412425B2B100D97089 /* CursorRecalibrationFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CursorRecalibrationFeature.swift; sourceTree = "<group>"; };
-		1E86A5AC24A5470000E75D5A /* JabberwockyHTKitEngine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JabberwockyHTKitEngine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EB6A34C24C9CFA900E4D854 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		1EF5E48E243F91F500C7E6B7 /* HTFocusContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTFocusContext.swift; sourceTree = "<group>"; };
 		1EF5E490243FBA8A00C7E6B7 /* CursorClickSoundFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CursorClickSoundFeature.swift; sourceTree = "<group>"; };
@@ -431,7 +384,6 @@
 			files = (
 				1E40591E2538AFBD00A70885 /* JabberwockyARKitEngine.framework in Frameworks */,
 				1EF86C8624A6D80A007ECB09 /* JabberwockyHTKit.framework in Frameworks */,
-				1EF86C8A24A6D80A007ECB09 /* JabberwockyHTKitEngine.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,8 +399,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1E4059802538EADE00A70885 /* JabberwockyHTKitEngine.framework in Frameworks */,
-				1E4059782538EA7300A70885 /* JabberwockyARKitEngine.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -456,16 +406,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1E4059332538E73900A70885 /* JabberwockyHTKitEngine.framework in Frameworks */,
 				1E4059622538E9D800A70885 /* JabberwockyARKitEngine.xcframework in Frameworks */,
 				1E1E0ABE242E8DBE002C4BE0 /* JabberwockyHTKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1E86A5A924A5470000E75D5A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -495,18 +437,6 @@
 				1E1333142437DB8B00D9172B /* LaunchScreen.storyboard */,
 			);
 			path = CustomThemeFeatureTutorial;
-			sourceTree = "<group>";
-		};
-		1E1CE41824A5426200001570 /* JabberwockyHTKitEngine */ = {
-			isa = PBXGroup;
-			children = (
-				1E29470724A63ABC0029AB0E /* Info.plist */,
-				1E29470624A63ABC0029AB0E /* JabberwockyHTKitEngine.h */,
-				1E1CE41924A5426200001570 /* Configuration */,
-				1E1CE42124A5426200001570 /* Engines */,
-				1E1CE42324A5426200001570 /* Notifications */,
-			);
-			path = JabberwockyHTKitEngine;
 			sourceTree = "<group>";
 		};
 		1E1CE41924A5426200001570 /* Configuration */ = {
@@ -567,6 +497,16 @@
 			path = Options;
 			sourceTree = "<group>";
 		};
+		1E4059F52539E89600A70885 /* EngineInterface */ = {
+			isa = PBXGroup;
+			children = (
+				1E1CE41924A5426200001570 /* Configuration */,
+				1E1CE42124A5426200001570 /* Engines */,
+				1E1CE42324A5426200001570 /* Notifications */,
+			);
+			path = EngineInterface;
+			sourceTree = "<group>";
+		};
 		1E68A5062442A343003DD8AE /* SwiftUITutorial */ = {
 			isa = PBXGroup;
 			children = (
@@ -597,7 +537,6 @@
 				1E1E0A10242D15F8002C4BE0 /* LICENSE */,
 				1E1E0A0E242D0513002C4BE0 /* README.md */,
 				1E7C63F32424090A00D97089 /* JabberwockyHTKit */,
-				1E1CE41824A5426200001570 /* JabberwockyHTKitEngine */,
 				1E7C653E24256FD900D97089 /* Tutorials */,
 				1E7C63F22424090A00D97089 /* Products */,
 				1E7C64D324244F5200D97089 /* Frameworks */,
@@ -615,7 +554,6 @@
 				1E1332D4243777B500D9172B /* Objc - Pods.app */,
 				1E1333122437D96500D9172B /* Theme - Pods.app */,
 				1E68A5052442A343003DD8AE /* SwiftUI - Pods.app */,
-				1E86A5AC24A5470000E75D5A /* JabberwockyHTKitEngine.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -629,6 +567,7 @@
 				1E7C643F24240A0200D97089 /* Banners */,
 				1E7C641524240A0100D97089 /* Configuration */,
 				1E7C641224240A0100D97089 /* Controllers */,
+				1E4059F52539E89600A70885 /* EngineInterface */,
 				1E7C645924240A0200D97089 /* Extensions */,
 				1E7C644524240A0200D97089 /* Features */,
 				1E7C640B24240A0100D97089 /* Focusables */,
@@ -896,14 +835,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1E86A5A724A5470000E75D5A /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1E29470824A63ABD0029AB0E /* JabberwockyHTKitEngine.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
@@ -977,7 +908,6 @@
 			);
 			dependencies = (
 				1EF86C8924A6D80A007ECB09 /* PBXTargetDependency */,
-				1EF86C8D24A6D80A007ECB09 /* PBXTargetDependency */,
 			);
 			name = "BasicTutorial-LocalDev";
 			productName = HTTutorial;
@@ -1012,12 +942,10 @@
 				1E7C63ED2424090A00D97089 /* Sources */,
 				1E7C63EE2424090A00D97089 /* Frameworks */,
 				1E7C63EF2424090A00D97089 /* Resources */,
-				1E40597A2538EA7300A70885 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				1EF86C7124A6CEFF007ECB09 /* PBXTargetDependency */,
 			);
 			name = JabberwockyHTKit;
 			productName = JabberwockyHTKit;
@@ -1038,30 +966,11 @@
 			);
 			dependencies = (
 				1E1E0AC1242E8DBE002C4BE0 /* PBXTargetDependency */,
-				1E4059362538E73900A70885 /* PBXTargetDependency */,
 			);
 			name = BasicTutorial;
 			productName = HTTutorial;
 			productReference = 1E7C652324255BA000D97089 /* Basic.app */;
 			productType = "com.apple.product-type.application";
-		};
-		1E86A5AB24A5470000E75D5A /* JabberwockyHTKitEngine */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 1E86A5B124A5470000E75D5A /* Build configuration list for PBXNativeTarget "JabberwockyHTKitEngine" */;
-			buildPhases = (
-				1E86A5A724A5470000E75D5A /* Headers */,
-				1E86A5A824A5470000E75D5A /* Sources */,
-				1E86A5A924A5470000E75D5A /* Frameworks */,
-				1E86A5AA24A5470000E75D5A /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = JabberwockyHTKitEngine;
-			productName = JabberwockyHTKitEngine;
-			productReference = 1E86A5AC24A5470000E75D5A /* JabberwockyHTKitEngine.framework */;
-			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -1086,9 +995,6 @@
 					1E7C652224255BA000D97089 = {
 						CreatedOnToolsVersion = 11.3.1;
 					};
-					1E86A5AB24A5470000E75D5A = {
-						CreatedOnToolsVersion = 11.5;
-					};
 				};
 			};
 			buildConfigurationList = 1E7C63EB2424090A00D97089 /* Build configuration list for PBXProject "JabberwockyHTKit" */;
@@ -1105,7 +1011,6 @@
 			projectRoot = "";
 			targets = (
 				1E7C63F02424090A00D97089 /* JabberwockyHTKit */,
-				1E86A5AB24A5470000E75D5A /* JabberwockyHTKitEngine */,
 				1E7C652224255BA000D97089 /* BasicTutorial */,
 				1E1E0A9A242E8098002C4BE0 /* BasicTutorial-LocalDev */,
 				1E1E0A32242E7F53002C4BE0 /* BasicTutorial-PodsOnly */,
@@ -1180,13 +1085,6 @@
 			files = (
 				1E7C652F24255BA200D97089 /* Assets.xcassets in Resources */,
 				1E1E0AC8242E9A2E002C4BE0 /* LaunchScreen.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1E86A5AA24A5470000E75D5A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1445,6 +1343,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E4059FF2539E8E700A70885 /* HTEngineSettings.swift in Sources */,
+				1E405A002539E8E700A70885 /* HTScreen.swift in Sources */,
+				1E405A012539E8E700A70885 /* HTEngine.swift in Sources */,
+				1E405A022539E8E700A70885 /* HTActivationContext.swift in Sources */,
+				1E405A032539E8E700A70885 /* HTBlinkContext.swift in Sources */,
+				1E405A042539E8E700A70885 /* HTCursorContext.swift in Sources */,
+				1E405A052539E8E700A70885 /* HTWarningContext.swift in Sources */,
+				1E405A062539E8E700A70885 /* NSNotification+HeadTracking.swift in Sources */,
+				1E405A072539E8E700A70885 /* NSNotification+Warning.swift in Sources */,
 				1E7C649624240A0200D97089 /* CountdownView.swift in Sources */,
 				1E7C649724240A0200D97089 /* CursorToggleButton.swift in Sources */,
 				1E7C64B524240A0200D97089 /* Array+Chunks.swift in Sources */,
@@ -1547,22 +1454,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1E86A5A824A5470000E75D5A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1E86A5B424A547E000E75D5A /* HTEngineSettings.swift in Sources */,
-				1E86A5B524A547E000E75D5A /* HTScreen.swift in Sources */,
-				1E86A5B624A547E000E75D5A /* HTEngine.swift in Sources */,
-				1E86A5B724A547E000E75D5A /* HTActivationContext.swift in Sources */,
-				1E86A5B824A547E000E75D5A /* HTBlinkContext.swift in Sources */,
-				1E86A5B924A547E000E75D5A /* HTCursorContext.swift in Sources */,
-				1E86A5BA24A547E000E75D5A /* HTWarningContext.swift in Sources */,
-				1E86A5BB24A547E000E75D5A /* NSNotification+HeadTracking.swift in Sources */,
-				1E86A5BC24A547E000E75D5A /* NSNotification+Warning.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -1571,25 +1462,10 @@
 			target = 1E7C63F02424090A00D97089 /* JabberwockyHTKit */;
 			targetProxy = 1E1E0AC0242E8DBE002C4BE0 /* PBXContainerItemProxy */;
 		};
-		1E4059362538E73900A70885 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 1E86A5AB24A5470000E75D5A /* JabberwockyHTKitEngine */;
-			targetProxy = 1E4059352538E73900A70885 /* PBXContainerItemProxy */;
-		};
-		1EF86C7124A6CEFF007ECB09 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 1E86A5AB24A5470000E75D5A /* JabberwockyHTKitEngine */;
-			targetProxy = 1EF86C7024A6CEFF007ECB09 /* PBXContainerItemProxy */;
-		};
 		1EF86C8924A6D80A007ECB09 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 1E7C63F02424090A00D97089 /* JabberwockyHTKit */;
 			targetProxy = 1EF86C8824A6D80A007ECB09 /* PBXContainerItemProxy */;
-		};
-		1EF86C8D24A6D80A007ECB09 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 1E86A5AB24A5470000E75D5A /* JabberwockyHTKitEngine */;
-			targetProxy = 1EF86C8C24A6D80A007ECB09 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1949,6 +1825,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DBB41E7BAA291BAC94D59310 /* Pods-JabberwockyHTKit.debug.xcconfig */;
 			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -1978,6 +1855,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4C6BD36C03E084F335039A88 /* Pods-JabberwockyHTKit.release.xcconfig */;
 			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -2047,60 +1925,6 @@
 				MARKETING_VERSION = 0.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = org.swiftable.jabberwocky.BasicTutorial;
 				PRODUCT_NAME = Basic;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		1E86A5B224A5470000E75D5A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = BDJ62329AB;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = JabberwockyHTKitEngine/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MARKETING_VERSION = 0.1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = org.swiftable.jabberwocky.JabberwockyHTKitEngine;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		1E86A5B324A5470000E75D5A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = BDJ62329AB;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = JabberwockyHTKitEngine/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MARKETING_VERSION = 0.1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = org.swiftable.jabberwocky.JabberwockyHTKitEngine;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -2177,15 +2001,6 @@
 			buildConfigurations = (
 				1E7C653424255BA200D97089 /* Debug */,
 				1E7C653524255BA200D97089 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		1E86A5B124A5470000E75D5A /* Build configuration list for PBXNativeTarget "JabberwockyHTKitEngine" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1E86A5B224A5470000E75D5A /* Debug */,
-				1E86A5B324A5470000E75D5A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

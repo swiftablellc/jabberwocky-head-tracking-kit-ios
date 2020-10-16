@@ -15,7 +15,6 @@ limitations under the License.
 */
 
 import CoreGraphics
-import JabberwockyHTKitEngine
 
 @objc public protocol HTSettings: HTEngineSettings {
 

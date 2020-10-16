@@ -14,7 +14,6 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-import JabberwockyHTKitEngine
 import UIKit
 
 @objc public class BannerWarningsFeature: NSObject, HTFeature {

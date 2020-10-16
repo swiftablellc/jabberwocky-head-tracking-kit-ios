@@ -15,7 +15,6 @@ limitations under the License.
 */
 
 import ARKit
-import JabberwockyHTKitEngine
 
 @available(iOS 11, *)
 class FaceMeshView: HTGlassView {

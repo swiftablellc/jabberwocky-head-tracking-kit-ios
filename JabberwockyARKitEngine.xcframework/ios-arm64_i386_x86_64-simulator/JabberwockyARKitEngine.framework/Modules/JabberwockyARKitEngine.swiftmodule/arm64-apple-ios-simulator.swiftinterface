@@ -4,7 +4,7 @@
 import ARKit
 import Foundation
 @_exported import JabberwockyARKitEngine
-import JabberwockyHTKitEngine
+import JabberwockyHTKit
 import SceneKit
 import Swift
 import simd
@@ -16,12 +16,12 @@ import simd
   @objc public var faceAnchor: ARKit.ARFaceAnchor? {
     get
   }
-  @objc required public init(engineSettings: JabberwockyHTKitEngine.HTEngineSettings)
+  @objc required public init(engineSettings: JabberwockyHTKit.HTEngineSettings)
   @objc deinit
   @objc override dynamic public init()
 }
 @available(iOS 11.0, *)
-@objc extension ARKitHTEngine : JabberwockyHTKitEngine.HTEngine {
+@objc extension ARKitHTEngine : JabberwockyHTKit.HTEngine {
   @objc dynamic public func enable()
   @objc dynamic public func disable()
   @objc dynamic public var isAuthorizedOnDevice: Swift.Bool {

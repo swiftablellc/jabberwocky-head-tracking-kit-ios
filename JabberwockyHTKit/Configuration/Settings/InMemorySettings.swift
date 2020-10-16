@@ -15,7 +15,6 @@ limitations under the License.
 */
 
 import CoreGraphics
-import JabberwockyHTKitEngine
 
 /*
  In Memory Settings
