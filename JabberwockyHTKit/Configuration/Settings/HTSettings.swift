@@ -15,9 +15,9 @@ limitations under the License.
 */
 
 import CoreGraphics
-import JabberwockyHTKitCore
+import JabberwockyHTKitEngine
 
-@objc public protocol HTSettings: HTCoreSettings {
+@objc public protocol HTSettings: HTEngineSettings {
 
     // MARK: Convenience Methods
     var blinkSensitivity: CFTimeInterval {get set}

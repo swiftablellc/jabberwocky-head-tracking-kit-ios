@@ -15,11 +15,8 @@ limitations under the License.
 */
 
 import AVFoundation
-#if JABBERWOCKY_LOCAL_DEV
-  import JabberwockyHTKitLocal
-#else
-  import JabberwockyHTKit
-#endif
+import JabberwockyARKitEngine
+import JabberwockyHTKit
 import UIKit
 
 @UIApplicationMain
@@ -33,7 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             if (granted) {
                 // Configure the default HTFeatures and enable Head Tracking
                 DispatchQueue.main.async {
-                    HeadTracking.configure()
+                    HeadTracking.configure(withEngine: ARKitHTEngine.self)
                     HeadTracking.configureFeature(CrazyThemeFeature.self)
                     HeadTracking.configureFeature(CursorMenuFeature.self)
                     HeadTracking.shared.enable()

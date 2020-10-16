@@ -14,7 +14,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-import JabberwockyHTKitCore
+import JabberwockyHTKitEngine
 import UIKit
 
 @objc public enum ScrollDirection: Int {
@@ -22,6 +22,7 @@ import UIKit
     case vertical
 }
 
+@available(iOS 12.0, *)
 @objc public class CursorScrollFeature: NSObject, HTFeature {
     
     private static let MAX_SCROLL_VELOCITY: CGFloat = 1.8

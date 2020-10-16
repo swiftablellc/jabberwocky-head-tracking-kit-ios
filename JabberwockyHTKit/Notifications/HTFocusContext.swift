@@ -14,8 +14,8 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
+import JabberwockyHTKitEngine
 import UIKit
-import JabberwockyHTKitCore
 
 @objc public class HTFocusContext: NSObject {
 

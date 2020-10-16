@@ -15,6 +15,7 @@ limitations under the License.
 */
 
 #import <AVFoundation/AVFoundation.h>
+#import "JabberwockyARKitEngine.h"
 #import "JabberwockyHTKit.h"
 #import "AppDelegate.h"
 
@@ -27,9 +28,9 @@ limitations under the License.
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [AVCaptureDevice requestAccessForMediaType:AVMediaTypeVideo completionHandler:^(BOOL granted) {
         NSLog(@"Requested Camera Permission");
-        if(granted){
+        if(granted) {
             dispatch_async(dispatch_get_main_queue(), ^{
-                [HeadTracking configureWithFeatures:HeadTracking.DEFAULT_FEATURES withSettingsAppGroup:nil];
+                [HeadTracking configureWithEngine:[ARKitHTEngine class] withFeatures:HeadTracking.DEFAULT_FEATURES withSettingsAppGroup:nil];
                 [HeadTracking.shared enableWithCompletion: ^(BOOL success) {}];
             });
         } else {

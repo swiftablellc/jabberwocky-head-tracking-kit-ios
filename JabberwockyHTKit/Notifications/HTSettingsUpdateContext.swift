@@ -15,7 +15,6 @@ limitations under the License.
 */
 
 import UIKit
-import JabberwockyHTKitCore
 
 @objc public class HTSettingsUpdateContext: NSObject {
 

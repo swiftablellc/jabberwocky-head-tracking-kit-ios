@@ -14,7 +14,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-import JabberwockyHTKitCore
+import JabberwockyHTKitEngine
 import UIKit
 
 @objc public class CursorIdleFeature: NSObject, HTFeature {

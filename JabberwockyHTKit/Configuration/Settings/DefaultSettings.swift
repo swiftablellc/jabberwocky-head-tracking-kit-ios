@@ -15,7 +15,6 @@ limitations under the License.
 */
 
 import CoreGraphics
-import JabberwockyHTKitCore
 
 @objc public class DefaultSettings: NSObject, HTSettings {
     
@@ -42,7 +41,7 @@ import JabberwockyHTKitCore
     ]
     
     // MARK: Required Methods by HTKitCore
-    public var cursorStickiness: CursorStickiness {
+    public var cursorStickiness: Float {
         get { getTypedObject(CursorStickinessOption.shared) }
         set { setObject(CursorStickinessOption.shared.key, newValue) }
     }

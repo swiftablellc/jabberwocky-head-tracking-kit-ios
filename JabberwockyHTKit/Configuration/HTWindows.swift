@@ -14,12 +14,9 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-import JabberwockyHTKitCore
 import UIKit
 
 @objc public class HTWindows: NSObject {
-    
-    private static let CAMERA_FEATURE_KEY = "MainWindowCameraFeature"
     
     private static let HIGHEST_WINDOW_FLOAT = CGFloat(500000000)
     private static let WINDOW_FLOAT_INCREMENT = CGFloat(1000)
@@ -30,7 +27,6 @@ import UIKit
     private static let DEFAULT_TOOLTIP_WL = DEFAULT_CURSOR_FOCUS_WL - WINDOW_FLOAT_INCREMENT
     private static let DEFAULT_MENU_WL = DEFAULT_TOOLTIP_WL - WINDOW_FLOAT_INCREMENT
     private static let DEFAULT_FACE_MESH_WL = DEFAULT_MENU_WL - WINDOW_FLOAT_INCREMENT
-    private static let DEFAULT_CAMERA_WL = UIWindow.Level(-CGFloat.greatestFiniteMagnitude)
 
     @objc public static var cursorDrawWindowLevel = DEFAULT_CURSOR_DRAW_WL
     @objc public static var focusAndClickAnimationWindowLevel = DEFAULT_FOCUS_AND_CLICK_ANIMATION_WL
@@ -38,7 +34,6 @@ import UIKit
     @objc public static var tooltipWindowLevel = DEFAULT_TOOLTIP_WL
     @objc public static var menuWindowLevel = DEFAULT_MENU_WL
     @objc public static var faceMeshWindowLevel = DEFAULT_FACE_MESH_WL
-    @objc public static var cameraWindowLevel = DEFAULT_CAMERA_WL
     
     // MARK: Singleton Initialization
     @objc public private(set) static var shared: HTWindows = HTWindows()
@@ -47,10 +42,6 @@ import UIKit
     
     // MARK: Window Registry
     private var windowRegistry: [String: UIWindow] = [:]
-    
-    @objc public var cameraWindow: CameraWindow? {
-        return windowRegistry[HTWindows.CAMERA_FEATURE_KEY] as? CameraWindow
-    }
     
     @objc public func getWindow(for feature: HTFeature) -> UIWindow? {
         let featureName = String(describing: type(of: feature))
@@ -66,14 +57,6 @@ import UIKit
     @objc public func disable(for feature: HTFeature) {
         let featureName = String(describing: type(of: feature))
         return disable(for: featureName)
-    }
-    
-    @objc public func enableCameraWindow(_ cameraViewController: HTCameraViewController) {
-        enable(for: HTWindows.CAMERA_FEATURE_KEY, of: CameraWindow.self, with: cameraViewController)
-    }
-    
-    @objc public func disableCameraWindow() {
-        disable(for: HTWindows.CAMERA_FEATURE_KEY)
     }
     
     @discardableResult

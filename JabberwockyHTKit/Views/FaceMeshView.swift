@@ -15,8 +15,9 @@ limitations under the License.
 */
 
 import ARKit
-import JabberwockyHTKitCore
+import JabberwockyHTKitEngine
 
+@available(iOS 11, *)
 class FaceMeshView: HTGlassView {
 
     private var meshColor: UIColor
@@ -33,14 +34,21 @@ class FaceMeshView: HTGlassView {
         
         super.init(frame: CGRect.zero)
         
-        guard HeadTrackingCore.shared.isAuthorizedOnDevice else { return }
+        guard HeadTracking.shared.isAuthorizedOnDevice else { return }
         
         layer.shadowColor = UIColor.black.cgColor
         layer.shadowOffset = CGSize(width: 2.0, height: 2.0)
         layer.shadowRadius = 10.0
         layer.shadowOpacity = 0.8
-
-        if let htSceneView = HTWindows.shared.cameraWindow?.cameraViewController?.sceneView {
+        // A little wonky because this lives in JabberwockyHTKit without a direct dependency on
+        // JabberwockyARKitEngine. We didn't want this feature living with the engine source.
+        if let engine = HeadTracking.shared.engine as? NSObject,
+            "ARKitHTEngine" == String(describing: type(of: engine)) {
+            
+            let selector = #selector(getter: ARSessionProviding.session)
+            guard engine.responds(to: selector) else { return }
+            guard let session = engine.perform(selector)?.takeUnretainedValue() as? ARSession else { return }
+            
             sceneView = ARSCNView()
             sceneView.preferredFramesPerSecond = 60
             sceneView.delegate = self
@@ -51,7 +59,7 @@ class FaceMeshView: HTGlassView {
             sceneView.layer.cornerRadius = 15.0
             sceneView.clipsToBounds = true
 
-            sceneView.session = htSceneView.session
+            sceneView.session = session
 
             self.addSubview(sceneView)
             sceneView.translatesAutoresizingMaskIntoConstraints = false
@@ -60,11 +68,10 @@ class FaceMeshView: HTGlassView {
             sceneView.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true
             sceneView.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
         }
-
     }
-    
 }
 
+@available(iOS 11, *)
 extension FaceMeshView: ARSCNViewDelegate {
 
     func renderer(_ renderer: SCNSceneRenderer, nodeFor anchor: ARAnchor) -> SCNNode? {

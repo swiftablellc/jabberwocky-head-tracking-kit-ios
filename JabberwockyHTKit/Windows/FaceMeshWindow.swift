@@ -16,6 +16,7 @@ limitations under the License.
 
 import UIKit
 
+@available(iOS 11.0, *)
 @objc public class FaceMeshWindow: HTGlassWindow {
     
     @objc public let faceMeshView: HTGlassView = FaceMeshView()

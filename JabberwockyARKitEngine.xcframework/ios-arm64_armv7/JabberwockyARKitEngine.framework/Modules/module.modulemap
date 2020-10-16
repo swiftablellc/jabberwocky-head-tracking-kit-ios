@@ -1,0 +1,11 @@
+framework module JabberwockyARKitEngine {
+  umbrella header "JabberwockyARKitEngine.h"
+
+  export *
+  module * { export * }
+}
+
+module JabberwockyARKitEngine.Swift {
+    header "JabberwockyARKitEngine-Swift.h"
+    requires objc
+}

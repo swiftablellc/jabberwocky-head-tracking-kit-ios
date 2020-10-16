@@ -14,12 +14,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-#if JABBERWOCKY_LOCAL_DEV
-  import JabberwockyHTKitLocal
-#else
-  import JabberwockyHTKit
-#endif
-
+import JabberwockyHTKit
 import UIKit
 
 public class CrazyThemeFeature: NSObject, HTFeature {

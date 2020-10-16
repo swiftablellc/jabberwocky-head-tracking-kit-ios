@@ -14,7 +14,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-import JabberwockyHTKitCore
+import JabberwockyHTKitEngine
 import UIKit
 
 @objc public class CursorBlinkClickFeature: NSObject, HTFeature {
@@ -81,8 +81,10 @@ import UIKit
         guard focusContext.focusedElement.htIgnoresCursorMode() ||
             HTCursor.shared.actualCursorMode.isClickMode else { return }
         
-        guard focusContext.focusedElement.htIgnoresScrollSpeed() ||
-            !CursorScrollFeature.isScrollingFast else { return }
+        if #available(iOS 12.0, *) {
+            guard focusContext.focusedElement.htIgnoresScrollSpeed() ||
+                !CursorScrollFeature.isScrollingFast else { return }
+        }
         
         guard blinkContext.blinkDuration >= HeadTracking.shared.settings.blinkSensitivity else {
             focusContext.focusedElement.htHandleTooShortClick()

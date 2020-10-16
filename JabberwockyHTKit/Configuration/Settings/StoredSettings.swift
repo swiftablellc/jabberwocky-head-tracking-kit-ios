@@ -15,7 +15,6 @@ limitations under the License.
 */
 
 import CoreGraphics
-import JabberwockyHTKitCore
 
 @objc public class StoredSettings: InMemorySettings {
 

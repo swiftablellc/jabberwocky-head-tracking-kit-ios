@@ -364,11 +364,13 @@ extension HTAlertController {
             buttonStackView.axis = .horizontal
         }
 
-        if buttonStackView.arrangedSubviews.count == 2 {
-            buttonStackView.arrangedSubviews[0].layer.maskedCorners = [.layerMinXMaxYCorner]
-            buttonStackView.arrangedSubviews[1].layer.maskedCorners = [.layerMaxXMaxYCorner]
-        } else {
-            buttonStackView.arrangedSubviews.last?.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
+        if #available(iOS 11.0, *) {
+            if buttonStackView.arrangedSubviews.count == 2 {
+                buttonStackView.arrangedSubviews[0].layer.maskedCorners = [.layerMinXMaxYCorner]
+                buttonStackView.arrangedSubviews[1].layer.maskedCorners = [.layerMaxXMaxYCorner]
+            } else {
+                buttonStackView.arrangedSubviews.last?.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
+            }
         }
 
     }

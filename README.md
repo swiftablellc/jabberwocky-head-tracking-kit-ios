@@ -31,10 +31,11 @@ source 'https://github.com/swiftablellc/jabberwocky-specs-repo.git'
 source 'https://github.com/CocoaPods/Specs.git'
 
 use_frameworks!
+
 platform :ios, '12.0'
 
 target '$YOUR_TARGET' do
-  pod 'JabberwockyHTKit'
+  pod 'JabberwockyHTKit', '~> 0.8.0'
 end
 ```
 
@@ -80,7 +81,7 @@ import JabberwockyHTKit
             if (granted) {
                 // Configure the default HTFeatures and enable Head Tracking
                 DispatchQueue.main.async {
-                    HeadTracking.configure()
+                    HeadTracking.configure(withEngine: ARKitHTEngine.self)
                     HeadTracking.shared.enable()
                 }
             } else {
@@ -112,7 +113,7 @@ import JabberwockyHTKit
                     if (granted) {
                         // Configure the default HTFeatures and enable Head Tracking
                         DispatchQueue.main.async {
-                            HeadTracking.configure()
+                            HeadTracking.configure(withEngine: ARKitHTEngine.self)
                             HeadTracking.shared.windowScene = windowScene
                             HeadTracking.shared.enable()
                         }
@@ -140,7 +141,7 @@ import JabberwockyHTKit
         NSLog(@"Requested Camera Permission");
         if(granted){
             dispatch_async(dispatch_get_main_queue(), ^{
-                [HeadTracking configureWithFeatures:HeadTracking.DEFAULT_FEATURES withSettingsAppGroup:nil];
+                [HeadTracking configureWithEngine:[ARKitHTEngine class] withFeatures:HeadTracking.DEFAULT_FEATURES withSettingsAppGroup:nil];
                 [HeadTracking.shared enableWithCompletion: ^(BOOL success) {}];
             });
         } else {

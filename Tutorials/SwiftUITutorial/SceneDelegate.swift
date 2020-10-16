@@ -15,11 +15,8 @@ limitations under the License.
 */
 
 import AVFoundation
-#if JABBERWOCKY_LOCAL_DEV
-  import JabberwockyHTKitLocal
-#else
-  import JabberwockyHTKit
-#endif
+import JabberwockyARKitEngine
+import JabberwockyHTKit
 import UIKit
 import SwiftUI
 
@@ -63,7 +60,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                     if (granted) {
                         // Configure the default HTFeatures and enable Head Tracking
                         DispatchQueue.main.async {
-                            HeadTracking.configure()
+                            HeadTracking.configure(withEngine: ARKitHTEngine.self)
                             HeadTracking.shared.windowScene = windowScene
                             HeadTracking.shared.enable()
                         }

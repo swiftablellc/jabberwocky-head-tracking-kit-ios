@@ -97,9 +97,11 @@ public class FocusableGlassView: HTGlassView {
         }
         
         // Filter out hits that are not focusable because of scroll speed
-        hits = hits.filter { focusableFacadeView in
-            return  focusableFacadeView.focusableDelegate.htIgnoresScrollSpeed() ||
-                    !CursorScrollFeature.isScrollingFast
+        if #available(iOS 12.0, *) {
+            hits = hits.filter { focusableFacadeView in
+                return  focusableFacadeView.focusableDelegate.htIgnoresScrollSpeed() ||
+                        !CursorScrollFeature.isScrollingFast
+            }
         }
 
         var closestDistances = (CGFloat.infinity, CGFloat.infinity)

@@ -16,6 +16,7 @@ limitations under the License.
 
 import UIKit
 
+@available(iOS 12.0, *)
 extension UIScrollView {
 
     var htCanScrollHorizontal: Bool {

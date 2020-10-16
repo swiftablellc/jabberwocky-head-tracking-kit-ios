@@ -53,7 +53,9 @@ class CursorToggleButton: UIButton {
         layer.masksToBounds = false
         
         //Just round the two corners on the right
-        layer.maskedCorners = [.layerMaxXMinYCorner, .layerMaxXMaxYCorner]
+        if #available(iOS 11.0, *) {
+            layer.maskedCorners = [.layerMaxXMinYCorner, .layerMaxXMaxYCorner]
+        }
         
         label.font = CursorToggleButton.smallFont
         label.textAlignment = .center
@@ -63,8 +65,10 @@ class CursorToggleButton: UIButton {
         
         label.backgroundColor = ThemeColors.standardBackground
         label.layer.cornerRadius = 14.0
-        label.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMaxXMaxYCorner,
-                                     .layerMinXMaxYCorner, .layerMinXMinYCorner]
+        if #available(iOS 11.0, *) {
+            label.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMaxXMaxYCorner,
+                                         .layerMinXMaxYCorner, .layerMinXMinYCorner]
+        }
         label.layer.masksToBounds = true
         
         addSubview(label)

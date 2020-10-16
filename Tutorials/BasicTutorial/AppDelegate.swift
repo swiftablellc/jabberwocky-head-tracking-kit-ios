@@ -15,11 +15,8 @@ limitations under the License.
 */
 
 import AVFoundation
-#if JABBERWOCKY_LOCAL_DEV
-  import JabberwockyHTKitLocal
-#else
-  import JabberwockyHTKit
-#endif
+import JabberwockyARKitEngine
+import JabberwockyHTKit
 import UIKit
 
 @UIApplicationMain
@@ -33,9 +30,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             if (granted) {
                 // Configure the default HTFeatures and enable Head Tracking
                 DispatchQueue.main.async {
-                    //let bundleId = Bundle.main.bundleIdentifier ?? ""
-                    //HeadTracking.configure(withSettingsAppGroup: "group." + bundleId)
-                    HeadTracking.configure()
+                    // Use In Memory Settings Configuration
+                    HeadTracking.configure(withEngine: ARKitHTEngine.self)
+                    // UserData Stored Settings Configuration using App Group
+                    // let bundleId = Bundle.main.bundleIdentifier ?? ""
+                    // HeadTracking.configure(withEngine: ARKitHTEngine.self, withSettingsAppGroup: "group." + bundleId)
+                    HeadTracking.configureFeature(FaceMeshFeature.self)
                     HeadTracking.shared.enable()
                 }
             } else {

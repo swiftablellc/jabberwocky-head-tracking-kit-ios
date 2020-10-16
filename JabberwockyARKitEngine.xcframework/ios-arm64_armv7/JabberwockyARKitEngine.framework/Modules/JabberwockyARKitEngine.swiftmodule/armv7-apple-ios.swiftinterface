@@ -1,0 +1,40 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.3 (swiftlang-1200.0.29.2 clang-1200.0.30.1)
+// swift-module-flags: -target armv7-apple-ios9.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name JabberwockyARKitEngine
+import ARKit
+import Foundation
+@_exported import JabberwockyARKitEngine
+import JabberwockyHTKitEngine
+import SceneKit
+import Swift
+import simd
+@available(iOS 11.0, *)
+@objc public class ARKitHTEngine : ObjectiveC.NSObject {
+  @objc public var isActivating: Swift.Bool
+  @objc public var isEnabled: Swift.Bool
+  @objc final public let session: ARKit.ARSession
+  @objc public var faceAnchor: ARKit.ARFaceAnchor? {
+    get
+  }
+  @objc required public init(engineSettings: JabberwockyHTKitEngine.HTEngineSettings)
+  @objc deinit
+  @objc override dynamic public init()
+}
+@available(iOS 11.0, *)
+@objc extension ARKitHTEngine : JabberwockyHTKitEngine.HTEngine {
+  @objc dynamic public func enable()
+  @objc dynamic public func disable()
+  @objc dynamic public var isAuthorizedOnDevice: Swift.Bool {
+    @objc get
+  }
+  @objc dynamic public var isSupportedByDevice: Swift.Bool {
+    @objc get
+  }
+}
+@available(iOS 11.0, *)
+extension ARKitHTEngine : ARKit.ARSessionDelegate {
+  @objc dynamic public func session(_ session: ARKit.ARSession, didFailWithError error: Swift.Error)
+  @objc dynamic public func session(_ session: ARKit.ARSession, didUpdate anchors: [ARKit.ARAnchor])
+  @objc dynamic public func session(_ session: ARKit.ARSession, didUpdate frame: ARKit.ARFrame)
+  @objc dynamic public func sessionInterruptionEnded(_ session: ARKit.ARSession)
+}

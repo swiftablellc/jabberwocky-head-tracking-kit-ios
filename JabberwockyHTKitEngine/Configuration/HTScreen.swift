@@ -15,28 +15,8 @@ limitations under the License.
 */
 
 import UIKit
-import JabberwockyHTKitCore
 
-@objc public class CameraWindow: HTGlassWindow {
-
-    @objc public internal(set) var cameraViewController: HTCameraViewController? {
-        get {
-            return self.rootViewController as? HTCameraViewController
-        } set {
-            if let newValue = newValue {
-                self.rootViewController = newValue
-            }
-        }
-    }
-
-    @objc public override var windowLevel: UIWindow.Level {
-        get {
-            return HTWindows.cameraWindowLevel
-        }
-        set {
-            //do nothing, this is a fixed value
-        }
-    }
-    
+@objc public class HTScreen: NSObject {
+    @objc public static let longerDimension: CGFloat = max(UIScreen.main.bounds.height, UIScreen.main.bounds.width)
+    @objc public static let shorterDimension: CGFloat = min(UIScreen.main.bounds.height, UIScreen.main.bounds.width)
 }
-

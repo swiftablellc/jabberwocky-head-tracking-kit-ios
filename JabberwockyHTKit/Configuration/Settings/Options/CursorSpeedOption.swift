@@ -55,16 +55,11 @@ public class CursorSpeedOption: HTSettingsOptionSpecTyped {
         return Transform(objectValue)?.label
     }
     
-    /*
-     0.2 is probably as low as you would ever wanna go, to reach the edges and not lose camera.
-     0.5 is probably good for high. 1.0 is the highest where I could even hope to control it.
-     0.3 is splitting the difference.
-     */
     public enum Transform: Float, CaseIterable {
-        case Highest = 0.7
-        case High = 0.5
+        case Highest = 1.0
+        case High = 0.7
         case Medium = 0.3
-        case Low = 0.2
+        case Low = 0.0
         
         var label: String {
             return String(describing: self)
