@@ -144,10 +144,6 @@
 		1EF86C8624A6D80A007ECB09 /* JabberwockyHTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E7C63F12424090A00D97089 /* JabberwockyHTKit.framework */; };
 		1EF86C8724A6D80A007ECB09 /* JabberwockyHTKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1E7C63F12424090A00D97089 /* JabberwockyHTKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1EF86C9024A6D8DC007ECB09 /* JabberwockyARKitEngine.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1EF86C8E24A6D8DC007ECB09 /* JabberwockyARKitEngine.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		5A8345243E2A003E3EE758FC /* Pods_CustomThemeFeatureTutorial_PodsOnly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89F0A0BAB49CC7D71C9A3B31 /* Pods_CustomThemeFeatureTutorial_PodsOnly.framework */; };
-		6331E74C0C6A739F8F9BDA40 /* Pods_ObjcTutorial_PodsOnly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31FB4679CD65B347CAFBFAB7 /* Pods_ObjcTutorial_PodsOnly.framework */; };
-		DFE49DB34BF0318B2DF43BA1 /* Pods_BasicTutorial_PodsOnly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B07850C7B23C685B285AC30 /* Pods_BasicTutorial_PodsOnly.framework */; };
-		FAB70B4A7C47B8CBA67665A0 /* Pods_SwiftUITutorial_PodsOnly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 315F538F33EDC8E05F00F665 /* Pods_SwiftUITutorial_PodsOnly.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -195,7 +191,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0B07850C7B23C685B285AC30 /* Pods_BasicTutorial_PodsOnly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BasicTutorial_PodsOnly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E1332D4243777B500D9172B /* Objc - Pods.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Objc - Pods.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E1332D72437785400D9172B /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1E1332D82437785400D9172B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -334,23 +329,14 @@
 		1EF86C7E24A6D0E0007ECB09 /* FaceMeshView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceMeshView.swift; sourceTree = "<group>"; };
 		1EF86C8024A6D0FF007ECB09 /* FaceMeshWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceMeshWindow.swift; sourceTree = "<group>"; };
 		1EF86C8E24A6D8DC007ECB09 /* JabberwockyARKitEngine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = JabberwockyARKitEngine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		315F538F33EDC8E05F00F665 /* Pods_SwiftUITutorial_PodsOnly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftUITutorial_PodsOnly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		31FB4679CD65B347CAFBFAB7 /* Pods_ObjcTutorial_PodsOnly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ObjcTutorial_PodsOnly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		469359539E6625CA0D106CB0 /* Pods-BasicTutorial-PodsOnly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasicTutorial-PodsOnly.release.xcconfig"; path = "Target Support Files/Pods-BasicTutorial-PodsOnly/Pods-BasicTutorial-PodsOnly.release.xcconfig"; sourceTree = "<group>"; };
 		471FEE75B3CED1BA67828DEC /* Pods-CustomThemeFeatureTutorial-PodsOnly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomThemeFeatureTutorial-PodsOnly.release.xcconfig"; path = "Target Support Files/Pods-CustomThemeFeatureTutorial-PodsOnly/Pods-CustomThemeFeatureTutorial-PodsOnly.release.xcconfig"; sourceTree = "<group>"; };
-		4C6BD36C03E084F335039A88 /* Pods-JabberwockyHTKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JabberwockyHTKit.release.xcconfig"; path = "Target Support Files/Pods-JabberwockyHTKit/Pods-JabberwockyHTKit.release.xcconfig"; sourceTree = "<group>"; };
-		501F47B2164643C80B43A2D0 /* Pods_JabberwockyHTKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JabberwockyHTKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		72BC8B77BF80105B32B2DFF5 /* Pods-BasicTutorial-PodsOnly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasicTutorial-PodsOnly.debug.xcconfig"; path = "Target Support Files/Pods-BasicTutorial-PodsOnly/Pods-BasicTutorial-PodsOnly.debug.xcconfig"; sourceTree = "<group>"; };
-		89F0A0BAB49CC7D71C9A3B31 /* Pods_CustomThemeFeatureTutorial_PodsOnly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CustomThemeFeatureTutorial_PodsOnly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D46E9A5DE88D15AD6CB0F62 /* Pods-SwiftUITutorial-PodsOnly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUITutorial-PodsOnly.release.xcconfig"; path = "Target Support Files/Pods-SwiftUITutorial-PodsOnly/Pods-SwiftUITutorial-PodsOnly.release.xcconfig"; sourceTree = "<group>"; };
 		8D62E0358FE9F65A7383C57E /* Pods-SwiftUITutorial-PodsOnly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUITutorial-PodsOnly.debug.xcconfig"; path = "Target Support Files/Pods-SwiftUITutorial-PodsOnly/Pods-SwiftUITutorial-PodsOnly.debug.xcconfig"; sourceTree = "<group>"; };
 		93AEAB1E6A7BB196C32A3264 /* Pods-CustomThemeFeatureTutorial-PodsOnly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomThemeFeatureTutorial-PodsOnly.debug.xcconfig"; path = "Target Support Files/Pods-CustomThemeFeatureTutorial-PodsOnly/Pods-CustomThemeFeatureTutorial-PodsOnly.debug.xcconfig"; sourceTree = "<group>"; };
-		C1E8760EEB83FD1A2813A9F2 /* Pods-BasicTutorial.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasicTutorial.release.xcconfig"; path = "Target Support Files/Pods-BasicTutorial/Pods-BasicTutorial.release.xcconfig"; sourceTree = "<group>"; };
-		C215212007476EDFB2CBB63E /* Pods_BasicTutorial.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BasicTutorial.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C86A15D6F51A8BB04C9E92DD /* Pods-ObjcTutorial-PodsOnly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ObjcTutorial-PodsOnly.release.xcconfig"; path = "Target Support Files/Pods-ObjcTutorial-PodsOnly/Pods-ObjcTutorial-PodsOnly.release.xcconfig"; sourceTree = "<group>"; };
-		DBB41E7BAA291BAC94D59310 /* Pods-JabberwockyHTKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JabberwockyHTKit.debug.xcconfig"; path = "Target Support Files/Pods-JabberwockyHTKit/Pods-JabberwockyHTKit.debug.xcconfig"; sourceTree = "<group>"; };
 		E24F6194FCABE6CBBC768E4A /* Pods-ObjcTutorial-PodsOnly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ObjcTutorial-PodsOnly.debug.xcconfig"; path = "Target Support Files/Pods-ObjcTutorial-PodsOnly/Pods-ObjcTutorial-PodsOnly.debug.xcconfig"; sourceTree = "<group>"; };
-		F1096426A68F60239F4D270A /* Pods-BasicTutorial.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasicTutorial.debug.xcconfig"; path = "Target Support Files/Pods-BasicTutorial/Pods-BasicTutorial.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -358,7 +344,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6331E74C0C6A739F8F9BDA40 /* Pods_ObjcTutorial_PodsOnly.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,7 +351,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5A8345243E2A003E3EE758FC /* Pods_CustomThemeFeatureTutorial_PodsOnly.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,7 +358,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DFE49DB34BF0318B2DF43BA1 /* Pods_BasicTutorial_PodsOnly.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,7 +374,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAB70B4A7C47B8CBA67665A0 /* Pods_SwiftUITutorial_PodsOnly.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -773,12 +755,6 @@
 			children = (
 				1E4059612538E9D800A70885 /* JabberwockyARKitEngine.xcframework */,
 				1EF86C8E24A6D8DC007ECB09 /* JabberwockyARKitEngine.framework */,
-				C215212007476EDFB2CBB63E /* Pods_BasicTutorial.framework */,
-				0B07850C7B23C685B285AC30 /* Pods_BasicTutorial_PodsOnly.framework */,
-				501F47B2164643C80B43A2D0 /* Pods_JabberwockyHTKit.framework */,
-				31FB4679CD65B347CAFBFAB7 /* Pods_ObjcTutorial_PodsOnly.framework */,
-				89F0A0BAB49CC7D71C9A3B31 /* Pods_CustomThemeFeatureTutorial_PodsOnly.framework */,
-				315F538F33EDC8E05F00F665 /* Pods_SwiftUITutorial_PodsOnly.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -808,12 +784,8 @@
 		ABA445A187F97E45258B9097 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				F1096426A68F60239F4D270A /* Pods-BasicTutorial.debug.xcconfig */,
-				C1E8760EEB83FD1A2813A9F2 /* Pods-BasicTutorial.release.xcconfig */,
 				72BC8B77BF80105B32B2DFF5 /* Pods-BasicTutorial-PodsOnly.debug.xcconfig */,
 				469359539E6625CA0D106CB0 /* Pods-BasicTutorial-PodsOnly.release.xcconfig */,
-				DBB41E7BAA291BAC94D59310 /* Pods-JabberwockyHTKit.debug.xcconfig */,
-				4C6BD36C03E084F335039A88 /* Pods-JabberwockyHTKit.release.xcconfig */,
 				E24F6194FCABE6CBBC768E4A /* Pods-ObjcTutorial-PodsOnly.debug.xcconfig */,
 				C86A15D6F51A8BB04C9E92DD /* Pods-ObjcTutorial-PodsOnly.release.xcconfig */,
 				93AEAB1E6A7BB196C32A3264 /* Pods-CustomThemeFeatureTutorial-PodsOnly.debug.xcconfig */,
@@ -937,7 +909,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1E7C64052424090A00D97089 /* Build configuration list for PBXNativeTarget "JabberwockyHTKit" */;
 			buildPhases = (
-				9964C09E1D39B3AAA68175DF /* [CP] Check Pods Manifest.lock */,
 				1E7C63EC2424090A00D97089 /* Headers */,
 				1E7C63ED2424090A00D97089 /* Sources */,
 				1E7C63EE2424090A00D97089 /* Frameworks */,
@@ -956,7 +927,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1E7C653624255BA200D97089 /* Build configuration list for PBXNativeTarget "BasicTutorial" */;
 			buildPhases = (
-				8540F80B5485C1CEE780A0FB /* [CP] Check Pods Manifest.lock */,
 				1E7C651F24255BA000D97089 /* Sources */,
 				1E7C652024255BA000D97089 /* Frameworks */,
 				1E7C652124255BA000D97089 /* Resources */,
@@ -1225,28 +1195,6 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BasicTutorial-PodsOnly/Pods-BasicTutorial-PodsOnly-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8540F80B5485C1CEE780A0FB /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-BasicTutorial-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		92B22F8AF596DC29425E721B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1263,28 +1211,6 @@
 			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-BasicTutorial-PodsOnly-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9964C09E1D39B3AAA68175DF /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-JabberwockyHTKit-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1823,7 +1749,6 @@
 		};
 		1E7C64062424090A00D97089 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DBB41E7BAA291BAC94D59310 /* Pods-JabberwockyHTKit.debug.xcconfig */;
 			buildSettings = {
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_ENABLE_MODULES = YES;
@@ -1853,7 +1778,6 @@
 		};
 		1E7C64072424090A00D97089 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4C6BD36C03E084F335039A88 /* Pods-JabberwockyHTKit.release.xcconfig */;
 			buildSettings = {
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_ENABLE_MODULES = YES;
@@ -1882,7 +1806,6 @@
 		};
 		1E7C653424255BA200D97089 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F1096426A68F60239F4D270A /* Pods-BasicTutorial.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -1907,7 +1830,6 @@
 		};
 		1E7C653524255BA200D97089 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C1E8760EEB83FD1A2813A9F2 /* Pods-BasicTutorial.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

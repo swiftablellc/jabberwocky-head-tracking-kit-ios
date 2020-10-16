@@ -15,8 +15,8 @@ limitations under the License.
 */
 
 #import <AVFoundation/AVFoundation.h>
-#import "JabberwockyARKitEngine.h"
-#import "JabberwockyHTKit.h"
+#import <JabberwockyARKitEngine/JabberwockyARKitEngine.h>
+#import <JabberwockyHTKit/JabberwockyHTKit.h>
 #import "AppDelegate.h"
 
 @interface AppDelegate ()

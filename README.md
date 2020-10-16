@@ -132,7 +132,8 @@ import JabberwockyHTKit
 
 ```objc
 #import <AVFoundation/AVFoundation.h>
-#import "JabberwockyHTKit.h"
+#import <JabberwockyARKitEngine/JabberwockyARKitEngine.h>
+#import <JabberwockyHTKit/JabberwockyHTKit.h>
 
 ...
 
