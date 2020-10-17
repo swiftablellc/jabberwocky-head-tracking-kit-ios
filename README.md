@@ -21,6 +21,33 @@
   * Extensible for subclasses of `UIView`
 * Plugin Architecture (HTFeature)
 
+## Build JabberwockyHTKit from Source
+
+To build and run `JabberwockyHTKit` from source follow the steps below. `BasicTutorial` is an example application target that has one standard `UIButton` which responds to taps on the screen. When configuring head tracking within an existing application there are a few setup steps that need to be performed. Once `JabberwockyHTKit` is configured and enabled, the default `HTFeature` singletons that are configured will automatically detect `UIControl`, `UICollectionViewCell`, and `UITableViewCell` elements and interact with them. Other custom `UIView` elements can be configured to work with the head tracking framework by implementing the `HTFocusable` protocol.
+
+### Step 1: Checkout and Install Dependencies
+
+* Check out from source:
+
+```shell script
+git clone git@github.com:swiftablellc/jabberwocky-head-tracking-kit-ios.git && cd jabberwocky-head-tracking-kit-ios.git
+```
+
+### Step 2: Build Framework
+
+* Open XCode using the `JabberwockyHTKit.xcodeproj`
+* Select the `JabberwockyHTKit` scheme and any Device/Simulator and then run in XCode.
+
+### Step 3: Run Tutorial
+
+* Select the `BasicTutorial` scheme and run on a `FaceID` enabled device.
+
+### Notes
+
+* `*-LocalDev` schemes are for development of `JabberwockyHTKit` and `JabberwockyARKitEngine` simultaneously. This is not a common use case, so it is safe to ignore these schemes.
+* `*-PodsOnly` schemes pull all dependencies from CocoaPods and therefore are not very useful for local development of `JabberwockyHTKit`, but great for app integration with just pods.
+* `JabberwockyHTKit` uses CocoaPods vendor framework to install its one dependency `JabberwockyARKitEngine`, but the `JabberwockyARKitEngine.xcframework` can be found [here](https://github.com/swiftablellc/jabberwocky-head-tracking-kit-ios/tree/master/JabberwockyARKitEngine.xcframework). It might be best to create a new target similar to `JabberwockyHTKit-LocalDev` to get it to build properly.
+
 ## Add Head Tracking to an Existing Application
 
 `BasicTutorial-PodsOnly` is an example application target that has one standard `UIButton` which responds to taps on the screen. When configuring head tracking within an existing application there are a few setup steps that need to be performed. Once `JabberwockyHTKit` is configured and enabled, the default `HTFeature` singletons that are configured will automatically detect `UIControl`, `UICollectionViewCell`, and `UITableViewCell` elements and interact with them. Other custom `UIView` elements can be configured to work with the head tracking framework by implementing the `HTFocusable` protocol.
@@ -74,6 +101,7 @@ pod install
 
 ```swift
 import AVFoundation
+import JabberwockyARKitEngine
 import JabberwockyHTKit
 
 ...
@@ -99,6 +127,7 @@ import JabberwockyHTKit
 
 ```swift
 import AVFoundation
+import JabberwockyARKitEngine
 import JabberwockyHTKit
 
 ...
@@ -174,33 +203,6 @@ Basic[2476:18033900] Requested Camera Permission
 Basic[2476:18033900] Head Tracking cannot be configured. It is not supported on this device.
 Basic[2476:18033900] Head Tracking is not configured. Use HeadTracking.configure() to configure.
 ```
-
-## Build JabberwockyHTKit from Source
-
-To build and run `JabberwockyHTKit` from source follow the steps below.  
-
-### Step 1: Checkout and Install Dependencies
-
-* Check out from source:
-
-```shell script
-git clone git@github.com:swiftablellc/jabberwocky-head-tracking-kit-ios.git && cd jabberwocky-head-tracking-kit-ios.git
-```
-
-### Step 2: Build Framework
-
-* Open XCode using the `JabberwockyHTKit.xcodeproj` or 
-* Select the `JabberwockyHTKit` scheme and any Device/Simulator and then run in XCode.
-
-### Step 3: Run Tutorial
-
-* Select the `BasicTutorial` scheme and run on a `FaceID` enabled device.
-
-### Notes
-
-* `*-LocalDev` schemes are for development of `JabberwockyHTKit` and `JabberwockyARKitEngine` simultaneously. This is not a common use case, so it is safe to ignore these schemes.
-* `*-PodsOnly` schemes pull all dependencies from CocoaPods and therefore are not very useful for local development of `JabberwockyHTKit`, but great for app integration with just pods.
-* `JabberwockyHTKit` uses CocoaPods vendor framework to install its one dependency `JabberwockyARKitEngine`, but the `JabberwockyARKitEngine.xcframework` can be found [here](https://github.com/swiftablellc/jabberwocky-head-tracking-kit-ios/tree/master/JabberwockyARKitEngine.xcframework). It might be best to create a new target similar to `JabberwockyHTKit-LocalDev` to get it to build properly.
 
 ## Release Instructions (Swiftable Developers)
 
