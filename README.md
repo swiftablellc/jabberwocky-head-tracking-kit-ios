@@ -25,7 +25,7 @@
 
 To build and run `JabberwockyHTKit` from source follow the steps below. `BasicTutorial` is an example application target that has one standard `UIButton` which responds to taps on the screen. When configuring head tracking within an existing application there are a few setup steps that need to be performed. Once `JabberwockyHTKit` is configured and enabled, the default `HTFeature` singletons that are configured will automatically detect `UIControl`, `UICollectionViewCell`, and `UITableViewCell` elements and interact with them. Other custom `UIView` elements can be configured to work with the head tracking framework by implementing the `HTFocusable` protocol.
 
-### Step 1: Checkout and Install Dependencies
+### Step 1: Checkout
 
 * Check out from source:
 
@@ -45,12 +45,10 @@ git clone git@github.com:swiftablellc/jabberwocky-head-tracking-kit-ios.git && c
 ### Notes
 
 * `*-LocalDev` schemes are for development of `JabberwockyHTKit` and `JabberwockyARKitEngine` simultaneously. This is not a common use case, so it is safe to ignore these schemes.
-* `*-PodsOnly` schemes pull all dependencies from CocoaPods and therefore are not very useful for local development of `JabberwockyHTKit`, but great for app integration with just pods.
+* `*-PodsOnly` schemes pull all dependencies from CocoaPods and therefore are not very useful for local development of `JabberwockyHTKit`, but a great way to try out see how cocoapods would work in an existing application. To use these, you will need to do a `pod install` and open xcode using the `.xcworkspace` file.
 * `JabberwockyHTKit` uses CocoaPods vendor framework to install its one dependency `JabberwockyARKitEngine`, but the `JabberwockyARKitEngine.xcframework` can be found [here](https://github.com/swiftablellc/jabberwocky-head-tracking-kit-ios/tree/master/JabberwockyARKitEngine.xcframework). It might be best to create a new target similar to `JabberwockyHTKit-LocalDev` to get it to build properly.
 
 ## Add Head Tracking to an Existing Application
-
-`BasicTutorial-PodsOnly` is an example application target that has one standard `UIButton` which responds to taps on the screen. When configuring head tracking within an existing application there are a few setup steps that need to be performed. Once `JabberwockyHTKit` is configured and enabled, the default `HTFeature` singletons that are configured will automatically detect `UIControl`, `UICollectionViewCell`, and `UITableViewCell` elements and interact with them. Other custom `UIView` elements can be configured to work with the head tracking framework by implementing the `HTFocusable` protocol.
 
 ### Step 1: Install JabberwockyHTKit Frameworks
 
