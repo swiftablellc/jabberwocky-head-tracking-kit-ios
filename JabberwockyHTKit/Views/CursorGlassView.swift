@@ -87,8 +87,8 @@ class CursorGlassView: HTGlassView {
         if cursor.pulseDelayTimer.isFull {
             cursor.pulsator?.pulseIfCharged()
         }
-
-        updateCursorPositionWithoutAnimation(cursor, cursorContext.convertToPosition(inView: self))
+        let cursorPosition = self.convert(cursorContext.smoothedScreenPoint, from: nil)
+        updateCursorPositionWithoutAnimation(cursor, cursorPosition)
     }
 
     func updateCursorPositionWithoutAnimation(_ cursor: CALayer, _ newPosition: CGPoint?) {

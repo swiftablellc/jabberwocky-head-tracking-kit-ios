@@ -16,26 +16,42 @@ limitations under the License.
 
 import UIKit
 
-@objc public enum HTViewSide: Int {
+@objc public enum HTViewSide: Int, Codable {
     case bottom, left, right, top
 }
 
 @objc public class HTCursorContext: NSObject, Codable {
-    
-    @objc public var smoothedScreenPoint: CGPoint
-    @objc public var smoothedNormalizedPoint: CGPoint
-    
-    @objc public var isFaceDetected: Bool
-    @objc public var isMovingFast: Bool
 
-    @objc public func convertToPosition(inView view: UIView) -> CGPoint {
-        return view.convert(smoothedScreenPoint, from: nil)
+    @objc public let smoothedScreenPoint: CGPoint
+    @objc public let smoothedNormalizedPoint: CGPoint
+    
+    @objc public let isFaceDetected: Bool
+    @objc public let isMovingFast: Bool
+
+    @objc public let instanceTimeInSeconds: CFTimeInterval
+    @objc public let lastInstanceTimeInSeconds: CFTimeInterval
+    @objc public let secondsSinceLastInstance: CFTimeInterval
+    
+    public let onEdges: Set<HTViewSide>
+    @objc public let isOnEdge: Bool
+
+    public init (isFaceDetected: Bool, isMovingFast: Bool, instanceTimeInSeconds: CFTimeInterval,
+                 lastInstanceTimeInSeconds: CFTimeInterval?, smoothedNormalizedPoint: CGPoint?,
+                 smoothedScreenPoint: CGPoint?) {
+        self.isFaceDetected = isFaceDetected
+        self.isMovingFast = isMovingFast
+        self.instanceTimeInSeconds = instanceTimeInSeconds
+        self.lastInstanceTimeInSeconds = lastInstanceTimeInSeconds ?? 0
+        self.secondsSinceLastInstance = self.instanceTimeInSeconds - self.lastInstanceTimeInSeconds
+        self.smoothedNormalizedPoint = smoothedNormalizedPoint ?? CGPoint(x: 0, y: 0)
+        self.smoothedScreenPoint = smoothedScreenPoint ?? CGPoint(x: 0, y: 0)
+        self.onEdges = HTCursorContext.getEdges(self.isFaceDetected, self.smoothedScreenPoint)
+        self.isOnEdge = !self.onEdges.isEmpty
     }
-
-    public var onEdges: Set<HTViewSide> {
+    
+    private class func getEdges(_ faceDetected: Bool, _ screenPoint: CGPoint) -> Set<HTViewSide> {
         var edges = Set<HTViewSide>()
-        if isFaceDetected {
-            let screenPoint = smoothedScreenPoint
+        if faceDetected {
             if screenPoint.x == UIScreen.main.bounds.width {
                 edges.insert(.right)
             }
@@ -50,26 +66,5 @@ import UIKit
             }
         }
         return edges
-    }
-
-    @objc public var isOnEdge: Bool {
-        return !onEdges.isEmpty
-    }
-
-    @objc public let instanceTimeInSeconds: CFTimeInterval
-    @objc public let lastInstanceTimeInSeconds: CFTimeInterval
-    @objc public let secondsSinceLastInstance: CFTimeInterval
-
-    public init (isFaceDetected: Bool, isMovingFast: Bool, instanceTimeInSeconds: CFTimeInterval,
-                 lastInstanceTimeInSeconds: CFTimeInterval?, smoothedNormalizedPoint: CGPoint?,
-                 smoothedScreenPoint: CGPoint?) {
-        self.isFaceDetected = isFaceDetected
-        self.isMovingFast = isMovingFast
-        self.instanceTimeInSeconds = instanceTimeInSeconds
-        self.lastInstanceTimeInSeconds = lastInstanceTimeInSeconds ?? 0
-        self.secondsSinceLastInstance = self.instanceTimeInSeconds - self.lastInstanceTimeInSeconds
-        self.smoothedNormalizedPoint = smoothedNormalizedPoint ?? CGPoint(x: 0, y: 0)
-        self.smoothedScreenPoint = smoothedScreenPoint ?? CGPoint(x: 0, y: 0)
-        
     }
 }

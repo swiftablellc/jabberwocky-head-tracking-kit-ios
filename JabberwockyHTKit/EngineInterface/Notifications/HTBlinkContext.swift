@@ -18,8 +18,8 @@ import Foundation
 
 @objc public class HTBlinkContext: NSObject, Codable {
 
-    @objc public var blinkDuration: CFTimeInterval
-    @objc public var cursorContext: HTCursorContext
+    @objc public let blinkDuration: CFTimeInterval
+    @objc public let cursorContext: HTCursorContext
     
     @objc public init(_ blinkDuration: CFTimeInterval, _ cursorContext: HTCursorContext){
         self.blinkDuration = blinkDuration

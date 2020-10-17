@@ -18,8 +18,8 @@ import Foundation
 
 @objc public class HTActivationContext: NSObject, Codable {
 
-    @objc public var message: String
-    @objc public var success: Bool
+    @objc public let message: String
+    @objc public let success: Bool
     
     @objc public init(_ success: Bool, _ message: String){
         self.message = message

@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "JabberwockyHTKit"
-  spec.version      = "0.8.1"
+  spec.version      = "0.8.2"
   spec.summary      = "Jabberwocky Head Tracking Kit for iOS"
 
   spec.description  = <<-DESC

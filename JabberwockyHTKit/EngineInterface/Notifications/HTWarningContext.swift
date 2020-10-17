@@ -24,8 +24,8 @@ import Foundation
 
 @objc public class HTWarningContext: NSObject, Codable {
 
-    @objc public var active: Bool
-    @objc public var warning: HTWarning
+    @objc public let active: Bool
+    @objc public let warning: HTWarning
     
     @objc public init(_ warning: HTWarning, _ active: Bool = true){
         self.active = active
