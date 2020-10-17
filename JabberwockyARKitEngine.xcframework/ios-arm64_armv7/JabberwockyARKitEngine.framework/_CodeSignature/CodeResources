@@ -42,7 +42,7 @@
 		</data>
 		<key>Modules/JabberwockyARKitEngine.swiftmodule/arm.swiftmodule</key>
 		<data>
-		0PKBW3utkqm9r/9hClT31Zj8j38=
+		w/ap1atLnzhYL40Ld7Y53I4qHG0=
 		</data>
 		<key>Modules/JabberwockyARKitEngine.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
@@ -54,7 +54,7 @@
 		</data>
 		<key>Modules/JabberwockyARKitEngine.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		GZwymmVL+WcBpHbq+t5fR7ogiR8=
+		UbQpiXIJpnR8IJ3DGuNaomJSJ6k=
 		</data>
 		<key>Modules/JabberwockyARKitEngine.swiftmodule/arm64.swiftdoc</key>
 		<data>
@@ -66,7 +66,7 @@
 		</data>
 		<key>Modules/JabberwockyARKitEngine.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		GZwymmVL+WcBpHbq+t5fR7ogiR8=
+		UbQpiXIJpnR8IJ3DGuNaomJSJ6k=
 		</data>
 		<key>Modules/JabberwockyARKitEngine.swiftmodule/armv7-apple-ios.swiftdoc</key>
 		<data>
@@ -78,7 +78,7 @@
 		</data>
 		<key>Modules/JabberwockyARKitEngine.swiftmodule/armv7-apple-ios.swiftmodule</key>
 		<data>
-		0PKBW3utkqm9r/9hClT31Zj8j38=
+		w/ap1atLnzhYL40Ld7Y53I4qHG0=
 		</data>
 		<key>Modules/JabberwockyARKitEngine.swiftmodule/armv7.swiftdoc</key>
 		<data>
@@ -90,7 +90,7 @@
 		</data>
 		<key>Modules/JabberwockyARKitEngine.swiftmodule/armv7.swiftmodule</key>
 		<data>
-		0PKBW3utkqm9r/9hClT31Zj8j38=
+		w/ap1atLnzhYL40Ld7Y53I4qHG0=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -199,11 +199,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			0PKBW3utkqm9r/9hClT31Zj8j38=
+			w/ap1atLnzhYL40Ld7Y53I4qHG0=
 			</data>
 			<key>hash2</key>
 			<data>
-			d0uVb3rjkBLhzAgl573tyQ39eNILaWYb/3r1RgkpM9g=
+			tEaU08I5d9gnjYve4sTl0EiS9zaGB3OO7zr/AIluxlk=
 			</data>
 		</dict>
 		<key>Modules/JabberwockyARKitEngine.swiftmodule/arm64-apple-ios.swiftdoc</key>
@@ -232,11 +232,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			GZwymmVL+WcBpHbq+t5fR7ogiR8=
+			UbQpiXIJpnR8IJ3DGuNaomJSJ6k=
 			</data>
 			<key>hash2</key>
 			<data>
-			sn5PPqnV6BV2So9JqGfVvbpdG2Qnj2rUJaup/942+Ls=
+			1kKatPCNI1RFFlRd5fqutP0y08NNhsy2I2rpbo42cFU=
 			</data>
 		</dict>
 		<key>Modules/JabberwockyARKitEngine.swiftmodule/arm64.swiftdoc</key>
@@ -265,11 +265,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			GZwymmVL+WcBpHbq+t5fR7ogiR8=
+			UbQpiXIJpnR8IJ3DGuNaomJSJ6k=
 			</data>
 			<key>hash2</key>
 			<data>
-			sn5PPqnV6BV2So9JqGfVvbpdG2Qnj2rUJaup/942+Ls=
+			1kKatPCNI1RFFlRd5fqutP0y08NNhsy2I2rpbo42cFU=
 			</data>
 		</dict>
 		<key>Modules/JabberwockyARKitEngine.swiftmodule/armv7-apple-ios.swiftdoc</key>
@@ -298,11 +298,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			0PKBW3utkqm9r/9hClT31Zj8j38=
+			w/ap1atLnzhYL40Ld7Y53I4qHG0=
 			</data>
 			<key>hash2</key>
 			<data>
-			d0uVb3rjkBLhzAgl573tyQ39eNILaWYb/3r1RgkpM9g=
+			tEaU08I5d9gnjYve4sTl0EiS9zaGB3OO7zr/AIluxlk=
 			</data>
 		</dict>
 		<key>Modules/JabberwockyARKitEngine.swiftmodule/armv7.swiftdoc</key>
@@ -331,11 +331,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			0PKBW3utkqm9r/9hClT31Zj8j38=
+			w/ap1atLnzhYL40Ld7Y53I4qHG0=
 			</data>
 			<key>hash2</key>
 			<data>
-			d0uVb3rjkBLhzAgl573tyQ39eNILaWYb/3r1RgkpM9g=
+			tEaU08I5d9gnjYve4sTl0EiS9zaGB3OO7zr/AIluxlk=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

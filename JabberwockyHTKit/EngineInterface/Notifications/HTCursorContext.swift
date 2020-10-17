@@ -58,9 +58,7 @@ import UIKit
 
     @objc public let instanceTimeInSeconds: CFTimeInterval
     @objc public let lastInstanceTimeInSeconds: CFTimeInterval
-    @objc public var secondsSinceLastInstance: CFTimeInterval {
-        return instanceTimeInSeconds - lastInstanceTimeInSeconds
-    }
+    @objc public let secondsSinceLastInstance: CFTimeInterval
 
     public init (isFaceDetected: Bool, isMovingFast: Bool, instanceTimeInSeconds: CFTimeInterval,
                  lastInstanceTimeInSeconds: CFTimeInterval?, smoothedNormalizedPoint: CGPoint?,
@@ -69,6 +67,7 @@ import UIKit
         self.isMovingFast = isMovingFast
         self.instanceTimeInSeconds = instanceTimeInSeconds
         self.lastInstanceTimeInSeconds = lastInstanceTimeInSeconds ?? 0
+        self.secondsSinceLastInstance = self.instanceTimeInSeconds - self.lastInstanceTimeInSeconds
         self.smoothedNormalizedPoint = smoothedNormalizedPoint ?? CGPoint(x: 0, y: 0)
         self.smoothedScreenPoint = smoothedScreenPoint ?? CGPoint(x: 0, y: 0)
         
