@@ -189,8 +189,8 @@ import JabberwockyHTKit
 Basic[19446:10081868] Requested Camera Permission
 ...
 Basic[19446:10081868] Head Tracking configured successfully.
-Basic[19446:10081868] Metal API Validation Enabled
 Basic[19446:10081868] Head Tracking enabled successfully.
+Basic[19446:10081868] Metal API Validation Enabled
 ```
 
 * If you run on a simulator or device that does not support FaceID, you should get XCode output similar to below. `JabberwockyARKitEngine.xcframework` binary comes with i386 and x86_64 module archs, so that running in a simulator should not crash.
