@@ -65,7 +65,15 @@ target '$YOUR_TARGET' do
 end
 ```
 
-* Install dependencies using CocoaPods. Install [CocoaPods](https://guides.cocoapods.org/using/getting-started.html) if you haven't already:
+* Verify CocoaPods version. Install [CocoaPods](https://guides.cocoapods.org/using/getting-started.html) if you haven't already:
+  * JabberwockyHTKit installs an `.xcframework` using CocoaPods so it requires CocoaPods version 1.10.0 or greater.
+```shell script
+pod --version
+
+1.10.0
+```
+
+* Install dependencies using CocoaPods:
 
 ```shell script
 pod install
