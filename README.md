@@ -103,6 +103,10 @@ import JabberwockyHTKit
 ...
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        // Override point for customization after application launch.
+        
+        ...
+        
         AVCaptureDevice.requestAccess(for: .video) { (granted) in
             if (granted) {
                 // Configure the default HTFeatures and enable Head Tracking
@@ -114,6 +118,9 @@ import JabberwockyHTKit
                 NSLog("Head Tracking requires camera access.")
             }
         }
+        
+        ...
+
         return true
     }
 ```
