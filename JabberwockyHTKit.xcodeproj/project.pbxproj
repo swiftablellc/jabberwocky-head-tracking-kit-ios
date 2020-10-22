@@ -325,7 +325,7 @@
 		1E7C652E24255BA200D97089 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1E7C653324255BA200D97089 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1E7C65412425B2B100D97089 /* CursorRecalibrationFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CursorRecalibrationFeature.swift; sourceTree = "<group>"; };
-		1EB6A34C24C9CFA900E4D854 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		1EB6A34C24C9CFA900E4D854 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		1EF5E48E243F91F500C7E6B7 /* HTFocusContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTFocusContext.swift; sourceTree = "<group>"; };
 		1EF5E490243FBA8A00C7E6B7 /* CursorClickSoundFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CursorClickSoundFeature.swift; sourceTree = "<group>"; };
 		1EF5E492243FFD9E00C7E6B7 /* FocusAndClickAnimationWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusAndClickAnimationWindow.swift; sourceTree = "<group>"; };
@@ -493,7 +493,7 @@
 			path = Options;
 			sourceTree = "<group>";
 		};
-		1E4059F52539E89600A70885 /* EngineInterface */ = {
+		1E4059F52539E89600A70885 /* JabberwockyHTEngineInterface */ = {
 			isa = PBXGroup;
 			children = (
 				1E2D616E253A7EAB003BE309 /* CAUTION.md */,
@@ -501,7 +501,7 @@
 				1E1CE42124A5426200001570 /* Engines */,
 				1E1CE42324A5426200001570 /* Notifications */,
 			);
-			path = EngineInterface;
+			path = JabberwockyHTEngineInterface;
 			sourceTree = "<group>";
 		};
 		1E68A5062442A343003DD8AE /* SwiftUITutorial */ = {
@@ -533,6 +533,7 @@
 				1E1332EA2437D5EB00D9172B /* JabberwockyHTKit.podspec */,
 				1E1E0A10242D15F8002C4BE0 /* LICENSE */,
 				1E1E0A0E242D0513002C4BE0 /* README.md */,
+				1E4059F52539E89600A70885 /* JabberwockyHTEngineInterface */,
 				1E7C63F32424090A00D97089 /* JabberwockyHTKit */,
 				1E7C653E24256FD900D97089 /* Tutorials */,
 				1E7C63F22424090A00D97089 /* Products */,
@@ -564,7 +565,6 @@
 				1E7C643F24240A0200D97089 /* Banners */,
 				1E7C641524240A0100D97089 /* Configuration */,
 				1E7C641224240A0100D97089 /* Controllers */,
-				1E4059F52539E89600A70885 /* EngineInterface */,
 				1E7C645924240A0200D97089 /* Extensions */,
 				1E7C644524240A0200D97089 /* Features */,
 				1E7C640B24240A0100D97089 /* Focusables */,
@@ -1858,7 +1858,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.8.2;
+				MARKETING_VERSION = 0.8.3;
 				PRODUCT_BUNDLE_IDENTIFIER = org.swiftable.jabberwocky.JabberwockyHTKit;
 				PRODUCT_NAME = JabberwockyHTKit;
 				SKIP_INSTALL = YES;
@@ -1887,7 +1887,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.8.2;
+				MARKETING_VERSION = 0.8.3;
 				PRODUCT_BUNDLE_IDENTIFIER = org.swiftable.jabberwocky.JabberwockyHTKit;
 				PRODUCT_NAME = JabberwockyHTKit;
 				SKIP_INSTALL = YES;

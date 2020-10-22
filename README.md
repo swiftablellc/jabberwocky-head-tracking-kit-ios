@@ -46,7 +46,6 @@ git clone git@github.com:swiftablellc/jabberwocky-head-tracking-kit-ios.git && c
 
 * `*-LocalDev` schemes are for development of `JabberwockyHTKit` and `JabberwockyARKitEngine` simultaneously. This is not a common use case, so it is safe to ignore these schemes.
 * `*-PodsOnly` schemes pull all dependencies from CocoaPods and therefore are not very useful for local development of `JabberwockyHTKit`, but a great way to try out see how cocoapods would work in an existing application. To use these, you will need to do a `pod install` and open xcode using the `.xcworkspace` file.
-* `JabberwockyHTKit` uses CocoaPods vendor framework to install its one dependency `JabberwockyARKitEngine`, but the `JabberwockyARKitEngine.xcframework` can be found [here](https://github.com/swiftablellc/jabberwocky-head-tracking-kit-ios/tree/master/JabberwockyARKitEngine.xcframework). It might be best to create a new target similar to `JabberwockyHTKit-LocalDev` to get it to build properly.
 
 ## Add Head Tracking to an Existing Application
 
@@ -62,7 +61,7 @@ use_frameworks!
 platform :ios, '12.0'
 
 target '$YOUR_TARGET' do
-  pod 'JabberwockyHTKit', '~> 0.8.2'
+  pod 'JabberwockyHTKit', '~> 0.8.3'
 end
 ```
 
@@ -71,7 +70,7 @@ end
 ```shell script
 pod install
 ```
-* Don't forget to open your project using the `*.xcworkspace` instead of  `.xcodeproj` or you will get a Pods not found error.
+* *WARNING:* Don't forget to open your project using the `*.xcworkspace` instead of  `.xcodeproj` or you will get a Pods not found error.
 
 ### Step 2: Add Camera Permissions to *-Info.plist
 
@@ -96,7 +95,6 @@ pod install
 #### Swift
 
 * See [Basic Tutorial AppDelegate](Tutorials/BasicTutorial/AppDelegate.swift) for example implementation.
-
 ```swift
 import AVFoundation
 import JabberwockyARKitEngine
@@ -119,6 +117,28 @@ import JabberwockyHTKit
         return true
     }
 ```
+
+* *WARNING:* If you are building a newer Swift project (with `SceneDelegate`), you will need to modifiy an additional file! The engine will get configured correctly, but the head tracking cursor won't show up because the `UIWindowScene` was not assigned correctly. Modify `SceneDelegate.swift` as follows:
+
+```swift
+import AVFoundation
+import JabberwockyARKitEngine
+import JabberwockyHTKit
+
+...
+
+    func sceneDidBecomeActive(_ scene: UIScene) {
+        // Called when the scene has moved from an inactive state to an active state.
+        // Use this method to restart any tasks that were paused (or not yet started) when the scene was inactive.
+        if let windowScene = scene as? UIWindowScene {
+            HeadTracking.ifConfiguredElse(configuredCompletion: { ht in
+                ht.windowScene = windowScene
+                ht.enable()
+            })
+        }
+    }
+```
+
 #### [SwiftUI](https://developer.apple.com/xcode/swiftui/)
 
 * SwiftUI is only partially supported (introspection and programmatic triggering of events in SwiftUI is elusive at this point). For an example implementation, which is very similar to pre-iOS 13 Swift is available at [SwiftUI Tutorial SceneDelegate](Tutorials/SwiftUITutorial/SceneDelegate.swift). The `UIWindowScene` needs to be provided to the Jabberwocky `HeadTracking` singleton for Jabberwocky to manage `UIWindow` stacks properly.

@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "JabberwockyHTKit"
-  spec.version      = "0.8.2"
+  spec.version      = "0.8.3"
   spec.summary      = "Jabberwocky Head Tracking Kit for iOS"
 
   spec.description  = <<-DESC
@@ -30,7 +30,7 @@ limitations under the License.
   spec.authors      = { "Jonathan Hoag" => "jon@swiftable.org", "Aaron Chavez" => "aaron@swiftable.org" }
   spec.source       = { :git => "https://github.com/swiftablellc/jabberwocky-head-tracking-kit-ios.git", :tag => "#{spec.version}" }
 
-  spec.source_files  = "JabberwockyHTKit/**/*.{swift}"
+  spec.source_files  = "JabberwockyHT*/**/*.{swift}"
   spec.resources = "JabberwockyHTKit/**/*.{xcassets,scnassets}"
   spec.vendored_frameworks = "JabberwockyARKitEngine.xcframework"
 
