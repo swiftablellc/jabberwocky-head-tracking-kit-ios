@@ -4,17 +4,17 @@ use_frameworks!
 platform :ios, '12.0'
 
 target 'BasicTutorial-PodsOnly' do
-  pod 'JabberwockyHTKit', '~> 0.8.3'
+  pod 'JabberwockyHTKit', '~> 0.8.4'
 end
 
 target 'CustomThemeFeatureTutorial-PodsOnly' do
-  pod 'JabberwockyHTKit', '~> 0.8.3'
+  pod 'JabberwockyHTKit', '~> 0.8.4'
 end
 
 target 'ObjcTutorial-PodsOnly' do
-  pod 'JabberwockyHTKit', '~> 0.8.3'
+  pod 'JabberwockyHTKit', '~> 0.8.4'
 end
 
 target 'SwiftUITutorial-PodsOnly' do
-  pod 'JabberwockyHTKit', '~> 0.8.3'
+  pod 'JabberwockyHTKit', '~> 0.8.4'
 end

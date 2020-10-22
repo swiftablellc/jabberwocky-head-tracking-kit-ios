@@ -61,7 +61,7 @@ use_frameworks!
 platform :ios, '12.0'
 
 target '$YOUR_TARGET' do
-  pod 'JabberwockyHTKit', '~> 0.8.3'
+  pod 'JabberwockyHTKit', '~> 0.8.4'
 end
 ```
 
