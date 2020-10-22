@@ -76,7 +76,11 @@ import UIKit.UIWindowScene
     @objc public var analytics: HTAnalytics = HTDefaultAnalytics()
 
     @available(iOS 13.0, *)
-    @objc public lazy var windowScene: UIWindowScene? = nil
+    @objc public lazy var windowScene: UIWindowScene? = nil {
+        didSet {
+            HTWindows.shared.handleWindowSceneUpdate(windowScene)
+        }
+    }
 
     // MARK: Internal
     private var configured = false

@@ -29,6 +29,16 @@
 		1E1E0AC9242E9A2E002C4BE0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E1E0AC7242E9A2E002C4BE0 /* LaunchScreen.storyboard */; };
 		1E1E0ACA242E9A2E002C4BE0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E1E0AC7242E9A2E002C4BE0 /* LaunchScreen.storyboard */; };
 		1E2D616F253A7EAB003BE309 /* CAUTION.md in Resources */ = {isa = PBXBuildFile; fileRef = 1E2D616E253A7EAB003BE309 /* CAUTION.md */; };
+		1E2D61942541EF71003BE309 /* JabberwockyARKitEngine.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E4059612538E9D800A70885 /* JabberwockyARKitEngine.xcframework */; };
+		1E2D61952541EF71003BE309 /* JabberwockyHTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E7C63F12424090A00D97089 /* JabberwockyHTKit.framework */; };
+		1E2D619A2541EF71003BE309 /* JabberwockyARKitEngine.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1E4059612538E9D800A70885 /* JabberwockyARKitEngine.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1E2D619B2541EF71003BE309 /* JabberwockyHTKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1E7C63F12424090A00D97089 /* JabberwockyHTKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1E2D61B52541EFDD003BE309 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E68A5192442A391003DD8AE /* LaunchScreen.storyboard */; };
+		1E2D61B62541EFDD003BE309 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E68A50D2442A344003DD8AE /* Assets.xcassets */; };
+		1E2D61BC2541F018003BE309 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E68A5072442A343003DD8AE /* AppDelegate.swift */; };
+		1E2D61BD2541F018003BE309 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E68A5092442A343003DD8AE /* SceneDelegate.swift */; };
+		1E2D61BE2541F018003BE309 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E68A50B2442A343003DD8AE /* ContentView.swift */; };
+		1E2D61CE2541F2D0003BE309 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E68A5102442A344003DD8AE /* Preview Assets.xcassets */; };
 		1E3DD1A32448D56000969739 /* CoreEventProxyFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3DD1A22448D56000969739 /* CoreEventProxyFeature.swift */; };
 		1E3DD1A62449002F00969739 /* NSNotification+Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3DD1A52449002F00969739 /* NSNotification+Event.swift */; };
 		1E3DD1A92449055100969739 /* HTEventContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3DD1A82449055100969739 /* HTEventContext.swift */; };
@@ -159,6 +169,13 @@
 			remoteGlobalIDString = 1E7C63F02424090A00D97089;
 			remoteInfo = JabberwockyHTKit;
 		};
+		1E2D61902541EF71003BE309 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1E7C63E82424090A00D97089 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1E7C63F02424090A00D97089;
+			remoteInfo = JabberwockyHTKit;
+		};
 		1EF86C8824A6D80A007ECB09 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1E7C63E82424090A00D97089 /* Project object */;
@@ -177,6 +194,18 @@
 			files = (
 				1E4059632538E9D800A70885 /* JabberwockyARKitEngine.xcframework in Embed Frameworks */,
 				1E1E0ABF242E8DBE002C4BE0 /* JabberwockyHTKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E2D61992541EF71003BE309 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				1E2D619A2541EF71003BE309 /* JabberwockyARKitEngine.xcframework in Embed Frameworks */,
+				1E2D619B2541EF71003BE309 /* JabberwockyHTKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -226,6 +255,7 @@
 		1E1E0AA9242E8098002C4BE0 /* Basic - Local.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Basic - Local.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E1E0AC7242E9A2E002C4BE0 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1E2D616E253A7EAB003BE309 /* CAUTION.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CAUTION.md; sourceTree = "<group>"; };
+		1E2D619F2541EF71003BE309 /* SwiftUITutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUITutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E3DD1A22448D56000969739 /* CoreEventProxyFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreEventProxyFeature.swift; sourceTree = "<group>"; };
 		1E3DD1A52449002F00969739 /* NSNotification+Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSNotification+Event.swift"; sourceTree = "<group>"; };
 		1E3DD1A82449055100969739 /* HTEventContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTEventContext.swift; sourceTree = "<group>"; };
@@ -380,6 +410,15 @@
 			files = (
 				1E40591E2538AFBD00A70885 /* JabberwockyARKitEngine.framework in Frameworks */,
 				1EF86C8624A6D80A007ECB09 /* JabberwockyHTKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E2D61932541EF71003BE309 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E2D61942541EF71003BE309 /* JabberwockyARKitEngine.xcframework in Frameworks */,
+				1E2D61952541EF71003BE309 /* JabberwockyHTKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -552,6 +591,7 @@
 				1E1332D4243777B500D9172B /* Objc - Pods.app */,
 				1E1333122437D96500D9172B /* Theme - Pods.app */,
 				1E68A5052442A343003DD8AE /* SwiftUI - Pods.app */,
+				1E2D619F2541EF71003BE309 /* SwiftUITutorial.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -908,6 +948,25 @@
 			productReference = 1E1E0AA9242E8098002C4BE0 /* Basic - Local.app */;
 			productType = "com.apple.product-type.application";
 		};
+		1E2D618E2541EF71003BE309 /* SwiftUITutorial */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1E2D619C2541EF71003BE309 /* Build configuration list for PBXNativeTarget "SwiftUITutorial" */;
+			buildPhases = (
+				1E2D61912541EF71003BE309 /* Sources */,
+				1E2D61932541EF71003BE309 /* Frameworks */,
+				1E2D61962541EF71003BE309 /* Resources */,
+				1E2D61992541EF71003BE309 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1E2D618F2541EF71003BE309 /* PBXTargetDependency */,
+			);
+			name = SwiftUITutorial;
+			productName = HTTutorial;
+			productReference = 1E2D619F2541EF71003BE309 /* SwiftUITutorial.app */;
+			productType = "com.apple.product-type.application";
+		};
 		1E68A5042442A343003DD8AE /* SwiftUITutorial-PodsOnly */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1E68A5182442A344003DD8AE /* Build configuration list for PBXNativeTarget "SwiftUITutorial-PodsOnly" */;
@@ -1005,6 +1064,7 @@
 			targets = (
 				1E7C63F02424090A00D97089 /* JabberwockyHTKit */,
 				1E7C652224255BA000D97089 /* BasicTutorial */,
+				1E2D618E2541EF71003BE309 /* SwiftUITutorial */,
 				1E1E0A9A242E8098002C4BE0 /* BasicTutorial-LocalDev */,
 				1E1E0A32242E7F53002C4BE0 /* BasicTutorial-PodsOnly */,
 				1E1333032437D96500D9172B /* CustomThemeFeatureTutorial-PodsOnly */,
@@ -1048,6 +1108,16 @@
 			files = (
 				1E1E0AA2242E8098002C4BE0 /* Assets.xcassets in Resources */,
 				1E1E0AC9242E9A2E002C4BE0 /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E2D61962541EF71003BE309 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E2D61CE2541F2D0003BE309 /* Preview Assets.xcassets in Resources */,
+				1E2D61B52541EFDD003BE309 /* LaunchScreen.storyboard in Resources */,
+				1E2D61B62541EFDD003BE309 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1347,6 +1417,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1E2D61912541EF71003BE309 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E2D61BC2541F018003BE309 /* AppDelegate.swift in Sources */,
+				1E2D61BD2541F018003BE309 /* SceneDelegate.swift in Sources */,
+				1E2D61BE2541F018003BE309 /* ContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1E68A5012442A343003DD8AE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1479,6 +1559,11 @@
 			isa = PBXTargetDependency;
 			target = 1E7C63F02424090A00D97089 /* JabberwockyHTKit */;
 			targetProxy = 1E1E0AC0242E8DBE002C4BE0 /* PBXContainerItemProxy */;
+		};
+		1E2D618F2541EF71003BE309 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1E7C63F02424090A00D97089 /* JabberwockyHTKit */;
+			targetProxy = 1E2D61902541EF71003BE309 /* PBXContainerItemProxy */;
 		};
 		1EF86C8924A6D80A007ECB09 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1670,6 +1755,58 @@
 			};
 			name = Release;
 		};
+		1E2D619D2541EF71003BE309 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Tutorials/SwiftUITutorial/Preview Content\"";
+				DEVELOPMENT_TEAM = BDJ62329AB;
+				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"${SRCROOT}",
+				);
+				INFOPLIST_FILE = Tutorials/SwiftUITutorial/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.swiftable.jabberwocky.SwiftUITutorial;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1E2D619E2541EF71003BE309 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Tutorials/SwiftUITutorial/Preview Content\"";
+				DEVELOPMENT_TEAM = BDJ62329AB;
+				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"${SRCROOT}",
+				);
+				INFOPLIST_FILE = Tutorials/SwiftUITutorial/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.swiftable.jabberwocky.SwiftUITutorial;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		1E68A5162442A344003DD8AE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8D62E0358FE9F65A7383C57E /* Pods-SwiftUITutorial-PodsOnly.debug.xcconfig */;
@@ -1686,7 +1823,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 0.1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = org.swiftable.jabberwocky.SwiftUITutorial;
+				PRODUCT_BUNDLE_IDENTIFIER = org.swiftable.jabberwocky.SwiftUITutorialPods;
 				PRODUCT_NAME = "SwiftUI - Pods";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1709,7 +1846,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 0.1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = org.swiftable.jabberwocky.SwiftUITutorial;
+				PRODUCT_BUNDLE_IDENTIFIER = org.swiftable.jabberwocky.SwiftUITutorialPods;
 				PRODUCT_NAME = "SwiftUI - Pods";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1979,6 +2116,15 @@
 			buildConfigurations = (
 				1E1E0AA7242E8098002C4BE0 /* Debug */,
 				1E1E0AA8242E8098002C4BE0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1E2D619C2541EF71003BE309 /* Build configuration list for PBXNativeTarget "SwiftUITutorial" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E2D619D2541EF71003BE309 /* Debug */,
+				1E2D619E2541EF71003BE309 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

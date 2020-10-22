@@ -14,8 +14,6 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-import AVFoundation
-import JabberwockyARKitEngine
 import JabberwockyHTKit
 import UIKit
 import SwiftUI
@@ -52,23 +50,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Called when the scene has moved from an inactive state to an active state.
         // Use this method to restart any tasks that were paused (or not yet started) when the scene was inactive.
         if let windowScene = scene as? UIWindowScene {
-            HeadTracking.ifConfiguredElse(configuredCompletion: { ht in
-                ht.windowScene = windowScene
-                ht.enable()
-            }) {
-                AVCaptureDevice.requestAccess(for: .video) { (granted) in
-                    if (granted) {
-                        // Configure the default HTFeatures and enable Head Tracking
-                        DispatchQueue.main.async {
-                            HeadTracking.configure(withEngine: ARKitHTEngine.self)
-                            HeadTracking.shared.windowScene = windowScene
-                            HeadTracking.shared.enable()
-                        }
-                    } else {
-                        NSLog("Head Tracking requires camera access.")
-                    }
-                }
-            }
+            HeadTracking.shared.windowScene = windowScene
         }
     }
 

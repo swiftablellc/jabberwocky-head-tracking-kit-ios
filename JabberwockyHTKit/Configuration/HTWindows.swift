@@ -59,9 +59,15 @@ import UIKit
         return disable(for: featureName)
     }
     
+    @available(iOS 13, *)
+    @objc public func handleWindowSceneUpdate(_ windowScene: UIWindowScene?) {
+        for enabledWindowFeature in windowRegistry.keys {
+            windowRegistry[enabledWindowFeature]?.windowScene = windowScene
+        }
+    }
+    
     @discardableResult
-    private func enable<T>(for featureName: String, of _ : T.Type,
-                           with viewController: UIViewController = UIViewController()) -> T where T: UIWindow {
+    private func enable<T>(for featureName: String, of _ : T.Type) -> T where T: UIWindow {
         if let existingWindow = windowRegistry[featureName] as? T {
             return existingWindow
         }
@@ -72,7 +78,7 @@ import UIKit
             newWindow = T(frame: UIScreen.main.bounds)
         }
         windowRegistry[featureName] = newWindow
-        newWindow.rootViewController = viewController
+        newWindow.rootViewController = UIViewController()
         if let keyWindow = UIApplication.shared.keyWindow {
             newWindow.makeKeyAndVisible()
             keyWindow.makeKey()

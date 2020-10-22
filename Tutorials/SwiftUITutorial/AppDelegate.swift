@@ -13,13 +13,29 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 */
+import AVFoundation
+import JabberwockyARKitEngine
+import JabberwockyHTKit
 import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    
+    var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        AVCaptureDevice.requestAccess(for: .video) { (granted) in
+            if (granted) {
+                // Configure the default HTFeatures and enable Head Tracking
+                DispatchQueue.main.async {
+                    HeadTracking.configure(withEngine: ARKitHTEngine.self)
+                    HeadTracking.shared.enable()
+                }
+            } else {
+                NSLog("Head Tracking requires camera access.")
+            }
+        }
         return true
     }
 
